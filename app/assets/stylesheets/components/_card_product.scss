@@ -1,0 +1,45 @@
+.outside-card-product{
+  overflow: hidden;
+  height: 120px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-product {
+  display: flex;
+  align-items: center;
+  width: 400px;
+}
+
+.card-product h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-product .card-product-infos {
+  padding: 16px;
+}
+
+.outside-card-product .card-product-actions {
+  opacity: 0;
+  display: flex;
+  transition: ease .3s;
+}
+
+.outside-card-product:hover .card-product-actions {
+  opacity: 1;
+}
+
+.outside-card-product .card-product-actions a {
+  color: #999999;
+  margin-left: 16px;
+  font-size: 14px;
+}
+
+.outside-card-product .card-product-actions a:hover {
+  color: #555555;
+}
