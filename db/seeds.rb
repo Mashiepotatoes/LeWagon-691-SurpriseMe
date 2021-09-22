@@ -8,7 +8,7 @@
 
 Product.create(name: "Xiaomi Mi Vacuum Cleaner Mini", price: 69.90)
 Product.create(name: "Jabra Elite 3 Earbuds", price: 128)
-Product.create(name: "Logitech 960-001090 C922 Pro Stream Webcam", price: 199)
+Product.create(name: "ARSSOO Cocktail Kit Bar Set. 15PC Professional Bartender Kit. 25oz Cocktail Shaker, 19oz Martini Shaker, Drink Mixer, Muddler Tool, Bar Strainer, Wine Opener, Jigger x2, Pourers and Bar Accessories", price: 69.99)
 Product.create(name: "Adjustable Laptop Stand Oli & Ode Table Stand Portable Ergonomic Notebook Stand with Heat-Vent, Heavy Duty Laptop Holder Compatible with MacBook Pro/Air, Dell, HP, other laptop", price: 29.50)
 Product.create(name: "STOGA 60% Gaming Keyboard, RGB Mechanical Keyboard, Small 61-Key Wired Brown Switch Mini Keyboard, White Computer Keyboard for Gaming/Office/PC/Mac", price: 56.99)
 Product.create(name: "Apple AirPods Pro", price: 280.00)
