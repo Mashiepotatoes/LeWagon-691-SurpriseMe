@@ -53,6 +53,7 @@ body {
 .search-form-control .form-control {
   height: 2.5rem;
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  padding: 20px;
 }
 
 .search-form-control .form-control:focus {
@@ -71,9 +72,9 @@ body {
 }
 
 .round-searchbar:hover, .round-searchbar:focus, .round-searchbar:after {
-    border-bottom: 2px solid white;
-    border-radius: 0;
-    background: none;
-    color: white;
+    border-radius: 10px;
+    background: white;
+    color: black;
     padding: 24px 15px;
+    opacity: 0.5;
 }
