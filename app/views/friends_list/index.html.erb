@@ -1,0 +1,12 @@
+<div class="friendslist">
+  <h1>Hello user</h1>
+  <%# <--- Search bar ---> %>
+    <%= simple_form_for :friends_list, url: "#", method: :get do |f| %>
+      <div class="search-form-control mt-3 ">
+        <input class="form-control required round-searchbar" type="text" name="query" id="query" />
+        <button name="button" type="submit" class="button-none" >
+          <i class="fas fa-search search-icon search-icon-landing"></i>
+        </button>
+      </div>
+    <% end %>
+</div>
