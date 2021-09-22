@@ -10,7 +10,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_22_062735) do
+ActiveRecord::Schema.define(version: 2021_09_22_063241) do
+
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,6 +34,7 @@ ActiveRecord::Schema.define(version: 2021_09_22_062735) do
     t.bigint "category_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "details"
     t.index ["category_id"], name: "index_products_on_category_id"
   end
 
