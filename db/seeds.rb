@@ -18,7 +18,7 @@ Product.create(name: "Expandable Cat Carrier Backpack for Cats, Space Capsule Bu
 Product.create(name: "LONDONTOWN kur Nail Hardener and Base Coat", price: 30.00)
 
 Category.create(name: "Electronics")
-Category.create(name: "Beauty")
-Category.create(name: "Pets")
-Category.create(name: "Home")
-Category.create(name: "Gaming")
+Category.create(name: "Beauty & Cosmetics")
+Category.create(name: "Pet Essentials")
+Category.create(name: "Home & Lifestyle")
+Category.create(name: "Office Accessories")
