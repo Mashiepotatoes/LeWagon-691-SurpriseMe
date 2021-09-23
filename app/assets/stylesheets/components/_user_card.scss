@@ -3,6 +3,7 @@
 .card-user {
   display: flex;
   flex-direction: column;
+  align-items: center;
   height: 100%;
 }
 
@@ -69,6 +70,9 @@
 
 
 // card-user-product //
+.card-user-product {
+  width: 100%;
+}
 
 .cards {
   display: grid;
@@ -127,4 +131,11 @@
   .cards {
     grid-template-columns: 1fr 1fr 1fr;
   }
+}
+
+// card-user-budget //
+.card-user-budget {
+  background-color: white;
+  width: 100%;
+  text-align: center;
 }
