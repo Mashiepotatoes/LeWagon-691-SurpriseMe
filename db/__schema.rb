@@ -48,16 +48,13 @@ ActiveRecord::Schema.define(version: 2021_09_23_084444) do
     t.bigint "category_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "description"
-    t.string "asin"
-    t.string "image_url"
-    t.string "brand"
+    t.string "details"
     t.index ["category_id"], name: "index_products_on_category_id"
   end
 
   create_table "sessions", force: :cascade do |t|
     t.integer "budget"
-    t.bigint "order_id"
+    t.bigint "order_id", null: false
     t.bigint "user_id", null: false
     t.bigint "recipient_id"
     t.datetime "created_at", precision: 6, null: false

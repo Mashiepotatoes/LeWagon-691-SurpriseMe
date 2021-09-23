@@ -69,12 +69,12 @@ serialised_toys_games = File.read(file_path_tg)
 parsed_toys_games = JSON.parse(serialised_toys_games)
 
 # ---- seeding ---- #
-parsed_datasets = [parsed_all_beauty, parsed_video_games, parsed_pet_supplies, parsed_cd_vinyl, parsed_toys_games] 
-categories = [all_beauty, video_games, cd_vinyl, pet_essentials, toys_games] 
+parsed_datasets = [parsed_all_beauty, parsed_video_games, parsed_pet_supplies, parsed_cd_vinyl, parsed_toys_games]
+categories = [all_beauty, video_games, cd_vinyl, pet_essentials, toys_games]
 
 categories_index = 0
 
-parsed_datasets.each do |dataset| 
+parsed_datasets.each do |dataset|
   dataset.each do |product|
     puts "Creating #{product["title"]}..."
 
@@ -84,7 +84,7 @@ parsed_datasets.each do |dataset|
     image_url = product["imageUrlHighRes"]
     brand = product["brand"]
     price = product["price"]
-    
+
     product = Product.new(name: name, description: description, price: price.to_s, asin: asin, image_url: image_url, brand: brand)
     product.category = categories[categories_index]
 
@@ -101,7 +101,7 @@ puts "Finished seeding"
 50.times do |i|
   puts "creating user #{i + 1}"
   User.create(
-    # name: Faker::Name.name, 
+    # name: Faker::Name.name,
     address: Faker::Address.full_address,
     birthday: Faker::Date.birthday(min_age: 18, max_age: 65),
     username: Faker::Internet.username,

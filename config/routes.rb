@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   resources :friendships, only: [:index, :show, :destroy] do
     resources :gift_recommendations, only: [:index]
   end
+
+  resources :sessions, only: [:new, :create]
 end
