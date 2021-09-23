@@ -3,7 +3,7 @@
   <%# <--- Search bar ---> %>
     <%= simple_form_for :friends_list, url: "#", method: :get do |f| %>
       <div class="search-form-control mt-3 ">
-        <input class="form-control required round-searchbar" type="text" name="query" id="query" placeholder="Find a friend"/>
+        <input class="form-control required round-searchbar" type="text" name="query" id="query" placeholder="Find a  "/>
         <button name="button" type="submit" class="button-none" >
           <i class="fas fa-search search-icon search-icon-landing"></i>
         </button>
@@ -11,6 +11,7 @@
     <% end %>
 </div>
 
+<%# <--- Search result ---> %>
 <div class="outside-card-product">
   <div class="d-flex justify-content-between">
     <div class="card-product">
@@ -20,14 +21,15 @@
       </div>
     </div>
   </div>
-    <%# <--- when removing friend ---> %>
+    <%# <--- to use for adding friend ---> %>
     <div class="card-product-actions">
-      <a href="#">Remove friend <i class="far fa-trash-alt"></i></a>
+      <a href="#">Add friend <i class="fas fa-user-plus"></i></a>
     </div>
 
 
-    <%# <--- to use for adding friend --->
-    <div class="card-product-actions">
-      <a href="#">Add friend <i class="fas fa-user-plus"></i></a>
+    <%# <--- already friends ---> %>
+    <%# <div class="card-product-actions">
+      <a href="#">Send a gift <i class="fas fa-gift"></i></a>
+      <a href="#">Remove friend <i class="far fa-trash-alt"></i></a>
     </div> %>
 </div>
