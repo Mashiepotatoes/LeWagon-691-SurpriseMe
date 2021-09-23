@@ -10,9 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
-ActiveRecord::Schema.define(version: 2021_09_23_103639) do
-
+ActiveRecord::Schema.define(version: 2021_09_23_163113) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,7 +30,7 @@ ActiveRecord::Schema.define(version: 2021_09_23_103639) do
     t.index ["friend_id"], name: "index_friendships_on_friend_id"
     t.index ["user_id"], name: "index_friendships_on_user_id"
   end
-  
+
   create_table "gift_recommendations", force: :cascade do |t|
     t.bigint "product_id", null: false
     t.datetime "created_at", precision: 6, null: false
@@ -69,6 +67,17 @@ ActiveRecord::Schema.define(version: 2021_09_23_103639) do
     t.index ["category_id"], name: "index_products_on_category_id"
   end
 
+  create_table "reviews", force: :cascade do |t|
+    t.string "content"
+    t.integer "rating"
+    t.bigint "order_id", null: false
+    t.bigint "friendship_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["friendship_id"], name: "index_reviews_on_friendship_id"
+    t.index ["order_id"], name: "index_reviews_on_order_id"
+  end
+
   create_table "sessions", force: :cascade do |t|
     t.integer "budget"
     t.bigint "order_id"
@@ -98,11 +107,11 @@ ActiveRecord::Schema.define(version: 2021_09_23_103639) do
 
   add_foreign_key "friendships", "users"
   add_foreign_key "friendships", "users", column: "friend_id"
-
   add_foreign_key "gift_recommendations", "products"
   add_foreign_key "orders", "products"
-
   add_foreign_key "products", "categories"
+  add_foreign_key "reviews", "friendships"
+  add_foreign_key "reviews", "orders"
   add_foreign_key "sessions", "orders"
   add_foreign_key "sessions", "users"
   add_foreign_key "sessions", "users", column: "recipient_id"
