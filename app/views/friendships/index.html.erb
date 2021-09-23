@@ -1,7 +1,7 @@
 <div class="friends">
   <h1>Hello user</h1>
   <%# <--- Search bar ---> %>
-    <%= simple_form_for :friends_list, url: "#", method: :get do |f| %>
+    <%= simple_form_for :friendships, url: "#", method: :get do |f| %>
       <div class="search-form-control mt-3 ">
         <input class="form-control required round-searchbar" type="text" name="query" id="query" placeholder="Find a Friend "/>
         <button name="button" type="submit" class="button-none" >
@@ -29,7 +29,7 @@
 
     <%# <--- already friends ---> %>
     <div class="card-product-actions">
-      <%= link_to "Send a gift", friend_path(user), class:"pr-1" %><i class="fas fa-gift"></i>
+      <%= link_to "Send a gift", friendship_path(user), class:"pr-1" %><i class="fas fa-gift"></i>
       <%# <a href="#">Send a gift <i class="fas fa-gift"></i></a> %>
       <a href="#">Remove friend <i class="far fa-trash-alt"></i></a>
     </div>
