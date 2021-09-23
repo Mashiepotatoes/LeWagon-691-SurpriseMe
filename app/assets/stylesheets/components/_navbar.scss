@@ -1,6 +1,6 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background: #DEA5A4;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -8,7 +8,10 @@
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 40px;
+  position: absolute;
+  top: -2px;
+  left: 20px;
+  width: 60px;
 }
 
 // remove ul bullet //
