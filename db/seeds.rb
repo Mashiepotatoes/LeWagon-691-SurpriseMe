@@ -41,30 +41,31 @@ file_path_vg = File.join(__dir__, "amazon_datasets/video_games.json")
 serialised_video_games = File.read(file_path_vg)
 parsed_video_games = JSON.parse(serialised_video_games)
 
-# # ---- Amazon cd_vinyl seeds ---- #
-# file_path_cdv = File.join(__dir__, "amazon_datasets/cd_vinyl.json")
-# serialised_cd_vinyl = File.read(file_path_cdv)
-# parsed_cd_vinyl = JSON.parse(serialised_cd_vinyl)
+# ---- Amazon cd_vinyl seeds ---- #
+file_path_cdv = File.join(__dir__, "amazon_datasets/cd_vinyl.json")
+serialised_cd_vinyl = File.read(file_path_cdv)
+parsed_cd_vinyl = JSON.parse(serialised_cd_vinyl)
 
-# # ---- Amazon pet_supplies seeds ---- #
-# file_path_ps = File.join(__dir__, "amazon_datasets/pet_supplies.json")
-# serialised_pet_supplies = File.read(file_path_ps)
-# parsed_pet_supplies = JSON.parse(serialised_pet_supplies)
+# ---- Amazon pet_supplies seeds ---- #
+file_path_ps = File.join(__dir__, "amazon_datasets/pet_supplies.json")
+serialised_pet_supplies = File.read(file_path_ps)
+parsed_pet_supplies = JSON.parse(serialised_pet_supplies)
 
-# # ---- Amazon toys_games seeds ---- #
-# file_path_tg = File.join(__dir__, "amazon_datasets/toys_games.json")
-# serialised_toys_games = File.read(file_path_tg)
-# parsed_toys_games = JSON.parse(serialised_toys_games)
+# ---- Amazon toys_games seeds ---- #
+file_path_tg = File.join(__dir__, "amazon_datasets/toys_games.json")
+serialised_toys_games = File.read(file_path_tg)
+parsed_toys_games = JSON.parse(serialised_toys_games)
 
 # ---- seeding ---- #
-parsed_datasets = [parsed_all_beauty, parsed_video_games] 
-# , parsed_cd_vinyl, parsed_pet_supplies, parsed_toys_games]
-categories = [all_beauty, video_games] 
-# , cd_vinyl, pet_essentials, toys_games]
+parsed_datasets = [parsed_all_beauty, parsed_video_games, parsed_pet_supplies, parsed_cd_vinyl, parsed_toys_games] 
+categories = [all_beauty, video_games, cd_vinyl, pet_essentials, toys_games] 
+
 categories_index = 0
 
 parsed_datasets.each do |dataset| 
   dataset.each do |product|
+    puts "Creating #{product["title"]}..."
+
     name = product["title"]
     description = product["description"].join
     asin = product["asin"] # product number
@@ -74,8 +75,8 @@ parsed_datasets.each do |dataset|
     
     product = Product.new(name: name, description: description, price: price.to_s, asin: asin, image_url: image_url, brand: brand)
     product.category = categories[categories_index]
-    binding.pry
-    product.save
+
+    product.save!
     puts "#{product["title"]} saved"
   end
   categories_index += 1
@@ -83,8 +84,18 @@ end
 
 puts "Finished seeding"
 
-# fake the reviews (and ratings)
-
 # ---- Create Users ---- #
+require 'faker'
 
-User.create(name:)
+50.times do |i|
+  puts "creating user #{i}"
+  User.create(
+    name: Faker::Name.name, 
+    address: Faker::Address.full_address,
+    birthday: Faker::Date.birthday(min_age: 18, max_age: 65),
+    username: Faker::Internet.username,
+    email: Faker::Internet.email,
+    password: Faker::Alphanumeric.alphanumeric(number: 10, min_alpha: 8)
+  )
+  puts "created user #{i}"
+end
