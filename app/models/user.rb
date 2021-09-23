@@ -4,6 +4,9 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  validates :address, presence: true, length: { minimum: 10 }
-  validates :birthday, presence: true
+  # validates :address, presence: true, length: { minimum: 10 }
+  # validates :birthday, presence: true
+
+  has_many :friendships
+  has_many :friends, through: :friendships
 end
