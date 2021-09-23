@@ -1,4 +1,5 @@
 class FriendshipsController < ApplicationController
+
   before_action :authenticate_user!
 
   def index
@@ -6,7 +7,6 @@ class FriendshipsController < ApplicationController
     @friend_list = Friendship.where(user: current_user,status: true) # current_user friend list
     @requests = Friendship.where(user: current_user,status: false)
     @invitations =  Friendship.where(friend: current_user,status: false)
-
   end
 
   def show
