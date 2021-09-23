@@ -110,3 +110,12 @@ puts "Finished seeding"
   )
   puts "created user #{i + 1}"
 end
+
+# ---- Create Orders ---- #
+
+# 200.times do |i|
+#   puts "creating order #{i + 1}"
+#   Order.create(
+
+#   )
+end
