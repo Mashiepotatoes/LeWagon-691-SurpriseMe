@@ -1,0 +1,30 @@
+<div class="navbar sticky-top navbar-expand-sm navbar-light navbar-lewagon">
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class=" mr-auto d-flex align-items-center mb-0 list-style-none">
+      <% if user_signed_in? %>
+        <li class="nav-item active nav-li list-style-none">
+          <%= link_to "Home", root_path, class: "nav-link navbar-login-btn text-white" %>
+        </li>
+        <li class="nav-item nav-li">
+          <%= link_to "My Cart", "#", class: "nav-link navbar-login-btn text-white" %>
+        </li>
+
+        <li class="nav-item dropdown ml-3">
+          <%= image_tag "https://kitt.lewagon.com/placeholder/users/#{current_user.username}", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+            <%= link_to "My Profile", edit_user_registration_path, class: "dropdown-item" %>
+            <%= link_to "My Favorites"," #", class: "dropdown-item" %>
+            <%= link_to "Previous Bookings", "#", class: "dropdown-item" %>
+            <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+          </div>
+        </li>
+      <% else %>
+        <li class="nav-item nav-li">
+          <%= link_to "Login", new_user_session_path, class: "nav-link text-white navbar-login-btn" %>
+        </li>
+        <li class="nav-item nav-li">
+          <%= link_to "Sign up", new_user_registration_path, class: "navbar-login-btn nav-link" %>
+        </li>
+      <% end %>
+  </div>
+</div>
