@@ -9,10 +9,7 @@ Rails.application.routes.draw do
   get "/friendships/requests", to: 'friendships#requests'
   get "/friendships/search", to: 'friendships#search'
 
-  resources :friendships, only: [:index, :show, :destroy, :create] do
-
   resources :sessions, only: [:new, :create, :show] do
     resources :gift_recommendations, only: [:index]
   end
-
 end
