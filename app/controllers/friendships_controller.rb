@@ -13,6 +13,7 @@ class FriendshipsController < ApplicationController
   end
 
   def show
+    @friend = User.find(params[:id])
   end
 
   def create
