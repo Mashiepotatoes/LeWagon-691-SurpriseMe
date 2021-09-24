@@ -106,25 +106,18 @@ puts "creating users"
 end
 puts "created #{User.count} users"
 
-# ---- Create Orders ---- #
-puts "creating orders"
-500.times do |i|
-  Order.create(product_id: Product.all.sample.id)
-end
-puts "finished creating #{Order.count} orders"
-
-# ---- Create Reviews ---- #
-
-puts "creating reviews"
-order = 1
-until order == 500
-  Review.create(
-    # content: Faker::Lorem.paragraph,
-    content: Product.all.sample.description,
-    rating: (1..5).to_a.sample,
-    order_id: order,
-    friend_id: User.all.sample.id
-  )
-  order += 1
-end
-puts "created #{Review.count} reviews"
+# ---- Create Orders and Reviews ---- #
+# puts "creating orders and reviews"
+# order_id = 1
+# until order_id == 500
+#   order = Order.create(product_id: Product.all.sample.id)
+#   review = Review.new(    
+#     content: Product.all.sample.description,
+#     rating: (1..5).to_a.sample,
+#     order_id: order_id,
+#     user_id: User.all.sample.id)
+#   review.order = order
+#   review.save
+# end
+# puts "finished creating #{Order.count} orders"
+# puts "finished creating #{Review.count} reviews"
