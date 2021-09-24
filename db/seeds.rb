@@ -72,12 +72,10 @@ parsed_toys_games = JSON.parse(serialised_toys_games)
 parsed_datasets = [parsed_all_beauty, parsed_video_games, parsed_pet_supplies, parsed_cd_vinyl, parsed_toys_games]
 categories = [all_beauty, video_games, cd_vinyl, pet_essentials, toys_games]
 
+puts "Creating products"
 categories_index = 0
-
 parsed_datasets.each do |dataset|
   dataset.each do |product|
-    puts "Creating #{product["title"]}..."
-
     name = product["title"]
     description = product["description"].join
     asin = product["asin"] # product number
@@ -87,19 +85,16 @@ parsed_datasets.each do |dataset|
 
     product = Product.new(name: name, description: description, price: price.to_s, asin: asin, image_url: image_url, brand: brand)
     product.category = categories[categories_index]
-
     product.save!
-    puts "#{product["title"]} saved"
   end
   categories_index += 1
 end
-
-puts "Finished seeding"
+puts "Created #{Product.count} products"
 
 # ---- Create Users ---- #
 
-50.times do |i|
-  puts "creating user #{i + 1}"
+puts "creating users"
+100.times do |i|
   User.create(
     # name: Faker::Name.name,
     address: Faker::Address.full_address,
@@ -108,14 +103,21 @@ puts "Finished seeding"
     email: Faker::Internet.email,
     password: Faker::Alphanumeric.alphanumeric(number: 10, min_alpha: 8)
   )
-  puts "created user #{i + 1}"
 end
+puts "created #{User.count} users"
 
-# ---- Create Orders ---- #
-
-# 200.times do |i|
-#   puts "creating order #{i + 1}"
-#   Order.create(
-
-#   )
-end
+# ---- Create Orders and Reviews ---- #
+# puts "creating orders and reviews"
+# order_id = 1
+# until order_id == 500
+#   order = Order.create(product_id: Product.all.sample.id)
+#   review = Review.new(    
+#     content: Product.all.sample.description,
+#     rating: (1..5).to_a.sample,
+#     order_id: order_id,
+#     user_id: User.all.sample.id)
+#   review.order = order
+#   review.save
+# end
+# puts "finished creating #{Order.count} orders"
+# puts "finished creating #{Review.count} reviews"
