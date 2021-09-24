@@ -20,6 +20,7 @@
       <p> Help us understand your preferences better </p>
       <button data-tf-popup="kZ8ASrho" data-tf-size="70" style="all:unset;font-family:Helvetica,Arial,sans-serif;display:inline-block;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;background-color:#5CD6C8;color:#000000;font-size:24px;border-radius:7px;padding:0 40px;font-weight:bold;height:60px;cursor:pointer;line-height:60px;text-align:center;margin:0;text-decoration:none;">Take the quiz</button><script src="//embed.typeform.com/next/embed.js"></script>
     </div>
+    
     <div class="friend-content container">
       <h2 class="page-func">Your friend</h2>
 
@@ -31,20 +32,34 @@
 
       <% else %>
         <% @friend_list.each do |friendship| %>
+
           <div class="outside-card-product">
+
             <div class="d-flex justify-content-between">
               <div class="card-product">
                 <img class="avatar-large" alt="avatar-large" src="https://kitt.lewagon.com/placeholder/users/arthur-littm" />
                 <div class="card-product-infos">
-                  <h2><%= friendship.friend.username %></h2>
+                  <%= link_to friendship.friend.username, friendship_path(friendship.friend) %>
+
                 </div>
               </div>
+              <div class="card-product-actions"></div>
             </div>
-            <div class="card-product-actions"></div>
+
+                  <%# <--- when removing friend ---> %>
+            <div class="card-product-actions">
+              <a href="#">Remove friend <i class="far fa-trash-alt"></i></a>
+            </div>
+                <%# <--- Send gift ---> %>
+            <div class="card-product-actions">
+              <%= link_to  friendship_path(friendship.friend) do %>
+                Send a gift <i class="fas fa-gift"></i>
+              <% end %>
+            </div>
           </div>
         <% end %>
-      <% end %>
+
+     <% end %>
     </div>
 </div>
-
 

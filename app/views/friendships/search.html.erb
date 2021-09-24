@@ -35,7 +35,8 @@
             <div class="card-product">
               <img class="avatar-large" alt="avatar-large" src="https://kitt.lewagon.com/placeholder/users/arthur-littm" />
               <div class="card-product-infos">
-                  <p><%= user.username %></p>
+                <%= link_to user.username, friendship_path(user) %>
+  
 
               </div>
             </div>

@@ -3,27 +3,32 @@
     <div class="card-user-profile-info">
       <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
       <div class="card-user-info">
-        <h1>Jeremy</h1>
+        <h1><%= @friend.username.capitalize() %></h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Est pellentesque elit ullamcorper dignissim cras tincidunt lobortis. Elit sed vulputate mi sit amet mauris. Semper risus in hendrerit gravida.</p>
       </div>
+      <% link_to%>
+
+
       <div class="card-user-add">
-        <a href="#">
+
+        <%= link_to friendships_path(recipient_id: params[:id] ), method: :post do %>
           <i class="fas fa-user-plus"></i>
-        </a>
+        <% end %>
+
       </div>
     </div>
     <div class="card-user-product">
       <div class="cards">
         <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
-          Breakfast
+          Gift 1
         </div>
 
         <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/lunch.jpg)">
-          Lunch
+         Gift 2
         </div>
 
         <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/dinner.jpg)">
-          Dinner
+          Gift 3
         </div>
       </div>
     </div>
@@ -31,7 +36,12 @@
       <label for="customRange1" class="form-label">Budget</label>
       <input type="range" class="form-range" id="customRange1">
       <br>
-      <%= link_to "Send a gift", gift_session_path(recipient_id: params[:id] ), method: :post, class: "btn btn-ghost" %>
+
+      <% if @friend.friends.exists? %>
+        <% if @friend.friends.include?(current_user) %>
+          <%= link_to "Send a gift", sessions_path(recipient_id: params[:id] ), method: :post, class: "btn btn-ghost" %>
+        <% end %>
+      <% end %>
 
     </div>
     <%# <a class="" href="#">Write a story</a> %>
