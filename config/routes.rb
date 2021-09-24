@@ -13,5 +13,4 @@ Rails.application.routes.draw do
   resources :gift_sessions, only: [:new, :create, :show] do
     resources :gift_recommendations, only: [:index]
   end
-
 end
