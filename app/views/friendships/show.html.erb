@@ -31,7 +31,8 @@
       <label for="customRange1" class="form-label">Budget</label>
       <input type="range" class="form-range" id="customRange1">
       <br>
-      <%= link_to "Send a gift", new_session_path, class: "btn btn-ghost" %>
+      <%= link_to "Send a gift", sessions_path(recipient_id: params[:id] ), method: :post, class: "btn btn-ghost" %>
+
     </div>
     <%# <a class="" href="#">Write a story</a> %>
   </div>
