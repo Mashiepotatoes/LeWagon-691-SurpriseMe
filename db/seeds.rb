@@ -101,7 +101,8 @@ puts "creating users"
     birthday: Faker::Date.birthday(min_age: 18, max_age: 65),
     username: Faker::Internet.username,
     email: Faker::Internet.email,
-    password: Faker::Alphanumeric.alphanumeric(number: 10, min_alpha: 8)
+    password: "123456"
+    # password: Faker::Alphanumeric.alphanumeric(number: 10, min_alpha: 8)
   )
 end
 puts "created #{User.count} users"
@@ -111,7 +112,7 @@ puts "created #{User.count} users"
 # order_id = 1
 # until order_id == 500
 #   order = Order.create(product_id: Product.all.sample.id)
-#   review = Review.new(    
+#   review = Review.new(
 #     content: Product.all.sample.description,
 #     rating: (1..5).to_a.sample,
 #     order_id: order_id,
