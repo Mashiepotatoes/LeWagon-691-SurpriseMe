@@ -7,6 +7,13 @@ class User < ApplicationRecord
   # validates :address, presence: true, length: { minimum: 10 }
   # validates :birthday, presence: true
 
+  include PgSearch::Model
+  pg_search_scope :search_by_username,
+    against: [ :username ],
+    using: {
+      tsearch: { prefix: true } # <-- now `superman batm` will return something!
+    }
+
   has_many :friendships
   has_many :friends, through: :friendships
 end

@@ -1,0 +1,15 @@
+.friend-page-container{
+  display: grid;
+  grid-template-columns: 30% 70%;
+}
+
+.friend-side-panel{
+  height: 100%;
+  margin: 2rem 2rem;
+  padding: 1.5rem 1rem;
+  background-color: rgb(196, 194, 194);
+}
+
+.friend-content{
+  padding: 2rem 2rem;
+}
