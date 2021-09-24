@@ -1,0 +1,68 @@
+<div class="container">
+
+  <div class="d-flex justify-content-between align-items-center pt-3">
+    <h1> Friend requests </h1>
+    <% link_to %>
+    <button type="button" data-toggle="modal" data-target="#exampleModalCenter">
+        View Sent request
+      </button>
+  </div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Sent friend request</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <% @requests.each do |request| %>
+          <div class="request">
+            <div class="avatar-bordered">
+            </div>
+            <div class="request-name">
+              <%= request.friend.username %>
+            </div>
+            <div class="cancel-request">
+              <%link_to "Cancel",friendships_path %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="friend-list-container py-5">
+
+    <% @invitations.each do |invitation| %>
+
+      <div class="friend-list-card">
+        <div class="profile-photo">
+          <img src="" alt="">
+            <p>photo</p>
+        </div>
+
+        <div class="profile-name">
+          <p class="m-0"><%= invitation.friend.username.capitalize() %></p>
+          <span class="birthday text-muted"><i class="fas fa-birthday-cake"></i> September 06 </span>
+        </div>
+
+        <div class="btn-group">
+          <%= link_to "Confirm",friendships_path(),method: :post,class:"btn-a"%>
+          <%= link_to "Delete",friendships_path,class:"btn-a"%>
+        </div>
+
+      <% end %>
+
+    </div>
+
+  </div>
+</div>

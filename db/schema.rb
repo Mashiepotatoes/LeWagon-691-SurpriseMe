@@ -10,9 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
 ActiveRecord::Schema.define(version: 2021_09_23_103639) do
-
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,6 +29,7 @@ ActiveRecord::Schema.define(version: 2021_09_23_103639) do
     t.boolean "status", default: false
     t.index ["friend_id"], name: "index_friendships_on_friend_id"
     t.index ["user_id"], name: "index_friendships_on_user_id"
+  end
 
   create_table "gift_recommendations", force: :cascade do |t|
     t.bigint "product_id", null: false
@@ -40,7 +39,6 @@ ActiveRecord::Schema.define(version: 2021_09_23_103639) do
     t.bigint "session_id"
     t.index ["product_id"], name: "index_gift_recommendations_on_product_id"
     t.index ["session_id"], name: "index_gift_recommendations_on_session_id"
-
   end
 
   create_table "occasions", force: :cascade do |t|
@@ -98,10 +96,8 @@ ActiveRecord::Schema.define(version: 2021_09_23_103639) do
 
   add_foreign_key "friendships", "users"
   add_foreign_key "friendships", "users", column: "friend_id"
-
   add_foreign_key "gift_recommendations", "products"
   add_foreign_key "orders", "products"
-
   add_foreign_key "products", "categories"
   add_foreign_key "sessions", "orders"
   add_foreign_key "sessions", "users"

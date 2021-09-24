@@ -5,8 +5,15 @@ class FriendshipsController < ApplicationController
   def index
     @users = User.all
     @friend_list = Friendship.where(user: current_user,status: true) # current_user friend list
+    # @requests = Friendship.where(user: current_user,status: false)
+    # @invitations =  Friendship.where(friend: current_user,status: false)
+
+  end
+
+  def requests
     @requests = Friendship.where(user: current_user,status: false)
     @invitations =  Friendship.where(friend: current_user,status: false)
+
   end
 
   def show
@@ -15,8 +22,12 @@ class FriendshipsController < ApplicationController
   def create
     friend_to_add = User.find(params[:friend])
 
-    add_friend = Friendship.create(user: current_user,friend: friend_to_add)
+    @add_friend = Friendship.create(user: current_user,friend: friend_to_add)
     # inverse_friendship = Friendship.create(user: friend_to_add,friend: current_user)
+
+    if @add_friend.save
+      redirect_to friendships_path
+    end
   end
 
   def accept
