@@ -1,9 +1,0 @@
-
-<h1>Here are some gift suggestions for <%= @session.recipient.username  %></h1>
-<% @session.gift_recommendations.each do |recommendation| %>
-  <%= recommendation.product.image_url %>
-  <%= recommendation.product.name %>
-  <%= recommendation.product.description %>
-  $<%= recommendation.product.price %> <br>
-<% end %>
-<%= link_to "Check out now", sessions_path, class: "btn btn-ghost" %>
