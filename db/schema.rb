@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_24_073421) do
+ActiveRecord::Schema.define(version: 2021_09_24_091216) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -41,9 +41,9 @@ ActiveRecord::Schema.define(version: 2021_09_24_073421) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "quantity"
-    t.bigint "session_id"
+    t.bigint "gift_session_id"
+    t.index ["gift_session_id"], name: "index_gift_recommendations_on_gift_session_id"
     t.index ["product_id"], name: "index_gift_recommendations_on_product_id"
-    t.index ["session_id"], name: "index_gift_recommendations_on_session_id"
   end
 
   create_table "gift_sessions", force: :cascade do |t|

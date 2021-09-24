@@ -94,7 +94,7 @@ puts "Created #{Product.count} products"
 # ---- Create Users ---- #
 
 puts "creating users"
-100.times do |i|
+10.times do |i|
   User.create(
     # name: Faker::Name.name,
     address: Faker::Address.full_address,
