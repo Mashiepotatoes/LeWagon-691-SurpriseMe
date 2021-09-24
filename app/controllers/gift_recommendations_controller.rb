@@ -1,13 +1,10 @@
 class GiftRecommendationsController < ApplicationController
   def index
-    # @product = Product.first
-    # @gift_recommendation.product = product
-    @gift_recommendations = Gift_recommendation.all
+    @product = Product.first
   end
 
   def new
-    @session = Session.find(params[:session_id])
+    @session = Session.new
     @gift_recommendation.session = @session
-    binding.pry
   end
 end
