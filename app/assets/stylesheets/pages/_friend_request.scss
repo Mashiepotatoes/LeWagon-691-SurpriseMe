@@ -1,0 +1,47 @@
+// View sent request modal
+.request{
+  margin: 1rem 1rem;
+  padding: 0.5rem 0.5rem;
+  display:flex;
+  height:40px;
+  background-color: grey;
+}
+
+.request-name{
+  margin-left: 1rem;
+}
+//
+.friend-request-container{
+  margin:0.5rem 0;
+}
+
+.friend-request-rect{
+  background-color: rgb(201, 198, 198);
+  padding: 0.8rem 1rem;
+  margin: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.friend-request-photo{
+  width: 130px;
+  height:100px;
+  background-color: rgb(105, 104, 104);
+}
+
+.friend-request-photo > img {
+  width: 100%;
+
+}
+
+.friend-request-content{
+  padding: 0 0.8rem;
+  display:flex;
+  justify-content: space-between;
+  width:100%;
+}
+
+.accept-grp{
+  width: 100px;
+}

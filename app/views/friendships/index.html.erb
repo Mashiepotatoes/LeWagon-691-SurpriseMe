@@ -2,7 +2,7 @@
 
   <h1>Hello <%= current_user.username %></h1>
   <%# <--- Search bar ---> %>
-    <%= simple_form_for :friends_list, url: "#", method: :get do |f| %>
+    <%= simple_form_for :friendships, url: "/friendships/search", method: :get do |f| %>
       <div class="search-form-control mt-3 ">
         <input class="form-control required round-searchbar" type="text" name="query" id="query" placeholder="Find a friend"/>
         <button name="button" type="submit" class="button-none" >
@@ -10,79 +10,80 @@
         </button>
       </div>
     <% end %>
-  
 </div>
 
-<div class="container">
-  <h2>All users</h2>
-  <% @users.each do |user| %>
+<div class="friend-page-container">
+  <div class="friend-side-panel">
+    <p><%= link_to "Your friends", friendships_path%></p>
+    <p><%= link_to "Friend Request", friendships_requests_path%></p>
+    <p><%= link_to "Birthday reminder", "#"%></p>
+  </div>
 
-    <% unless user != current_user %>
+  <div class="friend-content container">
+     <h2 class="page-func">Your friend</h2>
+
+     <% if @friend_list.empty? %>
+
+      <div class="empty">
+        <p> You haven't addd any friend yet!</p>
+      </div>
 
     <% else %>
-      <div class="d-flex ">
-        <div>
-          <p><%= user.username %></p>
-        </div>
+      <% @friend_list.each do |friendship| %>
+        <div class="outside-card-product">
+          <div class="d-flex justify-content-between">
+            <div class="card-product">
+              <img class="avatar-large" alt="avatar-large" src="https://kitt.lewagon.com/placeholder/users/arthur-littm" />
+              <div class="card-product-infos">
+                <h2><%= friendship.friend.username %></h2>
+              </div>
+            </div>
+          </div>
+            <%# <--- when removing friend ---> %>
+          <div class="card-product-actions">
+            <%# <a href="#">Remove friend <i class="far fa-trash-alt"></i></a> %>
+          </div>
 
-        <div>
-          <% if user.id == 2 %>
-          <% if user.has_request(current_user) %>
-            <%= link_to "Accept request", friendships_path(friend: user),method: :post %>
-          <% else %>
-            <%= link_to "Send friend request",friendships_path(friend: user),method: :post %>
-          <% end %>
-          <%# <button class="btn btn-primary">Add friend</button> %>
+            <%# <--- to use for adding friend --->
+            <div class="card-product-actions">
+              <a href="#">Add friend <i class="fas fa-user-plus"></i></a>
+            </div> %>
         </div>
-      </div>
+      <% end %>
+
     <% end %>
+  </div>
+</div>
+<%# <div class="container">
+  <h2>All users</h2> %>
+  <%# @users.each do |user| %>
+
+    <%# unless user != current_user %>
+
+    <%# else %>
+
+          <%# <% if user.id == 2 %>
+          <%# <% if user.has_request(current_user) %>
+            <%# <%= link_to "Accept request", friendships_path(friend: user),method: :post %>
+          <%# <% else %>
+            <%# <%= link_to "Send friend request",friendships_path(friend: user),method: :post %>
+          <%# <% end %>
+          <%# <button class="btn btn-primary">Add friend</button> %>
+        <%# </div> %>
+      <%# </div> %>
+    <%# end %>
 
 
-  <% end %>
-
+  <%# end %>
+<%#
   <h2> pending invitation</h2>
   <% @invitations.each do |invite| %>
-    <%= invite.user.username %> <%= link_to "Accept", friendships_accept_path(invitation: invite), method: :post %>
-  <% end %>
+    <%#= invite.user.username %> <%#= link_to "Accept", friendships_accept_path(invitation: invite), method: :post %>
+  <%# end %>
+  <%# <hr> %>
 
-  <hr>
-
-  <h2>pending request</h2>
-  <ul>
-    <% @requests.each do |request| %>
-      <li><%= request.friend.username %></li>
-    <% end %>
-  </ul>
-
-  <hr>
-
-  <h2>Your friend</h2>
-  <ul>
+  <%# <ul>
   <% @friend_list.each do |friend| %>
-    <li><%= friend.friend.username %></li>
-  <% end %>
-  </ul>
-
-  <% current_user.friends.each do |friend| %>
-    <div class="outside-card-product">
-      <div class="d-flex justify-content-between">
-        <div class="card-product">
-          <img class="avatar-large" alt="avatar-large" src="https://kitt.lewagon.com/placeholder/users/arthur-littm" />
-          <div class="card-product-infos">
-            <h2><%= friend.username %></h2>
-          </div>
-        </div>
-      </div>
-        <%# <--- when removing friend ---> %>
-        <div class="card-product-actions">
-          <a href="#">Remove friend <i class="far fa-trash-alt"></i></a>
-        </div>
-
-
-        <%# <--- to use for adding friend --->
-        <div class="card-product-actions">
-          <a href="#">Add friend <i class="fas fa-user-plus"></i></a>
-        </div> %>
-    </div>
-  <% end %>
-</div>
+    <%# <li><%= friend.friend.username %></li>
+  <%# end %>
+  <%# </ul> %>

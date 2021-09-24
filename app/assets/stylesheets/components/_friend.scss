@@ -6,3 +6,50 @@
   justify-content: center;
   align-items: center;
 }
+
+// friend request
+.friend-list-card{
+  height: 150px;
+  display:grid;
+  grid-template-columns: 15% 40% 55%;
+  background-color: rgb(252, 227, 138);
+  border-radius: 10px;
+  // border: 5px solid #CDF0EA;
+}
+
+.profile-photo{
+  width: 100%;
+}
+
+.profile-name{
+  font-size: 1.5rem;
+  margin:auto 5px;
+}
+
+.birthday{
+  font-size:1rem;
+}
+
+.btn-group {
+  display: flex;
+  align-items: center;
+}
+
+.btn-a {
+ display: inline-block;
+ padding: 1rem 5rem;
+ margin-right: 1rem;
+ border-radius: 10px;
+ color: black;
+ background-color: rgb(234, 255, 208);
+ border: 5px solid rgb(149, 225, 211);
+}
+
+.btn-a:hover {
+  text-decoration: none;
+}
+
+.page-func{
+  margin: 0 1rem;
+}
+//
