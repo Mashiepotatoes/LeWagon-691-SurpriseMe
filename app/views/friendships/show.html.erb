@@ -39,7 +39,7 @@
 
       <% if @friend.friends.exists? %>
         <% if @friend.friends.include?(current_user) %>
-          <%= link_to "Send a gift", sessions_path(recipient_id: params[:id] ), method: :post, class: "btn btn-ghost" %>
+          <%= link_to "Send a gift", gift_sessions_path(recipient_id: params[:id] ), method: :post, class: "btn btn-ghost" %>
         <% end %>
       <% end %>
 
