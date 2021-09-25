@@ -1,9 +1,20 @@
 
 <h1>Here are some gift suggestions for <%= @gift_session.recipient.username  %></h1>
-<% @gift_session.gift_recommendations.each do |recommendation| %>
-  <%= recommendation.product.image_url %>
-  <%= recommendation.product.name %>
-  <%= recommendation.product.description %>
-  $<%= recommendation.product.price %> <br>
-<% end %>
-<%= link_to "Check out now", gift_sessions_path, class: "btn btn-ghost" %>
+
+<div class="container">
+  <% @gift_session.gift_recommendations.each do |recommendation| %>
+  <div class="card-gift">
+    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+    <div class="card-gift-infos">
+      <h2><%= recommendation.product.name %></h2>
+      <p>Product rating</p>
+      <p><%= recommendation.product.description %></p>
+    </div>
+    <h4>$100</h4>
+    <%# recommendation.product.price %>
+  </div>
+  <% end %>
+  <div class="gift-checkout">
+    <%= link_to "Check out now", gift_sessions_path, class: "btn btn-ghost" %>
+  </div>
+</div>
