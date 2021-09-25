@@ -30,8 +30,6 @@ class GiftSessionsController < ApplicationController
     end
   end
 
-  private
-
   def gift_params
     params.require(:gift_session).permit(:gift_session_id)
   end

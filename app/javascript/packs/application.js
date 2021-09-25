@@ -26,6 +26,9 @@ require("channels")
 import "bootstrap";
 import "controllers"
 
+// Checkbox Stimulus
+import 'controllers';
+
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 
