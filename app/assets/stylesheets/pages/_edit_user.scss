@@ -1,0 +1,27 @@
+.rect{
+  background-color: $surprise-green;
+  height: 150px;
+  position: relative;
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+  width: 150px;
+  position: relative;
+  top: 77px;
+  margin: 0 auto;
+}
+
+.edit-name{
+  margin-top: 6rem;
+  text-align: center;
+}
+
+.edit-profile-content{
+  border-radius: 10px;
+  width: 50%;
+  margin: 1.5rem auto;
+  padding: 2rem;
+  background-color: #fff;
+}
