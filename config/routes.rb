@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
   resources :friendships, only: [:index, :destroy, :create, :show]
 
-  resources :gift_sessions, only: [:new, :create, :show] do
+  resources :gift_sessions, only: [:new, :create, :show, :update] do
     resources :gift_recommendations, only: [:index]
   end
 end
