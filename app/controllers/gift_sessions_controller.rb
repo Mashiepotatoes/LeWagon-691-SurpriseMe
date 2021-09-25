@@ -21,6 +21,21 @@ class GiftSessionsController < ApplicationController
     # retrieve product name, price
   end
 
+  # this method is for selecting gift recommendations via checkbox stimulus
+  def update
+    if gift_session.update(gift_params)
+      redirect_to gift_sessions_path
+    else
+      render :edit
+    end
+  end
+
+  private
+
+  def gift_params
+    params.require(:gift_session).permit(:gift_session_id)
+  end
+
   def get_recommendations(gift_session)
     products = Product.all.sample(3)
     # map through products
