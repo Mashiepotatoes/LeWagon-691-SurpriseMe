@@ -6,26 +6,54 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  border-radius: 10px;
 }
 
 .card-product {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  width: 400px;
 }
 
-.card-product h2 {
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0;
+.photo-container{
+  width: 150px;
 }
 
-.card-product .card-product-infos {
+.photo-container > img {
+  width: 100%;
+}
+
+.card-product-infos{
   padding: 16px;
+  margin-left: 1rem;
+
+}
+
+.card-product-infos > a {
+  color: #000;
+}
+
+// friend card display name
+.friend-card-name {
+  font-size: 1.2rem;
+  color: #000;
+}
+
+.friend-card-name:hover{
+  color: rgb(72, 13, 13);
+  text-decoration: none;
+}
+// remove friend and send gift btn
+.friend-card-btns{
+  margin: 0 1rem;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
 }
 
 .outside-card-product .card-product-actions {
+  margin: 0 0.8rem;
   opacity: 0;
   display: flex;
   transition: ease .3s;
@@ -38,9 +66,10 @@
 .outside-card-product .card-product-actions a {
   color: #999999;
   margin-left: 16px;
-  font-size: 14px;
+  font-size: 1rem;
 }
 
 .outside-card-product .card-product-actions a:hover {
-  color: #555555;
+  color: #3b3939;
+  text-decoration: none;
 }

@@ -41,6 +41,7 @@ class FriendshipsController < ApplicationController
   end
 
   def destroy
-    raise
+    @request = Friendship.find(params["request"])
+    @request.destroy
   end
 end
