@@ -1,6 +1,7 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: #DEA5A4;
+  background: #ffffff;
+  box-shadow: 0 2px 5px rgba(198, 198, 198, 0.75);
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -9,12 +10,140 @@
 
 .navbar-lewagon .navbar-brand img {
   position: absolute;
-  top: -2px;
+  top: 12px;
   left: 20px;
-  width: 60px;
+  width: 140px;
 }
 
 // remove ul bullet //
 .list-style-none{
   list-style-type: none;
+}
+
+.nav-link {
+  color: $surprise-pink !important;
+}
+// navbar searchbar
+.nav-searchbar{
+  position:relative;
+  margin:0 30px 0 150px;
+  border: 1px solid #e4e3df;
+  border-radius: 10px;
+  box-shadow:inset 0 1px 3px rgba(0,0,0,0.3);
+  padding: 1px 1px;
+}
+
+// expand searchbar effect
+.nav-searchbar:hover{
+  width: 400px;
+}
+
+.rounded-input-field{
+  border: none;
+  margin: 0.2rem 0.4rem;
+}
+
+.rounded-input-field{
+  width: 80%;
+}
+
+.rounded-input-field:focus{
+  outline:none;
+}
+
+//search icon
+.icon-pink{
+  font-size: 1rem;
+  position: absolute;
+  top:10px;
+  right: 10px;
+  color: $surprise-pink;
+}
+
+// navbar height
+.navbar-height{
+  height: 100px;
+}
+
+//navbar item
+.nav-item-wrap{
+  margin-right: 0.8rem;
+  text-align:center;
+  padding: 0.8rem 0.8rem;
+}
+
+.nav-item-wrap:hover{
+  background-color: rgb(232, 231, 231);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.nav-icon{
+  font-size: 1.4rem;
+  color: $surprise-pink;
+}
+
+.nav-li{
+  margin-right: 1rem;
+}
+
+//-----------------------//
+
+.u-hover--sparkle {
+
+  box-sizing: border-box;
+  position: relative;
+  padding: 0.75em;
+  &::before,
+  &::after {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transform-origin: center;
+  }
+
+  &::before {
+    border-top: 0.2em solid $surprise-pink;
+    border-bottom: 0.2em solid $surprise-pink;
+    transform: scale3d(0,1,1);
+  }
+
+  &::after {
+    border-left: 0.2em solid $surprise-pink;
+    border-right: 0.2em solid $surprise-pink;
+    transform: scale3d(1,0,1);
+  }
+
+  &:hover::before,
+  &:hover::after {
+    transform: scale3d(1,1,1);
+    transition: transform 900ms;
+  }
+}
+
+.cust-nav-link{
+  display: block;
+  color: $surprise-pink;
+}
+
+.cust-nav-link:hover {
+  color: $surprise-pink;
+  text-decoration: none;
+}
+
+// <--------media-query ---------------> //
+
+
+
+// <------- medium screen -------------> //
+@media only screen and (max-width: 768px) {
+  //hide search bar
+  .nav-searchbar{
+    display: none;
+  }
+
 }
