@@ -18,4 +18,5 @@ class User < ApplicationRecord
 
   has_many :friendships
   has_many :friends, through: :friendships
+  has_one_attached :profile_photo
 end
