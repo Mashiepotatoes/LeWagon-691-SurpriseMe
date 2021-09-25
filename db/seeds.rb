@@ -101,7 +101,9 @@ puts "creating users"
     birthday: Faker::Date.birthday(min_age: 18, max_age: 65),
     username: Faker::Internet.username,
     email: Faker::Internet.email,
-    password: "123456"
+    password: "123456",
+    first_name: Faker::Name.first_name,
+    last_name: Faker::Name.last_name
     # password: Faker::Alphanumeric.alphanumeric(number: 10, min_alpha: 8)
   )
 end
