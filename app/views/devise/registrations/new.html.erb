@@ -40,6 +40,7 @@
         <%= f.input :birthday,
                     required: true,
                     autofocus: true,
+                    start_year: Date.today.year - 90,
                     input_html: { class:"input-styling"},
                     as: :date %>
 
@@ -57,6 +58,9 @@
         <%= f.input :password_confirmation,
                     required: true,
                     input_html: { autocomplete: "new-password",class:"input-styling" } %>
+
+      <%= f.input :profile_photo, as: :file %>
+
       </div>
 
       <div class="form-actions mt-5">
