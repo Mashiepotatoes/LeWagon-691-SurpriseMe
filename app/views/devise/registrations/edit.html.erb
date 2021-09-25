@@ -1,10 +1,10 @@
 <div class="rect">
   <div class="centered">
-    <%# <% if current_user.profile_photo.attached? %>
-      <%# <%= cl_image_tag current_user.profile_photo.key,crop: :fill, class: "avatar-large" %> %>
-    <%# <% else %> 
-      <%# <%= image_tag(asset_path("blank-profile-picture.png")),class: "avatar-large" %> %>
-    <%# <% end %>
+    <% if current_user.profile_photo.attached? %>
+       <%= cl_image_tag current_user.profile_photo.key,gravity: :face, crop: :crop ,class: "avatar-large" %>
+    <% else %>
+      <%= image_tag(asset_path("blank-profile-picture.png"), class: "avatar-large") %>
+    <% end %>
   </div>
 </div>
 
