@@ -3,4 +3,9 @@
   bottom: 16px;
   right: 16px;
   z-index: 1000;
+  background-color: rgb(254, 228, 182);
+}
+
+.alert > ul{
+  list-style-type: none;
 }
