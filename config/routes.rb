@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  get 'response_sets/index'
+  get 'response_sets/edit'
+  get 'response_sets/update'
+  get 'answers/create'
+  get 'questions/show'
   devise_for :users
   root to: 'pages#home'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
@@ -13,4 +18,8 @@ Rails.application.routes.draw do
   resources :gift_sessions, only: [:new, :create, :show] do
     resources :gift_recommendations, only: [:index]
   end
+
+  resources :questions, only: [:show]
+  resources :answers, only: [:create, :edit, :update]
+  resources :response_sets, only: [:index]
 end
