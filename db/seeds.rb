@@ -122,3 +122,6 @@ puts "created #{User.count} users"
 # end
 # puts "finished creating #{Order.count} orders"
 # puts "finished creating #{Review.count} reviews"
+
+# ---- Create Questions and Answers---- #
+q1 = Question.new()
