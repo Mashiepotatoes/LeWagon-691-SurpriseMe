@@ -1,35 +1,73 @@
-<div class="container w-50 p-5">
-  <h2>Sign up</h2>
+<div class="container form-container">
 
-  <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-    <%= f.error_notification %>
+  <h2 class="text-center mb-2">Sign up for SurpriseMe</h2>
+  <div class="d-flex justify-content-center m-4">
+    <p>Already a member?</p>
+    <%= link_to "Log in",new_user_session_path,class:"sign-in-text"%>
+  </div>
 
-    <div class="form-inputs">
+  <div class="sign-up-form">
+    <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= f.error_notification %>
 
-       <%= f.input :username,
-                  required: true,
-                  autofocus: true,
-                  input_html: { autocomplete: "username" }%>
+      <div class="form-inputs">
 
-      <%= f.input :email,
-                  required: true,
-                  autofocus: true,
-                  input_html: { autocomplete: "email" }%>
+        <%= f.input :username,
+                    required: true,
+                    input_html: { autocomplete: "username",class:"input-styling" }%>
 
-      <%= f.input :password,
-                  required: true,
-                  hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                  input_html: { autocomplete: "new-password" } %>
-      <%= f.input :password_confirmation,
-                  required: true,
-                  input_html: { autocomplete: "new-password" } %>
-    </div>
+        <div class="d-flex ">
+          <div class="flex-fill mr-2">
+            <%= f.input :first_name,
+                        required: true,
+                        autofocus: true,
+                        input_html: { autocomplete: "first name",class:"input-styling" }%>
+          </div>
 
-    <div class="form-actions">
-      <%= f.button :submit, "Sign up" %>
-    </div>
-  <% end %>
+          <div class="flex-fill ml-2">
+            <%= f.input :last_name,
+                        required: true,
+                        autofocus: true,
+                        input_html: { autocomplete: "last name",class:"input-styling" }%>
+          </div>
+        </div>
 
-  <%= render "users/shared/links" %>
+        <%= f.input :email,
+                    required: true,
+                    autofocus: true,
+                    input_html: { autocomplete: "email",class:"input-styling" }%>
+
+        <%= f.input :birthday,
+                    required: true,
+                    autofocus: true,
+                    start_year: Date.today.year - 90,
+                    input_html: { class:"input-styling"},
+                    as: :date %>
+
+        <%= f.input :address,
+                    required: true,
+                    autofocus: true,
+                    input_html: { autocomplete: "address",class:"input-styling" }%>
+
+
+        <%= f.input :password,
+                    required: true,
+                    hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                    input_html: { autocomplete: "new-password",class:"input-styling" } %>
+
+        <%= f.input :password_confirmation,
+                    required: true,
+                    input_html: { autocomplete: "new-password",class:"input-styling" } %>
+
+      <%= f.input :profile_photo, as: :file %>
+
+      </div>
+
+      <div class="form-actions mt-5">
+        <%= f.button :submit, "Sign up",class: "surprise-pink-btn" %>
+      </div>
+    <% end %>
+
+  </div>
 
 </div>

@@ -18,3 +18,24 @@
 .btn-ghost:hover {
   opacity: 1;
 }
+
+// surprise-green btn
+
+// surprise-pink btn
+.surprise-pink-btn{
+  color: #fff;
+  border-radius: 10px;
+  width: 100%;
+  padding: 0.5rem 0;
+  background-color: $surprise-pink;
+}
+
+.surprise-pink-btn:hover{
+  color:white;
+  background-color: rgb(231, 44, 112);
+}
+
+.btn-border-none{
+  border: none;
+  background-color: transparent;
+}

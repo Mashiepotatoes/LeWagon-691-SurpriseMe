@@ -94,14 +94,16 @@ puts "Created #{Product.count} products"
 # ---- Create Users ---- #
 
 puts "creating users"
-100.times do |i|
+10.times do |i|
   User.create(
     # name: Faker::Name.name,
     address: Faker::Address.full_address,
     birthday: Faker::Date.birthday(min_age: 18, max_age: 65),
     username: Faker::Internet.username,
     email: Faker::Internet.email,
-    password: "123456"
+    password: "123456",
+    first_name: Faker::Name.first_name,
+    last_name: Faker::Name.last_name
     # password: Faker::Alphanumeric.alphanumeric(number: 10, min_alpha: 8)
   )
 end

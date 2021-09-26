@@ -4,8 +4,10 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  # validates :address, presence: true, length: { minimum: 10 }
-  # validates :birthday, presence: true
+  validates :first_name, presence: true, length: {minimum:1}
+  validates :last_name, presence: true, length: {minimum:1}
+  validates :address, presence: true, length: { minimum: 10 }
+  validates :birthday, presence: true
 
   include PgSearch::Model
   pg_search_scope :search_by_username,
@@ -19,4 +21,5 @@ class User < ApplicationRecord
   has_many :response_sets
   has_many :answers, through: :response_sets
   has_many :questions, through: :response_sets
+  has_one_attached :profile_photo
 end

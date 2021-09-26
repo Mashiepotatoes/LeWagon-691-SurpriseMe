@@ -3,9 +3,18 @@
   border-radius: 50%;
 }
 .avatar-large {
-  width: 56px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 5px solid $surprise-pink;
+}
+
+.avatar-navbar {
+  height: 60px;
+  width: 60px;
   border-radius: 50%;
 }
+
 .avatar-bordered {
   width: 40px;
   border-radius: 50%;
