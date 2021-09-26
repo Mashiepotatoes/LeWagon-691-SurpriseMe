@@ -35,7 +35,7 @@ Category.destroy_all
 # Category.create(name: "Travelling")
 # console.log("Categories seeded!")
 
-# electronics = Category.create(name: "Electronics")
+electronics = Category.create(name: "Electronics")
 all_beauty = Category.create(name: "Beauty & Cosmetics")
 video_games = Category.create(name: "Video Games")
 cd_vinyl = Category.create(name: "CD & Vinyl Records")
@@ -110,17 +110,31 @@ end
 puts "created #{User.count} users"
 
 # ---- Create Orders and Reviews ---- #
-# puts "creating orders and reviews"
-# order_id = 1
-# until order_id == 500
-#   order = Order.create(product_id: Product.all.sample.id)
-#   review = Review.new(
-#     content: Product.all.sample.description,
-#     rating: (1..5).to_a.sample,
-#     order_id: order_id,
-#     user_id: User.all.sample.id)
-#   review.order = order
-#   review.save
-# end
-# puts "finished creating #{Order.count} orders"
-# puts "finished creating #{Review.count} reviews"
+puts "creating orders and reviews"
+order_id = 1
+until order_id == 500
+  order = Order.create(product_id: Product.all.sample.id)
+  review = Review.new(
+    content: Product.all.sample.description,
+    rating: (1..5).to_a.sample,
+    order_id: order_id,
+    user_id: User.all.sample.id)
+  review.order = order
+  review.save
+end
+puts "finished creating #{Order.count} orders"
+puts "finished creating #{Review.count} reviews"
+
+# ---- Create Questions ---- #
+file_path_questions = File.join(__dir__, "questions_dataset/questions.json")
+serialised_questions = File.read(file_path_questions)
+parsed_questions = JSON.parse(serialised_questions)
+
+parsed_questions.each do |question|
+  content = question["question"]
+  options = question["options"]
+  parent = question["parent"]
+  dependency = question["dependency"] # dependency value is the number of its parent qn
+
+  Question.create(content: content, options: options, parent: parent, dependency: dependency)
+end

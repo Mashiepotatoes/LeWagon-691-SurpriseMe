@@ -10,10 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_25_121935) do
+ActiveRecord::Schema.define(version: 2021_09_26_142641) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "answers", force: :cascade do |t|
+    t.string "choice", default: "{}"
+    t.bigint "question_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["question_id"], name: "index_answers_on_question_id"
+    t.index ["user_id"], name: "index_answers_on_user_id"
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -105,6 +114,24 @@ ActiveRecord::Schema.define(version: 2021_09_25_121935) do
     t.index ["category_id"], name: "index_products_on_category_id"
   end
 
+  create_table "questions", force: :cascade do |t|
+    t.string "content"
+    t.text "options", default: [], array: true
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "response_sets", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.bigint "answer_id", null: false
+    t.bigint "question_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["answer_id"], name: "index_response_sets_on_answer_id"
+    t.index ["question_id"], name: "index_response_sets_on_question_id"
+    t.index ["user_id"], name: "index_response_sets_on_user_id"
+  end
+
   create_table "reviews", force: :cascade do |t|
     t.string "content"
     t.integer "rating"
@@ -133,6 +160,8 @@ ActiveRecord::Schema.define(version: 2021_09_25_121935) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "answers", "questions"
+  add_foreign_key "answers", "users"
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "friendships", "users"
   add_foreign_key "friendships", "users", column: "friend_id"
@@ -142,6 +171,9 @@ ActiveRecord::Schema.define(version: 2021_09_25_121935) do
   add_foreign_key "gift_sessions", "users", column: "recipient_id"
   add_foreign_key "orders", "products"
   add_foreign_key "products", "categories"
+  add_foreign_key "response_sets", "answers"
+  add_foreign_key "response_sets", "questions"
+  add_foreign_key "response_sets", "users"
   add_foreign_key "reviews", "friendships"
   add_foreign_key "reviews", "orders"
 end
