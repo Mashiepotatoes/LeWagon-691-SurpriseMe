@@ -33,6 +33,7 @@ class FriendshipsController < ApplicationController
   end
 
   def search
+    @friendship = Friendship.all
     if params[:query].present?
       @users = User.search_by_username(params[:query])
     else
@@ -40,8 +41,19 @@ class FriendshipsController < ApplicationController
     end
   end
 
-  def destroy
-    @request = Friendship.find(params["request"])
+  def cancel
+    @request = Friendship.find(params[:id])
     @request.destroy
+    redirect_to friendships_requests_path
+  end
+
+  def destroy
+
+    @friendship = Friendship.find(params[:id]) #user: current_user
+    @another_friendship = Friendship.find_by user: @friendship.friend,friend:current_user
+    @another_friendship.destroy
+    @friendship.destroy
+    redirect_to friendships_path
+
   end
 end

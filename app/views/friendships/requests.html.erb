@@ -40,12 +40,12 @@
                   </div>
 
                   <div class="sent-request-name">
-                    <%= request.friend.username %>
+                    <p><%= request.friend.first_name %><%= request.friend.last_name %></p>
                   </div>
                 </div>
 
                 <div class="sent-cancel-request">
-                  <%= link_to "Cancel", friendships_accept_path(request: request) ,method: :delete %>
+                  <%= link_to "Cancel", request_cancel_path(request) ,method: :delete %>
                 </div>
               </div>
 
@@ -61,45 +61,45 @@
     </div>
 <!------- End of modal -- ----->
 
-  <div class="friend-request-container">
-
-    <% @invitations.each do |invitation| %>
-      <div class="outside-card-product">
-        <div class="card-product">
-          <div class="photo-container">
-            <% if invitation.user.profile_photo.attached? %>
-              <%= cl_image_tag invitation.user.profile_photo.key,gravity: :face, crop: :crop,height: 120, width: 100 %>
-            <% else %>
-              <%= image_tag(asset_path("blank-profile-picture.png"),height: 120, width: 100) %>
-              <%# <%= cl_image_tag("qef3hpwpcsezqvzin6g0.png"), height: 60, width: 60,crop: :fill, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-            <% end %>
-          </div>
-          <div class="card-product-infos">
-            <% last_n = invitation.user.last_name %>
-            <% first_n = invitation.user.first_name %>
-            <strong><%= link_to last_n  , friendship_path(invitation.user),class:"friend-card-name" %></strong>
-          </div>
+      <% if @invitations.empty? %>
+        <div class="outside-card-product">
+          <p style="margin:auto"> You don't have any friend request for now !</p>
         </div>
+      <% else %>
+        <% @invitations.each do |invitation| %>
+          <div class="outside-card-product">
+            <div class="card-product">
+              <div class="photo-container">
+                <% if invitation.user.profile_photo.attached? %>
+                  <%= cl_image_tag invitation.user.profile_photo.key,gravity: :face, crop: :crop,height: 120, width: 100 %>
+                <% else %>
+                  <%= image_tag(asset_path("blank-profile-picture.png"),height: 120, width: 100) %>
+                  <%# <%= cl_image_tag("qef3hpwpcsezqvzin6g0.png"), height: 60, width: 60,crop: :fill, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+                <% end %>
+              </div>
+              <div class="card-product-infos">
+                <strong><%= link_to friendship_path(invitation.user),class:"friend-card-name" do %>
+                  <p><%= invitation.user.first_name %> <%= invitation.user.last_name %></p>
+                  <% end %>
+                </strong>
+              </div>
+            </div>
 
-        <div class="friend-card-btns">
-          <div class="card-product-actions">
-            <%= link_to friendships_accept_path(invitation: invitation) ,method: :post do %>
-              Accept <i class="fas fa-user-check"></i>
-            <% end %>
+            <div class="friend-card-btns">
+              <div class="card-product-actions">
+                <%= link_to friendships_accept_path(invitation: invitation) ,method: :post do %>
+                  Accept <i class="fas fa-user-check"></i>
+                <% end %>
+              </div>
+
+              <div class="card-product-actions">
+                <%= link_to request_cancel_path(invitation) ,method: :delete do %>
+                  Cancel <i class="fas fa-user-slash"></i>
+                <% end %>
+              </div>
+            </div>
           </div>
-
-          <div class="card-product-actions">
-            <%= link_to friendships_accept_path(request: invitation) ,method: :delete do %>
-              Cancel <i class="fas fa-user-slash"></i>
-            <% end %>
-          </div>
-        </div>
-
-
-
-      </div>
-    <% end %>
-
+        <% end %>
+      <% end %>
   </div>
-
 </div>
