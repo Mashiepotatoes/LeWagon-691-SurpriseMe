@@ -27,6 +27,11 @@ import "bootstrap";
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
+import { Application } from "stimulus"
+import ScrollTo from "stimulus-scroll-to"
+
+const application = Application.start()
+application.register("scroll-to", ScrollTo)
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:

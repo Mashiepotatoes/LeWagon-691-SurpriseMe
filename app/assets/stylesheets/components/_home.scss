@@ -1,7 +1,7 @@
 .image-tag {
-  opacity: 0.5;
   position: relative;
   width: 100%;
+  filter: brightness(80%)
 }
 
 .tagline {
@@ -11,5 +11,44 @@
   align-items: center;
   top: 550px;
   left: 450px;
-  color:#404A4F;
+  color:white;
+}
+
+.tagline a {
+  color: white;
+}
+
+.desc-1 {
+  position: absolute;
+  top: 1150px;
+  left: 50px;
+  width: 300px;
+  font-size: 15px;
+  color: white;
+}
+
+.desc-2 {
+  position: absolute;
+  top: 1250px;
+  left: 450px;
+  width: 300px;
+  font-size: 15px;
+  color: white;
+}
+
+.desc-3 {
+  position: absolute;
+  top: 1150px;
+  left: 950px;
+  width: 300px;
+  font-size: 15px;
+  color: white;
+}
+
+.fa-arrow-circle-up {
+  font-size: 40px;
+  color: white;
+  position: absolute;
+  bottom: -1160px;
+  right: 40px;
 }
