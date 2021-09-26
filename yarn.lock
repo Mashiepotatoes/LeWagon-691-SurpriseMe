@@ -7024,6 +7024,11 @@ stimulus-checkbox-select-all@^4.0.0:
   resolved "https://registry.yarnpkg.com/stimulus-checkbox-select-all/-/stimulus-checkbox-select-all-4.0.0.tgz#2e710e5eb0f9f744519ad267eca164cfa1766332"
   integrity sha512-Pmb/FHVNQm7vS1jdnPrY4/KP44fyK3Z87BWIcAJxdZGkQrVro8+s1LL0VsHvfx3by8ApJ9GcUCX6X1yvOvR8iw==
 
+stimulus-scroll-to@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/stimulus-scroll-to/-/stimulus-scroll-to-3.0.0.tgz#e30ceaffe5c524d1f767f5be4bac6bffa9925b2c"
+  integrity sha512-0YMISBjkSxkT57/TR0blxMtz6GuHmolph+kLocIH5ptW03wM032r6y24qGhd2FKt+MJyDHPAdxFkidLf1WG5eQ==
+
 stream-browserify@^2.0.1:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/stream-browserify/-/stream-browserify-2.0.2.tgz#87521d38a44aa7ee91ce1cd2a47df0cb49dd660b"
