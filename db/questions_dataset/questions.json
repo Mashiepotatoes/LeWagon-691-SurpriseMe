@@ -2,7 +2,7 @@
   {"question": "Do you have a pet?", "options": ["Yes", "No"], "parent": 1, "dependency": 0 },
   {"question": "Do you enjoy dressing your pet up?", "options": ["Yes", "No"], "parent": 0, "dependency": 1},
   {"question": "Which of these toys does your pet enjoy playing with?", "options": ["Soft Toy", "Chew Toy", "Feather on a stick", "Bone"], "parent": 0, "dependency": 1},
-  {"question": "Do you exercise with your pet?", "options": ["Yes", "No"], "parent": 0, "dependency": 0},
+  {"question": "Do you exercise with your pet?", "options": ["Yes", "No"], "parent": 0, "dependency": 1},
   {"question": "Do you enjoy doing outdoor activities?", "options": ["Yes", "No"], "parent": 2, "dependency": 0},
   {"question": "Do you feel more at ease on land, at sea, or in air?", "options": ["land", "sea", "air"], "parent": 0, "dependency": 2},
   {"question": "Do you enjoy group activities?", "options": ["Yes", "No"], "parent": 1, "dependency": 2}

@@ -16,6 +16,7 @@ class User < ApplicationRecord
 
   has_many :friendships
   has_many :friends, through: :friendships
-  has_many :question_answer_sets
-  has_many :answers, through: :question_answer_sets
+  has_many :response_sets
+  has_many :answers, through: :response_sets
+  has_many :questions, through: :response_sets
 end

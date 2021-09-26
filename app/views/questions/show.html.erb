@@ -1,2 +1,13 @@
-<h1>Questions#show</h1>
-<p>Find me in app/views/questions/show.html.erb</p>
+
+<div class="page-container d-flex justify-content-center align-items-center">
+  <div class="page-container-inner d-block justify-content-center align-items-center">
+    <div><h1><%= @question.content %></h1></div>
+    <div>
+      <!-- form for submitting answers -->
+      <%= simple_form_for [@question, @answer] do |f| %>
+      <%= f.input :choice, as: :radio_buttons, collection: @question.options %>
+      <%= f.button :submit %>
+      <% end %>
+    </div>
+  </div>
+</div>
