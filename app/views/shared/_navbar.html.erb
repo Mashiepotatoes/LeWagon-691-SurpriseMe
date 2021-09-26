@@ -9,20 +9,19 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <%= simple_form_for :friendships, url: "/friendships/search", method: :get do |f| %>
-      <div class="nav-searchbar">
-        <input class="required rounded-input-field" type="text" name="query" id="query" placeholder="Seach for member..."/>
-        <button name="button" type="submit" class="button-none ml-3" >
-          <i class="fas fa-search navbar-search-icon icon-pink"></i>
-        </button>
-      </div>
-    <% end %>
-
   </div>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class=" mr-auto d-flex align-items-center mb-0 list-style-none">
         <% if user_signed_in? %>
+          <%= simple_form_for :friendships, url: "/friendships/search", method: :get do |f| %>
+            <div class="nav-searchbar">
+              <input class="required rounded-input-field" type="text" name="query" id="query" placeholder="Seach for member..."/>
+              <button name="button" type="submit" class="button-none ml-3" >
+                <i class="fas fa-search navbar-search-icon icon-pink"></i>
+              </button>
+            </div>
+          <% end %>
 
           <li class="nav-item active list-style-none nav-item-wrap">
             <i class="fas fa-home nav-icon"></i>
@@ -55,7 +54,7 @@
           <li class="nav-item nav-li">
             <%= link_to "Login", new_user_session_path, class: "nav-link sparkle u-hover--sparkle" %>
           </li>
-          <li class="nav-item nav-li ">
+          <li class="nav-item nav-li">
             <%= link_to "Sign up", new_user_registration_path, class: "nav-link sparkle u-hover--sparkle" %>
           </li>
         <% end %>

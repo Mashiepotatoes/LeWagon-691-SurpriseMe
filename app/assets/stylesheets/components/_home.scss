@@ -1,0 +1,15 @@
+.image-tag {
+  opacity: 0.5;
+  position: relative;
+  width: 100%;
+}
+
+.tagline {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 550px;
+  left: 450px;
+  color:#404A4F;
+}
