@@ -15,6 +15,7 @@ class GiftSessionsController < ApplicationController
     @gift_session.recipient = User.find(params[:recipient_id])
     @gift_session.budget = params[:gift_session][:budget]
     @gift_session.save
+
     @gift_session.gift_recommendations = get_recommendations(@gift_session)
     redirect_to gift_session_path(@gift_session.id) if @gift_session.save
     # call gift recommendation model
@@ -24,6 +25,7 @@ class GiftSessionsController < ApplicationController
   def get_recommendations(gift_session)
     # products = Product.all.sample(3)
     # # map through products
+    recommendations_array = Product.curate(gift_session)
     recommender = Disco::Recommender.new
     recommender.fit(recommendations_array)
     recommender.item_recs(user_id)
