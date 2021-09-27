@@ -1,35 +1,25 @@
-<%# <%= form_with model: @gift_session, data: { controller: 'checkbox-select-all' } do |f| %>
-  <%# <label> %>
-    <%# <input type="checkbox" data-checkbox-select-all-target="checkboxAll" /> %>
-    <%# <span>Select All / Deselect All</span> %>
-  <%# </label> %>
-
-  <%# <%= f.collection_check_boxes :gift_recommendation_ids, GiftRecommendation.all, :id, :product_id do |b| %>
-    <%# <%= b.label do %>
-      <%# <%= b.check_box data: { target_checkbox_select_all: 'checkbox' } %>
-      <%# <%= b.text %>
-    <%# <% end %>
-  <%# <% end %>
-<%# <% end %>
-
 <div class="container">
-  <h1>Here are some gift suggestions for <%= @gift_session.recipient.username  %></h1>
-  <div class="form-check">
-    <input id="check-all" type="checkbox" data-check-all-checkboxes-target="checkbox" data-action="change->check-all-checkboxes#checkAll">
-    <label for="check-all">Select All</label>
-  </div>
-  <% @gift_session.gift_recommendations.each do |recommendation| %>
-  <div class="card-gift">
-    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-    <div class="card-gift-infos">
-      <h2><%= recommendation.product.name %></h2>
-      <p>Product rating</p>
-      <p><%= recommendation.product.description %></p>
+  <h2 class='mt-4'>Here are some gift suggestions for <%= @gift_session.recipient.username  %></h2>
+  <form class='mt-2'data-controller='check-all-checkboxes'>
+    <div class="form-check pl-0">
+      <input id="check-all" type="checkbox" data-check-all-checkboxes-target="checkbox" data-action="change->check-all-checkboxes#checkAll">
+      <label for="check-all">Select All</label>
     </div>
-    <h4>$100</h4>
-    <%# recommendation.product.price %>
-  </div>
+    <% @gift_session.gift_recommendations.each do |recommendation| %>
+    <div class="card-gift form-check">
+      <input id='checkbox-product' type="checkbox" class="form-check-input" data-check-all-checkboxes-target="check3box">
+      <label for='checkbox-product'></label>
+      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+      <div class="card-gift-infos">
+        <h2><%= recommendation.product.name %></h2>
+        <p>Product rating</p>
+        <p><%= recommendation.product.description %></p>
+      </div>
+      <h4>$100</h4>
+      <%# recommendation.product.price %>
+    </div>
   <% end %>
+  </form>
   <div class="gift-checkout">
     <%= link_to "Check out now", gift_sessions_path, class: "btn btn-ghost" %>
   </div>
