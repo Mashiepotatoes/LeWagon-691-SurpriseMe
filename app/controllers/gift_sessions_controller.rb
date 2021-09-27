@@ -27,11 +27,21 @@ class GiftSessionsController < ApplicationController
     # # map through products
     recommendations_array = Product.curate(gift_session)
     recommender = Disco::Recommender.new
-    recommender.fit(recommendations_array)
-    recommender.item_recs(user_id)
-      products.map do |product|
-        GiftRecommendation.create(product: product, gift_session: gift_session)
-      end
+    recommendations = format_results(recommendations_array, gift_session)
+    recommender.fit(recommendations)
+    products = recommender.item_recs(user_id)
+    products.map do |product|
+      GiftRecommendation.create(product: product, gift_session: gift_session)
+    end
+  end
+
+  def format_results(products, gift_session)
+    products.map do |product|
+      {
+        user_id: gift_session.user_id,
+        item_id: product.id,
+        rating: product.rating
+      }
     end
   end
 end
