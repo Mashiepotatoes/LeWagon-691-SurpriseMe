@@ -22,11 +22,15 @@ Rails.application.routes.draw do
     resources :gift_recommendations, only: [:index]
   end
 
-  resources :orders, only: [:show, :create]
+  resources :orders, only: [:show, :create] do
+    resources :payments, only: :new
+  end
 
   resources :questions, only: [:show] do
     resources :answers, only: [:create, :edit, :update]
   end
 
   resources :response_sets, only: [:index]
+
+  mount StripeEvent::Engine, at: '/stripe-webhooks'
 end

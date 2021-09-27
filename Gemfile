@@ -66,3 +66,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # For stripe
 gem 'money-rails'
 gem 'stripe'
+gem 'stripe_event'
