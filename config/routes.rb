@@ -18,6 +18,8 @@ Rails.application.routes.draw do
     resources :gift_recommendations, only: [:index]
   end
 
+  resources :orders, only: [:show, :create]
+
   resources :questions, only: [:show] do
     resources :answers, only: [:create, :edit, :update]
   end
