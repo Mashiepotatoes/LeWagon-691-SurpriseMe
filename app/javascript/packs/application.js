@@ -34,7 +34,6 @@ import ScrollTo from "stimulus-scroll-to"
 const application = Application.start()
 application.register("scroll-to", ScrollTo)
 
-import { Application } from "stimulus"
 import CheckboxSelectAll from "stimulus-checkbox-select-all"
 
 const application = Application.start()
