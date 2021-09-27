@@ -20,21 +20,21 @@
     <div class="card-user-product">
       <div class="cards">
         <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
-          Gift 1
+          Occasion 1
         </div>
 
         <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/lunch.jpg)">
-         Gift 2
+         Occasion 2
         </div>
 
         <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/dinner.jpg)">
-          Gift 3
+          Occasion 3
         </div>
       </div>
     </div>
     <div class="card-user-budget">
       <label for="customRange1" class="form-label">Budget</label>
-      <input type="range" class="form-range" id="price_range">
+      <input type="range" min="10" max="1000" class="form-range" id="price_range">
       <br>
 
     <% if @friend_list %>
