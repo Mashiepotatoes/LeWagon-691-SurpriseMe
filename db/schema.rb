@@ -10,6 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 2021_09_26_132729) do
 
   # These are extensions that must be enabled in order to support this database
@@ -139,11 +140,11 @@ ActiveRecord::Schema.define(version: 2021_09_26_132729) do
     t.string "content"
     t.integer "rating"
     t.bigint "order_id", null: false
-    t.bigint "friendship_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["friendship_id"], name: "index_reviews_on_friendship_id"
+    t.bigint "user_id"
     t.index ["order_id"], name: "index_reviews_on_order_id"
+    t.index ["user_id"], name: "index_reviews_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -177,6 +178,6 @@ ActiveRecord::Schema.define(version: 2021_09_26_132729) do
   add_foreign_key "response_sets", "answers"
   add_foreign_key "response_sets", "questions"
   add_foreign_key "response_sets", "users"
-  add_foreign_key "reviews", "friendships"
   add_foreign_key "reviews", "orders"
+  add_foreign_key "reviews", "users"
 end
