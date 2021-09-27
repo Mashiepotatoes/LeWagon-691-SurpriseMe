@@ -22,10 +22,14 @@ class GiftSessionsController < ApplicationController
   end
 
   def get_recommendations(gift_session)
-    products = Product.all.sample(3)
-    # map through products
-    products.map do |product|
-      GiftRecommendation.create(product: product, gift_session: gift_session)
+    # products = Product.all.sample(3)
+    # # map through products
+    recommender = Disco::Recommender.new
+    recommender.fit(recommendations_array)
+    recommender.item_recs(user_id)
+      products.map do |product|
+        GiftRecommendation.create(product: product, gift_session: gift_session)
+      end
     end
   end
 end

@@ -24,7 +24,7 @@ class AnswersController < ApplicationController
     end
 
     # If user has finished answering all questions, redirect to response_sets index
-    if @possible_questions.empty? 
+    if @possible_questions.empty?
       redirect_to response_sets_path
     else
       @random_question = @possible_questions.sample
