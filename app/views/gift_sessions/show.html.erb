@@ -26,11 +26,24 @@
       <p>Product rating</p>
       <p><%= recommendation.product.description %></p>
     </div>
-    <h4>$100</h4>
+
+    <h4><%= recommendation.product.price %></h4>
+
+    <div data-controller="quantity" data-quantity-target='wrapper' data-product-id=<%= recommendation.product.id %> >
+      <button data-action="click->quantity#reduce">-</button>
+      <p data-quantity-target="total"> 0 </p>
+      <button data-action="click->quantity#add">+</button>
+
+      <%# <%= button_to "-", reduce_path(:product_id => recommendation.product.id), data: {action: "click->quantity#reduce"} %>
+      <%# <p data-quantity-target="total"> 0 </p> %>
+      <%# <%= button_to "+", line_items_path(:product_id => recommendation.product.id), data: {action: "click->quantity#add"} %> 
+    </div>
+
+
     <%# recommendation.product.price %>
   </div>
   <% end %>
   <div class="gift-checkout">
-    <%= link_to "Check out now", gift_sessions_path, class: "btn btn-ghost" %>
+    <%= link_to "View cart", cart_path(@current_cart), class: "btn btn-ghost" %>
   </div>
 </div>
