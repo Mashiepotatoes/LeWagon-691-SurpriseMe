@@ -30,15 +30,11 @@ import "controllers"
 // import { initSelect2 } from '../components/init_select2';
 import { Application } from "stimulus"
 import ScrollTo from "stimulus-scroll-to"
-
-const application = Application.start()
-application.register("scroll-to", ScrollTo)
-
 import CheckboxSelectAll from "stimulus-checkbox-select-all"
 
 const application = Application.start()
+application.register("scroll-to", ScrollTo)
 application.register("checkbox-select-all", CheckboxSelectAll)
-
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
