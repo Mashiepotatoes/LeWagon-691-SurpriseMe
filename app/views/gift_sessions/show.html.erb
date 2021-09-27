@@ -1,7 +1,7 @@
 <div class="container">
-  <h1 class='mt-4'>Here are some gift suggestions for <%= @gift_session.recipient.username  %></h1>
+  <h2 class='mt-4'>Here are some gift suggestions for <%= @gift_session.recipient.username  %></h2>
   <form class='mt-2'data-controller='check-all-checkboxes'>
-    <div class="form-check">
+    <div class="form-check pl-0">
       <input id="check-all" type="checkbox" data-check-all-checkboxes-target="checkbox" data-action="change->check-all-checkboxes#checkAll">
       <label for="check-all">Select All</label>
     </div>
