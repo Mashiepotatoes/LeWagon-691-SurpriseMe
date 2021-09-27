@@ -25,7 +25,7 @@ class FriendshipsController < ApplicationController
   end
 
   def accept
-    @invitation = Friendship.find(params[:invitation])
+    @invitation = Friendship.find(params[:format])
     @invitation.status = true
     @invitation.save
 
