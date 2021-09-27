@@ -118,7 +118,8 @@ until order_id == 500
     content: Product.all.sample.description,
     rating: (1..5).to_a.sample,
     order_id: order_id,
-    user_id: User.all.sample.id)
+    user_id: User.all.sample.id
+    )
   review.order = order
   review.save
 end
