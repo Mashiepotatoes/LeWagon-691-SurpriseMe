@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
+  devise_scope :user do
+    get '/users/sign_out' => 'devise/sessions#destroy'
+  end
 
   devise_scope :user do
     get '/users/sign_out' => 'devise/sessions#destroy'
@@ -18,6 +21,8 @@ Rails.application.routes.draw do
   resources :gift_sessions, only: [:new, :create, :show, :update] do
     resources :gift_recommendations, only: [:index]
   end
+
+  resources :orders, only: [:show, :create]
 
   resources :questions, only: [:show] do
     resources :answers, only: [:create, :edit, :update]
