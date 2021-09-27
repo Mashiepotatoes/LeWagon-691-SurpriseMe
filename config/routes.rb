@@ -31,4 +31,6 @@ Rails.application.routes.draw do
   end
 
   resources :response_sets, only: [:index]
+
+  mount StripeEvent::Engine, at: '/stripe-webhooks'
 end
