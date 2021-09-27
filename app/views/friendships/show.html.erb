@@ -17,29 +17,34 @@
 
       </div>
     </div>
-    <div class="card-user-product">
-      <div class="cards">
-        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
-          Occasion 1
-        </div>
+    <div class="simple_form">
+      <%= simple_form_for @gift_session do |f| %>
+        <div class="card-user-product">
+          <div class="cards">
+            <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+              Occasion 1
+            </div>
 
-        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/lunch.jpg)">
-         Occasion 2
-        </div>
+            <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/lunch.jpg)">
+            Occasion 2
+            </div>
 
-        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/dinner.jpg)">
-          Occasion 3
+            <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/dinner.jpg)">
+              Occasion 3
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-    <div class="card-user-budget">
-        <label for="budget" class="form-label"></label>
-        0 <input type="range" min="10" max="1000" value="500" class="slider" id="price_range"> 1000
-        <p>Price: <span id="selected_range"></span></p>
-        
-      <% if @friend_list %>
-          <%= link_to "Send a gift", gift_sessions_path(recipient_id: params[:id]), method: :post, class: "btn btn-ghost" %>
+        <div class="card-user-budget">
+          <%# <label for="budget" class="form-label"></label> %>
+          0 <%= f.range_field :budget, min: 10, max: 1000, value: 500, class:"slider", id:"price_range" %> 1000
+              <p>Price: <span id="selected_range"></span></p>
+              <%= hidden_field_tag 'recipient_id', params[:id] %>
+            <%= f.button  :submit, 'Send a gift', class: "btn btn-ghost" %>
       <% end %>
+        <%# <% if @friend_list %>
+            <%# <%= link_to "Send a gift", gift_sessions_path(recipient_id: params[:id]), method: :post, class: "btn btn-ghost"  %>
+        <%# <% end %>
+      </div>
     </div>
 
     <%# <a class="" href="#">Write a story</a> %>
