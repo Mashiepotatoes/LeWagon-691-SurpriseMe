@@ -28,6 +28,8 @@ import "controllers"
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
+
+// <---- stimulus --->
 import { Application } from "stimulus"
 import ScrollTo from "stimulus-scroll-to"
 import CheckboxSelectAll from "stimulus-checkbox-select-all"
