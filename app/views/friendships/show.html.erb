@@ -37,11 +37,9 @@
       <input type="range" class="form-range" id="customRange1">
       <br>
 
-      <% if @friend.friends.exists? %>
-        <% if @friend.friends.include?(current_user) %>
-          <%= link_to "Send a gift", gift_sessions_path(recipient_id: params[:id] ), method: :post, class: "btn btn-ghost" %>
-        <% end %>
-      <% end %>
+    <% if @friend_list %>
+        <%= link_to "Send a gift", gift_sessions_path(recipient_id: params[:id]), method: :post, class: "btn btn-ghost" %>
+    <% end %>
 
     </div>
     <%# <a class="" href="#">Write a story</a> %>
