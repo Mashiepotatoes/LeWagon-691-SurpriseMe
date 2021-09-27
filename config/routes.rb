@@ -38,6 +38,6 @@ Rails.application.routes.draw do
   resources :response_sets, only: [:index]
 
   mount StripeEvent::Engine, at: '/stripe-webhooks'
-  resources :rating
+  resources :rating, only: [:create]
 end
 
