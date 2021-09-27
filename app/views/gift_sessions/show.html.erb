@@ -6,23 +6,21 @@
       <label for="check-all">Select All</label>
     </div>
     <% @gift_session.gift_recommendations.each do |recommendation| %>
-    <div class="card-gift form-check">
-      <input id='checkbox-product' type="checkbox" class="form-check-input" data-check-all-checkboxes-target="check3box">
-      <label for='checkbox-product'></label>
-      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-      <div class="card-gift-infos">
-        <h2><%= recommendation.product.name %></h2>
-        <p>Product rating</p>
-        <p><%= recommendation.product.description %></p>
+      <% if recommendation.product.price <= @gift_session.budget %>
+      <div class="card-gift form-check">
+        <input id='checkbox-product' type="checkbox" class="form-check-input" data-check-all-checkboxes-target="check3box">
+        <label for='checkbox-product'></label>
+        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+        <div class="card-gift-infos">
+          <h2><%= recommendation.product.name %></h2>
+          <p>Product rating</p>
+          <p><%= recommendation.product.description %></p>
+        </div>
+        <h4><%= recommendation.product.price %></h4>
+        <%# recommendation.product.price <= the "selected_range" id %>
       </div>
-      <h4>$100</h4>
-      <%# recommendation.product.price %>
-    </div>
-    <h4><%= recommendation.product.price %></h4>
-    <%# recommendation.product.price <= the "selected_range" id %>
-  </div>
-
-  <% end %>
+      <% end %>
+    <% end %>
   </form>
   <div class="gift-checkout">
     <%= link_to "Check out now", gift_sessions_path, class: "btn btn-ghost" %>
