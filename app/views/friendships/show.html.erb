@@ -33,15 +33,15 @@
       </div>
     </div>
     <div class="card-user-budget">
-      <label for="customRange1" class="form-label">Budget</label>
-      <input type="range" min="10" max="1000" class="form-range" id="price_range">
-      <br>
-
-    <% if @friend_list %>
-        <%= link_to "Send a gift", gift_sessions_path(recipient_id: params[:id]), method: :post, class: "btn btn-ghost" %>
-    <% end %>
-
+        <label for="budget" class="form-label"></label>
+        0 <input type="range" min="10" max="1000" value="500" class="slider" id="price_range"> 1000
+        <p>Price: <span id="selected_range"></span></p>
+        
+      <% if @friend_list %>
+          <%= link_to "Send a gift", gift_sessions_path(recipient_id: params[:id]), method: :post, class: "btn btn-ghost" %>
+      <% end %>
     </div>
+
     <%# <a class="" href="#">Write a story</a> %>
   </div>
 </div>

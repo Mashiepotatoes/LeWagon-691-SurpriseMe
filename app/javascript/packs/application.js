@@ -31,6 +31,7 @@ import 'controllers';
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
+import { initSlider } from '../plugins/init_Slider';
 
 // <---- stimulus --->
 import { Application } from "stimulus"
@@ -44,4 +45,5 @@ application.register("checkbox-select-all", CheckboxSelectAll)
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
+  initSlider();
 });

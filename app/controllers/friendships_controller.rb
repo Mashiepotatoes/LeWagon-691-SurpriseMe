@@ -21,11 +21,10 @@ class FriendshipsController < ApplicationController
     friend_to_add = User.find(params["format"])
     @add_friend = Friendship.create(user: current_user,friend: friend_to_add)
     redirect_to friendships_path
-
   end
 
   def accept
-    @invitation = Friendship.find(params[:invitation])
+    @invitation = Friendship.find(params[:format])
     @invitation.status = true
     @invitation.save
 
