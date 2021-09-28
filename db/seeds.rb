@@ -2,6 +2,7 @@ require 'json'
 require 'open-uri'
 require 'faker'
 
+<<<<<<< HEAD
 Product.destroy_all
 Category.destroy_all
 
@@ -22,6 +23,14 @@ category = Category.find(1)
 # Product.create(image_url:"https://source.unsplash.com/random",category:category,name: "Wheeled Golf Travel Cover Bag for Airlines Shipping Storage Carrier Black", price: 49.23, details: "Premium Nylon cloth golf bag travel golf club protector, dustproof, folding, lightweight and durable, can be used many times. Suitable for car or air transport. The bottom is equipped with non-slip foot pads, pulley design, easy towing. Half open double sided zipper for easy use, transparent pocket for your business card. Unique foldable design, convenient storage, suitable for outing use.")
 # Product.create(image_url:"https://source.unsplash.com/random",category:category,name: "LYY_Dual-purpose Folding Camping Beach Chair with Backrest for Outdoor Activities", price: 55.30, details: "The side pocket design can place mobile phones or other objects. Concave-convex pattern design can easily cope with a variety of grounds. The non-slip plastic foot cover prevents slipping. Aluminum alloy folding bracket is light, strong and not easy to deform, and high-density double-layer Oxford cloth is durable, comfortable, breathable and not stuffy. The length of the product is 82cm, the width is 44cm, and the thickness is 30cm. It is suitable for picnic, camping, fishing, traveling, outing, etc.")
 # Product.create(image_url:"https://source.unsplash.com/random",category:category,name: "Bicycle Wall Hook Stand Bike Mounted Mount Storage Hanger Adjustable activity Rack", price: 8.13, details: "Features: Bicycle Wall Mount Hanger for hanging the bike vertically to save space. Made of strong solid steel,load capacity up to 30kg. Fits on any solid wall. Four mounting points and side special design make fasten sturdy. Suitable for all type bikes like Mountain bikes,road bikes,folding bikes etc. Specification: Load Capacity: 30kg. Material: High Quality Strong Steel, High Graded Rubber. Product dimensions (L x W x H): 26 x 7.5 x 13.5cm")
+=======
+# Product.destroy_all
+# Category.destroy_all
+# Order.destroy_all
+# Rating.destroy_all
+# Question.destroy_all
+
+>>>>>>> create some fake data for disco gem
 # console.log("Products seeded!")
 
 # console.log("Seeding categories!")
@@ -86,7 +95,7 @@ parsed_datasets.each do |dataset|
     brand = product["brand"]
     price = product["price"]
 
-    product = Product.new(name: name, description: description, price: price.to_s, image_url: image_url, brand: brand)
+    product = Product.new(name: name, description: description, price: price, image_url: image_url, brand: brand)
     product.category = categories[categories_index]
     product.save!
   end
@@ -113,21 +122,20 @@ end
 puts "created #{User.count} users"
 
 # ---- Create Orders and Reviews ---- #
-puts "creating orders and reviews"
-order_id = 1
-until order_id == 500
+puts "creating orders and ratings"
+# order_id = 1
+# until order_id == 500
+500.times do |i|
   order = Order.create(product_id: Product.all.sample.id)
-  review = Review.new(
-    content: Product.all.sample.description,
-    rating: (1..5).to_a.sample,
-    order_id: order_id,
-    user_id: User.all.sample.id
-    )
-  review.order = order
-  review.save
+  # rating = Rating).to_a.sample,
+  #   order_id: order_id,
+  #   user_id: User.all.sample.id
+  #   )
+  # rating.order = order
+  # rating.save
 end
 puts "finished creating #{Order.count} orders"
-puts "finished creating #{Review.count} reviews"
+# puts "finished creating #{Review.count} ratings"
 
 # ---- Create Questions ---- #
 file_path_questions = File.join(__dir__, "questions_dataset/questions.json")

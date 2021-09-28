@@ -1,7 +1,4 @@
 Rails.application.routes.draw do
-  get 'products/index'
-  get 'products/new'
-  get 'products/edit'
   devise_for :users
   devise_scope :user do
     get '/users/sign_out' => 'devise/sessions#destroy'
@@ -41,5 +38,6 @@ Rails.application.routes.draw do
   resources :response_sets, only: [:index]
 
   mount StripeEvent::Engine, at: '/stripe-webhooks'
+  resources :rating, only: [:create]
 end
 
