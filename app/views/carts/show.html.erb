@@ -58,7 +58,10 @@
       </div>
     </div>
 
-        <button class="checkout">Checkout</button>
+        <%= form_tag orders_path do %>
+          <%= hidden_field_tag 'cart_id', @current_cart.id %>
+          <%= submit_tag 'Purchase', class: 'btn btn-primary' %>
+        <% end %>
 
   </div>
 </div>

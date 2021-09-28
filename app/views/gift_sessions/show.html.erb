@@ -17,7 +17,8 @@
           <p>Product rating</p>
           <p><%= recommendation.product.description %></p>
         </div>
-        <h4>$<%= recommendation.product.price_cents %></h4>
+
+        <h4><%= humanized_money_with_symbol(recommendation.product.price) %></h4>
 
         <div data-controller="quantity" data-quantity-target='wrapper' data-product-id=<%= recommendation.product.id %> >
           <button data-action="click->quantity#reduce">-</button>
@@ -25,6 +26,8 @@
           <button data-action="click->quantity#add">+</button>
         </div>
       </div>
+
+
 
     <% end %>
   </form>

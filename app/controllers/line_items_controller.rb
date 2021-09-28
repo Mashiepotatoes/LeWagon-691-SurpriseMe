@@ -12,7 +12,9 @@ class LineItemsController < ApplicationController
       @line_item.product = chosen_product
     end
 
+    # @line_item.amount = @line_item.quantity * chosen_product.price
     @line_item.save
+    raise
 
     # How do we check that the line item was saved?
     # what is the total line_item count now?
@@ -29,6 +31,7 @@ class LineItemsController < ApplicationController
       @line_item = current_cart.line_items.find_by(product: chosen_product)
       if @line_item.quantity > 0
           @line_item.quantity = @line_item.quantity - 1
+          # @line_item.amount = @line_item.quantity * chosen_product.price
           @line_item.save
       end
       if @line_item.quantity == 0
