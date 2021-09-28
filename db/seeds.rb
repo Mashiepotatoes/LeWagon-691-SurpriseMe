@@ -53,6 +53,9 @@ video_games = Category.create(name: "Video Games")
 cd_vinyl = Category.create(name: "CD & Vinyl Records")
 pet_essentials = Category.create(name: "Pet Essentials")
 toys_games = Category.create(name: "Toys & Games")
+fashion = Category.create(name: "Fashion")
+home_kitchen = Category.create(name: "Home & Lifestyle")
+sports_outdoors = Category.create(name: "Outdoor Activities")
 # home_lifestyle = Category.create(name: "Home & Lifestyle")
 
 # ---- Amazon all_beauty Seeds ---- #
@@ -81,9 +84,33 @@ file_path_tg = File.join(__dir__, "amazon_datasets/toys_games.json")
 serialised_toys_games = File.read(file_path_tg)
 parsed_toys_games = JSON.parse(serialised_toys_games)
 
+# ---- Amazon electronics seeds ---- #
+
+file_path_tg = File.join(__dir__, "amazon_datasets/electronics.json")
+serialised_electronics = File.read(file_path_tg)
+parsed_electronics = JSON.parse(serialised_electronics)
+
+# ---- Amazon fashion seeds ---- #
+
+file_path_tg = File.join(__dir__, "amazon_datasets/fashion.json")
+serialised_fashion = File.read(file_path_tg)
+parsed_fashion = JSON.parse(serialised_fashion)
+
+# ---- Amazon home_kitchen seeds ---- #
+
+file_path_tg = File.join(__dir__, "amazon_datasets/home_kitchen.json")
+serialised_home_kitchen = File.read(file_path_tg)
+parsed_home_kitchen = JSON.parse(serialised_home_kitchen)
+
+# ---- Amazon sports_outdoors seeds ---- #
+
+file_path_tg = File.join(__dir__, "amazon_datasets/sports_outdoors.json")
+serialised_sports_outdoors = File.read(file_path_tg)
+parsed_sports_outdoors = JSON.parse(serialised_sports_outdoors)
+
 # ---- seeding ---- #
-parsed_datasets = [parsed_all_beauty, parsed_video_games, parsed_pet_supplies, parsed_cd_vinyl, parsed_toys_games]
-categories = [all_beauty, video_games, cd_vinyl, pet_essentials, toys_games]
+parsed_datasets = [parsed_all_beauty, parsed_video_games, parsed_pet_supplies, parsed_cd_vinyl, parsed_toys_games, parsed_electronics, parsed_fashion, parsed_home_kitchen, parsed_sports_outdoors]
+categories = [all_beauty, video_games, cd_vinyl, pet_essentials, toys_games, electronics, fashion, home_kitchen, sports_outdoors]
 
 puts "Creating products"
 categories_index = 0
