@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   devise_scope :user do
     get '/users/sign_out' => 'devise/sessions#destroy'
   end
+
   root to: 'pages#home'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
@@ -29,9 +30,15 @@ Rails.application.routes.draw do
 
   resources :products
 
+  resources :orders, only: [:show, :create] do
+    resources :payments, only: :new
+  end
+
   resources :questions, only: [:show] do
     resources :answers, only: [:create, :edit, :update]
   end
 
   resources :response_sets, only: [:index]
+
+  mount StripeEvent::Engine, at: '/stripe-webhooks'
 end

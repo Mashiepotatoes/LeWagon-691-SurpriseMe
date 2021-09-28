@@ -15,13 +15,13 @@ class FriendshipsController < ApplicationController
   def show
     @friend = User.find(params[:id])
     @friend_list = Friendship.where(user: current_user, friend_id: @friend)
+    @gift_session = GiftSession.new
   end
 
   def create
     friend_to_add = User.find(params["format"])
     @add_friend = Friendship.create(user: current_user,friend: friend_to_add)
     redirect_to friendships_path
-
   end
 
   def accept
