@@ -23,9 +23,21 @@ class GiftSessionsController < ApplicationController
   end
 
   def get_recommendations(gift_session)
-    recommendations_array = Product.curate(gift_session)
+    recommendations_array = Product.curate(gift_session) # filter by price
     recommender = Disco::Recommender.new
-    recommendations = format_results(recommendations_array, gift_session)
+    # recommendations = format_results(recommendations_array,  gift_session)
+    recommendations = ([
+      {user_id: 1, item_id: 1, rating: 5},
+      {user_id: 2, item_id: 1, rating: 5},
+      {user_id: 1, item_id: 2, rating: 5},
+      {user_id: 2, item_id: 2, rating: 5},
+      {user_id: 1, item_id: 3, rating: 5},
+      {user_id: 2, item_id: 3, rating: 5},
+      {user_id: 1, item_id: 4, rating: 5},
+      {user_id: 2, item_id: 4, rating: 5},
+      {user_id: 1, item_id: 5, rating: 5},
+      {user_id: 2, item_id: 5, rating: 5}
+  ])
     recommender.fit(recommendations)
     products = recommender.user_recs(user_id)
     products.map do |product|
@@ -36,7 +48,7 @@ class GiftSessionsController < ApplicationController
   def format_results(products)
     products.map do |product|
       {
-        user_id: gift_session.user_id,
+        user_id: gift_session.recipient_id,
         item_id: product.id,
         rating: product.rating
       }
