@@ -50,10 +50,8 @@
               <p>Price: <span id="selected_range"></span></p>
               <%= hidden_field_tag 'recipient_id', params[:id] %>
             <%= f.button  :submit, 'Send a gift', class: "btn btn-ghost" %>
+        </div>
       <% end %>
-        <%# <% if @friend_list %>
-            <%# <%= link_to "Send a gift", gift_sessions_path(recipient_id: params[:id]), method: :post, class: "btn btn-ghost"  %>
-        <%# <% end %>
       </div>
     </div>
   </div>
