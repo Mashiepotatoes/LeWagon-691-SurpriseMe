@@ -43,6 +43,7 @@ class GiftSessionsController < ApplicationController
     products.map do |product|
       GiftRecommendation.create(product: product, gift_session: gift_session)
     end
+
   end
 
   def format_results(products)

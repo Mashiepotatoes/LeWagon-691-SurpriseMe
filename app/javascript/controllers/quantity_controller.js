@@ -4,16 +4,14 @@ import {csrfToken} from "@rails/ujs"
 export default class extends Controller {
   static targets = ["total", "wrapper"]
 
-  // connect() {
-  //   console.log("quantity connected")
-  // }
+  connect() {
+    console.log("Hello from Stimulus");
+  }
 
   add(e) {
     e.preventDefault();
     let productId = this.wrapperTarget.dataset.productId;
-    // const quantity = parseInt(this.totalTarget.textContent)
-    // this.totalTarget.textContent = quantity + 1
-    // fetch result from our add route
+
     fetch(`/line_items?product_id=${productId}`, {
       method: "POST",
       headers: {

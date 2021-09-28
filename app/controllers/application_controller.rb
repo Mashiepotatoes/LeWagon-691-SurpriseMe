@@ -14,9 +14,11 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit(:account_update) { |u| u.permit(:username, :first_name, :last_name, :email, :password, :current_password, :birthday, :address, :profile_photo ) }
   end
 
+  private
+
   def current_cart
     if session[:cart_id]
-      cart = Cart.find(session[:cart_id])
+      cart = Cart.find_by(:id => session[:cart_id])
       if cart.present?
         @current_cart = cart
       else
