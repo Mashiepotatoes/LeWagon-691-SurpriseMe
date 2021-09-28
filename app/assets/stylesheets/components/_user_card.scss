@@ -15,6 +15,11 @@
   padding: 60px 16px 0px 16px;
 }
 
+.fa-user-friends {
+  color: #DEA5A4;
+  opacity: 0.5;
+}
+
 .fa-user-plus {
   color: #DEA5A4;
   opacity: 0.5;
@@ -72,9 +77,17 @@
 // card-user-product //
 .simple_form {
   width: 100%;
+  background-color: white;
 }
 .card-user-product {
   width: 100%;
+}
+
+.card-user-product p {
+  width: 100%;
+  background-color: white;
+  text-align: center;
+  font-size: 24px;
 }
 
 .cards {
