@@ -35,15 +35,15 @@
 
           <li class="nav-item active list-style-none nav-item-wrap">
             <i class="fas fa-shopping-cart nav-icon"></i>
-            <%= link_to "My cart", root_path, class: "cust-nav-link" %>
+            <%= link_to "My cart", cart_path(@current_cart), class: "cust-nav-link" %>
           </li>
 
           <li class="nav-item dropdown ml-3">
             <% if current_user.profile_photo.attached? %>
               <%= cl_image_tag current_user.profile_photo.key,gravity: :face, crop: :crop, class: "avatar-navbar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <% else %>
-              <%= image_tag(asset_path("blank-profile-picture.png"),height: 100, width: 100,class: "avatar-navbar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false) %>
-              <%# <%= cl_image_tag("qef3hpwpcsezqvzin6g0.png"), height: 60, width: 60,crop: :fill, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+              <%= image_tag("https://res.cloudinary.com/trueice/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,b_rgb:262c35/v1632549894/qef3hpwpcsezqvzin6g0.png",height: 100, width: 100,class: "avatar-navbar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false) %>
+              <%# <%= cl_image_tag("qef3hpwpcsezqvzin6g0") %>
             <% end %>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
               <%= link_to "My Profile", edit_user_registration_path, class: "dropdown-item" %>
