@@ -20,8 +20,8 @@
     <div class="simple_form">
       <%= simple_form_for @gift_session do |f| %>
         <div class="card-user-product">
-        <%= f.input :occasion, as: :radio_buttons %>
           <div class="cards">
+            <%= f.association :occasion, as: :radio_buttons %>
             <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/dncp2x5qh/image/upload/v1632818696/nina-mercado-CnrDuY0tFrg-unsplash_ktdxgl.jpg)">
               General
             </div>

@@ -97,6 +97,9 @@ ActiveRecord::Schema.define(version: 2021_09_29_031758) do
     t.bigint "recipient_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "{:null=>false, :foreign_key=>true}_id"
+    t.bigint "occasions_id", null: false
+    t.index ["occasions_id"], name: "index_gift_sessions_on_occasions_id"
     t.index ["order_id"], name: "index_gift_sessions_on_order_id"
     t.index ["recipient_id"], name: "index_gift_sessions_on_recipient_id"
     t.index ["user_id"], name: "index_gift_sessions_on_user_id"
@@ -132,15 +135,6 @@ ActiveRecord::Schema.define(version: 2021_09_29_031758) do
     t.index ["cart_id"], name: "index_orders_on_cart_id"
     t.index ["product_id"], name: "index_orders_on_product_id"
     t.index ["user_id"], name: "index_orders_on_user_id"
-  end
-
-  create_table "product_occasions", force: :cascade do |t|
-    t.bigint "products_id"
-    t.bigint "occasions_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["occasions_id"], name: "index_product_occasions_on_occasions_id"
-    t.index ["products_id"], name: "index_product_occasions_on_products_id"
   end
 
   create_table "products", force: :cascade do |t|
@@ -214,6 +208,7 @@ ActiveRecord::Schema.define(version: 2021_09_29_031758) do
   add_foreign_key "friendships", "users"
   add_foreign_key "friendships", "users", column: "friend_id"
   add_foreign_key "gift_recommendations", "products"
+  add_foreign_key "gift_sessions", "occasions", column: "occasions_id"
   add_foreign_key "gift_sessions", "orders"
   add_foreign_key "gift_sessions", "users"
   add_foreign_key "gift_sessions", "users", column: "recipient_id"

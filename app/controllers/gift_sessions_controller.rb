@@ -13,8 +13,10 @@ class GiftSessionsController < ApplicationController
     @gift_session = GiftSession.new # current user id
     @gift_session.user = current_user # recipient id
     @gift_session.recipient = User.find(params[:recipient_id])
+    @gift_session.occasion = "Christmas"
     @gift_session.budget = params[:gift_session][:budget]
     @gift_session.save
+    raise
 
     redirect_to gift_session_path(@gift_session.id) if @gift_session.save
   end
