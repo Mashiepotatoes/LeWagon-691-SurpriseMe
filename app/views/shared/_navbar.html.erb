@@ -1,3 +1,4 @@
+
 <div class="navbar-height navbar sticky-top navbar-expand-sm navbar-light navbar-lewagon d-flex justify-content-end">
 
   <div class="d-flex align-items-center">
@@ -9,19 +10,20 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
+    <%= simple_form_for :friendships, url: "/friendships/search", method: :get do |f| %>
+      <div class="nav-searchbar">
+        <input class="required rounded-input-field" type="text" name="query" id="query" placeholder="Seach for member..."/>
+        <button name="button" type="submit" class="button-none ml-3" >
+          <i class="fas fa-search navbar-search-icon icon-pink"></i>
+        </button>
+      </div>
+    <% end %>
+
   </div>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class=" mr-auto d-flex align-items-center mb-0 list-style-none">
         <% if user_signed_in? %>
-          <%= simple_form_for :friendships, url: "/friendships/search", method: :get do |f| %>
-            <div class="nav-searchbar">
-              <input class="required rounded-input-field" type="text" name="query" id="query" placeholder="Seach for member..."/>
-              <button name="button" type="submit" class="button-none ml-3" >
-                <i class="fas fa-search navbar-search-icon icon-pink"></i>
-              </button>
-            </div>
-          <% end %>
 
           <li class="nav-item active list-style-none nav-item-wrap">
             <i class="fas fa-home nav-icon"></i>
@@ -35,15 +37,15 @@
 
           <li class="nav-item active list-style-none nav-item-wrap">
             <i class="fas fa-shopping-cart nav-icon"></i>
-            <%= link_to "My cart", cart_path(@current_cart), class: "cust-nav-link" %>
+            <%= link_to "My cart", root_path, class: "cust-nav-link" %>
           </li>
 
           <li class="nav-item dropdown ml-3">
             <% if current_user.profile_photo.attached? %>
-              <%= cl_image_tag current_user.profile_photo.key,gravity: :face, crop: :crop, class: "avatar-navbar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+              <%= cl_image_tag current_user.profile_photo.key, class: "avatar-navbar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <% else %>
-              <%= image_tag("https://res.cloudinary.com/trueice/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,b_rgb:262c35/v1632549894/qef3hpwpcsezqvzin6g0.png",height: 100, width: 100,class: "avatar-navbar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false) %>
-              <%# <%= cl_image_tag("qef3hpwpcsezqvzin6g0") %>
+              <%= image_tag(asset_path("blank-profile-picture.png"),class: "avatar-navbar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false) %>
+              <%# <%= cl_image_tag("qef3hpwpcsezqvzin6g0.png"), height: 60, width: 60,crop: :fill, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
             <% end %>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
               <%= link_to "My Profile", edit_user_registration_path, class: "dropdown-item" %>
@@ -52,10 +54,10 @@
           </li>
         <% else %>
           <li class="nav-item nav-li">
-            <%= link_to "Login", new_user_session_path, class: "nav-link sparkle u-hover--sparkle" %>
+            <%= link_to "Login", new_user_session_path, class: "nav-link" %>
           </li>
-          <li class="nav-item nav-li">
-            <%= link_to "Sign up", new_user_registration_path, class: "nav-link sparkle u-hover--sparkle" %>
+          <li class="nav-item nav-li ">
+            <%= link_to "Sign up", new_user_registration_path, class: "nav-link" %>
           </li>
         <% end %>
     </div>
