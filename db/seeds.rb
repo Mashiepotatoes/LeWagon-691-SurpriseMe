@@ -78,12 +78,11 @@ parsed_datasets.each do |dataset|
   dataset.each do |product|
     name = product["title"]
     description = product["description"].join
-    asin = product["asin"] # product number
     image_url = product["imageUrlHighRes"]
     brand = product["brand"]
     price = product["price"]
 
-    product = Product.new(name: name, description: description, price: price.to_s, asin: asin, image_url: image_url, brand: brand)
+    product = Product.new(name: name, description: description, price: price.to_s, image_url: image_url, brand: brand)
     product.category = categories[categories_index]
     product.save!
   end
