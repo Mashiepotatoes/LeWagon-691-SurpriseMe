@@ -1,79 +1,64 @@
-<h1>Shopping Cart</h1>
+<div class="container">
+  <h1>Your Cart</h1>
 
-<div class="shopping-cart">
+  <div class="shopping-cart">
 
-  <div class="column-labels">
-    <label class="product-image">Image</label>
-    <label class="product-details">Product</label>
-    <label class="product-price">Price</label>
-    <label class="product-quantity">Quantity</label>
-    <label class="product-removal">Remove</label>
-    <label class="product-line-price">Total</label>
-  </div>
-
-  <% @cart.line_items.each do |line_item| %>
-    <div class="product">
-      <div class="product-image">
-        <%# <%= image_tag line_item.product.image_url%> %>
-      </div>
-      <div class="product-details">
-        <div class="product-title"><%= line_item.product.name %></div>
-        <p class="product-description"><%= line_item.product.description %></p>
-      </div>
-      <div class="product-price"><%= line_item.product.price %></div>
-      <div class="product-quantity">
-        <%= line_item.quantity %>
-      </div>
-      <div class="product-removal">
-        <button class="remove-product">
-          Remove
-        </button>
-      </div>
-      <div class="product-line-price"><%= line_item.product.price * line_item.quantity %></div>
+    <div class="column-labels">
+      <label class="product-image">Image</label>
+      <label class="product-details">Product</label>
+      <label class="product-price">Price</label>
+      <label class="product-quantity">Quantity</label>
+      <label class="product-removal">Remove</label>
+      <label class="product-line-price">Total</label>
     </div>
-  <% end %>
 
-
-  <div class="totals">
-    <div class="totals-item">
-      <label>Subtotal</label>
-      <div class="totals-value" id="cart-subtotal">71.97</div>
-    </div>
-    <div class="totals-item">
-      <label>Tax (5%)</label>
-      <div class="totals-value" id="cart-tax">3.60</div>
-    </div>
-    <div class="totals-item">
-      <label>Shipping</label>
-      <div class="totals-value" id="cart-shipping">15.00</div>
-    </div>
-    <div class="totals-item totals-item-total">
-      <label>Grand Total</label>
-      <div class="totals-value" id="cart-total">90.57</div>
-    </div>
-  </div>
-
-      <button class="checkout">Checkout</button>
-
-</div>
-<%#
-<h1>Cart</h1>
-
-<ul>
+    <% total = 0 %>
 
     <% @cart.line_items.each do |line_item| %>
-      <%# <li>
-        <% quantity = line_item.quantity %>
-        <%# <p><%= line_item.product.name</p> %>
-        <%# <p><%=# line_item.quantity</p> %>
-        <%# <p><%= line_item.product.price  * quantity</p> %>
-      <%# </li> %>
+      <div class="product">
+        <div class="product-image">
+          <%= image_tag line_item.product.image_url %>
+        </div>
+        <div class="product-details">
+          <div class="product-title"><%= line_item.product.name %></div>
 
-      <%# <%= link_to "Remove item", line_items_path(line_item), method: :delete %>
-    <%# <% end %>
+        </div>
+        <div class="product-price"><%= line_item.product.price %></div>
+        <div class="product-quantity">
+          <%= line_item.quantity %>
+        </div>
+        <div class="product-removal">
+          <%= button_to "Remove",line_items_path(id: line_item),method: :delete ,class: "remove-product"%>
+          <%# <button class="remove-product">
+            Remove
+          </button> %>
+        </div>
+        <% total += line_item.product.price * line_item.quantity %>
+        <div class="product-line-price"><%= line_item.product.price * line_item.quantity %></div>
+      </div>
+    <% end %>
 
-<%# </ul>
 
-<button class="btn btn-primary">
-  Pay now
-</button> %>
+    <div class="totals">
+      <div class="totals-item">
+        <label>Subtotal</label>
+        <div class="totals-value" id="cart-subtotal"></div>
+      </div>
+      <div class="totals-item">
+        <label>Tax (7%)</label>
+        <div class="totals-value" id="cart-tax"><%total *0.07%></div>
+      </div>
+      <div class="totals-item">
+        <label>Shipping</label>
+        <div class="totals-value" id="cart-shipping">15.00</div>
+      </div>
+      <div class="totals-item totals-item-total">
+        <label>Grand Total</label>
+        <div class="totals-value" id="cart-total"><%= total %></div>
+      </div>
+    </div>
+
+        <button class="checkout">Checkout</button>
+
+  </div>
+</div>

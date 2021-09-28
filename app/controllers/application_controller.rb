@@ -16,12 +16,13 @@ class ApplicationController < ActionController::Base
 
   def current_cart
     if session[:cart_id]
-      cart = Cart.find_by(:id => session[:cart_id])
+      cart = Cart.find(session[:cart_id])
       if cart.present?
         @current_cart = cart
       else
         session[:cart_id] = nil
       end
+
     end
 
     if session[:cart_id] == nil

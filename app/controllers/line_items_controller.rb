@@ -1,6 +1,5 @@
 class LineItemsController < ApplicationController
   def create
-    # binding.pry
     chosen_product = Product.find(params["product_id"])
     current_cart = @current_cart
 
@@ -43,7 +42,7 @@ class LineItemsController < ApplicationController
   end
 
   def destroy
-    @line_item = LineItem.find(params["format"])
+    @line_item = LineItem.find(params[:id])
     @line_item.destroy
     redirect_to cart_path(@current_cart)
   end
