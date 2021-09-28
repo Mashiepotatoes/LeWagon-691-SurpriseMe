@@ -134,6 +134,15 @@ ActiveRecord::Schema.define(version: 2021_09_29_031758) do
     t.index ["user_id"], name: "index_orders_on_user_id"
   end
 
+  create_table "product_occasions", force: :cascade do |t|
+    t.bigint "products_id"
+    t.bigint "occasions_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["occasions_id"], name: "index_product_occasions_on_occasions_id"
+    t.index ["products_id"], name: "index_product_occasions_on_products_id"
+  end
+
   create_table "products", force: :cascade do |t|
     t.string "name"
     t.integer "price"
@@ -211,6 +220,8 @@ ActiveRecord::Schema.define(version: 2021_09_29_031758) do
   add_foreign_key "orders", "carts"
   add_foreign_key "orders", "products"
   add_foreign_key "orders", "users"
+  add_foreign_key "product_occasions", "occasions", column: "occasions_id"
+  add_foreign_key "product_occasions", "products", column: "products_id"
   add_foreign_key "products", "categories"
   add_foreign_key "ratings", "gift_sessions"
   add_foreign_key "ratings", "products"
