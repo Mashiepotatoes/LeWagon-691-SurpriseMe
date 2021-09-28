@@ -1,7 +1,12 @@
 .image-tag {
   position: relative;
   width: 100%;
-  filter: brightness(80%)
+  filter: brightness(80%);
+  filter: grayscale(60%);
+}
+
+.image-tag:hover {
+  filter: grayscale(0);
 }
 
 .tagline {
