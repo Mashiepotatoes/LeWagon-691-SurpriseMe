@@ -12,6 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2021_09_28_062032) do
 
+
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -84,9 +85,11 @@ ActiveRecord::Schema.define(version: 2021_09_28_062032) do
     t.bigint "recipient_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "{:null=>false, :foreign_key=>true}_id"
     t.index ["order_id"], name: "index_gift_sessions_on_order_id"
     t.index ["recipient_id"], name: "index_gift_sessions_on_recipient_id"
     t.index ["user_id"], name: "index_gift_sessions_on_user_id"
+    t.index ["{:null=>false, :foreign_key=>true}_id"], name: "index_gift_sessions_on_{:null=>false, :foreign_key=>true}_id"
   end
 
   create_table "line_items", force: :cascade do |t|
@@ -144,6 +147,14 @@ ActiveRecord::Schema.define(version: 2021_09_28_062032) do
     t.integer "dependency"
   end
 
+  create_table "ratings", force: :cascade do |t|
+    t.integer "rating"
+    t.bigint "orders_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["orders_id"], name: "index_ratings_on_orders_id"
+  end
+
   create_table "response_sets", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.bigint "answer_id", null: false
@@ -153,17 +164,6 @@ ActiveRecord::Schema.define(version: 2021_09_28_062032) do
     t.index ["answer_id"], name: "index_response_sets_on_answer_id"
     t.index ["question_id"], name: "index_response_sets_on_question_id"
     t.index ["user_id"], name: "index_response_sets_on_user_id"
-  end
-
-  create_table "reviews", force: :cascade do |t|
-    t.string "content"
-    t.integer "rating"
-    t.bigint "order_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.bigint "user_id"
-    t.index ["order_id"], name: "index_reviews_on_order_id"
-    t.index ["user_id"], name: "index_reviews_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -179,8 +179,10 @@ ActiveRecord::Schema.define(version: 2021_09_28_062032) do
     t.string "username"
     t.string "first_name"
     t.string "last_name"
+    t.bigint "{:null=>false, :foreign_key=>true}_id"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+    t.index ["{:null=>false, :foreign_key=>true}_id"], name: "index_users_on_{:null=>false, :foreign_key=>true}_id"
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
@@ -196,9 +198,8 @@ ActiveRecord::Schema.define(version: 2021_09_28_062032) do
   add_foreign_key "orders", "products"
   add_foreign_key "orders", "users"
   add_foreign_key "products", "categories"
+  add_foreign_key "ratings", "orders", column: "orders_id"
   add_foreign_key "response_sets", "answers"
   add_foreign_key "response_sets", "questions"
   add_foreign_key "response_sets", "users"
-  add_foreign_key "reviews", "orders"
-  add_foreign_key "reviews", "users"
 end

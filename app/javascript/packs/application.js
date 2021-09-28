@@ -25,6 +25,7 @@ require("channels")
 // External imports
 import "bootstrap";
 import "controllers"
+import { initStarRating } from '../plugins/init_star_rating';
 
 // Checkbox Stimulus
 import 'controllers';
@@ -46,4 +47,5 @@ document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
   initSlider();
+  initStarRating();
 });

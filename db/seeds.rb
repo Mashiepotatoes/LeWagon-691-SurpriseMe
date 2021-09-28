@@ -5,8 +5,6 @@ require 'faker'
 Product.destroy_all
 Category.destroy_all
 
-Category.create(name: "Electronics")
-category = Category.find(1)
 # ------ Jeremy and PE seeds ----- #
 # console.log("Seeding products!")
 Product.create(image_url:"https://source.unsplash.com/random",category:category, name: "Xiaomi Mi Vacuum Cleaner Mini", price_cents: 6990, description: "A small-format wireless hand vacuum cleaner. It has two speeds, so you can adapt it to everything you need. Light and portable.")
@@ -22,77 +20,86 @@ Product.create(image_url:"https://source.unsplash.com/random",category:category,
 # Product.create(image_url:"https://source.unsplash.com/random",category:category,name: "Wheeled Golf Travel Cover Bag for Airlines Shipping Storage Carrier Black", price: 49.23, details: "Premium Nylon cloth golf bag travel golf club protector, dustproof, folding, lightweight and durable, can be used many times. Suitable for car or air transport. The bottom is equipped with non-slip foot pads, pulley design, easy towing. Half open double sided zipper for easy use, transparent pocket for your business card. Unique foldable design, convenient storage, suitable for outing use.")
 # Product.create(image_url:"https://source.unsplash.com/random",category:category,name: "LYY_Dual-purpose Folding Camping Beach Chair with Backrest for Outdoor Activities", price: 55.30, details: "The side pocket design can place mobile phones or other objects. Concave-convex pattern design can easily cope with a variety of grounds. The non-slip plastic foot cover prevents slipping. Aluminum alloy folding bracket is light, strong and not easy to deform, and high-density double-layer Oxford cloth is durable, comfortable, breathable and not stuffy. The length of the product is 82cm, the width is 44cm, and the thickness is 30cm. It is suitable for picnic, camping, fishing, traveling, outing, etc.")
 # Product.create(image_url:"https://source.unsplash.com/random",category:category,name: "Bicycle Wall Hook Stand Bike Mounted Mount Storage Hanger Adjustable activity Rack", price: 8.13, details: "Features: Bicycle Wall Mount Hanger for hanging the bike vertically to save space. Made of strong solid steel,load capacity up to 30kg. Fits on any solid wall. Four mounting points and side special design make fasten sturdy. Suitable for all type bikes like Mountain bikes,road bikes,folding bikes etc. Specification: Load Capacity: 30kg. Material: High Quality Strong Steel, High Graded Rubber. Product dimensions (L x W x H): 26 x 7.5 x 13.5cm")
+
+# Product.destroy_all
+# Category.destroy_all
+# Order.destroy_all
+# Rating.destroy_all
+# Question.destroy_all
+
 # console.log("Products seeded!")
 
-# console.log("Seeding categories!")
-# Category.create(name: "Electronics")
-# Category.create(name: "Beauty & Cosmetics")
-# Category.create(name: "Pet Essentials")
-# Category.create(name: "Home & Lifestyle")
-# Category.create(name: "Outdoor Activities")
-# Category.create(name: "Fashion")
-# Category.create(name: "Jewellery")
-# Category.create(name: "Video Games")
-# Category.create(name: "Toys and Games")
-# Category.create(name: "CDs and Vinyl")
-# Category.create(name: "Travelling")
-# console.log("Categories seeded!")
+console.log("Seeding categories!")
+Category.create(name: "Electronics")
+Category.create(name: "Beauty & Cosmetics")
+Category.create(name: "Pet Essentials")
+Category.create(name: "Home & Lifestyle")
+Category.create(name: "Outdoor Activities")
+Category.create(name: "Fashion")
+Category.create(name: "Jewellery")
+Category.create(name: "Video Games")
+Category.create(name: "Toys and Games")
+Category.create(name: "CDs and Vinyl")
+Category.create(name: "Travelling")
+console.log("Categories seeded!")
 
-# electronics = Category.create(name: "Electronics")
-# all_beauty = Category.create(name: "Beauty & Cosmetics")
-# video_games = Category.create(name: "Video Games")
-# cd_vinyl = Category.create(name: "CD & Vinyl Records")
-# pet_essentials = Category.create(name: "Pet Essentials")
-# toys_games = Category.create(name: "Toys & Games")
-# home_lifestyle = Category.create(name: "Home & Lifestyle")
+electronics = Category.create(name: "Electronics")
+all_beauty = Category.create(name: "Beauty & Cosmetics")
+video_games = Category.create(name: "Video Games")
+cd_vinyl = Category.create(name: "CD & Vinyl Records")
+pet_essentials = Category.create(name: "Pet Essentials")
+toys_games = Category.create(name: "Toys & Games")
+home_lifestyle = Category.create(name: "Home & Lifestyle")
 
 # ---- Amazon all_beauty Seeds ---- #
-# file_path_beauty = File.join(__dir__, "amazon_datasets/all_beauty.json")
-# serialised_all_beauty = File.read(file_path_beauty)
-# parsed_all_beauty = JSON.parse(serialised_all_beauty)
+file_path_beauty = File.join(__dir__, "amazon_datasets/all_beauty.json")
+serialised_all_beauty = File.read(file_path_beauty)
+parsed_all_beauty = JSON.parse(serialised_all_beauty)
 
 # ---- Amazon video_games seeds ---- #
-# file_path_vg = File.join(__dir__, "amazon_datasets/video_games.json")
-# serialised_video_games = File.read(file_path_vg)
-# parsed_video_games = JSON.parse(serialised_video_games)
+file_path_vg = File.join(__dir__, "amazon_datasets/video_games.json")
+serialised_video_games = File.read(file_path_vg)
+parsed_video_games = JSON.parse(serialised_video_games)
 
 # # ---- Amazon cd_vinyl seeds ---- #
-# file_path_cdv = File.join(__dir__, "amazon_datasets/cd_vinyl.json")
-# serialised_cd_vinyl = File.read(file_path_cdv)
-# parsed_cd_vinyl = JSON.parse(serialised_cd_vinyl)
+file_path_cdv = File.join(__dir__, "amazon_datasets/cd_vinyl.json")
+serialised_cd_vinyl = File.read(file_path_cdv)
+parsed_cd_vinyl = JSON.parse(serialised_cd_vinyl)
 
 # # ---- Amazon pet_supplies seeds ---- #
-# file_path_ps = File.join(__dir__, "amazon_datasets/pet_supplies.json")
-# serialised_pet_supplies = File.read(file_path_ps)
-# parsed_pet_supplies = JSON.parse(serialised_pet_supplies)
+file_path_ps = File.join(__dir__, "amazon_datasets/pet_supplies.json")
+serialised_pet_supplies = File.read(file_path_ps)
+parsed_pet_supplies = JSON.parse(serialised_pet_supplies)
 
 # ---- Amazon toys_games seeds ---- #
 
-# file_path_tg = File.join(__dir__, "amazon_datasets/toys_games.json")
-# serialised_toys_games = File.read(file_path_tg)
-# parsed_toys_games = JSON.parse(serialised_toys_games)
+file_path_tg = File.join(__dir__, "amazon_datasets/toys_games.json")
+serialised_toys_games = File.read(file_path_tg)
+parsed_toys_games = JSON.parse(serialised_toys_games)
 
 # ---- seeding ---- #
-# parsed_datasets = [parsed_all_beauty, parsed_video_games, parsed_pet_supplies, parsed_cd_vinyl, parsed_toys_games]
-# categories = [all_beauty, video_games, cd_vinyl, pet_essentials, toys_games]
 
-# puts "Creating products"
-# categories_index = 0
-# parsed_datasets.each do |dataset|
-#   dataset.each do |product|
-#     name = product["title"]
-#     description = product["description"].join
-#     image_url = product["imageUrlHighRes"]
-#     brand = product["brand"]
-#     price = product["price"]
+parsed_datasets = [parsed_all_beauty, parsed_video_games, parsed_pet_supplies, parsed_cd_vinyl, parsed_toys_games]
+categories = [all_beauty, video_games, cd_vinyl, pet_essentials, toys_games]
 
-#     product = Product.new(name: name, description: description, price: price.to_s, image_url: image_url, brand: brand)
-#     product.category = categories[categories_index]
-#     product.save!
-#   end
-#   categories_index += 1
-# end
-# puts "Created #{Product.count} products"
+puts "Creating products"
+categories_index = 0
+parsed_datasets.each do |dataset|
+  dataset.each do |product|
+    name = product["title"]
+    description = product["description"].join
+    image_url = product["imageUrlHighRes"]
+    brand = product["brand"]
+    price = product["price"]
+
+    product = Product.new(name: name, description: description, price: price, image_url: image_url, brand: brand)
+    product.category = categories[categories_index]
+    product.save!
+  end
+  categories_index += 1
+end
+puts "Created #{Product.count} products"
+
 
 # ---- Create Users ---- #
 
@@ -113,21 +120,22 @@ end
 puts "created #{User.count} users"
 
 # ---- Create Orders and Reviews ---- #
-# puts "creating orders and reviews"
+
+puts "creating orders and ratings"
 # order_id = 1
 # until order_id == 500
-#   order = Order.create(product_id: Product.all.sample.id)
-#   review = Review.new(
-#     content: Product.all.sample.description,
-#     rating: (1..5).to_a.sample,
-#     order_id: order_id,
-#     user_id: User.all.sample.id
-#     )
-#   review.order = order
-#   review.save
-# end
-# puts "finished creating #{Order.count} orders"
-# puts "finished creating #{Review.count} reviews"
+500.times do |i|
+  order = Order.create(product_id: Product.all.sample.id)
+  # rating = Rating).to_a.sample,
+  #   order_id: order_id,
+  #   user_id: User.all.sample.id
+  #   )
+  # rating.order = order
+  # rating.save
+end
+puts "finished creating #{Order.count} orders"
+# puts "finished creating #{Review.count} ratings"
+
 
 # ---- Create Questions ---- #
 # file_path_questions = File.join(__dir__, "questions_dataset/questions.json")

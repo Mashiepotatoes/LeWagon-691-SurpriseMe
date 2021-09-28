@@ -36,7 +36,9 @@
         </div>
         <div class="card-user-budget">
           <%# <label for="budget" class="form-label"></label> %>
-          <%= f.range_field :budget, min: 10, max: 1000, value: 500, class:"slider", id:"price_range" %> 1000
+
+          10 <%= f.range_field :budget, min: 10, max: 500, value: 250, class:"slider", id:"price_range" %> 500
+
               <p>Price: <span id="selected_range"></span></p>
               <%= hidden_field_tag 'recipient_id', params[:id] %>
             <%= f.button  :submit, 'Send a gift', class: "btn btn-ghost" %>
