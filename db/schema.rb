@@ -134,6 +134,8 @@ ActiveRecord::Schema.define(version: 2021_09_27_112704) do
     t.text "options", default: [], array: true
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "parent"
+    t.integer "dependency"
   end
 
   create_table "ratings", force: :cascade do |t|

@@ -1,6 +1,4 @@
-[
-  {
-    "category": [
+[{"cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Costumes & Accessories",
       "Kids & Baby",
@@ -21,7 +19,7 @@
     "imageURLHighRes":[]
   },
   {
-    "category": [
+    "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Luggage & Travel Gear",
       "Backpacks",
@@ -45,7 +43,7 @@
     ]
   },
   {
-    "category": [
+    "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Luggage & Travel Gear",
       "Backpacks",
@@ -69,7 +67,7 @@
     ]
   },
   {
-    "category": [
+    "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Luggage & Travel Gear",
       "Backpacks",
@@ -93,7 +91,7 @@
     ]
   },
   {
-    "category": [
+    "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Novelty & More",
       "Clothing",
@@ -119,7 +117,7 @@
     ]
   },
   {
-    "category": [
+    "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Women",
       "Clothing",
@@ -142,7 +140,7 @@
     ]
   },
   {
-    "category": [
+    "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Women",
       "Shoes",
@@ -164,7 +162,7 @@
     ]
   },
   {
-    "category": [
+    "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Luggage & Travel Gear",
       "Backpacks",
@@ -188,7 +186,7 @@
     ]
   },
   {
-    "category": [
+    "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Luggage & Travel Gear",
       "Backpacks",
@@ -212,7 +210,7 @@
     ]
   },
   {
-    "category": [
+    "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Novelty & More",
       "Clothing",
@@ -228,7 +226,7 @@
     ]
   },
   {
-    "category": [
+    "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Novelty & More",
       "Clothing",
@@ -248,7 +246,7 @@
     ]
   },
   {
-    "category": [
+    "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Men",
       "Shoes"
@@ -262,7 +260,7 @@
     "imageURLHighRes":[]
   },
   {
-    "category": [
+    "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Women",
       "Jewelry"
@@ -276,7 +274,7 @@
     "imageURLHighRes":[]
   },
   {
-    "category": [
+    "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Luggage & Travel Gear",
       "Travel Accessories"
@@ -290,7 +288,7 @@
     "imageURLHighRes":[]
   },
   {
-    "category": [
+    "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Women",
       "Clothing"
@@ -302,7 +300,7 @@
     "imageURLHighRes":[]
   },
   {
-    "category": [
+    "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Women",
       "Handbags & Wallets",
@@ -319,7 +317,7 @@
     ]
   },
   {
-    "category": [
+    "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Men",
       "Accessories"
@@ -334,7 +332,7 @@
     "imageURLHighRes":[]
   },
   {
-    "category": [
+    "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Baby",
       "Baby Girls",
@@ -355,7 +353,7 @@
     "imageURLHighRes":[]
   },
   {
-    "category": [
+    "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Baby",
       "Baby Boys",
@@ -371,7 +369,7 @@
     "imageURLHighRes":[]
   },
   {
-    "category": [
+    "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Baby",
       "Baby Boys",
@@ -386,7 +384,7 @@
     "imageURLHighRes":[]
   },
   {
-    "category": [
+    "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Baby",
       "Baby Boys",
@@ -404,7 +402,7 @@
     ]
   },
   {
-    "category": [
+    "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Shoe, Jewelry & Watch Accessories",
       "Jewelry Accessories"
@@ -418,7 +416,7 @@
     "imageURLHighRes":[]
   },
   {
-    "category": [
+    "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Luggage & Travel Gear",
       "Travel Accessories",
@@ -433,7 +431,7 @@
     "imageURLHighRes":[]
   },
   {
-    "category": [
+    "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Boys",
       "Accessories"
@@ -449,7 +447,7 @@
     ]
   },
   {
-    "category": [
+    "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Baby",
       "Baby Boys",
@@ -467,7 +465,7 @@
     ]
   },
   {
-    "category": [
+    "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Men",
       "Clothing",
@@ -491,7 +489,7 @@
     ]
   },
   {
-    "category": [
+    "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Women",
       "Clothing",
@@ -514,7 +512,7 @@
     ]
   },
   {
-    "category": [
+    "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Women",
       "Clothing",
@@ -534,7 +532,7 @@
     ]
   },
   {
-    "category": [
+    "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Women",
       "Jewelry",
@@ -552,7 +550,7 @@
     ]
   },
   {
-    "category": [
+    "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Women",
       "Jewelry",
@@ -570,7 +568,7 @@
     ]
   },
   {
-    "category": [
+    "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Men",
       "Accessories",
@@ -586,7 +584,7 @@
     ]
   },
   {
-    "category": [
+    "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Women",
       "Shoes",
@@ -604,7 +602,7 @@
     ]
   },
   {
-    "category": [
+    "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Men",
       "Clothing",
@@ -627,7 +625,7 @@
     ]
   },
   {
-    "category": [
+    "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Men",
       "Clothing",
@@ -646,7 +644,7 @@
     ]
   },
   {
-    "category": [
+    "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Men",
       "Clothing",
@@ -669,7 +667,7 @@
     ]
   },
   {
-    "category": [
+    "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Men",
       "Clothing",
@@ -691,7 +689,7 @@
     ]
   },
   {
-    "category": [
+    "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Men",
       "Clothing",
@@ -713,7 +711,7 @@
     ]
   },
   {
-    "category": [
+    "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Men",
       "Clothing",
@@ -731,7 +729,7 @@
     ]
   },
   {
-    "category": [
+    "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Men",
       "Clothing"
@@ -747,7 +745,7 @@
     ]
   },
   {
-    "category": [
+    "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Women",
       "Jewelry",
@@ -768,7 +766,7 @@
     ]
   },
   {
-    "category": [
+    "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Men",
       "Watches",
@@ -783,7 +781,7 @@
     "imageURLHighRes": []
   },
   {
-    "category": [
+    "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Men",
       "Watches",
@@ -798,7 +796,7 @@
     "imageURLHighRes":[]
   },
   {
-    "category": [
+    "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Women",
       "Imported",
@@ -819,7 +817,7 @@
     ]
   },
   {
-    "category": [
+    "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Women",
       "Clothing",
@@ -834,7 +832,7 @@
     "imageURLHighRes": ["https://images-na.ssl-images-amazon.com/images/I/51v%2BzSZZn4L.jpg"]
   },
   {
-    "category": [
+    "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Women",
       "Maternity",
@@ -858,7 +856,7 @@
     ]
   },
   {
-    "category": [
+    "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Women",
       "Imported",
@@ -879,7 +877,7 @@
     ]
   },
   {
-    "category": [
+    "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Women",
       "Clothing",
@@ -895,7 +893,7 @@
     "imageURLHighRes": []
   },
   {
-    "category": [
+    "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Novelty & More",
       "Clothing",
@@ -919,7 +917,7 @@
     ]
   },
   {
-    "category": [
+    "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Women",
       "Clothing",
@@ -934,7 +932,7 @@
     "imageURLHighRes": []
   },
   {
-    "category": [
+    "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Women",
       "Maternity",
@@ -952,7 +950,7 @@
     ]
   },
   {
-    "category": [
+    "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Women",
       "Clothing",
@@ -977,7 +975,7 @@
     ]
   },
   {
-    "category": [
+    "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Women",
       "Clothing",
@@ -994,6 +992,25 @@
     "price": 16,
     "imageURLHighRes": [
       "https://images-na.ssl-images-amazon.com/images/I/51wPG6JhNeL.jpg"
+    ]
+  },
+  {
+    "category": [
+      "Fasion"
+    ],
+    "sub_category": [
+      "Shoes",
+      "Kids"
+    ],
+    "description": [],
+    "title": "Hello Kitty LALA Lovely Kids Girls Summer Slippers Shoes Beach Pool Black US size 3",
+    "brand": "Hello Kitty",
+    "price": "69",
+    "imageURLHighRes": [
+      "https://images-na.ssl-images-amazon.com/images/I/41Vf3mKKZBL.jpg",
+      "https://images-na.ssl-images-amazon.com/images/I/31pDNSufkjL.jpg",
+      "https://images-na.ssl-images-amazon.com/images/I/41hbUxgBk9L.jpg",
+      "https://images-na.ssl-images-amazon.com/images/I/51XXiau9lZL.jpg"
     ]
   }
 ]
