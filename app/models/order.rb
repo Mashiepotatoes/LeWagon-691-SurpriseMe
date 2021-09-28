@@ -1,5 +1,4 @@
 class Order < ApplicationRecord
-  has_many :gift_sessions, optional: true
-  has_one :rating
+  has_many :gift_sessions
   belongs_to :product
 end

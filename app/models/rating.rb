@@ -1,5 +1,7 @@
 class Rating < ApplicationRecord
-  belongs_to :orders
-  belongs_to :recipient, class_name: "User"
+  belongs_to :products
+  belongs_to :recipients, class_name: "User"
+  belongs_to :gift_sessions
+
   validates :rating, presence: true
 end
