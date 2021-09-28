@@ -5,7 +5,6 @@ require 'faker'
 Product.destroy_all
 Category.destroy_all
 
-Category.create(name: "Electronics")
 category = Category.find(1)
 # ------ Jeremy and PE seeds ----- #
 

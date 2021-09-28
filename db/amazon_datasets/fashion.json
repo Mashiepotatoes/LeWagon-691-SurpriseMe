@@ -1,4 +1,4 @@
-[{"cateogry": ["Fashion"], "sub_category": [
+[{"occasion": ["Christmas", "Birthday"], "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Costumes & Accessories",
       "Kids & Baby",
@@ -18,19 +18,12 @@
     "price": 15,
     "imageURLHighRes":[]
   },
-  {
+  {"occasion": ["Christmas", "General"],
     "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Luggage & Travel Gear",
       "Backpacks",
-      "Casual Daypacks",
-      "Polyester Canvas Waterproof",
-      "Imported",
-      "Size: Large (H 40 x W 26 x D 20cm)",
-      "Color: LIGHT GRAY & BLACK | Condition: 100% brand new",
-      "- Made of lightweight, durable and waterproof fabric",
-      "- Roomy main compartment and multiple pockets for functionally",
-      "- a front zip pocket, 2 interior open pockets, bottle pocket on both sides, a zipper at the back. Adjustable double shoulder straps and double top handles"
+      "Casual Daypacks"
     ],
     "description": [
       "The Hottest Bag in Town! Brand: Anello Condition: 100% brand new Size: Large Simplistic Japanese design to add spark to your style! Main compartment with a large capacity can fit numerous items! - a front zip pocket - 2 interior open pockets - bottle pocket on both sides - a zipper at the back - Made of lightweight, durable and waterproof fabric! - Roomy main compartment and multiple pockets for functionally - Comes with adjustable double shoulder straps and double top handles - Simple and stylish design that goes well with most outfits. Specifications: Size: approx. H 40 x W 26 x D 20cm Shoulder straps length: approx. 38-80cm (adjustable) Weight: approx. 650g Material: 600DOxford"
@@ -42,19 +35,12 @@
       "https://images-na.ssl-images-amazon.com/images/I/51RJoBQ2ANL.jpg"
     ]
   },
-  {
+  {"occasion": ["Christmas", "General"],
     "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Luggage & Travel Gear",
       "Backpacks",
-      "Kids' Backpacks",
-      "PU Leather",
-      "Imported",
-      "Size: Large PU Leather (H 39 x W 26 x D 16cm) Model: AT-B01211",
-      "Color: PINK BEIGE | Condition: 100% brand new",
-      "- Made of stylish, elegant and durable and PU leather fabric",
-      "- Roomy main compartment and multiple pockets for functionally",
-      "- a front zip pocket, 2 interior open pockets, bottle pocket on both sides, a zipper at the back. Adjustable double shoulder straps and double top handles"
+      "Kids' Backpacks"
     ],
     "description": [
       "The Hottest Bag in Town! Brand: Anello Condition: 100% brand new Size: LARGE SIZE Material: PU Leather Simplistic Japanese design to add spark to your style! Main compartment with a large capacity can fit numerous items! Comes with a front zip pocket, 2 interior open pockets, 2 side bottle pockets and a zipper at the back! Made of stylish, elegant and durable PU leather fabric! - Roomy main compartment and multiple pockets for functionally - Comes with adjustable double shoulder straps and double top handles - Simple and stylish design that goes well with most outfits - Made of stylish, elegant and durable and PU leather fabric. Specifications: Size: approx. H 39 x W 26 x D 16cm Shoulder straps length: up to 84cm (adjustable) Weight: approx. 800g Material: PU Leather"
@@ -66,19 +52,12 @@
       "https://images-na.ssl-images-amazon.com/images/I/518UiiWp-vL.jpg"
     ]
   },
-  {
+  {"occasion": ["Christmas", "General"],
     "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Luggage & Travel Gear",
       "Backpacks",
-      "Kids' Backpacks",
-      "PU Leather",
-      "Imported",
-      "Size: Large PU Leather (H 39 x W 26 x D 16cm) Model: AT-B01211",
-      "Color: BLACK | Condition: 100% brand new",
-      "- Made of stylish, elegant and durable and PU leather fabric",
-      "- Roomy main compartment and multiple pockets for functionally",
-      "- a front zip pocket, 2 interior open pockets, bottle pocket on both sides, a zipper at the back. Adjustable double shoulder straps and double top handles"
+      "Kids' Backpacks"
     ],
     "description": [
       "The Hottest Bag in Town! Brand: Anello Condition: 100% brand new Size: LARGE SIZE Material: PU Leather Simplistic Japanese design to add spark to your style! Main compartment with a large capacity can fit numerous items! Comes with a front zip pocket, 2 interior open pockets, 2 side bottle pockets and a zipper at the back! Made of stylish, elegant and durable PU leather fabric! - Roomy main compartment and multiple pockets for functionally - Comes with adjustable double shoulder straps and double top handles - Simple and stylish design that goes well with most outfits - Made of stylish, elegant and durable and PU leather fabric. Specifications: Size: approx. H 39 x W 26 x D 16cm Shoulder straps length: up to 84cm (adjustable) Weight: approx. 800g Material: PU Leather"
@@ -90,7 +69,7 @@
       "https://images-na.ssl-images-amazon.com/images/I/514s3E59F1L.jpg"
     ]
   },
-  {
+  {"occasion": ["General"],
     "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Novelty & More",
@@ -99,12 +78,7 @@
       "Women",
       "Accessories",
       "Hats & Caps",
-      "Baseball Caps",
-      "Imported",
-      "Plush,Cotton, Polyester",
-      "Lovely for look,Unisex for the normal adult",
-      "One size (approx 55-60 cm) adjustable",
-      "Unavailable alkaline detergent, (such as soap, laundry). With a mild detergent."
+      "Baseball Caps"
     ],
     "description": [
       "Brand New.  Hat Centre Length: adult about 8cm (3.14 \")  Adult section Cap around: 55-60cm (21.65 \"-23.62\") adjustable hat around"
@@ -116,18 +90,13 @@
       "https://images-na.ssl-images-amazon.com/images/I/51ALk5zBu2L.jpg"
     ]
   },
-  {
+  {"occasion": ["General"],
     "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Women",
       "Clothing",
       "Swimsuits & Cover Ups",
-      "Cover-Ups",
-      "Imported",
-      "Bohemia style, butterfly printing",
-      "Length 30 \", Bust 40~45 \"",
-      "Ice silk cotton,Very soft and comfortable",
-      "Unique style beach cover up for your bikinis and swimsuits make you more beautiful,fashion,sexy and elegant."
+      "Cover-Ups"
     ],
     "description": [
       "Please allow 1-2cm dimension deviation. 100% brand new and in original package.  Due to Difference Computer Minitors,The Color Maybe slightly diffrent from picture"
@@ -139,19 +108,13 @@
       "https://images-na.ssl-images-amazon.com/images/I/51HNh00jdGL.jpg"
     ]
   },
-  {
+  {"occasion": ["General"],
     "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Women",
       "Shoes",
       "Sandals",
-      "Flip-Flops",
-      "synthetic-and-fabric",
-      "Imported",
-      "Heel Height: 11cm=4.33\",Platform: 5.5cm=2.17\"",
-      "Material:EVA and cloth",
-      "Choose the usual size you wear, if you like loose, you could choos one size plus.",
-      "EVA rubber sole,comfortable,Handmade special occasion sandals"
+      "Flip-Flops"
     ],
     "title": "bettyhome Women Sexy Club Party Super High Heels 4.33 inch Comfortable Thongs Casual Wedges Sandals Beach Flip Flops Slippers",
     "description": ["Super High Heels 4.33 inch"],
@@ -161,19 +124,12 @@
       "https://images-na.ssl-images-amazon.com/images/I/51tzpun%2BBDL.jpg"
     ]
   },
-  {
+  {"occasion": ["General"],
     "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Luggage & Travel Gear",
       "Backpacks",
-      "Kids' Backpacks",
-      "PU Leather",
-      "Imported",
-      "Size: Mini / Small PU Leather (H 32 x W 23 x D 14cm) Model: AT-B01212",
-      "Color: NAVY | Condition: 100% brand new",
-      "- Made of stylish, elegant and durable and PU leather fabric",
-      "- Roomy main compartment and multiple pockets for functionally",
-      "- a front zip pocket, 2 interior open pockets, bottle pocket on both sides, a zipper at the back. Adjustable double shoulder straps and double top handles"
+      "Kids' Backpacks"
     ],
     "description": [
       "The Hottest Bag in Town! Brand: Anello Condition: 100% brand new Size: MINI / SMALL SIZE Material: PU Leather Simplistic Japanese design to add spark to your style! Main compartment with a large capacity can fit numerous items! Comes with a front zip pocket, 2 interior open pockets, side bottle pockets and a zipper at the back! Made of stylish, elegant and durable PU leather fabric! - Roomy main compartment and multiple pockets for functionally - Comes with adjustable double shoulder straps and double top handles - Simple and stylish design that goes well with most outfits - Made of stylish, elegant and durable and PU leather fabric Specifications: Size: approx. H 32 x W 23 x D 14cm Shoulder straps: adjustable Weight: approx. 600g Material: PU Leather"
@@ -185,19 +141,12 @@
       "https://images-na.ssl-images-amazon.com/images/I/51NA97pnTNL.jpg"
     ]
   },
-  {
+  {"occasion": ["General"],
     "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Luggage & Travel Gear",
       "Backpacks",
-      "Casual Daypacks",
-      "Polyester Canvas Waterproof",
-      "Imported",
-      "Size: Large (H 29 x W 33 x D 14cm) Model: AT-H0852",
-      "Color: CAMO | Condition: 100% brand new",
-      "- Made of lightweight, durable and waterproof fabric",
-      "- Roomy main compartment and multiple pockets for functionally",
-      "- a front zip pocket, 2 interior open pockets. Adjustable double shoulder straps and double top handles"
+      "Casual Daypacks"
     ],
     "description": [
       "2 Way Shoulder Handle Polyester Canvas Boston Bag Large ! Brand: Anello ( Original ) Condition: 100% brand new Size: LARGE SIZE Material: Polyester Canvas Simplistic Japanese design to add spark to your style! Main compartment with a large capacity can fit numerous items! Comes with a front zip pocket, 2 interior open pockets. - Roomy main compartment and multiple pockets for functionally - Comes with adjustable shoulder straps and double top handles - Simple and stylish design that goes well with most outfits - Made of stylish, elegant and durable fabric. Specifications: Size: approx. H 29 x W 33 x D 14cm Shoulder straps length: up to 128cm (adjustable) Weight: approx. 400g Material: Polyester Canvas"
@@ -209,7 +158,7 @@
       "https://images-na.ssl-images-amazon.com/images/I/512lZ8qMVVL.jpg"
     ]
   },
-  {
+  {"occasion": ["General", "Christmas"],
     "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Novelty & More",
@@ -225,7 +174,7 @@
       "https://images-na.ssl-images-amazon.com/images/I/41cQk6Z-bZL.jpg"
     ]
   },
-  {
+  {"occasion": ["General"],
     "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Novelty & More",
@@ -245,7 +194,7 @@
       "https://images-na.ssl-images-amazon.com/images/I/51XUFkm8Z9L.jpg"
     ]
   },
-  {
+  {"occasion": ["General", "Birthday"],
     "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Men",
@@ -255,11 +204,11 @@
       "Filipenses 4:13 grabado sobre piel italiana duotono en una combinacion de colores y de tipografia contemporanea. Esta disenada para usarse con Biblias de Tamano Regular y de Tamano Personal. 17 x 25 cm / Phillipians 4:13 embossed on Italian Duo-tone materials, contemporary color style and trendy typesetting. It can fit all Regular and Personal sizes Bibles. 6-5/8 x 9-13/16 in."
     ],
     "title": "Todo lo puedo / I Can Do Everything Bible Cover: Verde/Cafe (Spanish Edition)",
-    "brand": "Visit Amazon's Zondervan Page",
+    "brand": "",
     "price": 13,
     "imageURLHighRes":[]
   },
-  {
+  {"occasion": ["General", "Christmas", "Birthday"],
     "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Women",
@@ -269,11 +218,11 @@
       "Beth Martin is a popular jewelry design instructor, continually inspiring students to go beyond their comfort level and incorporate beach glass into areas they never considered. Eva Sherman opened Grand River Beads and Gift Gallery in 2005. Her jewelry designs have been published in several different magazines and she has traveled and taught extensively. Both live in Rocky River, OH."
     ],
     "title": "Organic Wire and Metal Jewelry: Stunning Pieces Made with Sea Glass, Stones, and Crystals",
-    "brand": "Visit Amazon's Eva M. Sherman Page",
+    "brand": "",
     "price": 18,
     "imageURLHighRes":[]
   },
-  {
+  {"occasion": ["General"],
     "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Luggage & Travel Gear",
@@ -287,7 +236,7 @@
     "price": 15,
     "imageURLHighRes":[]
   },
-  {
+  {"occasion": ["General"],
     "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Women",
@@ -295,11 +244,11 @@
     ],
     "title": "One White Lie (The Barrington Billionaire's Series) (Volume 1)",
     "description": [],
-    "brand": "Visit Amazon's Jeannette Winters Page",
+    "brand": "",
     "price": 8,
     "imageURLHighRes":[]
   },
-  {
+  {"occasion": ["General", "Birthday", "Christmas", "Anniversary"],
     "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Women",
@@ -316,7 +265,7 @@
       "https://images-na.ssl-images-amazon.com/images/I/51KTzLHECDL.jpg"
     ]
   },
-  {
+  {"occasion": ["General", "Birthday", "Christmas","Anniversary"],
     "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Men",
@@ -331,20 +280,13 @@
     "price": 19,
     "imageURLHighRes":[]
   },
-  {
+  {"occasion": ["General"],
     "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Baby",
       "Baby Girls",
       "Clothing",
-      "Footies & Rompers",
-      "Footies",
-      "Made in USA or Imported",
-      "100% Cotton",
-      "Use this adorable outfit to play in all the month of October or as a Halloween Costume!",
-      "Front has an allover skeleton pattern that Glows-in-the Dark! Long sleeves; contrasting trim at crew neck and sleeve hems.",
-      "Zip closure from ankle to chin including worry-free safety tab at chin; footed.",
-      "Care Instructions: Machine Wash"
+      "Footies & Rompers"
     ],
     "title": "'Scary Skeleton' Glow-in-the-Dark Footed Bodysuit Coverall, Girls",
     "description": ["Glow-in-the-Dark Footed Bodysuit"],
@@ -352,7 +294,7 @@
     "price": 30,
     "imageURLHighRes":[]
   },
-  {
+  {"occasion": ["General"],
     "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Baby",
@@ -368,7 +310,7 @@
     "price": 22,
     "imageURLHighRes":[]
   },
-  {
+  {"occasion": ["General"],
     "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Baby",
@@ -383,7 +325,7 @@
     "price": 22,
     "imageURLHighRes":[]
   },
-  {
+  {"occasion": ["General"],
     "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Baby",
@@ -401,11 +343,9 @@
       "https://images-na.ssl-images-amazon.com/images/I/31ua8kP7GVL.jpg"
     ]
   },
-  {
+  {"occasion": ["General", "Housewarming"],
     "cateogry": ["Fashion"], "sub_category": [
-      "Clothing, Shoes & Jewelry",
-      "Shoe, Jewelry & Watch Accessories",
-      "Jewelry Accessories"
+      "Essential Oils"
     ],
     "description": [
       "A must for those interested in Essential Oils. A great introduction to those new to using essential oils and a handy 'must' reminder and quick reference for those already familiar with them.\n\nThis is a handy 5\" x 6 3/4\" manual and is really two books in one. The \"Essential Oils History & Overview\" is all about the history of oils, the science behind them, some of their marvelous properties, safety, and storage information. Flip over the book and viola The \"Essential Oils Reference Guide\" details common wellness uses, health concerns, and how leading authorities have suggested using essential oils in those cases. It also describes techniques for applying oils and gives a two page summary on each of 25 commonly used oils and 10 blends. Finally, there is a chart that summarizes much of this information that is called the QuickQuick Guide.\n\nBecause of the simple but thorough format and style of this book it will be of great value to essential oil product consultants for companies like Young Living, doTerra and others to introduce new users to essential oils and how they may be of benefit."
@@ -415,7 +355,7 @@
     "price": 80,
     "imageURLHighRes":[]
   },
-  {
+  {"occasion": ["General"],
     "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Luggage & Travel Gear",
@@ -430,7 +370,7 @@
     "price": 4,
     "imageURLHighRes":[]
   },
-  {
+  {"occasion": ["General"],
     "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Boys",
@@ -446,7 +386,7 @@
       "https://images-na.ssl-images-amazon.com/images/I/31VzkSA2mYL.jpg"
     ]
   },
-  {
+  {"occasion": ["General"],
     "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Baby",
@@ -464,19 +404,13 @@
       "https://images-na.ssl-images-amazon.com/images/I/51NatLSGgFL.jpg"
     ]
   },
-  {
+  {"occasion": ["General", "Birthday", "Anniversary"],
     "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Men",
       "Clothing",
       "Shirts",
-      "Casual Button-Down Shirts",
-      "Cotton blend",
-      "First 5 Customer Get Free Gift",
-      "Our sizes are China Size, pls Select Two Sizes Up",
-      "Support USA Local Return",
-      "Recommend A Friend, Both Enjoy 5% Discount",
-      "Bulk Ordering Available"
+      "Casual Button-Down Shirts"
     ],
     "description": [
       "Hi buyer, pls pay attention, pls read our size details clearly before making the buying decision. Thanks. Super quality, much more comfortable.Package:Other accessories not include Material:Cotton blendSize details: US Small=China Medium:Length:25.59\"(65cm),Bust:37.80\"(96cm),Shoulder:16.93\"(43cm),Sleeve Length:8.27\"(21cm); US Medium=China Large:Length:26.38\"(67cm),Bust:39.37\"(100cm),Shoulder:17.32\"(44cm),Sleeve Length:8.66\"(22cm); US Large=China X-Large:Length:27.17\"(69cm),Bust:40.94\"(104cm),Shoulder:17.72\"(45cm),Sleeve Length:9.06\"(23cm); US X-Large=China 2X-Large:Length:27.95\"(71cm),Bust:42.52\"(108cm),Shoulder:18.11\"(46cm),Sleeve Length:9.45\"(24cm); US 2X-Large=China 3X-Large:Length:28.74\"(73cm),Bust:44.09\"(112cm),Shoulder:18.50\"(47cm),Sleeve Length:9.84\"(25cm);"
@@ -488,18 +422,12 @@
       "https://images-na.ssl-images-amazon.com/images/I/31DodyO5mHL.jpg"
     ]
   },
-  {
+  {"occasion": ["General", "Birthday"],
     "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Women",
       "Clothing",
-      "Dresses",
-      "100% Cotton",
-      "#*#Please note that you need to check the size, our size is Asian size.",
-      "#*#Dear customer:Comfort is key at FLCH+YIGE and to ensure you experience the best there is.We have been making efforts and are willing to complete shopping with you.",
-      "US Small=China Medium:Length:51.57\"(131cm),Bust:40.94\"(104cm)",
-      "US Medium=China Large:Length:51.97\"(132cm),Bust:42.52\"(108cm)",
-      "US Large=China X-Large:Length:52.36\"(133cm),Bust:44.09\"(112cm)"
+      "Dresses"
     ],
     "description": [
       "Please Note Purchasing Notes: 1.Please check the size information under the Product Description before ordering,rather than the \"size chart\" beside the drop down box. 2.Please note that due to limitations in photography and the inevitable differences in monitor settings,the colors shown in the photograph may not correspond 100% to those in the items themselves. 3.Customer ServiceIf:you have any problem on the product,please feel free to contact us,we will give best service and solution,wish you have a nice shopping experience.Package:Other accessories not include Material:CottonSize details: US X-Small=China Small:Length:51.18\"(130cm),Bust:39.37\"(100cm); US Small=China Medium:Length:51.57\"(131cm),Bust:40.94\"(104cm); US Medium=China Large:Length:51.97\"(132cm),Bust:42.52\"(108cm); US Large=China X-Large:Length:52.36\"(133cm),Bust:44.09\"(112cm);"
@@ -511,7 +439,7 @@
       "https://images-na.ssl-images-amazon.com/images/I/51gPcllAvhL.jpg"
     ]
   },
-  {
+  {"occasion": ["General"],
     "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Women",
@@ -531,7 +459,7 @@
       "https://images-na.ssl-images-amazon.com/images/I/51W-sGjlQmL.jpg"
     ]
   },
-  {
+  {"occasion": ["General", "Anniversary"],
     "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Women",
@@ -549,7 +477,7 @@
       "https://images-na.ssl-images-amazon.com/images/I/414mZiFAJZL.jpg"
     ]
   },
-  {
+  {"occasion": ["General", "Birthday", "Anniversary"],
     "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Women",
@@ -567,7 +495,7 @@
       "https://images-na.ssl-images-amazon.com/images/I/318HJ2KtQzL.jpg"
     ]
   },
-  {
+  {"occasion": ["General"],
     "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Men",
@@ -583,7 +511,7 @@
       "https://images-na.ssl-images-amazon.com/images/I/41rlJ%2BWzFlL.jpg"
     ]
   },
-  {
+  {"occasion": ["General"],
     "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Women",
@@ -601,125 +529,94 @@
       "https://images-na.ssl-images-amazon.com/images/I/51bHMyS9E8L.jpg"
     ]
   },
-  {
+  {"occasion": ["General"],
     "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Men",
       "Clothing",
-      "Jeans",
-      "Zipper closure",
-      "Style: Tube",
-      "Type: Leather pants",
-      "Leather type: Smooth leather",
-      "Knee seam: No",
-      "Lining: Yes"
+      "Jeans"
     ],
     "description": [
       "Slip into the tight leather jeans by Bockle.The new, modern skinny cut is hip high, particularly among young men.The Bockle 1991 tube falls out really tight and you can order a size ...The soft, non-slip leather adjusts to ideal.The new Bockle look, with silver buttons on the back pockets. #FETT-AN#Specification:#FETT-AUS#- Type: leatherpants- Kind: leather- Color: White- Closure: zip- Waist height: low- Knee Seam: No- Lining: Yes"
     ],
-    "title": "Bockle\u00ae 1991 Tube White Men Leather Pants Trouser Tight Leather Jeans",
+    "title": "Bockle 1991 Tube White Men Leather Pants Trouser Tight Leather Jeans",
     "brand": "Bockle",
     "price": 169,
     "imageURLHighRes": [
       "https://images-na.ssl-images-amazon.com/images/I/41HKKtOvo0L.jpg"
     ]
   },
-  {
+  {"occasion": ["General"],
     "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Men",
-      "Clothing",
-      "leather pants",
-      "leather trouser",
-      "leather"
+      "Clothing"
     ],
     "description": [
       "A new lace-up leather pants by Bockle, made for the man with claim and expression joy. The lacing is continuous, even at the waist and can be nicely taut and pulled tightly. To open the leather pants with zipper, press stud and hook."
     ],
-    "title": "Bockle\u00ae 1991 lace-up Leather Pants Leatherjeans Men Pants Leather Jeans New",
+    "title": "Bockle 1991 lace-up Leather Pants Leatherjeans Men Pants Leather Jeans New",
     "brand": "Bockle",
     "price": 100,
     "imageURLHighRes": [
       "https://images-na.ssl-images-amazon.com/images/I/41QC8sQZ75L.jpg"
     ]
   },
-  {
+  {"occasion": ["General"],
     "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Men",
-      "Clothing",
-      "Jeans",
-      "Zipper closure",
-      "Style: Tube",
-      "Type: Leather pants",
-      "Leather type: Smooth leather",
-      "Knee seam: No",
-      "Lining: Yes"
+      "Clothing"
     ],
     "description": [
       "Slip into the tight leather jeans by Bockle.The new, modern skinny cut is hip high, particularly among young men.The Bockle 1991 tube falls out really tight and you can order a size ...The soft, non-slip leather adjusts to ideal.The new Bockle look, with silver buttons on the back pockets.Get it now!#FETT-AN#Specification:#FETT-AUS#- Type: leatherpants- Kind: smooth leather- Color: Black- Closure: zip- Waist height: low- Knee Seam: No- Lining: Yes"
     ],
-    "title": "Bockle\u00ae 1991 Tube Lederhose Men Leather Pants Trouser Tight Leather Jeans",
+    "title": "Bockle 1991 Tube Lederhose Men Leather Pants Trouser Tight Leather Jeans",
     "brand": "Bockle",
     "price": 149,
     "imageURLHighRes": [
       "https://images-na.ssl-images-amazon.com/images/I/41%2B1Q7je0oL.jpg"
     ]
   },
-  {
+  {"occasion": ["General"],
     "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Men",
-      "Clothing",
-      "Button Fly closure",
-      "Style: Tube",
-      "Type: Leather pants",
-      "Couleur: Black",
-      "Knee seam: Yes",
-      "Lining: Yes"
+      "Clothing"
     ],
     "description": [
       "The new leather pants by Bockle is a mix of jacket and sweatpants.Experience the new leather feel and enjoy the very good leather.With the original Bockle buttons equipped.Sexy Look for cool guys!"
     ],
-    "title": "Bockle\u00ae B-Joggers Tight Leather Sweatpants Button Closure Men",
+    "title": "Bockle B-Joggers Tight Leather Sweatpants Button Closure Men",
     "brand": "Bockle",
     "price": 199,
     "imageURLHighRes": [
       "https://images-na.ssl-images-amazon.com/images/I/41BD0ZWylkL.jpg"
     ]
   },
-  {
+  {"occasion": ["General"],
     "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Men",
-      "Clothing",
-      "Button Fly closure",
-      "Style: Tube",
-      "Type: Leather pants",
-      "Couleur: Black",
-      "Knee seam: Yes",
-      "Lining: Yes"
+      "Clothing"
     ],
     "description": [
       "The new Bockle Boyfriend.Butter Soft lamb leather, crisp cut."
     ],
-    "title": "Bockle\u00ae Boyfriend Men Leather Pants Trouser Tube Jeans",
+    "title": "Bockle Boyfriend Men Leather Pants Trouser Tube Jeans",
     "brand": "Bockle",
     "price": 199,
     "imageURLHighRes": [
       "https://images-na.ssl-images-amazon.com/images/I/51wI1z7yHXL.jpg"
     ]
   },
-  {
+  {"occasion": ["General"],
     "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Men",
       "Clothing",
       "Pants",
-      "Casual",
-      "Type: Leather pants",
-      "Couleur: Black",
-      "Lining: Yes"
+      "Casual"
     ],
     "title": "Bockle Joggers Running Leather Pants Trousers Lambskin Soft Men",
     "brand": "Bockle",
@@ -728,7 +625,7 @@
       "https://images-na.ssl-images-amazon.com/images/I/416COawtcyL.jpg"
     ]
   },
-  {
+  {"occasion": ["General"],
     "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Men",
@@ -744,18 +641,13 @@
       "https://images-na.ssl-images-amazon.com/images/I/41opyrBCysL.jpg"
     ]
   },
-  {
+  {"occasion": ["General", "Anniversary"],
     "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Women",
       "Jewelry",
       "Necklaces",
-      "Pendants",
-      "2 Necklace,one for you,one for your lover with a special meaning.",
-      "Material: 925 Silver,Nickel-free,Lead-free.",
-      "Chain Length:45cm.",
-      "It comes with a gift box and silk pouch.Great gift for lover, mom,daughter, girlfriend, wife, bride or just a friend.The stud earrings suitable for daily wear or any special occasions. Like valentine's day, Mother's day, Wedding, Anniversary ,Engagement, Gathering, Christmas, Graduations etc.",
-      "Buying without worry, customer's satisfaction is our unremitting pursuit, if not satisfied with our product or got some trouble about that. It's OK ,just contact us,we will try our best to solve the problems for you."
+      "Pendants"
     ],
     "description":["Joyfulshine Couple Necklace"],
     "title": "Joyfulshine Couple Necklace Ring Pendant Love Forever Necklace Two Piece Promise Jewelry",
@@ -765,7 +657,7 @@
       "https://images-na.ssl-images-amazon.com/images/I/41AMG9rX3nL.jpg"
     ]
   },
-  {
+  {"occasion": ["General", "Anniversary", "Christmas", "Birthday"],
     "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Men",
@@ -780,7 +672,7 @@
     "price": 47,
     "imageURLHighRes": []
   },
-  {
+  {"occasion": ["General", "Anniversary", "Birthday", "Christmas"],
     "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Men",
@@ -795,16 +687,10 @@
     "price": 50,
     "imageURLHighRes":[]
   },
-  {
+  {"occasion": ["General"],
     "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
-      "Women",
-      "Imported",
-      "OPEN CROTCH: Thigh-high lace top garter belt panty hose sheers are the perfect for stylish women",
-      "GARTERBELT: The sheer tights legs are attached to a soft semi opaque belt with a floral net trim.",
-      "QUALITY: Durable, resistant and comfortable nylon. 20 den matt imitation semi-opaque stocking",
-      "88% nylon/12% spandex, Made in Italy",
-      "Hand wash, No bleach, No iron, No tumble dry"
+      "Women"
     ],
     "description": [
       "Veneziana Sexy Strip 20 Open Crotch Pantyhose (20 Den) OPEN CROTCH: Thigh-high lace top garter belt panty hose sheers are perfect for stylish women GARTERBELT: The sheer tights legs are attached to a soft semi opaque belt with a floral net trim. QUALITY: Durable, resistant and comfortable nylon. 20 den matt imitation semi-opaque stocking SIMPLE CLASSIC STYLE: plain open-crotch tights - Work, Office, Casual, Evening, Party, Glamour. COLOURS: Beautiful crotch less thigh high strip panty - available in Black, Beige, Bianco (White). Small Medium Large S M L 87% Polyamide, 12% Elastane Care Instructions: - Washing: In order to increase the longevity of this product, please take care to wash by hand and drip dry only, the material is highly unsuitable for tumble dry. - We also recommend the use of hosiery gloves to prevent unwanted snagging."
@@ -816,14 +702,13 @@
       "https://images-na.ssl-images-amazon.com/images/I/41%2BVhT2w7NL.jpg"
     ]
   },
-  {
+  {"occasion": ["General"],
     "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Women",
       "Clothing",
       "Socks & Hosiery",
-      "Tights",
-      "Imported"
+      "Tights"
     ],
     "description":[],
     "title": "satin",
@@ -831,20 +716,14 @@
     "price": 50,
     "imageURLHighRes": ["https://images-na.ssl-images-amazon.com/images/I/51v%2BzSZZn4L.jpg"]
   },
-  {
+  {"occasion": ["General"],
     "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Women",
       "Maternity",
       "Nursing",
       "Tops & Tees",
-      "Knits & Tees",
-      "SAVE 10% WHEN YOU ADD 2 OR MORE sofsy PRODUCTS TO YOUR BASKET. Code: SOFSY200",
-      "Tie front allows easy access to nursing openings beneath, for hassle-free breastfeeding anywhere.",
-      "Made of a premium rayon fabric blend thats soft to the touch, yet ultra-durable and lasting.",
-      "Elasticized waist makes this a flattering top that can be worn during pregnancy and after birth!",
-      "Extra-long length provides ample coverage for your bottom as well as your growing baby bump.",
-      "Can be tied on the front, back or side & in a knot or bow to create a variety of stylish looks."
+      "Knits & Tees"
     ],
     "description": [
       "Top Length (Neck to Bottom Hem) Small - 29 inches, Medium - 30 inches, Large - 31 inches, X-Large - 32 inches   Who says nursing tops cant be stylish? The sofsy Tie Front Nursing & Maternity Top is a chic, refreshing twist on frumpy motherhood gear. This sassy pullover features a tie-front top that gives you easy access to LARGE DUAL NURSING OPENINGS beneath. No more fumbling with your shirt when babys hungrynow breastfeeding on the go is quick & simple!  Unlike nursing tops that are cheap & flimsy, ours is a durable garment made with a premium 95% Rayon 5% Elastane fabric blend. Youll feel the quality the moment you take it out of the package! It HOLDS UP TO WASH AFTER WASH without losing its shape or vibrant color. With its comfortable elasticized waist that shrinks and expands to fit your shape, our top can be WORN DURING PREGNANCY AND AFTER your little ones arrival. Some maternity tops cover you in the frontbut not in the back. Ours is EXTRA LONG to provide reassuring coverage for your large baby bump AND your bottom. So you feel cute and confidentnot self conscious!  Tie our versatile top at the front, side, back in a knot or bow to create a VARIETY OF FASHIONABLE LOOKS that are perfect for work, lunches with friends, or trips to the park. During breastfeeding, you can even tie the ties at the very ends to make a cozy cocoon for your little one while ensuring privacy.  Delight your favorite new mom or mom-to-be with the sofsy Tie Front Nursing & Maternity Top. Both practical & trendy, it makes a GREAT BABY SHOWER or WELCOME HOME GIFT! Click ADD TO CART TO BUY NOW!"
@@ -855,16 +734,10 @@
       "https://images-na.ssl-images-amazon.com/images/I/51HJbA8UG2L.jpg"
     ]
   },
-  {
+  {"occasion": ["General"],
     "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
-      "Women",
-      "Imported",
-      "ELEGANT: beautiful and sexy lingerie these Thigh-high Stay Up Stockings are a timeless classic",
-      "FLORAL LACE TOPS: Deep Elastic 9cm tops with sturdy Double Silicone bands",
-      "EXCELLENT QUALITY: Durable and resistant These sheer thigh highs for women are made for everyday use",
-      "88% nylon/12% spandex, Made in Italy",
-      "Hand wash, No bleach, No iron, No tumble dry"
+      "Women"
     ],
     "description": [
       "Veneziana Ar Beautiful - Hold Ups Thigh High Stockings (20 Den) These beautiful and comfortable Sheer Transparent Thigh High Stockings are the perfect style for fashionable women who are looking for the ideal addition to their outfit. Whether it is for work, a party, a glamorous day out, or even a Wedding, the elegant design and fine quality material make these hold ups perfect for helping you look and feel amazing all day long. The wide lace elastic tops are made with double silicone bands for extra sturdy hold up strength, and are approximately 9cm un-stretched. With such a simple, yet classic and versatile style, these over the knee thigh high hold-ups stockings can be worn all day everyday, wherever you are, whatever the occasion. Main Features: - Style: Plain Classic Thigh-High Stockings - Floral Lace Tops: Approximately 9cm deep un-stretched with Double Silicone bands. - Natural and Versatile Colors Available: Black, Brown (Tan) or Natural (Nude) - Thickness: Sheer Transparent - 20 Den (Semi Matt) - Sizes Available: Extra Small - Small (1 - 2), or Medium - Large (3 - 4) - Suitable for all Occasions: Work, Office, Casual, Leisure, Evening, Party, Glamour, Wedding - Suitable for Warmer Seasons: Spring, Summer - Soft, stretchy and comfortable - High Quality: Durable and resistant material - Material: 88% Polyamide, 12% Elastane"
@@ -876,15 +749,12 @@
       "https://images-na.ssl-images-amazon.com/images/I/21-QdeaSWeL.jpg"
     ]
   },
-  {
+  {"occasion": ["General"],
     "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Women",
       "Clothing",
-      "Socks & Hosiery",
-      "Sheers",
-      "RECEIVE $1.00 OFF FOR EACH ADDITIONAL PAIR OF VENEZIANA HOSIERY ADDED TO YOUR CART!",
-      "Imported"
+      "Socks & Hosiery"
     ],
     "description":[],
     "title": "Fiona",
@@ -892,7 +762,7 @@
     "price": 40,
     "imageURLHighRes": []
   },
-  {
+  {"occasion": ["General", "Christmas"],
     "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Novelty & More",
@@ -900,11 +770,7 @@
       "Novelty",
       "Women",
       "Accessories",
-      "Scarves",
-      "Acrylic, ,",
-      "Snug ribbed knit.",
-      "Size One Size.",
-      "Fabric 100% Soft Touch Acrylic Weight: 130g."
+      "Scarves"
     ],
     "description": [
       "Snug ribbed knit. Size One Size. Fabric 100% Soft Touch Acrylic Weight: 130g."
@@ -916,22 +782,19 @@
       "https://images-na.ssl-images-amazon.com/images/I/516QE-qf8BL.jpg"
     ]
   },
-  {
+  {"occasion": ["General"],
     "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Women",
       "Clothing",
-      "Socks & Hosiery",
-      "Sheers",
-      "RECEIVE $1.00 OFF FOR EACH ADDITIONAL PAIR OF VENEZIANA HOSIERY ADDED TO YOUR CART!",
-      "Imported"
+      "Socks & Hosiery"
     ],
     "title": "Fiona",
     "brand": "Veneziana",
     "price": 35,
     "imageURLHighRes": []
   },
-  {
+  {"occasion": ["General"],
     "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Women",
@@ -949,20 +812,13 @@
 
     ]
   },
-  {
+  {"occasion": ["General"],
     "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Women",
       "Clothing",
       "Socks & Hosiery",
-      "Tights",
-      "RECEIVE $1.00 OFF FOR EACH ADDITIONAL PAIR OF VENEZIANA HOSIERY ADDED TO YOUR CART!",
-      "Imported",
-      "PLAIN MATT hose are perfect for a fashionable woman who is looking to complete their outfit S M L XL",
-      "REINFORCED BRIEF & SANDAL TOES: The reinforced panty section is shaped in a Boxer Brief style",
-      "QUALITY: Durable, resistant, comfortable 20 Denier. SIZES: Small Medium Large X-Large (Plus Size)",
-      "SEMI SHEER: These tights are perfect for all occasions Work Office Casual Leisure Evening Party",
-      "COLOUR: Available in a classic Black, Cappuccino (Brown/Tan) or Natural (Nude)"
+      "Tights"
     ],
     "description": [
       "PLAIN MATT hose are perfect for a fashionable woman who is looking to complete their outfit S M L XL REINFORCED BRIEF & SANDAL TOES: The reinforced panty section is shaped in a Boxer Brief style QUALITY: Durable, resistant, comfortable 20 Denier. SIZES: Small Medium Large X-Large (Plus Size) SEMI SHEER: These tights are perfect for all occasions Work Office Casual Leisure Evening Party COLOUR: Available in a classic Black, Cappuccino (Brown/Tan) or Natural (Nude)"
@@ -974,17 +830,12 @@
       "https://images-na.ssl-images-amazon.com/images/I/31syCwUltjL.jpg"
     ]
   },
-  {
+  {"occasion": ["General"],
     "cateogry": ["Fashion"], "sub_category": [
       "Clothing, Shoes & Jewelry",
       "Women",
       "Clothing",
-      "Jumpsuits, Rompers & Overalls",
-      "Material:Polyester",
-      "slim fit high waist jumpsuit",
-      "Suit For casual,sports,yoga,outdoor, summer party,clubwear and nightclub",
-      "Garment Care: Hand wash or dry clean your bodysuit, please don't soak the bodysuit in water for a long time, don't use chlorine bleach to wash",
-      "If you have any question,please contact us firstly,thank you."
+      "Jumpsuits, Rompers & Overalls"
     ],
     "description": [],
     "title": "Womens Sexy V-neck Long Sleeve Camouflage Slim Nightclub Bodycon Jumpsuit Rompers",
@@ -994,11 +845,8 @@
       "https://images-na.ssl-images-amazon.com/images/I/51wPG6JhNeL.jpg"
     ]
   },
-  {
-    "category": [
-      "Fasion"
-    ],
-    "sub_category": [
+  {"occasion": ["General"],
+    "category": ["Fasion"], "sub_category": [
       "Shoes",
       "Kids"
     ],
