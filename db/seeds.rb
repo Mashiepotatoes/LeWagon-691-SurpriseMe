@@ -122,7 +122,7 @@ parsed_datasets.each do |dataset|
     description = product_raw["description"]
     image_url = product_raw["imageUrlHighRes"]
     brand = product_raw["brand"]
-    price = product_raw["price"].to_f
+    price = product_raw["price"].to_i
 
     product_inst = Product.new(name: name, description: description, price: price, image_url: image_url, brand: brand)
     product_inst.category = categories[categories_index]
@@ -149,7 +149,7 @@ end
 # ---- Create Users ---- #
 
 puts "creating users"
-10.times do |i|
+200.times do |i|
   User.create(
     address: Faker::Address.full_address,
     birthday: Faker::Date.birthday(min_age: 18, max_age: 65),
@@ -164,7 +164,7 @@ puts "created #{User.count} users"
 
 # ---- Create Orders, Sessions, and Ratings ---- #
 puts "creating orders, sessions, and ratings"
-50.times do |i|
+200.times do |i|
   cart = Cart.create
   product = Product.all.sample
   order = Order.create(product: product, user: User.all.sample, cart: cart)

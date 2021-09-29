@@ -16,9 +16,6 @@ class GiftSessionsController < ApplicationController
     @gift_session.occasion = Occasion.find(params[:gift_session][:occasion_id])
     @gift_session.budget = params[:gift_session][:budget]
     @gift_session.save
-    # call gift recommendation model
-    # retrieve product name, price
-    # @gift_session.gift_recommendations = get_recommendations(@gift_session)
     redirect_to gift_session_path(@gift_session.id) if @gift_session.save
   end
 

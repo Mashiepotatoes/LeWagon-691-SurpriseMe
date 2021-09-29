@@ -13,8 +13,8 @@ class Product < ApplicationRecord
 
   has_many :ratings
 
-  scope :less_than, ->(budget) {
-    where("price < #{budget}")
+  scope :less_than, -> (budget) {
+    where("price_cents <= #{budget*100}")
   }
 
   scope :rating_filter, -> {
