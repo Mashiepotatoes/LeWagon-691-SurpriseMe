@@ -1,2 +1,13 @@
-<h1>ResponseSets#edit</h1>
-<p>Find me in app/views/response_sets/edit.html.erb</p>
+<%#---------------To be updated if edit function is needed--------------------%>
+<h2>Questions that you have answered</h2>
+<% @response_sets.each do |response| %>
+  <div class="card-preferences">
+    <div class="card-preferences-info">
+      <p><strong>Q</strong>: <em><%= response.question.content %></em></p>
+      <p><strong>A</strong>: <%= response.answer.choice %></p>
+    </div>
+    <div class="card-preferences-edit">
+      <p><%= link_to "Edit response", class: "btn btn-ghost btn-quiz mt-3" %></p>
+    </div>
+  </div>
+<% end %>

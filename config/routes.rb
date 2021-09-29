@@ -21,6 +21,8 @@ Rails.application.routes.draw do
 
   resources :friendships, only: [:index, :destroy, :create, :show]
 
+  resources :birthdays, only: [:index]
+
   resources :gift_sessions, only: [:new, :create, :show, :update] do
     resources :gift_recommendations, only: [:index]
   end
@@ -35,7 +37,7 @@ Rails.application.routes.draw do
     resources :answers, only: [:create, :edit, :update]
   end
 
-  resources :response_sets, only: [:index]
+  resources :response_sets, only: [:index, :edit, :update]
 
   mount StripeEvent::Engine, at: '/stripe-webhooks'
   resources :rating, only: [:create]

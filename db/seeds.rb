@@ -8,7 +8,7 @@ Order.destroy_all
 Rating.destroy_all
 Occasion.destroy_all
 
-category = Category.find(1)
+# category = Category.find(1)
 # ------ Jeremy and PE seeds ----- #
 # console.log("Seeding products!")
 # Product.create(image_url:"https://source.unsplash.com/random",category:category, name: "Xiaomi Mi Vacuum Cleaner Mini", price_cents: 6990, description: "A small-format wireless hand vacuum cleaner. It has two speeds, so you can adapt it to everything you need. Light and portable.")
@@ -149,7 +149,7 @@ end
 # ---- Create Users ---- #
 
 puts "creating users"
-200.times do |i|
+10.times do |i|
   User.create(
     address: Faker::Address.full_address,
     birthday: Faker::Date.birthday(min_age: 18, max_age: 65),
@@ -164,7 +164,7 @@ puts "created #{User.count} users"
 
 # ---- Create Orders, Sessions, and Ratings ---- #
 puts "creating orders, sessions, and ratings"
-200.times do |i|
+10.times do |i|
   cart = Cart.create
   product = Product.all.sample
   order = Order.create(product: product, user: User.all.sample, cart: cart)
@@ -196,5 +196,5 @@ parsed_questions.each do |question|
   content = question["question"]
   options = question["options"]
 
-  Question.create(content: content, options: options, parent: parent)
+  Question.create(content: content, options: options)
 end
