@@ -23,6 +23,7 @@ class Product < ApplicationRecord
   scope :nil_price, -> { where(price: nil) }
 
   def self.curate(gift_session, disco_recommendations)
-    disco_recommendations.less_than(gift_session.budget).rating_filter.sample(5) # for_occasion(gift_session.occasion)
+    disco_recommendations.less_than(gift_session.budget).sample(5) # for_occasion(gift_session.occasion)
+    binding.pry
   end
 end

@@ -17,7 +17,6 @@
           <p>Product rating</p>
           <p><%= recommendation.description %></p>
         </div>
-
         <h4><%= humanized_money_with_symbol(recommendation.price) %></h4>
 
         <div data-controller="quantity" data-quantity-target='wrapper' data-product-id=<%= recommendation.id %> >
