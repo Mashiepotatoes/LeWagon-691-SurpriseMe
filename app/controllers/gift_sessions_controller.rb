@@ -8,14 +8,11 @@ class GiftSessionsController < ApplicationController
   end
 
   def create
-    @gift_session = GiftSession.new
-    # current user id
-    @gift_session.user = current_user
-    # recipient id
+    @gift_session = GiftSession.new # current user id
+    @gift_session.user = current_user # recipient id
     @gift_session.recipient = User.find(params[:recipient_id])
     @gift_session.budget = params[:gift_session][:budget]
     @gift_session.save
-
     # call gift recommendation model
     # retrieve product name, price
     @gift_session.gift_recommendations = get_recommendations(@gift_session)
@@ -24,40 +21,39 @@ class GiftSessionsController < ApplicationController
 
   def get_recommendations(gift_session)
     recommendations_array = Product.curate(gift_session) # filter by price
-    recommender = Disco::Recommender.new
-    # recommendations = format_results(recommendations_array,  gift_session)
-    recommendations = ([
-      {user_id: 1, item_id: 1, rating: 5},
-      {user_id: 2, item_id: 1, rating: 5},
-      {user_id: 1, item_id: 2, rating: 5},
-      {user_id: 2, item_id: 2, rating: 5},
-      {user_id: 1, item_id: 3, rating: 5},
-      {user_id: 2, item_id: 3, rating: 5},
-      {user_id: 1, item_id: 4, rating: 5},
-      {user_id: 2, item_id: 4, rating: 5},
-      {user_id: 1, item_id: 5, rating: 5},
-      {user_id: 2, item_id: 5, rating: 5}
-  ])
-    recommender.fit(recommendations)
-    # products = recommender.user_recs(user_id)
-    # products.map do |product|
-    #   GiftRecommendation.create(product: product, gift_session: gift_session)
+  #   recommender = Disco::Recommender.new
+  #   # recommendations = format_results(recommendations_array,  gift_session)
+  #   recommendations = ([
+  #     {user_id: 1, item_id: 1, rating: 5},
+  #     {user_id: 2, item_id: 1, rating: 5},
+  #     {user_id: 1, item_id: 2, rating: 5},
+  #     {user_id: 2, item_id: 2, rating: 5},
+  #     {user_id: 1, item_id: 3, rating: 5},
+  #     {user_id: 2, item_id: 3, rating: 5},
+  #     {user_id: 1, item_id: 4, rating: 5},
+  #     {user_id: 2, item_id: 4, rating: 5},
+  #     {user_id: 1, item_id: 5, rating: 5},
+  #     {user_id: 2, item_id: 5, rating: 5}
+  # ])
+  #   recommender.fit(recommendations)
+  #   products = recommender.user_recs(current_user.id)
+  #   products.map do |product|
+  #     GiftRecommendation.create(product: product, gift_session: gift_session)
     # end
-
-    products = Product.first(3)
-    products.map do |product|
+    
+    recommendations_array.map do |product|
       GiftRecommendation.create(product: product, gift_session: gift_session)
     end
 
   end
 
-  def format_results(products)
-    products.map do |product|
-      {
-        user_id: gift_session.recipient_id,
-        item_id: product.id,
-        rating: product.rating
-      }
-    end
-  end
+  # def format_results(products)
+  #   products.map do |product|
+  #     {
+  #       user_id: gift_session.recipient_id,
+  #       item_id: product.id,
+  #       rating: product.rating
+  #     }
+  #   end
+  # end
 end
