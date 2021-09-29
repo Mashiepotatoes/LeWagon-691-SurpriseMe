@@ -1,38 +1,52 @@
-<div class="container">
-  <h2 class='mt-4'>Here are some gift suggestions for <%= @gift_session.recipient.username  %></h2>
-  <form class='mt-2'data-controller='check-all-checkboxes'>
+<div class="gift-container">
+  <h2>Here are some gift suggestions for </h2>
+  <%# <form class='mt-2'data-controller='check-all-checkboxes'>
     <div class="form-check pl-0">
       <input id="check-all" type="checkbox" data-check-all-checkboxes-target="checkbox" data-action="change->check-all-checkboxes#checkAll">
       <label for="check-all">Select All</label>
-    </div>
+    </div> %>
 
     <% @disco_recommendations.each do |recommendation| %>
       <%# <% if recommendation.product.price_cents <= @gift_session.budget %>
-      <div class="card-gift form-check">
+      <div class="card-gift">
+        <%# <div class="card-gift form-check"> %>
+          <div class="cart-img-container">
+            <%= image_tag(recommendation.image_url) %>
+          </div>
+
+          <div class="card-gift-content">
+            <div class="card-gift-content-wide">
+                <h2><%= recommendation.name %></h2>
+                <p><%= recommendation.description %></p>
+            </div>
+
+            <div class="cart-gift-details">
+              <div class="card-gift-quantity" data-controller="quantity" data-quantity-target='wrapper' data-product-id=<%= recommendation.id %> >
+                <button class="quantity-btn" data-action="click->quantity#reduce"><i class="fas fa-minus"></i></button>
+                <div class="my-1" data-quantity-target="total"> 0 </div>
+                <button class="quantity-btn" data-action="click->quantity#add"><i class="fas fa-plus"></i></button>
+              </div>
+
+              <h4 class="card-gift-price"><%= humanized_money_with_symbol(recommendation.price) %></h4>
+            </div>
+          </div>
+
         <%# <input id='checkbox-product' type="checkbox" class="form-check-input" data-check-all-checkboxes-target="check3box">
         <label for='checkbox-product'></label>
         <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
         <div class="card-gift-infos"> %>
-          <h2><%= recommendation.name %></h2>
-          <p>Product rating: </p>
-          <p><%= recommendation.description %></p>
-          <p><%= recommendation.occasion.name %></p>
-        </div>
-        <h4><%= humanized_money_with_symbol(recommendation.price) %></h4>
+          <%# <h2><%= recommendation.name</h2> %>
+          <%# <p>Product rating: </p> %>
+          <%# <p><%= recommendation.description</p> %>
+          <%# <p><%= recommendation.occasion.name</p> %>
+        <%# </div> %>
 
-        <div data-controller="quantity" data-quantity-target='wrapper' data-product-id=<%= recommendation.id %> >
-          <button data-action="click->quantity#reduce">-</button>
-          <p data-quantity-target="total"> 0 </p>
-          <button data-action="click->quantity#add">+</button>
-        </div>
       </div>
 
-
-
     <% end %>
-  </form>
+  <%# </form> %>
 
-  <div class="gift-checkout">
-    <%= link_to "View cart", cart_path(@current_cart), class: "btn btn-ghost" %>
+  <div class="checkout-gift">
+    <%= link_to "View cart", cart_path(@current_cart), class: "btn surprise-green-btn" %>
   </div>
 </div>
