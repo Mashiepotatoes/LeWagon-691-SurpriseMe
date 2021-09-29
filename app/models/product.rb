@@ -1,9 +1,13 @@
 class Product < ApplicationRecord
   belongs_to :category
   has_many :ratings, dependent: :destroy
-  has_many :line_items, dependent: :destroy
+  has_many :line_items
+  has_many :carts, through: :line_items
+
   monetize :price_cents
-  has_many :orders, dependent: :destroy
+
+  belongs_to :orders, dependent: :destroy
+#   has_many :orders, dependent: :destroy
   has_many :product_occasions, dependent: :destroy
   has_many :occasions, through: :product_occasions
 
@@ -29,4 +33,6 @@ class Product < ApplicationRecord
   def self.curate(gift_session, disco_recommendations)
     disco_recommendations.for_occasion(gift_session.occasion_id).less_than(gift_session.budget).rating_filter.sample(5) # for_occasion(gift_session.occasion)
   end
+
+
 end

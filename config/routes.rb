@@ -2,13 +2,14 @@ Rails.application.routes.draw do
   devise_for :users
   devise_scope :user do
     get '/users/sign_out' => 'devise/sessions#destroy'
+    # get '/users/received', to: 'products#received_gifts'
   end
 
+  get '/users/gift_received', to: 'products#gift_received', as: :received
   root to: 'pages#home'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
   get 'carts/:id' ,to: 'carts#show', as: "cart"
-
   post "/friendships/accept", to: 'friendships#accept'
   get "/friendships/requests", to: 'friendships#requests'
   get "/friendships/search", to: 'friendships#search'
@@ -20,6 +21,8 @@ Rails.application.routes.draw do
   post '/line_items/reduce/:id', to: "line_items#reduce",as: :reduce
 
   resources :friendships, only: [:index, :destroy, :create, :show]
+
+  resources :birthdays, only: [:index]
 
   resources :gift_sessions, only: [:new, :create, :show, :update] do
     resources :gift_recommendations, only: [:index]
@@ -35,7 +38,7 @@ Rails.application.routes.draw do
     resources :answers, only: [:create, :edit, :update]
   end
 
-  resources :response_sets, only: [:index]
+  resources :response_sets, only: [:index, :edit, :update]
 
   mount StripeEvent::Engine, at: '/stripe-webhooks'
   resources :rating, only: [:create]

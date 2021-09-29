@@ -4,21 +4,32 @@
   background-color :transparent;
 }
 
+// <--- Take quiz at user preference --->
+.btn-ghost {
+  color: #4A4A4A;
+  border: 1px solid #4A4A4A;
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.btn-ghost:hover {
+  opacity: 1;
+}
+
 // <--- send gift at user profile --->
 .btn-flat {
-  position: absolute;
-  bottom: -215px;
-  right: 120px;
   color: white;
-  padding: 8px 24px;
-  width: 340px;
+  padding: 8px 4rem;
   border-radius: 4px;
-  background: #29EFC6;
+  background: $surprise-green;
   transition: background 0.3s ease;
 }
 
 .btn-flat:hover {
-  background: #22cfac;
+  background: $surprise-green-secondary;
   color: white;
 }
 

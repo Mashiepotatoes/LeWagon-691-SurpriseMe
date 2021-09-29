@@ -1,26 +1,31 @@
-<div class="background" id="back-to-top">
-  <%= image_tag "https://res.cloudinary.com/dncp2x5qh/image/upload/v1632643774/pexels-tima-miroshnichenko-6463605_ctlci8.jpg", class:"image-tag" %>
-  <div class="tagline">
-    <p>We help you buy gifts that people actually want</p>
+<div class="background-wrapper min-vh-100" id="back-to-top">
+  <div class="tagline min-vh-100">
+    <h3>We help you buy gifts that people actually want</h3>
     <a href="#learn-more" data-controller="scroll-to" >Learn More! <i class="fas fa-caret-down"></i></a>
   </div>
 
-  <h2 id="learn-more"><%= image_tag "https://res.cloudinary.com/dncp2x5qh/image/upload/v1632643791/pexels-cottonbro-3972177_olkptt.jpg", class:"image-tag" %></h2>
-  <div class="desc-1">
-    <h4>Proprietary Technology</h4>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pharetra convallis posuere morbi leo urna. Iaculis nunc sed augue lacus viverra vitae congue eu. Dui nunc mattis enim ut tellus elementum sagittis.Tristique senectus et netus et malesuada fames ac turpis egestas. Massa massa ultricies mi quis hendrerit dolor. Rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque. Eu turpis egestas pretium aenean pharetra magna ac. Viverra tellus in hac habitasse platea dictumst vestibulum rhoncus est.  </p>
-  </div>
+  <div class="home-desc-wrapper min-vh-100">
+    <div class="container" id="learn-more">
+      <div class="d-flex w-100 align-item-center" id="desc">
+        <div class="desc-item">
+          <h4>Proprietary Technology</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pharetra convallis posuere morbi leo urna. Iaculis nunc sed augue lacus viverra vitae congue eu. Dui nunc mattis enim ut tellus elementum sagittis.Tristique senectus et netus et malesuada fames ac turpis egestas. Massa massa ultricies mi quis hendrerit dolor. Rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque. Eu turpis egestas pretium aenean pharetra magna ac. Viverra tellus in hac habitasse platea dictumst vestibulum rhoncus est.  </p>
+        </div>
 
-  <div class="desc-2">
-    <h4>Protects your privacy</h4>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pharetra convallis posuere morbi leo urna. Iaculis nunc sed augue lacus viverra vitae congue eu. Dui nunc mattis enim ut tellus elementum sagittis.Tristique senectus et netus et malesuada fames ac turpis egestas. Massa massa ultricies mi quis hendrerit dolor. Rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque. Eu turpis egestas pretium aenean pharetra magna ac. Viverra tellus in hac habitasse platea dictumst vestibulum rhoncus est.  </p>
-  </div>
+        <div class="desc-item">
+          <h4>Protects your privacy</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pharetra convallis posuere morbi leo urna. Iaculis nunc sed augue lacus viverra vitae congue eu. Dui nunc mattis enim ut tellus elementum sagittis.Tristique senectus et netus et malesuada fames ac turpis egestas. Massa massa ultricies mi quis hendrerit dolor. Rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque. Eu turpis egestas pretium aenean pharetra magna ac. Viverra tellus in hac habitasse platea dictumst vestibulum rhoncus est.  </p>
+        </div>
 
-  <div class="desc-3">
-    <h4>Make your money’s worth</h4>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pharetra convallis posuere morbi leo urna. Iaculis nunc sed augue lacus viverra vitae congue eu. Dui nunc mattis enim ut tellus elementum sagittis.Tristique senectus et netus et malesuada fames ac turpis egestas. Massa massa ultricies mi quis hendrerit dolor. Rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque. Eu turpis egestas pretium aenean pharetra magna ac. Viverra tellus in hac habitasse platea dictumst vestibulum rhoncus est.  </p>
-  </div>
+        <div class="desc-item">
+          <h4>Make your money’s worth</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Pharetra convallis posuere morbi leo urna. Iaculis nunc sed augue lacus viverra vitae congue eu. Dui nunc mattis enim ut tellus elementum sagittis.Tristique senectus et netus et malesuada fames ac turpis egestas. Massa massa ultricies mi quis hendrerit dolor. Rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque. Eu turpis egestas pretium aenean pharetra magna ac. Viverra tellus in hac habitasse platea dictumst vestibulum rhoncus est.  </p>
+        </div>
+      </div>
 
-  <%= link_to "Let's Get Started", user_session_path, class:"btn btn-flat home" %>
-  <a href="#back-to-top" data-controller="scroll-to" ><i class="fas fa-arrow-circle-up"></i></a>
+        <%= link_to "Let's Get Started", user_session_path, class:"btn btn-flat home mx-auto mt-8" %>
+    </div>
+  </div>
 </div>
+
+<a id="back-to-top" href="#back-to-top" data-controller="scroll-to" ><i class="fas fa-arrow-circle-up"></i></a>

@@ -7,16 +7,14 @@ footer{
 }
 
 .footer-content{
-  img{
-    width: 130px;
-  }
-}
-.footer-content{
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
   text-align: center;
+
+  img{
+    width: 120px;
+  }
 }
 
 .footer-content h3{
@@ -27,7 +25,6 @@ footer{
 }
 
 .socials{
-  margin-top: 1.4rem;
   list-style: none;
   display:flex;
   align-items: center;
@@ -54,7 +51,7 @@ footer{
   color: $surprise-pink;
 }
 
-.footer-bottom{
+.footer-bottom {
   background-color: #000;
   width: 100vw;
   padding: 5px 0 ;
@@ -62,6 +59,7 @@ footer{
   justify-content: center;
   align-items: center;
   text-align: center;
+  font-family: $body-font;
 }
 
 .footer-bottom p {

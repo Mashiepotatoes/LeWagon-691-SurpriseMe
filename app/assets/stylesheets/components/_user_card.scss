@@ -16,12 +16,12 @@
 }
 
 .fa-user-friends {
-  color: #DEA5A4;
+  color: $surprise-pink;
   opacity: 0.5;
 }
 
 .fa-user-plus {
-  color: #DEA5A4;
+  color: $surprise-pink;
   opacity: 0.5;
 }
 
@@ -37,10 +37,12 @@
   display: flex;
   align-items: center;
   padding: 30px;
+  font-family: $headers-font;
 }
 
 .card-user-info {
   height: auto;
+  font-family: $body-font;
 }
 
 .card-user-profile-info img {
@@ -88,6 +90,8 @@
   background-color: white;
   text-align: center;
   font-size: 24px;
+  font-family: $headers-font;
+  margin: 0 auto;
 }
 
 .cards {
@@ -116,6 +120,7 @@ input[id ^= "occasion"] {
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   filter: grayscale(1);
+  font-family: $headers-font;
 }
 
 .card-category:hover {
@@ -129,16 +134,26 @@ input[id ^="occasion"]:checked + label .card-category{
 
 // card-user-budget //
 .card-user-budget {
-  width: 60%;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 10px 20px;
   text-align: center;
   background-color: white;
+  font-family: $body-font;
+}
+
+.budget-submit {
+  width: 70%;
+
 }
 
 .slider {
   -webkit-appearance: none;
   appearance: none;
-  background-color:#FF69B2;
-  width: 60%;
+  background-color: $surprise-pink;
+  width: 100%;
+  margin: 0 16px;
   height: 10px;
   border-radius: 5px;
   outline: none;
@@ -158,7 +173,7 @@ input[id ^="occasion"]:checked + label .card-category{
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background: #FF69B2;
+  background: $surprise-pink;
   cursor: pointer;
 }
 
