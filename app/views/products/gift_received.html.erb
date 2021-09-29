@@ -1,0 +1,23 @@
+<div class="container gift-container">
+
+  <h2>Gifts that I have received</h2>
+
+  <% @received_gifts.each do |gift| %>
+    <div class="card-gift d-flex justify-content-center align-items">
+      <div class="cart-img-container">
+        <%= image_tag(gift.image_url) %>
+      </div>
+      <div class="card-gift-content">
+        <div class="card-gift-content-wide">
+          <h2><%= gift.name %><h2>
+          <p><%= gift.description %><p>
+        </div>
+        <div class="card-gift-content-rate">
+          <%= link_to 'Rate',"#",class:"btn-rate"%>
+        </div>
+      </div>
+
+    </div>
+  <% end %>
+
+</div>
