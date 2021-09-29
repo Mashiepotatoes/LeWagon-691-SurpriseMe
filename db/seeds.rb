@@ -94,7 +94,7 @@ parsed_datasets.each do |dataset|
     image_url = product_raw["imageUrlHighRes"]
     brand = product_raw["brand"]
     price = product_raw["price"].to_f
-    
+
     product_inst = Product.new(name: name, description: description, price: price, image_url: image_url, brand: brand)
     product_inst.category = categories[categories_index]
     product_inst.save!
@@ -118,8 +118,8 @@ puts "creating users"
 end
 puts "created #{User.count} users"
 
- # ---- Create Orders, Sessions, and Ratings ---- #
- puts "creating orders, sessions, and ratings"
+# ---- Create Orders, Sessions, and Ratings ---- #
+puts "creating orders, sessions, and ratings"
 50.times do |i|
   cart = Cart.create
   product = Product.all.sample
