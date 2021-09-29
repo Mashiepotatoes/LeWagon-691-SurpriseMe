@@ -158,7 +158,6 @@ puts "creating orders, sessions, and ratings"
     user: session.recipient,
     product: product
     )
-
 end
 
 puts "Created #{Product.count} products"
@@ -174,6 +173,7 @@ parsed_questions = JSON.parse(serialised_questions)
 parsed_questions.each do |question|
   content = question["question"]
   options = question["options"]
+  subcategory = question["subcat"]
 
-  Question.create(content: content, options: options)
+  Question.create(content: content, options: options, subcategory: subcategory)
 end

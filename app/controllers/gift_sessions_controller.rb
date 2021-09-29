@@ -25,4 +25,9 @@ class GiftSessionsController < ApplicationController
     Product.curate(gift_session, disco_recommendations) # filter by price
 
   end
+
+  def filter
+    user_preferences = Answer.distinct.pluck(:subcategory)
+    Products.where(subcategory: user_preferences)
+  end
 end
