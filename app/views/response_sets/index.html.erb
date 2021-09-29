@@ -1,13 +1,23 @@
 <div class="container">
   <div class="container-preferences">
-    <h2>Questions that you have answered</h2>
-    <% @response_sets.each do |response| %>
-      <div class="card-preferences">
-        <div class="card-preferences-info">
-          <p><strong>Q</strong>: <em><%= response.question.content %></em></p>
-          <p><strong>A</strong>: <%= response.answer.choice %></p>
+    <% if @response_sets.empty? %>
+      <div class="card-quiz">
+        <div class="card-quiz-info">
+          <h2> <%= current_user.first_name %>, help us get to know you better!</h2>
+          <p>Take our quiz to help us understand what you like. We want our recommendations to be better tailored to your personal preferences, so answer as many questions as possible!</p>
+          <%= link_to "Begin Quiz", question_path(@question), class: "btn btn-ghost btn-quiz mt-3" %>
         </div>
       </div>
+    <% else %>
+      <h2>Questions that you have answered</h2>
+      <% @response_sets.each do |response| %>
+        <div class="card-preferences">
+          <div class="card-preferences-info">
+            <p><strong>Q</strong>: <em><%= response.question.content %></em></p>
+            <p><strong>A</strong>: <%= response.answer.choice %></p>
+          </div>
+        </div>
+      <% end %>
     <% end %>
   </div>
 </div>
