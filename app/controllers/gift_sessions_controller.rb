@@ -39,7 +39,12 @@ class GiftSessionsController < ApplicationController
       {user_id: 2, item_id: 5, rating: 5}
   ])
     recommender.fit(recommendations)
-    products = recommender.user_recs(user_id)
+    # products = recommender.user_recs(user_id)
+    # products.map do |product|
+    #   GiftRecommendation.create(product: product, gift_session: gift_session)
+    # end
+
+    products = Product.first(3)
     products.map do |product|
       GiftRecommendation.create(product: product, gift_session: gift_session)
     end

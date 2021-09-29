@@ -30,7 +30,7 @@ class OrdersController < ApplicationController
   end
 
   def show
-      @order = current_user.order
+      @order = current_user.orders.find(params[:id])
     # Find the gift session
     # @gift_session = GiftSession.find(params[:id])
     # Assign the created order to the gift session
