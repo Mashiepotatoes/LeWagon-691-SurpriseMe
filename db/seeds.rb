@@ -164,7 +164,7 @@ puts "created #{User.count} users"
 
 # ---- Create Orders, Sessions, and Ratings ---- #
 puts "creating orders, sessions, and ratings"
-200.times do |i|
+10.times do |i|
   cart = Cart.create
   product = Product.all.sample
   order = Order.create(product: product, user: User.all.sample, cart: cart)
