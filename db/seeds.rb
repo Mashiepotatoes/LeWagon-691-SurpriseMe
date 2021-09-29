@@ -8,7 +8,6 @@ Order.destroy_all
 Rating.destroy_all
 
 # ------ Jeremy and PE seeds ----- #
-<<<<<<< HEAD
 # console.log("Seeding products!")
 # Product.create(image_url:"https://source.unsplash.com/random",category:category, name: "Xiaomi Mi Vacuum Cleaner Mini", price_cents: 6990, description: "A small-format wireless hand vacuum cleaner. It has two speeds, so you can adapt it to everything you need. Light and portable.")
 # Product.create(image_url:"https://source.unsplash.com/random",category:category, name: "Jabra Elite 3 Earbuds", price_cents: 12800, description: "Designed for secure fit and amazing durability: Ergonomic shape makes eargels exceptionally comfortable and the ideal fit for every type of ear – IP55 weather-resistant rating against dust and water. Long battery life and true wireless stability: With up to 28 hours of battery time with the pocket-friendly charging case, the Elite 3 earphones let you take calls and play music while staying connected.")
@@ -23,8 +22,6 @@ Rating.destroy_all
 # Product.create(image_url:"https://source.unsplash.com/random",category:category,name: "Wheeled Golf Travel Cover Bag for Airlines Shipping Storage Carrier Black", price: 49.23, details: "Premium Nylon cloth golf bag travel golf club protector, dustproof, folding, lightweight and durable, can be used many times. Suitable for car or air transport. The bottom is equipped with non-slip foot pads, pulley design, easy towing. Half open double sided zipper for easy use, transparent pocket for your business card. Unique foldable design, convenient storage, suitable for outing use.")
 # Product.create(image_url:"https://source.unsplash.com/random",category:category,name: "LYY_Dual-purpose Folding Camping Beach Chair with Backrest for Outdoor Activities", price: 55.30, details: "The side pocket design can place mobile phones or other objects. Concave-convex pattern design can easily cope with a variety of grounds. The non-slip plastic foot cover prevents slipping. Aluminum alloy folding bracket is light, strong and not easy to deform, and high-density double-layer Oxford cloth is durable, comfortable, breathable and not stuffy. The length of the product is 82cm, the width is 44cm, and the thickness is 30cm. It is suitable for picnic, camping, fishing, traveling, outing, etc.")
 # Product.create(image_url:"https://source.unsplash.com/random",category:category,name: "Bicycle Wall Hook Stand Bike Mounted Mount Storage Hanger Adjustable activity Rack", price: 8.13, details: "Features: Bicycle Wall Mount Hanger for hanging the bike vertically to save space. Made of strong solid steel,load capacity up to 30kg. Fits on any solid wall. Four mounting points and side special design make fasten sturdy. Suitable for all type bikes like Mountain bikes,road bikes,folding bikes etc. Specification: Load Capacity: 30kg. Material: High Quality Strong Steel, High Graded Rubber. Product dimensions (L x W x H): 26 x 7.5 x 13.5cm")
-=======
->>>>>>> latest seeds
 
 # Product.destroy_all
 # Category.destroy_all
@@ -128,7 +125,7 @@ parsed_datasets.each do |dataset|
     image_url = product_raw["imageUrlHighRes"]
     brand = product_raw["brand"]
     price = product_raw["price"].to_f
-    
+
     product_inst = Product.new(name: name, description: description, price: price, image_url: image_url, brand: brand)
     product_inst.category = categories[categories_index]
     product_inst.save!
@@ -154,8 +151,9 @@ puts "creating users"
     first_name: Faker::Name.first_name,
     last_name: Faker::Name.last_name
     # password: Faker::Alphanumeric.alphanumeric(number: 10, min_alpha: 8)
- end
-  
+  )
+end
+
 # ---- Create Orders, Sessions, and Ratings ---- #
 puts "creating orders"
 50.times do |i|
@@ -174,7 +172,7 @@ puts "creating orders"
     )
 
 end
-  
+
 puts "finished creating #{Order.count} orders"
 puts "finished creating #{GiftSession.count} gift sessions"
 puts "finished creating #{Rating.count} ratings"

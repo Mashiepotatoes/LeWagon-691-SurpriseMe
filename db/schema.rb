@@ -10,17 +10,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-ActiveRecord::Schema.define(version: 2021_09_28_101640) do
-
-=======
-ActiveRecord::Schema.define(version: 2021_09_29_024144) do
->>>>>>> remove migration for recipient id, add migration for user id to ratings
-=======
 ActiveRecord::Schema.define(version: 2021_09_29_031758) do
->>>>>>> implement disco  gem and can display results on gift sessions view
+
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -154,7 +145,7 @@ ActiveRecord::Schema.define(version: 2021_09_29_031758) do
     t.string "image_url"
     t.string "brand"
     t.decimal "average_rating", precision: 2, scale: 1
-    t.integer "price_cents", default: 0, null: fals
+    t.integer "price_cents", default: 0, null: false
     t.index ["category_id"], name: "index_products_on_category_id"
   end
 
