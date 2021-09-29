@@ -4,23 +4,29 @@ class Product < ApplicationRecord
   has_many :line_items, dependent: :destroy
   monetize :price_cents
   has_many :orders, dependent: :destroy
-  # scope :for_occasion, -> (occasion) {
-    #   where(occasion: occasion)
-    # }
-    has_many :product_occasions
-    has_many :occasions, through: :product_occasions
-    has_many :ratings
+  has_many :product_occasions, dependent: :destroy
+  has_many :occasions, through: :product_occasions
+
+  scope :for_occasion, ->(occasion_id) {
+    joins(:occasions).where("occasion_id = #{occasion_id}")
+  }
+
+  has_many :ratings
 
   scope :less_than, -> (budget) {
     where("price_cents <= #{budget*100}")
   }
 
-  # scope :long_title, -> { where("LENGTH(name) > 100") }
-  # scope :no_price, -> { where(price: 0) }
-  # scope :nil_price, -> { where(price: nil) }
+  scope :rating_filter, -> {
+    where("average_rating > 3").or(where("average_rating = 0"))
+  }
+
+  scope :long_title, -> { where("LENGTH(name) > 100") }
+  scope :no_price, -> { where(price: 0) }
+  scope :nil_price, -> { where(price: nil) }
+  scope :curated, ->(gift_session, disco_recommendations) { curate(gift_session, disco_recommendations)}
 
   def self.curate(gift_session, disco_recommendations)
-    disco_recommendations.less_than(gift_session.budget) # for_occasion(gift_session.occasion)
-    binding.pry
+    disco_recommendations.for_occasion(gift_session.occasion_id).less_than(gift_session.budget).rating_filter.sample(5) # for_occasion(gift_session.occasion)
   end
 end
