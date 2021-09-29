@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2021_09_29_031758) do
+=======
+ActiveRecord::Schema.define(version: 2021_09_29_062816) do
+>>>>>>> b97319f (updated occasion reference key)
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -98,8 +102,8 @@ ActiveRecord::Schema.define(version: 2021_09_29_031758) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "{:null=>false, :foreign_key=>true}_id"
-    t.bigint "occasions_id", null: false
-    t.index ["occasions_id"], name: "index_gift_sessions_on_occasions_id"
+    t.bigint "occasion_id", null: false
+    t.index ["occasion_id"], name: "index_gift_sessions_on_occasion_id"
     t.index ["order_id"], name: "index_gift_sessions_on_order_id"
     t.index ["recipient_id"], name: "index_gift_sessions_on_recipient_id"
     t.index ["user_id"], name: "index_gift_sessions_on_user_id"
@@ -218,7 +222,7 @@ ActiveRecord::Schema.define(version: 2021_09_29_031758) do
   add_foreign_key "friendships", "users"
   add_foreign_key "friendships", "users", column: "friend_id"
   add_foreign_key "gift_recommendations", "products"
-  add_foreign_key "gift_sessions", "occasions", column: "occasions_id"
+  add_foreign_key "gift_sessions", "occasions"
   add_foreign_key "gift_sessions", "orders"
   add_foreign_key "gift_sessions", "users"
   add_foreign_key "gift_sessions", "users", column: "recipient_id"

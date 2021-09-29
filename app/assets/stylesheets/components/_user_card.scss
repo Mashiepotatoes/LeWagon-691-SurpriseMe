@@ -98,7 +98,7 @@
   background-color: white;
 }
 
-input[name="occasion"] {
+input[id ^= "occasion"] {
   display:none;
 }
 
@@ -122,7 +122,7 @@ input[name="occasion"] {
   filter: grayscale(0);
 }
 
-input[name="occasion"]:checked + label .card-category{
+input[id ^="occasion"]:checked + label .card-category{
   filter: grayscale(0);
   box-shadow: 0 0 10px 4px rgba($surprise-pink, 0.4);
 }

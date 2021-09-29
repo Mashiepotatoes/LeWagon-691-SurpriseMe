@@ -22,17 +22,8 @@
         <div class="card-user-product">
           <p>Pick an occasion:</p>
           <div class="cards">
-          <%# <%= f.input :occasion,
-              as: :radio_buttons,
-              collection_wrapper_tag: 'div',
-              collection_wrapper_class: 'category-wrapper',
-              item_wrapper_class: 'category-item',
-              input_html: {class: 'category-selector'},
-              collection: @occasions %>
             <% @occasions.each do |occasion| %>
-
-
-              <input type="radio" name="occasion" id="<%= "occasion-#{occasion.id}" %>">
+              <input type="radio" name="gift_session[occasion]" value="<%= occasion.id %>" id="<%= "occasion-#{occasion.id}" %>">
               <label class="card-label" for="<%= "occasion-#{occasion.id}" %>">
                 <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path occasion.cover_image %>)">
                   <%= occasion.name.capitalize %>

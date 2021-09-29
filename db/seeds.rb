@@ -7,7 +7,7 @@ Category.destroy_all
 Order.destroy_all
 Rating.destroy_all
 
-# category = Category.find(1)
+category = Category.find(1)
 # ------ Jeremy and PE seeds ----- #
 # console.log("Seeding products!")
 # Product.create(image_url:"https://source.unsplash.com/random",category:category, name: "Xiaomi Mi Vacuum Cleaner Mini", price_cents: 6990, description: "A small-format wireless hand vacuum cleaner. It has two speeds, so you can adapt it to everything you need. Light and portable.")
@@ -87,9 +87,9 @@ parsed_toys_games = JSON.parse(serialised_toys_games)
 
 # ---- Amazon electronics seeds ---- #
 
-# file_path_tg = File.join(__dir__, "amazon_datasets/electronics.json")
-# serialised_electronics = File.read(file_path_tg)
-# parsed_electronics = JSON.parse(serialised_electronics)
+file_path_tg = File.join(__dir__, "amazon_datasets/electronics.json")
+serialised_electronics = File.read(file_path_tg)
+parsed_electronics = JSON.parse(serialised_electronics)
 
 # ---- Amazon fashion seeds ---- #
 
@@ -110,8 +110,8 @@ serialised_sports_outdoors = File.read(file_path_tg)
 parsed_sports_outdoors = JSON.parse(serialised_sports_outdoors)
 
 # ---- seeding ---- #
-parsed_datasets = [parsed_all_beauty, parsed_video_games, parsed_pet_supplies, parsed_cd_vinyl, parsed_toys_games, parsed_fashion, parsed_home_kitchen, parsed_sports_outdoors]
-categories = [all_beauty, video_games, cd_vinyl, pet_essentials, toys_games, fashion, home_kitchen, sports_outdoors]
+parsed_datasets = [parsed_all_beauty, parsed_video_games, parsed_pet_supplies, parsed_cd_vinyl, parsed_toys_games, parsed_electronics, parsed_fashion, parsed_home_kitchen, parsed_sports_outdoors]
+categories = [all_beauty, video_games, cd_vinyl, pet_essentials, toys_games, fashion, home_kitchen, sports_outdoors, electronics]
 
 puts "Creating products"
 categories_index = 0
@@ -180,5 +180,5 @@ parsed_questions.each do |question|
   content = question["question"]
   options = question["options"]
 
-  Question.create(content: content, options: options)
+  Question.create(content: content, options: options, parent: parent)
 end
