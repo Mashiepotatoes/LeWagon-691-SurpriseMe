@@ -2,13 +2,14 @@ Rails.application.routes.draw do
   devise_for :users
   devise_scope :user do
     get '/users/sign_out' => 'devise/sessions#destroy'
+    # get '/users/received', to: 'products#received_gifts'
   end
 
+  get '/users/gift_received', to: 'products#gift_received', as: :received
   root to: 'pages#home'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
   get 'carts/:id' ,to: 'carts#show', as: "cart"
-
   post "/friendships/accept", to: 'friendships#accept'
   get "/friendships/requests", to: 'friendships#requests'
   get "/friendships/search", to: 'friendships#search'

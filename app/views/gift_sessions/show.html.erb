@@ -9,10 +9,10 @@
     <% @disco_recommendations.each do |recommendation| %>
       <%# <% if recommendation.product.price_cents <= @gift_session.budget %>
       <div class="card-gift form-check">
-        <input id='checkbox-product' type="checkbox" class="form-check-input" data-check-all-checkboxes-target="check3box">
+        <%# <input id='checkbox-product' type="checkbox" class="form-check-input" data-check-all-checkboxes-target="check3box">
         <label for='checkbox-product'></label>
         <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-        <div class="card-gift-infos">
+        <div class="card-gift-infos"> %>
           <h2><%= recommendation.name %></h2>
           <p>Product rating</p>
           <p><%= recommendation.description %></p>

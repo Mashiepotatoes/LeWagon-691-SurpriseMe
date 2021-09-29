@@ -5,8 +5,8 @@ class GiftSessionsController < ApplicationController
 
   def show
     @gift_session = GiftSession.find(params[:id])
-    @disco_recommendations = @gift_session.recipient.recommended_products
-    get_recommendations(@gift_session, @disco_recommendations)
+    # @disco_recommendations = @gift_session.recipient.recommended_products
+    @disco_recommendations = get_recommendations(@gift_session, @disco_recommendations)
   end
 
   def create
@@ -21,7 +21,8 @@ class GiftSessionsController < ApplicationController
 
   private
 
-  def get_recommendations(gift_session, @disco_recommendations)
-    Product.curate(gift_session) # filter by price
+  def get_recommendations(gift_session, disco_recommendations)
+    Product.first(3)
+    # Product.curate(gift_session) # filter by price
   end
 end
