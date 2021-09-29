@@ -10,9 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 
 ActiveRecord::Schema.define(version: 2021_09_28_101640) do
 
+=======
+ActiveRecord::Schema.define(version: 2021_09_29_024144) do
+>>>>>>> remove migration for recipient id, add migration for user id to ratings
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -152,12 +156,12 @@ ActiveRecord::Schema.define(version: 2021_09_28_101640) do
     t.bigint "product_id"
     t.bigint "gift_session_id"
     t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
     t.bigint "recipient_id"
     t.index ["gift_session_id"], name: "index_ratings_on_gift_session_id"
     t.index ["product_id"], name: "index_ratings_on_product_id"
     t.index ["recipient_id"], name: "index_ratings_on_recipient_id"
-    t.index ["user_id"], name: "index_ratings_on_user_id"
+    t.index ["user_id"], name: "index_ratings_on_user_id"    t.datetime "updated_at", precision: 6, null: false
+
   end
 
   create_table "response_sets", force: :cascade do |t|
@@ -201,10 +205,15 @@ ActiveRecord::Schema.define(version: 2021_09_28_101640) do
   add_foreign_key "orders", "products"
   add_foreign_key "orders", "users"
   add_foreign_key "products", "categories"
+<<<<<<< HEAD
   add_foreign_key "ratings", "gift_sessions"
   add_foreign_key "ratings", "products"
   add_foreign_key "ratings", "users"
   add_foreign_key "ratings", "users", column: "recipient_id"
+=======
+  add_foreign_key "ratings", "orders", column: "orders_id"
+  add_foreign_key "ratings", "users"
+>>>>>>> remove migration for recipient id, add migration for user id to ratings
   add_foreign_key "response_sets", "answers"
   add_foreign_key "response_sets", "questions"
   add_foreign_key "response_sets", "users"
