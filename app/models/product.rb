@@ -4,6 +4,7 @@ class Product < ApplicationRecord
   has_many :line_items, dependent: :destroy
   monetize :price_cents
   has_many :orders, dependent: :destroy
+  
   # scope :for_occasion, -> (occasion) {
     #   where(occasion: occasion)
     # }
@@ -21,6 +22,5 @@ class Product < ApplicationRecord
 
   def self.curate(gift_session, disco_recommendations)
     disco_recommendations.less_than(gift_session.budget) # for_occasion(gift_session.occasion)
-    binding.pry
   end
 end
