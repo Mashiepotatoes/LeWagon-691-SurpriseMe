@@ -66,17 +66,13 @@ parsed_all_beauty = JSON.parse(serialised_all_beauty)
 # serialised_video_games = File.read(file_path_vg)
 # parsed_video_games = JSON.parse(serialised_video_games)
 
-# ---- Amazon cd_vinyl seeds ---- #
+# # ---- Amazon cd_vinyl seeds ---- #
 # file_path_cdv = File.join(__dir__, "amazon_datasets/cd_vinyl.json")
 # serialised_cd_vinyl = File.read(file_path_cdv)
 # parsed_cd_vinyl = JSON.parse(serialised_cd_vinyl)
 
-# ---- Amazon pet_supplies seeds ---- #
-# file_path_ps = File.join(__dir__, "amazon_datasets/pet_supplies.json")
-# serialised_pet_supplies = File.read(file_path_ps)
 # parsed_pet_supplies = JSON.parse(serialised_pet_supplies)
-
-# ---- Amazon toys_games seeds ---- #
+# # ---- Amazon toys_games seeds ---- #
 
 # file_path_tg = File.join(__dir__, "amazon_datasets/toys_games.json")
 # serialised_toys_games = File.read(file_path_tg)
@@ -90,24 +86,25 @@ parsed_all_beauty = JSON.parse(serialised_all_beauty)
 
 # ---- Amazon fashion seeds ---- #
 
-file_path_tg = File.join(__dir__, "amazon_datasets/fashion.json")
-serialised_fashion = File.read(file_path_tg)
-parsed_fashion = JSON.parse(serialised_fashion)
+# file_path_tg = File.join(__dir__, "amazon_datasets/fashion.json")
+# serialised_fashion = File.read(file_path_tg)
+# parsed_fashion = JSON.parse(serialised_fashion)
 
-# ---- Amazon home_kitchen seeds ---- #
+# # ---- Amazon home_kitchen seeds ---- #
 
-file_path_tg = File.join(__dir__, "amazon_datasets/home_kitchen.json")
-serialised_home_kitchen = File.read(file_path_tg)
-parsed_home_kitchen = JSON.parse(serialised_home_kitchen)
+# file_path_tg = File.join(__dir__, "amazon_datasets/home_kitchen.json")
+# serialised_home_kitchen = File.read(file_path_tg)
+# parsed_home_kitchen = JSON.parse(serialised_home_kitchen)
 
-# ---- Amazon sports_outdoors seeds ---- #
+# # ---- Amazon sports_outdoors seeds ---- #
 
-file_path_tg = File.join(__dir__, "amazon_datasets/sports_outdoors.json")
-serialised_sports_outdoors = File.read(file_path_tg)
-parsed_sports_outdoors = JSON.parse(serialised_sports_outdoors)
+# file_path_tg = File.join(__dir__, "amazon_datasets/sports_outdoors.json")
+# serialised_sports_outdoors = File.read(file_path_tg)
+# parsed_sports_outdoors = JSON.parse(serialised_sports_outdoors)
 
 # ---- seeding ---- #
-parsed_datasets = [parsed_all_beauty, parsed_video_games, parsed_pet_supplies, parsed_cd_vinyl, parsed_toys_games, parsed_fashion, parsed_home_kitchen, parsed_sports_outdoors]
+# parsed_datasets = [parsed_all_beauty, parsed_video_games, parsed_pet_supplies, parsed_cd_vinyl, parsed_toys_games, parsed_fashion, parsed_home_kitchen, parsed_sports_outdoors]
+parsed_datasets = [parsed_all_beauty]
 categories = [all_beauty, video_games, cd_vinyl, pet_essentials, toys_games, fashion, home_kitchen, sports_outdoors]
 
 puts "Creating products"
