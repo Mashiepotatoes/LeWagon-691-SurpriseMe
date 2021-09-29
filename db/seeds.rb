@@ -7,7 +7,7 @@ Category.destroy_all
 Order.destroy_all
 Rating.destroy_all
 
-category = Category.find(1)
+# category = Category.find(1)
 # ------ Jeremy and PE seeds ----- #
 # console.log("Seeding products!")
 # Product.create(image_url:"https://source.unsplash.com/random",category:category, name: "Xiaomi Mi Vacuum Cleaner Mini", price_cents: 6990, description: "A small-format wireless hand vacuum cleaner. It has two speeds, so you can adapt it to everything you need. Light and portable.")
@@ -48,7 +48,7 @@ category = Category.find(1)
 
 # ---- categories ---- #
 
-electronics = Category.create(name: "Electronics")
+# electronics = Category.create(name: "Electronics")
 all_beauty = Category.create(name: "Beauty & Cosmetics")
 video_games = Category.create(name: "Video Games")
 cd_vinyl = Category.create(name: "CD & Vinyl Records")
@@ -87,9 +87,9 @@ parsed_toys_games = JSON.parse(serialised_toys_games)
 
 # ---- Amazon electronics seeds ---- #
 
-file_path_tg = File.join(__dir__, "amazon_datasets/electronics.json")
-serialised_electronics = File.read(file_path_tg)
-parsed_electronics = JSON.parse(serialised_electronics)
+# file_path_tg = File.join(__dir__, "amazon_datasets/electronics.json")
+# serialised_electronics = File.read(file_path_tg)
+# parsed_electronics = JSON.parse(serialised_electronics)
 
 # ---- Amazon fashion seeds ---- #
 
@@ -110,15 +110,15 @@ serialised_sports_outdoors = File.read(file_path_tg)
 parsed_sports_outdoors = JSON.parse(serialised_sports_outdoors)
 
 # ---- seeding ---- #
-parsed_datasets = [parsed_all_beauty, parsed_video_games, parsed_pet_supplies, parsed_cd_vinyl, parsed_toys_games, parsed_electronics, parsed_fashion, parsed_home_kitchen, parsed_sports_outdoors]
-categories = [all_beauty, video_games, cd_vinyl, pet_essentials, toys_games, fashion, home_kitchen, sports_outdoors, electronics]
+parsed_datasets = [parsed_all_beauty, parsed_video_games, parsed_pet_supplies, parsed_cd_vinyl, parsed_toys_games, parsed_fashion, parsed_home_kitchen, parsed_sports_outdoors]
+categories = [all_beauty, video_games, cd_vinyl, pet_essentials, toys_games, fashion, home_kitchen, sports_outdoors]
 
 puts "Creating products"
 categories_index = 0
 parsed_datasets.each do |dataset|
   dataset.each do |product_raw|
     name = product_raw["title"]
-    description = product_raw["description"].join
+    description = product_raw["description"]
     image_url = product_raw["imageUrlHighRes"]
     brand = product_raw["brand"]
     price = product_raw["price"].to_f
@@ -129,6 +129,13 @@ parsed_datasets.each do |dataset|
   end
   categories_index += 1
 end
+
+# ---- Create occasion cover image ---- #
+general = Occasion.create(name: "General", cover_image: "General")
+birthday = Occasion.create(name: "Birthday", cover_image: "Birthday")
+christmas = Occasion.create(name: "Christmas", cover_image: "Christmas")
+anniversary = Occasion.create(name: "Anniversary", cover_image: "Anniversary")
+housewarming = Occasion.create(name: "Housewarming", cover_image: "Housewarming")
 
 # ---- Create Users ---- #
 
@@ -172,13 +179,13 @@ puts "finished creating #{GiftSession.count} gift sessions"
 puts "finished creating #{Rating.count} ratings"
 
 # ---- Create Questions ---- #
-file_path_questions = File.join(__dir__, "questions_dataset/questions.json")
-serialised_questions = File.read(file_path_questions)
-parsed_questions = JSON.parse(serialised_questions)
+# file_path_questions = File.join(__dir__, "questions_dataset/questions.json")
+# serialised_questions = File.read(file_path_questions)
+# parsed_questions = JSON.parse(serialised_questions)
 
-parsed_questions.each do |question|
-  content = question["question"]
-  options = question["options"]
+# parsed_questions.each do |question|
+#   content = question["question"]
+#   options = question["options"]
 
-  Question.create(content: content, options: options, parent: parent)
-end
+#   Question.create(content: content, options: options, parent: parent)
+# end

@@ -4,17 +4,12 @@ class Product < ApplicationRecord
   has_many :line_items, dependent: :destroy
   monetize :price_cents
   has_many :orders, dependent: :destroy
-<<<<<<< HEAD
-  has_many :product_occasions, dependent: :destroy
-  has_many :ratings
-
   # scope :for_occasion, -> (occasion) {
-  #   where(occasion: occasion)
-  # }
-=======
-  has_many :product_occasions
-  has_many :occasions, through: :product_occasions, dependent: :destroy
->>>>>>> 568ba71 (added product_occasions table)
+    #   where(occasion: occasion)
+    # }
+    has_many :product_occasions
+    has_many :occasions, through: :product_occasions
+    has_many :ratings
 
   scope :less_than, ->(budget) {
     where("price < #{budget}")

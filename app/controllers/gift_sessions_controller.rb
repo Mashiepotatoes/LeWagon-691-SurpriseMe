@@ -18,7 +18,7 @@ class GiftSessionsController < ApplicationController
     @gift_session.save
     # call gift recommendation model
     # retrieve product name, price
-    @gift_session.gift_recommendations = get_recommendations(@gift_session)
+    # @gift_session.gift_recommendations = get_recommendations(@gift_session)
     redirect_to gift_session_path(@gift_session.id) if @gift_session.save
   end
 

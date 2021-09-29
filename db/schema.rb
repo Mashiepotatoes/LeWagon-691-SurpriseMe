@@ -10,11 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 2021_09_29_031758) do
-=======
 ActiveRecord::Schema.define(version: 2021_09_29_062816) do
->>>>>>> b97319f (updated occasion reference key)
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -101,7 +97,6 @@ ActiveRecord::Schema.define(version: 2021_09_29_062816) do
     t.bigint "recipient_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.bigint "{:null=>false, :foreign_key=>true}_id"
     t.bigint "occasion_id", null: false
     t.index ["occasion_id"], name: "index_gift_sessions_on_occasion_id"
     t.index ["order_id"], name: "index_gift_sessions_on_order_id"
