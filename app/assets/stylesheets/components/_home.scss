@@ -1,39 +1,50 @@
-.image-tag {
-  position: relative;
-  width: 100%;
-  filter: brightness(80%);
+.background-wrapper {
+  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("https://res.cloudinary.com/dncp2x5qh/image/upload/v1632643774/pexels-tima-miroshnichenko-6463605_ctlci8.jpg");
+  background-size: 100%;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+.home-desc-wrapper {
+  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("https://res.cloudinary.com/dncp2x5qh/image/upload/v1632643791/pexels-cottonbro-3972177_olkptt.jpg");
+  background-size: 100%;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
 }
 
 .tagline {
-  position: absolute;
   display: flex;
   flex-direction: column;
   align-items: center;
-  top: 550px;
-  left: 450px;
+  justify-content: center;
   color:white;
-}
 
-.tagline a {
+  h3 {
+    font: $headers-font;
+  }
+
+  a {
+  font: $body-font;
   color: white;
+  }
 }
 
-.desc-1 {
+
+#desc {
   width: 300px;
   font-size: 15px;
   color: white;
 }
 
-.desc-2 {
-  width: 300px;
-  font-size: 15px;
-  color: white;
-}
+.desc-item {
+  margin: 0 32px;
 
-.desc-3 {
-  width: 300px;
-  font-size: 15px;
-  color: white;
+  &:nth-of-type(2) {
+    margin-top: 64px;
+  }
 }
 
 .btn-flat.home {
@@ -43,16 +54,21 @@
   background: none;
   background-color: Transparent;
   border: 2px solid white;
+  display: flex;
+  justify-content: center;
+  margin-top: 64px;
 
   a {
     color: white;
   }
 }
 
+a#back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
 .fa-arrow-circle-up {
   font-size: 40px;
   color: white;
-  position: absolute;
-  bottom: -1160px;
-  right: 40px;
 }
