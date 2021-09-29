@@ -5,4 +5,11 @@ class Order < ApplicationRecord
   belongs_to :user
 
   monetize :amount_cents
+
+
+  scope :is_pending, -> {where(state: 'pending')}
+
+  has_many :gift_sessions, optional: true
+  has_one :rating
+  belongs_to :product
 end
