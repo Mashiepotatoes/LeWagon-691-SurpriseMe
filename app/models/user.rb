@@ -23,6 +23,8 @@ class User < ApplicationRecord
   has_many :questions, through: :response_sets
   has_one_attached :profile_photo
   has_many :orders
+  has_many :ratings
+  has_recommended :products
 
   def pending_orders
     self.orders.is_pending
