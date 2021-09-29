@@ -1,11 +1,11 @@
 <div class="container">
   <div class="container-preferences">
-    <h1>Questions that you have answered</h1>
-    <% @question.each do |question| %>
+    <h2>Questions that you have answered</h2>
+    <% @response_sets.each do |response| %>
       <div class="card-preferences">
         <div class="card-preferences-info">
-          <p><strong>Q</strong>: <%= question.content %></p>
-          <p><strong>A</strong>: </p>
+          <p><strong>Q</strong>: <%= response.question.content %></p>
+          <p><strong>A</strong>: <%= response.answer.choice %></p>
         </div>
       </div>
     <% end %>

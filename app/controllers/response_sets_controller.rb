@@ -1,12 +1,9 @@
 class ResponseSetsController < ApplicationController
   def index
     # List all question
-    @question = Question.all
-
+    @response_sets = ResponseSet.where(user_id: current_user)
     # List all answers by current user
-    # @response = ResponseSet.new
-    # @response.question_id = @question.id
-    # @response.user_id = current_user.id
-    # @response.answer_id = @answer.id
+    # How do i retrieve current user response for a particular qn?
+
   end
 end
