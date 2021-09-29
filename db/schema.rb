@@ -11,12 +11,16 @@
 # It's strongly recommended that you check this file into your version control system.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 ActiveRecord::Schema.define(version: 2021_09_28_101640) do
 
 =======
 ActiveRecord::Schema.define(version: 2021_09_29_024144) do
 >>>>>>> remove migration for recipient id, add migration for user id to ratings
+=======
+ActiveRecord::Schema.define(version: 2021_09_29_031758) do
+>>>>>>> implement disco  gem and can display results on gift sessions view
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -61,6 +65,19 @@ ActiveRecord::Schema.define(version: 2021_09_29_024144) do
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "disco_recommendations", force: :cascade do |t|
+    t.string "subject_type"
+    t.bigint "subject_id"
+    t.string "item_type"
+    t.bigint "item_id"
+    t.string "context"
+    t.float "score"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["item_type", "item_id"], name: "index_disco_recommendations_on_item_type_and_item_id"
+    t.index ["subject_type", "subject_id"], name: "index_disco_recommendations_on_subject_type_and_subject_id"
   end
 
   create_table "friendships", force: :cascade do |t|
@@ -152,16 +169,12 @@ ActiveRecord::Schema.define(version: 2021_09_29_024144) do
 
   create_table "ratings", force: :cascade do |t|
     t.integer "rating"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
     t.bigint "user_id"
     t.bigint "product_id"
-    t.bigint "gift_session_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.bigint "recipient_id"
-    t.index ["gift_session_id"], name: "index_ratings_on_gift_session_id"
     t.index ["product_id"], name: "index_ratings_on_product_id"
-    t.index ["recipient_id"], name: "index_ratings_on_recipient_id"
-    t.index ["user_id"], name: "index_ratings_on_user_id"    t.datetime "updated_at", precision: 6, null: false
-
+    t.index ["user_id"], name: "index_ratings_on_user_id"
   end
 
   create_table "response_sets", force: :cascade do |t|
@@ -205,8 +218,8 @@ ActiveRecord::Schema.define(version: 2021_09_29_024144) do
   add_foreign_key "orders", "products"
   add_foreign_key "orders", "users"
   add_foreign_key "products", "categories"
-  add_foreign_key "ratings", "orders", column: "orders_id"
   add_foreign_key "ratings", "users"
+  add_foreign_key "ratings", "products"
   add_foreign_key "response_sets", "answers"
   add_foreign_key "response_sets", "questions"
   add_foreign_key "response_sets", "users"

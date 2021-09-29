@@ -6,21 +6,21 @@
       <label for="check-all">Select All</label>
     </div>
 
-    <% @gift_session.gift_recommendations.each do |recommendation| %>
+    <% @disco_recommendations.each do |recommendation| %>
       <%# <% if recommendation.product.price_cents <= @gift_session.budget %>
       <div class="card-gift form-check">
         <input id='checkbox-product' type="checkbox" class="form-check-input" data-check-all-checkboxes-target="check3box">
         <label for='checkbox-product'></label>
         <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
         <div class="card-gift-infos">
-          <h2><%= recommendation.product.name %></h2>
+          <h2><%= recommendation.name %></h2>
           <p>Product rating</p>
-          <p><%= recommendation.product.description %></p>
+          <p><%= recommendation.description %></p>
         </div>
 
-        <h4><%= humanized_money_with_symbol(recommendation.product.price) %></h4>
+        <h4><%= humanized_money_with_symbol(recommendation.price) %></h4>
 
-        <div data-controller="quantity" data-quantity-target='wrapper' data-product-id=<%= recommendation.product.id %> >
+        <div data-controller="quantity" data-quantity-target='wrapper' data-product-id=<%= recommendation.id %> >
           <button data-action="click->quantity#reduce">-</button>
           <p data-quantity-target="total"> 0 </p>
           <button data-action="click->quantity#add">+</button>

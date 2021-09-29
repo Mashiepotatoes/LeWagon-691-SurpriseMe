@@ -127,7 +127,7 @@ parsed_datasets.each do |dataset|
     description = product_raw["description"].join
     image_url = product_raw["imageUrlHighRes"]
     brand = product_raw["brand"]
-    price = product_raw["price"]
+    price = product_raw["price"].to_f
     
     product_inst = Product.new(name: name, description: description, price: price, image_url: image_url, brand: brand)
     product_inst.category = categories[categories_index]
@@ -164,10 +164,10 @@ puts "creating orders"
   session = GiftSession.create(
     order: order,
     user: User.first,
-    recipient: User.last,
+    recipient: User.all.sample,
     budget: (10..100).to_a.sample
   )
-  rating = Rating.create(
+  rating = Rating.create!(
     rating: (1..5).to_a.sample,
     user: session.recipient,
     product: product
@@ -176,7 +176,7 @@ puts "creating orders"
 end
   
 puts "finished creating #{Order.count} orders"
-puts "finished creating #{GiftSession.count} ratings"
+puts "finished creating #{GiftSession.count} gift sessions"
 puts "finished creating #{Rating.count} ratings"
 
 # ---- Create Questions ---- #
