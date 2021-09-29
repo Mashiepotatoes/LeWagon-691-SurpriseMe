@@ -1,2 +1,13 @@
-<h1>ResponseSets#index</h1>
-<p>Find me in app/views/response_sets/index.html.erb</p>
+<div class="container">
+  <div class="container-preferences">
+    <h2>Questions that you have answered</h2>
+    <% @response_sets.each do |response| %>
+      <div class="card-preferences">
+        <div class="card-preferences-info">
+          <p><strong>Q</strong>: <em><%= response.question.content %></em></p>
+          <p><strong>A</strong>: <%= response.answer.choice %></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

@@ -4,6 +4,7 @@ class FriendshipsController < ApplicationController
 
   def index
     @friend_list = Friendship.where(user: current_user,status: true) # current_user friend list
+    @question = Question.first
   end
 
   def requests
