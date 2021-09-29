@@ -1,5 +1,5 @@
 class Order < ApplicationRecord
-  has_many :gift_sessions
+  has_many :gift_sessions, dependent: :destroy
   belongs_to :cart
   belongs_to :user
   belongs_to :product

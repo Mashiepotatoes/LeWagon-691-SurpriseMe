@@ -11,19 +11,15 @@ class Product < ApplicationRecord
   # }
 
   scope :less_than, -> (budget) {
-    where("price < #{budget}")
+    where("price_cents <= #{budget*100}")
   }
 
-  scope :rating_filter, -> {
-    where("average_rating > 3").or(where("average_rating = 0"))
-  }
-
-  scope :long_title, -> { where("LENGTH(name) > 100") }
-  scope :no_price, -> { where(price: 0) }
-  scope :nil_price, -> { where(price: nil) }
+  # scope :long_title, -> { where("LENGTH(name) > 100") }
+  # scope :no_price, -> { where(price: 0) }
+  # scope :nil_price, -> { where(price: nil) }
 
   def self.curate(gift_session, disco_recommendations)
-    disco_recommendations.less_than(gift_session.budget).sample(5) # for_occasion(gift_session.occasion)
+    disco_recommendations.less_than(gift_session.budget) # for_occasion(gift_session.occasion)
     binding.pry
   end
 end

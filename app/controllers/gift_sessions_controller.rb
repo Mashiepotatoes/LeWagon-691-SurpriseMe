@@ -8,7 +8,6 @@ class GiftSessionsController < ApplicationController
     @disco_recommendations = @gift_session.recipient.recommended_products
     binding.pry
     get_recommendations(@gift_session, @disco_recommendations)
-    binding.pry
   end
 
   def create
@@ -25,5 +24,6 @@ class GiftSessionsController < ApplicationController
 
   def get_recommendations(gift_session, disco_recommendations)
     Product.curate(gift_session, disco_recommendations) # filter by price
+    binding.pry
   end
 end
