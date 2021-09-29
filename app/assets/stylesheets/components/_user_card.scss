@@ -129,16 +129,25 @@ input[id ^="occasion"]:checked + label .card-category{
 
 // card-user-budget //
 .card-user-budget {
-  width: 60%;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 10px 20px;
   text-align: center;
   background-color: white;
+}
+
+.budget-submit {
+  width: 70%;
+
 }
 
 .slider {
   -webkit-appearance: none;
   appearance: none;
   background-color:#FF69B2;
-  width: 60%;
+  width: 100%;
+  margin: 0 16px;
   height: 10px;
   border-radius: 5px;
   outline: none;
