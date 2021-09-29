@@ -3,9 +3,18 @@ class Product < ApplicationRecord
   has_many :line_items, dependent: :destroy
   monetize :price_cents
   has_many :orders, dependent: :destroy
+  has_many :ratings
+
+  # scope :for_occasion, -> (occasion) {
+  #   where(occasion: occasion)
+  # }
 
   scope :less_than, -> (budget) {
     where("price < #{budget}")
+  }
+
+  scope :rating_filter, -> {
+    where("average_rating > 3").or(where("average_rating = 0"))
   }
 
   scope :long_title, -> { where("LENGTH(name) > 100") }
@@ -13,10 +22,6 @@ class Product < ApplicationRecord
   scope :nil_price, -> { where(price: nil) }
 
   def self.curate(gift_session)
-    results = self.all.sample(5)  # .less_than(gift_session.budget)
-  end
-
-  def rating
-    4.5
+    self.for_occasion(gift_session.occasion).less_than(gift_session.budget).rating_filter.sample(5)
   end
 end
