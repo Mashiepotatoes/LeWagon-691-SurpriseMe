@@ -1,7 +1,7 @@
 .image-tag {
   position: relative;
   width: 100%;
-  filter: brightness(80%)
+  filter: brightness(80%);
 }
 
 .tagline {
@@ -43,6 +43,22 @@
   width: 300px;
   font-size: 15px;
   color: white;
+}
+
+.btn-flat.home {
+  position: absolute;
+  bottom: -1150px;
+  left: 450px;
+  padding: 8px 24px;
+  width: 340px;
+  border-radius: 4px;
+  background: none;
+  background-color: Transparent;
+  border: 2px solid white;
+
+  a {
+    color: white;
+  }
 }
 
 .fa-arrow-circle-up {

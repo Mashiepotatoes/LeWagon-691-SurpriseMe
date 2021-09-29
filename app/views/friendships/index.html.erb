@@ -38,14 +38,14 @@
           <div class="friend-card-btns">
                   <%# <--- when removing friend ---> %>
             <div class="card-product-actions">
-              <%= link_to friendship_path(friendship),method: :delete do %>
-                Remove friend <i class="far fa-trash-alt"></i>
+              <%= link_to  friendship_path(friendship.friend) do %>
+                Send a gift <i class="fas fa-gift"></i>
               <% end %>
             </div>
                 <%# <--- Send gift ---> %>
             <div class="card-product-actions">
-              <%= link_to  friendship_path(friendship.friend) do %>
-                Send a gift <i class="fas fa-gift"></i>
+              <%= link_to friendship_path(friendship),method: :delete do %>
+                Remove friend <i class="far fa-trash-alt"></i>
               <% end %>
             </div>
           </div>

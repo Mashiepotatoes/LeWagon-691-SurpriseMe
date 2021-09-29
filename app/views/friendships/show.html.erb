@@ -6,49 +6,40 @@
         <h1><%= @friend.username.capitalize() %></h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Est pellentesque elit ullamcorper dignissim cras tincidunt lobortis. Elit sed vulputate mi sit amet mauris. Semper risus in hendrerit gravida.</p>
       </div>
-      <% link_to%>
-
 
       <div class="card-user-add">
-
-        <%= link_to friendships_path(recipient_id: params[:id] ), method: :post do %>
-          <i class="fas fa-user-plus"></i>
+        <% if @friend_list %>
+          <i class="fas fa-user-friends"></i>
+        <% else %>
+          <%= link_to friendships_path(recipient_id: params[:id] ), method: :post do %>
+            <i class="fas fa-user-plus"></i>
+          <% end %>
         <% end %>
-
       </div>
     </div>
     <div class="simple_form">
       <%= simple_form_for @gift_session do |f| %>
         <div class="card-user-product">
+          <p>Pick an occasion:</p>
           <div class="cards">
-            <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
-              Occasion 1
-            </div>
-
-            <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/lunch.jpg)">
-            Occasion 2
-            </div>
-
-            <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/dinner.jpg)">
-              Occasion 3
-            </div>
+            <% @occasions.each do |occasion| %>
+              <input type="radio" name="gift_session[occasion_id]" value="<%= occasion.id %>" id="<%= "occasion-#{occasion.id}" %>">
+              <label class="card-label" for="<%= "occasion-#{occasion.id}" %>">
+                <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path occasion.cover_image %>)">
+                  <%= occasion.name.capitalize %>
+                </div>
+              </label>
+            <% end %>
           </div>
         </div>
         <div class="card-user-budget">
-          <%# <label for="budget" class="form-label"></label> %>
-
-          10 <%= f.range_field :budget, min: 10, max: 500, value: 250, class:"slider", id:"price_range" %> 500
-
-              <p>Price: <span id="selected_range"></span></p>
+          $10 <%= f.range_field :budget, min: 10, max: 500, value: 250, class:"slider", id:"price_range" %> $500
+              <p>Budget: $<span id="selected_range"></span></p>
               <%= hidden_field_tag 'recipient_id', params[:id] %>
-            <%= f.button  :submit, 'Send a gift', class: "btn btn-ghost" %>
+            <%= f.button  :submit, 'Send a gift', class: "btn btn-flat" %>
+        </div>
       <% end %>
-        <%# <% if @friend_list %>
-            <%# <%= link_to "Send a gift", gift_sessions_path(recipient_id: params[:id]), method: :post, class: "btn btn-ghost"  %>
-        <%# <% end %>
       </div>
     </div>
-
-    <%# <a class="" href="#">Write a story</a> %>
   </div>
 </div>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_29_031758) do
+ActiveRecord::Schema.define(version: 2021_09_29_062816) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -97,6 +97,8 @@ ActiveRecord::Schema.define(version: 2021_09_29_031758) do
     t.bigint "recipient_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "occasion_id", null: false
+    t.index ["occasion_id"], name: "index_gift_sessions_on_occasion_id"
     t.index ["order_id"], name: "index_gift_sessions_on_order_id"
     t.index ["recipient_id"], name: "index_gift_sessions_on_recipient_id"
     t.index ["user_id"], name: "index_gift_sessions_on_user_id"
@@ -118,6 +120,7 @@ ActiveRecord::Schema.define(version: 2021_09_29_031758) do
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "cover_image"
   end
 
   create_table "orders", force: :cascade do |t|
@@ -132,6 +135,15 @@ ActiveRecord::Schema.define(version: 2021_09_29_031758) do
     t.index ["cart_id"], name: "index_orders_on_cart_id"
     t.index ["product_id"], name: "index_orders_on_product_id"
     t.index ["user_id"], name: "index_orders_on_user_id"
+  end
+
+  create_table "product_occasion", force: :cascade do |t|
+    t.bigint "product_id"
+    t.bigint "occasion_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["occasion_id"], name: "index_product_occasion_on_occasion_id"
+    t.index ["product_id"], name: "index_product_occasion_on_product_id"
   end
 
   create_table "products", force: :cascade do |t|
@@ -205,12 +217,15 @@ ActiveRecord::Schema.define(version: 2021_09_29_031758) do
   add_foreign_key "friendships", "users"
   add_foreign_key "friendships", "users", column: "friend_id"
   add_foreign_key "gift_recommendations", "products"
+  add_foreign_key "gift_sessions", "occasions"
   add_foreign_key "gift_sessions", "orders"
   add_foreign_key "gift_sessions", "users"
   add_foreign_key "gift_sessions", "users", column: "recipient_id"
   add_foreign_key "orders", "carts"
   add_foreign_key "orders", "products"
   add_foreign_key "orders", "users"
+  add_foreign_key "product_occasion", "occasions"
+  add_foreign_key "product_occasion", "products"
   add_foreign_key "products", "categories"
   add_foreign_key "ratings", "gift_sessions"
   add_foreign_key "ratings", "products"
