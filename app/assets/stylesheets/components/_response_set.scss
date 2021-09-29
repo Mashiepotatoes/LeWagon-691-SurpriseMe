@@ -2,14 +2,17 @@
   padding: 16px;
 }
 
+// <--- Preferences Card if all questions are answered --->
 .card-preferences {
   overflow: hidden;
   height: 100px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.1);
   display: flex;
+  justify-content: space-between;
   align-items: center;
   margin-top: 15px;
+  padding-right: 30px;
 }
 
 .card-preferences h2 {
@@ -29,4 +32,44 @@
 
 .card-preferences .card-preferences-info {
   padding: 16px;
+}
+
+// <--- Quiz Card if user has not taken quiz --->
+
+.card-quiz {
+  height: 500px;
+  background: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.card-quiz h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 0;
+  color: #f53d96;
+}
+
+.card-quiz p {
+  font-size: 16px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+  color: #f53d96;
+  text-align: center;
+}
+
+.card-quiz .card-quiz-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+  width: 750px;
+}
+
+.card-preferences-edit {
+  display: none;
 }

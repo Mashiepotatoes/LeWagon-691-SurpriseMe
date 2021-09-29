@@ -4,7 +4,7 @@
   background-color :transparent;
 }
 
-// <--- send gift at user profile --->
+// <--- Take quiz at user preference --->
 .btn-ghost {
   color: #4A4A4A;
   border: 1px solid #4A4A4A;
@@ -17,6 +17,20 @@
 
 .btn-ghost:hover {
   opacity: 1;
+}
+
+// <--- send gift at user profile --->
+.btn-flat {
+  color: white;
+  padding: 8px 4rem;
+  border-radius: 4px;
+  background: #29EFC6;
+  transition: background 0.3s ease;
+}
+
+.btn-flat:hover {
+  background: #22cfac;
+  color: white;
 }
 
 // surprise-green btn

@@ -25,7 +25,6 @@ require("channels")
 // External imports
 import "bootstrap";
 import "controllers"
-import { initStarRating } from '../plugins/init_star_rating';
 
 // Checkbox Stimulus
 import 'controllers';
@@ -33,6 +32,7 @@ import 'controllers';
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 import { initSlider } from '../plugins/init_Slider';
+import { initStarRating } from '../plugins/init_star_rating';
 
 // <---- stimulus --->
 import { Application } from "stimulus"

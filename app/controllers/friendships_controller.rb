@@ -5,6 +5,7 @@ class FriendshipsController < ApplicationController
   def index
     @friend_list = Friendship.where(user: current_user,status: true) # current_user friend list
     @question = Question.first
+    @response_sets = ResponseSet.where(user: current_user)
   end
 
   def requests
@@ -17,6 +18,7 @@ class FriendshipsController < ApplicationController
     @friend = User.find(params[:id])
     @friend_list = Friendship.where(user: current_user, friend_id: @friend)
     @gift_session = GiftSession.new
+    @occasions = Occasion.all
   end
 
   def create

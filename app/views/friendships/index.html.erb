@@ -2,8 +2,15 @@
   <div class="friend-side-panel">
     <p class="side-panel-text"><%= link_to "All friends", friendships_path%></p>
     <p class="side-panel-text"><%= link_to "Friend Request", friendships_requests_path%></p>
-    <p class="side-panel-text"><%= link_to "Birthday reminder", "#"%></p>
-    <%# <p class="side-panel-text"><%= link_to "Take a quiz", question_path(@question) %></p> %>
+    <p class="side-panel-text"><%= link_to "Birthday reminder", birthdays_path%></p>
+    <p class="side-panel-text">
+      <% if @response_sets.empty? %>
+        <%= link_to "Preference Quiz", question_path(@question) %>
+      <% else %>
+        <%= link_to "Preference Quiz", response_sets_path %>
+      <% end %>
+    </p>
+
   </div>
 
   <div class="friend-content container">
@@ -38,14 +45,14 @@
           <div class="friend-card-btns">
                   <%# <--- when removing friend ---> %>
             <div class="card-product-actions">
-              <%= link_to friendship_path(friendship),method: :delete do %>
-                Remove friend <i class="far fa-trash-alt"></i>
+              <%= link_to  friendship_path(friendship.friend) do %>
+                Send a gift <i class="fas fa-gift"></i>
               <% end %>
             </div>
                 <%# <--- Send gift ---> %>
             <div class="card-product-actions">
-              <%= link_to  friendship_path(friendship.friend) do %>
-                Send a gift <i class="fas fa-gift"></i>
+              <%= link_to friendship_path(friendship),method: :delete do %>
+                Remove friend <i class="far fa-trash-alt"></i>
               <% end %>
             </div>
           </div>

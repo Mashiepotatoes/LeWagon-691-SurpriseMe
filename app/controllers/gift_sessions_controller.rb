@@ -13,16 +13,16 @@ class GiftSessionsController < ApplicationController
     @gift_session = GiftSession.new # current user id
     @gift_session.user = current_user # recipient id
     @gift_session.recipient = User.find(params[:recipient_id])
+    @gift_session.occasion = Occasion.find(params[:gift_session][:occasion_id])
     @gift_session.budget = params[:gift_session][:budget]
     @gift_session.save
-
     redirect_to gift_session_path(@gift_session.id) if @gift_session.save
   end
 
   private
 
   def get_recommendations(gift_session, disco_recommendations)
-    Product.first(3)
-    # Product.curate(gift_session) # filter by price
+    Product.curate(gift_session, disco_recommendations) # filter by price
+
   end
 end
