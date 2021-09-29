@@ -205,15 +205,8 @@ ActiveRecord::Schema.define(version: 2021_09_29_024144) do
   add_foreign_key "orders", "products"
   add_foreign_key "orders", "users"
   add_foreign_key "products", "categories"
-<<<<<<< HEAD
-  add_foreign_key "ratings", "gift_sessions"
-  add_foreign_key "ratings", "products"
-  add_foreign_key "ratings", "users"
-  add_foreign_key "ratings", "users", column: "recipient_id"
-=======
   add_foreign_key "ratings", "orders", column: "orders_id"
   add_foreign_key "ratings", "users"
->>>>>>> remove migration for recipient id, add migration for user id to ratings
   add_foreign_key "response_sets", "answers"
   add_foreign_key "response_sets", "questions"
   add_foreign_key "response_sets", "users"
