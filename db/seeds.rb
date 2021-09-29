@@ -89,39 +89,47 @@ categories = [all_beauty, video_games, cd_vinyl, pet_essentials, toys_games]
 puts "Creating products and ratings"
 categories_index = 0
 parsed_datasets.each do |dataset|
-  dataset.each do |product|
-    name = product["title"]
-    description = product["description"].join
-    image_url = product["imageUrlHighRes"]
-    brand = product["brand"]
-    price = product["price"]
-
+  dataset.each do |product_raw|
+    name = product_raw["title"]
+    description = product_raw["description"].join
+    image_url = product_raw["imageUrlHighRes"]
+    brand = product_raw["brand"]
+    price = product_raw["price"]
+    # occasion = product_raw["occasions"]
+    
     product_inst = Product.new(name: name, description: description, price: price, image_url: image_url, brand: brand)
-    product.category = categories[categories_index]
-    product.save!
-    puts "Created #{product["title"]}"
+    product_inst.category = categories[categories_index]
+    product_inst.save!
+    puts "Created #{product_raw["title"]}"
 
-    (1..10).to_a.sample.times do |i|
-      rating = Rating.create(
-        rating: (1..5).to_a.sample,
-        user_id: User.all.sample.id
-        )
-      rating.product = product_inst
-      rating.save
-    end
-
-    puts "finished creating #{product.rating.count} ratings"
+    # puts "finished creating #{product.rating.count} ratings"
   end
   categories_index += 1
 end
 puts "Created #{Product.count} products"
 
-# ---- Create Orders ---- #
+# ---- Create Orders, Sessions, and Ratings ---- #
 puts "creating orders"
-500.times do |i|
-  order = Order.create(product_id: Product.all.sample.id)
+50.times do |i|
+  product = Product.all.sample
+  order = Order.create(product: product)
+  session = GiftSession.create(
+    order: order,
+    user: User.first,
+    recipient: User.last,
+    budget: (10..100).to_a.sample
+  )
+  rating = Rating.create(
+    rating: (1..5).to_a.sample,
+    user: session.recipient,
+    product: product
+    )
+
 end
 puts "finished creating #{Order.count} orders"
+puts "finished creating #{GiftSession.count} ratings"
+puts "finished creating #{Rating.count} ratings"
+
 
 # ---- Create Questions ---- #
 file_path_questions = File.join(__dir__, "questions_dataset/questions.json")
