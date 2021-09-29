@@ -14,7 +14,6 @@ class LineItemsController < ApplicationController
 
     # @line_item.amount = @line_item.quantity * chosen_product.price
     @line_item.save
-    raise
 
     # How do we check that the line item was saved?
     # what is the total line_item count now?
