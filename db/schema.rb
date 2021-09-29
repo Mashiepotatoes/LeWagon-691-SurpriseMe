@@ -121,6 +121,7 @@ ActiveRecord::Schema.define(version: 2021_09_29_031758) do
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "cover_image"
   end
 
   create_table "orders", force: :cascade do |t|
@@ -135,6 +136,15 @@ ActiveRecord::Schema.define(version: 2021_09_29_031758) do
     t.index ["cart_id"], name: "index_orders_on_cart_id"
     t.index ["product_id"], name: "index_orders_on_product_id"
     t.index ["user_id"], name: "index_orders_on_user_id"
+  end
+
+  create_table "product_occasion", force: :cascade do |t|
+    t.bigint "product_id"
+    t.bigint "occasion_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["occasion_id"], name: "index_product_occasion_on_occasion_id"
+    t.index ["product_id"], name: "index_product_occasion_on_product_id"
   end
 
   create_table "products", force: :cascade do |t|
@@ -215,8 +225,8 @@ ActiveRecord::Schema.define(version: 2021_09_29_031758) do
   add_foreign_key "orders", "carts"
   add_foreign_key "orders", "products"
   add_foreign_key "orders", "users"
-  add_foreign_key "product_occasions", "occasions", column: "occasions_id"
-  add_foreign_key "product_occasions", "products", column: "products_id"
+  add_foreign_key "product_occasion", "occasions"
+  add_foreign_key "product_occasion", "products"
   add_foreign_key "products", "categories"
   add_foreign_key "ratings", "gift_sessions"
   add_foreign_key "ratings", "products"

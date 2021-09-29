@@ -20,34 +20,30 @@
     <div class="simple_form">
       <%= simple_form_for @gift_session do |f| %>
         <div class="card-user-product">
-          <p>Pick an occasion</p>
+          <p>Pick an occasion:</p>
           <div class="cards">
-            <%= f.association :occasion, as: :radio_buttons %>
-            <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/dncp2x5qh/image/upload/v1632818696/nina-mercado-CnrDuY0tFrg-unsplash_ktdxgl.jpg)">
-              General
-            </div>
+          <%# <%= f.input :occasion,
+              as: :radio_buttons,
+              collection_wrapper_tag: 'div',
+              collection_wrapper_class: 'category-wrapper',
+              item_wrapper_class: 'category-item',
+              input_html: {class: 'category-selector'},
+              collection: @occasions %>
+            <% @occasions.each do |occasion| %>
 
-            <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/dncp2x5qh/image/upload/v1632818340/stories-ys8qztLjJyg-unsplash_udojgg.jpg)">
-            Birthday
-            </div>
 
-            <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/dncp2x5qh/image/upload/v1632818399/jonathan-borba-vcX5AhBwk6s-unsplash_rln7vk.jpg)">
-              Christmas
-            </div>
-
-            <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/dncp2x5qh/image/upload/v1632818447/kilimanjaro-studioz-1tgSROQC9hM-unsplash_dgxflq.jpg)">
-              Anniversary
-            </div>
-
-            <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/dncp2x5qh/image/upload/v1632818527/kelsey-chance-tAH2cA_BL5g-unsplash_atgoim.jpg)">
-              Housewarming
-            </div>
+              <input type="radio" name="occasion" id="<%= "occasion-#{occasion.id}" %>">
+              <label class="card-label" for="<%= "occasion-#{occasion.id}" %>">
+                <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path occasion.cover_image %>)">
+                  <%= occasion.name.capitalize %>
+                </div>
+              </label>
+            <% end %>
           </div>
         </div>
         <div class="card-user-budget">
-          10 <%= f.range_field :budget, min: 10, max: 500, value: 250, class:"slider", id:"price_range" %> 500
-
-              <p>Price: <span id="selected_range"></span></p>
+          $10 <%= f.range_field :budget, min: 10, max: 500, value: 250, class:"slider", id:"price_range" %> $500
+              <p>Budget: $<span id="selected_range"></span></p>
               <%= hidden_field_tag 'recipient_id', params[:id] %>
             <%= f.button  :submit, 'Send a gift', class: "btn btn-flat" %>
         </div>

@@ -98,6 +98,10 @@
   background-color: white;
 }
 
+input[name="occasion"] {
+  display:none;
+}
+
 .card-category {
   background-size: cover;
   background-position: center;
@@ -111,16 +115,21 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  filter: grayscale(60%);
+  filter: grayscale(1);
 }
 
 .card-category:hover {
   filter: grayscale(0);
 }
 
+input[name="occasion"]:checked + label .card-category{
+  filter: grayscale(0);
+  box-shadow: 0 0 10px 4px rgba($surprise-pink, 0.4);
+}
+
 // card-user-budget //
 .card-user-budget {
-  width: 100%;
+  width: 60%;
   text-align: center;
   background-color: white;
 }

@@ -17,6 +17,7 @@ class FriendshipsController < ApplicationController
     @friend = User.find(params[:id])
     @friend_list = Friendship.where(user: current_user, friend_id: @friend)
     @gift_session = GiftSession.new
+    @occasions = Occasion.all
   end
 
   def create
