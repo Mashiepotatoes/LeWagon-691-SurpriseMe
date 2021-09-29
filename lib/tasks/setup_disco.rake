@@ -4,8 +4,8 @@ namespace :setup_disco do
     data = Rating.all.map do |rating|
       {
         user_id: rating.user.id,
-        rating: rating.rating,
-        item_id: rating.product.id
+        item_id: rating.product.id,
+        rating: rating.rating
       }
     end
     recommender = Disco::Recommender.new
