@@ -21,7 +21,7 @@ class GiftSessionsController < ApplicationController
 
   private
 
-  def get_recommendations(gift_session, @disco_recommendations)
-    Product.curate(gift_session) # filter by price
+  def get_recommendations(gift_session, disco_recommendations)
+    Product.curate(gift_session, disco_recommendations) # filter by price
   end
 end
