@@ -86,9 +86,9 @@ parsed_all_beauty = JSON.parse(serialised_all_beauty)
 
 # ---- Amazon fashion seeds ---- #
 
-# file_path_tg = File.join(__dir__, "amazon_datasets/fashion.json")
-# serialised_fashion = File.read(file_path_tg)
-# parsed_fashion = JSON.parse(serialised_fashion)
+file_path_tg = File.join(__dir__, "amazon_datasets/fashion.json")
+serialised_fashion = File.read(file_path_tg)
+parsed_fashion = JSON.parse(serialised_fashion)
 
 # # ---- Amazon home_kitchen seeds ---- #
 
@@ -104,7 +104,7 @@ parsed_all_beauty = JSON.parse(serialised_all_beauty)
 
 # ---- seeding ---- #
 # parsed_datasets = [parsed_all_beauty, parsed_video_games, parsed_pet_supplies, parsed_cd_vinyl, parsed_toys_games, parsed_fashion, parsed_home_kitchen, parsed_sports_outdoors]
-parsed_datasets = [parsed_all_beauty]
+parsed_datasets = [parsed_all_beauty, parsed_fashion]
 categories = [all_beauty, video_games, cd_vinyl, pet_essentials, toys_games, fashion, home_kitchen, sports_outdoors]
 
 puts "Creating products"
