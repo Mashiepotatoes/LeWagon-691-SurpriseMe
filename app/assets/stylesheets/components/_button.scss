@@ -24,12 +24,12 @@
   color: white;
   padding: 8px 4rem;
   border-radius: 4px;
-  background: #29EFC6;
+  background: $surprise-green;
   transition: background 0.3s ease;
 }
 
 .btn-flat:hover {
-  background: #22cfac;
+  background: $surprise-green-secondary;
   color: white;
 }
 
