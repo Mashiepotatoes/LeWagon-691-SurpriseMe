@@ -16,6 +16,7 @@
           <h2><%= recommendation.name %></h2>
           <p>Product rating</p>
           <p><%= recommendation.description %></p>
+          <p><%= recommendation.occasion.name %></p>
         </div>
 
         <h4><%= humanized_money_with_symbol(recommendation.price) %></h4>
