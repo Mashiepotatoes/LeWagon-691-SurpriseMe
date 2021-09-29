@@ -1,5 +1,5 @@
-<div class="container">
-  <h1>Your Cart</h1>
+<div class="container mt-5">
+  <h1>Shopping Cart</h1>
 
   <div class="shopping-cart">
 
@@ -56,9 +56,10 @@
         <label>Grand Total</label>
         <div class="totals-value" id="cart-total"><%= total %></div>
       </div>
+      <%= form_tag orders_path do %>
+        <%= hidden_field_tag 'cart_id', @current_cart.id %>
+        <%= submit_tag 'Purchase', class: 'btn btn-primary float-right' %>
+      <% end %>
     </div>
-
-        <button class="checkout">Checkout</button>
-
   </div>
 </div>

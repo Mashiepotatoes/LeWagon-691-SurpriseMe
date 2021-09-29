@@ -1,10 +1,6 @@
 import { Controller } from "stimulus";
 
 export default class extends Controller {
-  connect() {
-    console.log("hello from StimulusJS")
-  }
-
   static targets = ["checkbox", "check3box"]
 
   checkAll() {

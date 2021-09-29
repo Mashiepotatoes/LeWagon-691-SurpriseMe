@@ -111,7 +111,14 @@ ActiveRecord::Schema.define(version: 2021_09_28_101640) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "product_id"
+    t.bigint "user_id"
+    t.bigint "cart_id"
+    t.string "state"
+    t.string "checkout_session_id"
+    t.integer "amount_cents", default: 0, null: false
+    t.index ["cart_id"], name: "index_orders_on_cart_id"
     t.index ["product_id"], name: "index_orders_on_product_id"
+    t.index ["user_id"], name: "index_orders_on_user_id"
   end
 
   create_table "products", force: :cascade do |t|
@@ -124,6 +131,7 @@ ActiveRecord::Schema.define(version: 2021_09_28_101640) do
     t.string "image_url"
     t.string "brand"
     t.decimal "average_rating", precision: 2, scale: 1
+    t.integer "price_cents", default: 0, null: fals
     t.index ["category_id"], name: "index_products_on_category_id"
   end
 
@@ -187,7 +195,9 @@ ActiveRecord::Schema.define(version: 2021_09_28_101640) do
   add_foreign_key "gift_sessions", "orders"
   add_foreign_key "gift_sessions", "users"
   add_foreign_key "gift_sessions", "users", column: "recipient_id"
+  add_foreign_key "orders", "carts"
   add_foreign_key "orders", "products"
+  add_foreign_key "orders", "users"
   add_foreign_key "products", "categories"
   add_foreign_key "ratings", "gift_sessions"
   add_foreign_key "ratings", "products"

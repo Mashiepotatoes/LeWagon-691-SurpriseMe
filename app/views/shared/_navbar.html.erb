@@ -37,7 +37,7 @@
 
           <li class="nav-item active list-style-none nav-item-wrap">
             <i class="fas fa-shopping-cart nav-icon"></i>
-            <%= link_to "My cart", root_path, class: "cust-nav-link" %>
+            <%= link_to "My cart", cart_path(@current_cart), class: "cust-nav-link" %>
           </li>
 
           <li class="nav-item dropdown ml-3">
@@ -53,11 +53,11 @@
             </div>
           </li>
         <% else %>
-          <li class="nav-item nav-li">
-            <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+          <li class="nav-item nav-li ">
+            <%= link_to "Login", new_user_session_path, class: "nav-link u-hover--sparkle" %>
           </li>
           <li class="nav-item nav-li ">
-            <%= link_to "Sign up", new_user_registration_path, class: "nav-link" %>
+            <%= link_to "Sign up", new_user_registration_path, class: "nav-link u-hover--sparkle" %>
           </li>
         <% end %>
     </div>

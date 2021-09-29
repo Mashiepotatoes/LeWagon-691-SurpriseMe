@@ -40,4 +40,3 @@ Rails.application.routes.draw do
   mount StripeEvent::Engine, at: '/stripe-webhooks'
   resources :rating, only: [:create]
 end
-
