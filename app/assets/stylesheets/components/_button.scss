@@ -42,12 +42,6 @@
   background-color: $surprise-pink;
 }
 
-.surprise-pink-btn:hover{
-  color:white;
-  background-color: rgb(231, 44, 112);
-  text-transform: scale(1.05);
-}
-
 .surprise-pink-btn-small{
   color: #fff;
   border-radius: 5px;
@@ -56,7 +50,16 @@
   background-color: $surprise-pink;
 }
 
-.surprise-pink-btn-small:hover{
+
+.surprise-pink-btn-med{
+  color: #fff;
+  border-radius: 5px;
+  width: 100%;
+  padding: 0.5rem 0;
+  background-color: $surprise-pink;
+}
+
+.surprise-pink-btn-small:hover, .surprise-pink-btn-med:hover, .surprise-pink-btn:hover{
   color:white;
   background-color: rgb(231, 44, 112);
   text-transform: scale(1.05);
@@ -66,6 +69,41 @@
   color: #fff;
   width:100%;
   background-color: $surprise-green;
+  border-radius: 5px;
+}
+
+.surprise-green-btn-small {
+  color: #fff;
+  background-color: $surprise-green;
+  width: 50%;
+  border-radius: 5px;
+}
+
+.surprise-green-btn:hover, .surprise-green-btn-small:hover{
+  background-color: #2e856e;
+}
+
+.surprise-orange-ghost-btn {
+  border: solid 1px #EDAD85;
+  background-color: transparent;
+  border-radius: 5px;
+  padding: 0.5rem 0;
+  width: 150px;
+  text-align: center;
+
+  a {
+    text-decoration: none;
+    color: #EDAD85;
+  }
+}
+
+.surprise-orange-ghost-btn:hover {
+  border: none;
+  background-color: #EDAD85;
+
+  a {
+    color: white;
+  }
 }
 
 .btn-border-none{
