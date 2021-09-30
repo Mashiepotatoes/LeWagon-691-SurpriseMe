@@ -24,9 +24,14 @@ class Product < ApplicationRecord
   }
 
   def self.curate(gift_session, disco_recommendations, user_preferences)
-    disco_recommendations.for_occasion(gift_session.occasion_id).by_category(user_preferences).less_than(gift_session.budget).sample(5)
-    binding.pry
+    if disco_recommendations.nil?
+      Product.all.sample(10)
+    else
+      if (user_preferences.nil?) || (user_preferences.count <= 2)
+        Product.all.sample(10)
+      else
+        disco_recommendations.for_occasion(gift_session.occasion_id).by_category(user_preferences).less_than(gift_session.budget).sample(5)
+      end
+    end
   end
-
-
 end
