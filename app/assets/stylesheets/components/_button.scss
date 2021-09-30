@@ -23,6 +23,7 @@
 .btn-flat {
   color: white;
   padding: 8px 4rem;
+  margin-bottom: 20px;
   border-radius: 5px;
   background: $surprise-green;
   transition: background 0.3s ease;
@@ -67,8 +68,6 @@
   background-color: $surprise-green;
 }
 
-
-
 .btn-border-none{
   border: none;
   background-color: transparent;
@@ -87,3 +86,21 @@
   color:$surprise-pink;
 }
 
+.btn-submit {
+  background: $surprise-pink;
+  color: white;
+  padding: 8px 4rem;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+  border-color: $surprise-pink;
+  font-family: $body-font;
+  position: center;
+
+}
+
+.btn-submit:hover {
+  background-color: #cf538f;
+  border-color: #cf538f;
+  color: white;
+}
