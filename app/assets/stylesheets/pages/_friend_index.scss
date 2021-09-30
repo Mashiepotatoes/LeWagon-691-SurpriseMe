@@ -4,17 +4,18 @@
 }
 
 .friend-side-panel{
-  background-color: #FCE3E3;
+  background-color: rgba(252, 227, 227, 0.6);
   height: 100vh;
   margin: 1.5rem 1.5rem;
-  box-shadow: 0 5px 5px rgba(198, 198, 198, 0.75);
+  border-radius: 5px;
+
 
   a {
     text-decoration: none;
     color: $surprise-font;
 
     & + a .side-panel-text {
-    border-top: 1px solid $surprise-font-secondary;
+    border-top: 1px solid rgba(64, 74, 79, 0.2);
     }
   }
 }
@@ -26,15 +27,17 @@
   font-family: $headers-font;
   margin-right: 30px;
   margin-left: 30px;
+  font-size: 20px;
 }
 
 .side-panel-text:hover{
   background-color: $surprise-pink;
   border-bottom: none;
   margin: 0;
+  color: white;
 
-  a {
-    color:#fff;
+  & + a .side-panel-text {
+    border: none;
   }
 }
 
