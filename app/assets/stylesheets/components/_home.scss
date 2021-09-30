@@ -7,7 +7,7 @@
 }
 
 .home-desc-wrapper {
-  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("https://res.cloudinary.com/dncp2x5qh/image/upload/v1632643791/pexels-cottonbro-3972177_olkptt.jpg");
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("https://res.cloudinary.com/dncp2x5qh/image/upload/v1632643791/pexels-cottonbro-3972177_olkptt.jpg");
   background-size: 100%;
   background-position: center top;
   background-repeat: no-repeat;
@@ -48,6 +48,10 @@
   &:nth-of-type(2) {
     margin-top: 64px;
   }
+
+  p {
+    text-align: justify;
+  }
 }
 
 .btn-flat.home {
@@ -64,6 +68,11 @@
   a {
     color: white;
   }
+}
+
+.btn-flat.home:hover {
+  background-color: white;
+  color:$surprise-font;
 }
 
 a#back-to-top {
