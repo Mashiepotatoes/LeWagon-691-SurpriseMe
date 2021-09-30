@@ -1,6 +1,7 @@
 class RatingController < ApplicationController
   def new
     @rating = Rating.new
+    # @product = Product.friendships
   end
 
   def create
