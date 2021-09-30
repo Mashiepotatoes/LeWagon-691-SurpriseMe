@@ -161,9 +161,8 @@ puts "creating orders, sessions, and ratings"
 10.times do |i|
   cart = Cart.create
   product = Product.all.sample
-  order = Order.create(product: product, user: User.all.sample, cart: cart)
+  # order = Order.create(product: product, user: User.all.sample, cart: cart)
   session = GiftSession.create(
-    order: order,
     user: User.all.sample,
     recipient: User.all.sample,
     budget: (10..100).to_a.sample

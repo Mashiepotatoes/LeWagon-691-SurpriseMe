@@ -6,8 +6,6 @@ class Product < ApplicationRecord
 
   monetize :price_cents
 
-  belongs_to :orders, dependent: :destroy
-#   has_many :orders, dependent: :destroy
   has_many :product_occasions, dependent: :destroy
   has_many :occasions, through: :product_occasions
 
@@ -24,12 +22,15 @@ class Product < ApplicationRecord
   }
 
   def self.curate(gift_session, disco_recommendations, user_preferences)
+    # if we don't get any recommendations
     if disco_recommendations.nil?
-      Product.all.sample(10)
+      Product.all.sample(3)
     else
+      # if user doesn't have enough preferences data
       if (user_preferences.nil?) || (user_preferences.count <= 2)
-        Product.all.sample(10)
+        Product.all.sample(3)
       else
+        # if not get disco recommendation
         disco_recommendations.for_occasion(gift_session.occasion_id).by_category(user_preferences).less_than(gift_session.budget).sample(5)
       end
     end
