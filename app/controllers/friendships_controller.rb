@@ -25,7 +25,7 @@ class FriendshipsController < ApplicationController
   def create
     friend_to_add = User.find(params["format"])
     @add_friend = Friendship.create(user: current_user,friend: friend_to_add)
-    redirect_to friendships_path
+    redirect_to friendships_path, notice: "Friend request sent!"
   end
 
   def accept
@@ -34,7 +34,7 @@ class FriendshipsController < ApplicationController
     @invitation.save
 
     @new_friend = Friendship.create!(user: current_user, friend: @invitation.user, status: true)
-    redirect_to friendships_path
+    redirect_to friendships_path, notice: "Friend request accepted!"
   end
 
   def search

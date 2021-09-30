@@ -48,15 +48,11 @@
                   Accept request <i class="fas fa-user-plus"></i>
                 <% end %>
               <% else %>
-                <div data-controller="notification">
-                  <%= link_to friendships_path(user),method: :post do %>
-                    Add friend <i class="fas fa-user-plus"></i>
-                  <% end %>
-                </div>
+                <%= link_to friendships_path(user),method: :post do %>
+                  Add friend <i class="fas fa-user-plus"></i>
+                <% end %>
               <% end %>
-
             </div>
-
         </div>
       <% end %>
     <% end %>
