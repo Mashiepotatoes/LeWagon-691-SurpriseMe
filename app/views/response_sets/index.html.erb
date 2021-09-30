@@ -1,6 +1,6 @@
 <div class="container">
   <div class="container-preferences">
-    <% if @response_sets.empty? %>
+    <% if @response_sets.count != @questions.count @%>
       <div class="card-quiz">
         <div class="card-quiz-info">
           <h2> <%= current_user.first_name.capitalize %>, help us get to know you better!</h2>
