@@ -5,8 +5,8 @@
     <div>
       <!-- form for submitting answers -->
       <%= simple_form_for [@question, @answer], html: {class: 'quiz-form'} do |f| %>
-      <%= f.input :choice, as: :radio_buttons, collection: @question.options, input_html: { class: 'form-input' } %>
-      <%= f.button :submit %>
+      <%= f.input :choice, as: :radio_buttons, label: "required", collection: @question.options %>
+      <%= f.button :submit, "Next", class: 'btn-flat' %>
       <% end %>
     </div>
   </div>

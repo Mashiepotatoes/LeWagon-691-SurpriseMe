@@ -6,16 +6,24 @@
 
 .quiz-container-inner{
   width: 1000px;
-  height: 30vh;
-  padding: 20px;
+  height: auto;
+  padding: 40px;
+  border-radius: 10px;
   background-color: $surprise-pink-secondary;
+  box-shadow: 0 5px 5px rgba(198, 198, 198, 0.75);
 }
 
 .quiz-form {
   background-color: $surprise-pink-secondary;
+  border-radius: 5%;
 }
 
-.form-input {
+.simple_form.quiz-form label {
   float: none;
   padding: 0;
+  font-family: $body-font;
+}
+
+.simple_form input.is-valid ~ .form-check-label {
+  color: black;
 }
