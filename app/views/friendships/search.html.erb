@@ -31,24 +31,28 @@
             </div>
 
             <!--- to use for adding friend --->
-            <div class="card-product-actions mr-4">
-              <% if @friendship.find_by user:current_user, friend:user, status: false %>
-                Pending confirmation
-              <% elsif current_user.friends.include?(user) %>
-                <%= link_to friendship_path(user) do %>
-                  Send a gift <i class="fas fa-gift"></i>
-                <% end %>
-              <% elsif @friendship.find_by user:user, friend:current_user %>
-                <% @request = @friendship.find_by user:user, friend:current_user %>
-                <%= link_to friendships_accept_path(@request),method: :post do %>
-                  Accept request <i class="fas fa-user-plus"></i>
-                <% end %>
-              <% else %>
-                <%= link_to friendships_path(user),method: :post do %>
-                  Add friend <i class="fas fa-user-plus"></i>
-                <% end %>
-              <% end %>
-            </div>
+
+            <% if user != current_user %>
+              <div class="card-product-actions mr-4">
+                  <% if @friendship.find_by user:current_user, friend:user, status: false %>
+                    Pending confirmation
+                  <% elsif current_user.friends.include?(user) %>
+                    <%= link_to friendship_path(user) do %>
+                      Send a gift <i class="fas fa-gift"></i>
+                    <% end %>
+                  <% elsif @friendship.find_by user:user, friend:current_user %>
+                    <% @request = @friendship.find_by user:user, friend:current_user %>
+                    <%= link_to friendships_accept_path(@request),method: :post do %>
+                      Accept request <i class="fas fa-user-plus"></i>
+                    <% end %>
+                  <% else %>
+                    <%= link_to friendships_path(user),method: :post do %>
+                      Add friend <i class="fas fa-user-plus"></i>
+                    <% end %>
+                  <% end %>
+              </div>
+            <% end %>
+
         </div>
       <% end %>
     <% end %>

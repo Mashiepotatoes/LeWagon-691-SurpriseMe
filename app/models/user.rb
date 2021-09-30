@@ -30,15 +30,21 @@ class User < ApplicationRecord
     self.orders.is_pending
   end
 
-  # def received_gifts
-  #   # send instance as argument
+  def received_gifts
 
-  #   # return gift sessions that user = recipient
-  #   @received_products = Product.joins(carts: [orders: [:gift_sessions]])
-  #   .where("state =   'paid' AND recipient_id = #{self.id}" )
+    @users_gifts = []
 
-    # paid_orders = self.gift_sessions.orders.is_paid
-    # Get products from these orders and return them
-  # end
+    @gift_sessions = GiftSession.where(recipient: self)
+    @gift_sessions._select! do |session|
+      session.order.state == "paid"
+    end
+
+    @gift_sessions.each do |session|
+      products = session.order.cart.products
+      products.each { |product| @users_gifts << product }
+    end
+
+    @users_gifts
+  end
 
 end
