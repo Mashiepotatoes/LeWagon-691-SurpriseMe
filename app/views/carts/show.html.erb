@@ -18,13 +18,17 @@
           <div class="product-details">
             <div class="product-title"><%= line_item.product.name %></div>
           </div>
-          <div class="product-quantity">
-            QTY: <%= line_item.quantity %>
+
+          <div class="quan-price">
+            <div class="product-quantity">
+              QTY: <%= line_item.quantity %>
+            </div>
+            <% total += line_item.product.price * line_item.quantity %>
+            <div class="product-line-price"><%= line_item.product.price * line_item.quantity %></div>
           </div>
-          <% total += line_item.product.price * line_item.quantity %>
-          Total: <div class="product-line-price"><%= line_item.product.price * line_item.quantity %></div>
+
           <div class="product-removal">
-            <%= button_to "X",line_items_path(id: line_item),method: :delete , class: "remove-product"%>
+            <%= button_to "x",line_items_path(id: line_item),method: :delete , class: "remove-product text-center"%>
           </div>
         </div>
       </div>
@@ -34,7 +38,6 @@
   <div class="totals">
     <div class="totals-portion">
         <h3>Purchase Summary</h3>
-        <%# <p>Purchasing a gift for...</p> %>
       <div class="totals-item">
         <label>Subtotal</label>
         <div class="totals-value" id="cart-subtotal"><%= total %></div>

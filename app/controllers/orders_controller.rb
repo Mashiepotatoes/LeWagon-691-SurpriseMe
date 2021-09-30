@@ -3,10 +3,12 @@ class OrdersController < ApplicationController
     @cart = Cart.find(params[:cart_id])
     @total = 0
     @cart.line_items.each do |item|
-      @total += (item.product.price * item.quantity)
+      @total += ((item.product.price * item.quantity).to_d * 1.07).to_d
     end
 
-    order = Order.create!(cart: @cart, amount: @total, state: 'pending', user: current_user)
+    @grand_total = @total + 15.0
+
+    order = Order.create!(cart: @cart, amount: @grand_total, state: 'pending', user: current_user)
 
     session = Stripe::Checkout::Session.create(
       payment_method_types: ['card'],
