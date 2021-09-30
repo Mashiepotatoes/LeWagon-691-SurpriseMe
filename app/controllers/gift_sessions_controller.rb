@@ -16,6 +16,7 @@ class GiftSessionsController < ApplicationController
     @gift_session.occasion = Occasion.find(params[:gift_session][:occasion_id])
     @gift_session.budget = params[:gift_session][:budget] # user's slider value
     @gift_session.save
+
     redirect_to gift_session_path(@gift_session.id) if @gift_session.save
   end
 
