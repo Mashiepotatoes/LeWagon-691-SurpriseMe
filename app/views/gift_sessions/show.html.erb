@@ -1,12 +1,13 @@
 <div class="gift-container">
-  <div>
-    <h2>Choosing the perfect gift for...
+  <div class="gift-header">
+    <h2>Choosing the perfect gift for...</h2>
+    <div class="gift-profile-img">
       <% if @gift_session.recipient.profile_photo.attached? %>
-        <%= cl_image_tag @gift_session.recipient.profile_photo.key, class:"rounded-circle w-25 h-25" %>
+        <%= cl_image_tag @gift_session.recipient.profile_photo.key, class:"rounded-circle" %>
       <% else %>
-        <%= image_tag(asset_path("blank-profile-picture.png"), class:"rounded-circle w-25 h-25") %>
+        <%= image_tag(asset_path("blank-profile-picture.png"), class:"rounded-circle") %>
       <% end %>
-    </h2>
+    </div>
   </div>
 
     <% @disco_recommendations.each do |recommendation| %>
