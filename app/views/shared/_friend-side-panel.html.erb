@@ -1,14 +1,14 @@
 <div class="friend-side-panel">
   <%= link_to friendships_path do %>
-    <div class="side-panel-text">All Friends</div>
+    <div class="side-panel-text">My Friends</div>
   <% end %>
 
   <%= link_to friendships_requests_path do %>
-    <div class="side-panel-text">Friend Request</div>
+    <div class="side-panel-text">Friend Requests</div>
   <% end %>
 
   <%= link_to birthdays_path do %>
-    <div class="side-panel-text">Birthday Reminder</div>
+    <div class="side-panel-text">Upcoming Birthdays</div>
   <% end %>
 
   <%= link_to received_path do %>
@@ -21,7 +21,7 @@
     <% end %>
   <% else %>
     <%= link_to response_sets_path do %>
-      <div class="side-panel-text">Preference Quiz</div>
+      <div class="side-panel-text">Preferences Quiz</div>
     <% end %>
   <% end %>
 </div>

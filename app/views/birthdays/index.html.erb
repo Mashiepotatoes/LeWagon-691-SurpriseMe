@@ -5,7 +5,7 @@
     <h2 class="page-func">Upcoming Birthdays</h2>
     <% if @friend_list.empty? %>
       <div class="outside-card-product">
-        <p style="margin:auto"> You haven't add any friend yet!</p>
+        <p style="margin:auto"> You haven't added a friend yet!</p>
       </div>
     <% else %>
       <% if @upcomingbirthday.count > 0 %>
@@ -44,8 +44,8 @@
           </div>
         <% end %>
       <% else %>
-        <div class="outside-card-product">
-          <p style="margin:auto"> There're no upcoming birthdays.</p>
+        <div class="outside-card-product reject">
+          <p style="margin:auto"> There are no upcoming birthdays.</p>
         </div>
       <% end %>
     <% end %>

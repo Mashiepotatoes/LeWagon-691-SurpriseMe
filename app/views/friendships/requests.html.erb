@@ -16,7 +16,7 @@
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLongTitle">Sent friend requests</h5>
+            <h5 class="modal-title" id="example-modal-long-title">Sent friend requests</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
@@ -58,8 +58,8 @@
 <!------- End of modal -- ----->
 
       <% if @invitations.empty? %>
-        <div class="outside-card-product">
-          <p style="margin:auto" id="reject"> You do not currently have any friend requests</p>
+        <div class="outside-card-productreject">
+          <p style="margin:auto"> You do not currently have any friend requests.</p>
         </div>
       <% else %>
         <% @invitations.each do |invitation| %>
