@@ -6,10 +6,10 @@
     <p class="side-panel-text"><%= link_to "Birthday Reminder", birthdays_path%></p>
     <p class="side-panel-text">
       <% if @response_sets.empty? %>
-        <%# <%= link_to "Preference Quiz", question_path(@question) %>
-      <%# <% else %>
-        <%# <%= link_to "Preference Quiz", response_sets_path %>
-      <%# <% end %>
+        <%= link_to "Preference Quiz", question_path(@question) %>
+      <% else %>
+        <%= link_to "Preference Quiz", response_sets_path %>
+      <% end %>
     </p>
   </div>
 

@@ -10,9 +10,9 @@ class FriendshipsController < ApplicationController
 
   def requests
     @requests = Friendship.where(user: current_user,status: false)
-    @invitations =  Friendship.where(friend: current_user,status: false)
-    # @question = Question.first
-    # @response_sets = ResponseSet.where(user: current_user)
+    @invitations = Friendship.where(friend: current_user,status: false)
+    @question = Question.first
+    @response_sets = ResponseSet.where(user: current_user)
   end
 
   def show

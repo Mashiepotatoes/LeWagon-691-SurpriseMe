@@ -16,13 +16,12 @@
       <div class="side-panel-text">Gifts Received</div>
     <% end %>
 
-    <%# <p class="side-panel-text"> %>
-      <%# <% if @response_sets.empty? %>
-        <%# <%= link_to "Preference Quiz", question_path(@question) %>
-      <%# <% else %>
-        <%# <%= link_to "Preference Quiz", response_sets_path %>
-      <%# <% end %>
-    <%# </p> %>
+      <% if @response_sets.empty? %>
+        <%= link_to "Preference Quiz", question_path(@question) %>
+      <% else %>
+        <%= link_to "Preference Quiz", response_sets_path %>
+      <% end %>
+    </p>
 
   </div>
 
