@@ -156,8 +156,8 @@ ActiveRecord::Schema.define(version: 2021_09_29_153928) do
     t.string "description"
     t.string "image_url"
     t.string "brand"
-    t.decimal "average_rating", precision: 2, scale: 1
     t.integer "price_cents", default: 0, null: false
+    t.decimal "average_rating", precision: 2, scale: 1
     t.string "subcategory"
     t.index ["category_id"], name: "index_products_on_category_id"
   end
@@ -174,11 +174,15 @@ ActiveRecord::Schema.define(version: 2021_09_29_153928) do
 
   create_table "ratings", force: :cascade do |t|
     t.integer "rating"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
     t.bigint "user_id"
     t.bigint "product_id"
+    t.bigint "gift_session_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.bigint "recipient_id"
+    t.index ["gift_session_id"], name: "index_ratings_on_gift_session_id"
     t.index ["product_id"], name: "index_ratings_on_product_id"
+    t.index ["recipient_id"], name: "index_ratings_on_recipient_id"
     t.index ["user_id"], name: "index_ratings_on_user_id"
   end
 
@@ -226,8 +230,10 @@ ActiveRecord::Schema.define(version: 2021_09_29_153928) do
   add_foreign_key "product_occasions", "occasions"
   add_foreign_key "product_occasions", "products"
   add_foreign_key "products", "categories"
+  add_foreign_key "ratings", "gift_sessions"
   add_foreign_key "ratings", "products"
   add_foreign_key "ratings", "users"
+  add_foreign_key "ratings", "users", column: "recipient_id"
   add_foreign_key "response_sets", "answers"
   add_foreign_key "response_sets", "questions"
   add_foreign_key "response_sets", "users"
