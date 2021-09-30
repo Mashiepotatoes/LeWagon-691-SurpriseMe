@@ -35,12 +35,19 @@
         <label for='checkbox-product'></label>
         <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
         <div class="card-gift-infos"> %>
-          <%# <h2><%= recommendation.name</h2> %>
-          <%# <p>Product rating: </p> %>
-          <%# <p><%= recommendation.description</p> %>
-          <%# <p><%= recommendation.occasion.name</p> %>
-        <%# </div> %>
+          <h2><%= recommendation.name %></h2>
+          <p>Product rating: </p>
+          <p><%= recommendation.description %></p>
+          <%# <p><%= recommendation.occasion.name %></p> %>
+        </div>
+        <h4><%= humanized_money_with_symbol(recommendation.price) %></h4>
 
+        <div data-controller="quantity" data-quantity-target='wrapper' data-product-id=<%= recommendation.id %> >
+          <button data-action="click->quantity#reduce">-</button>
+          <p data-quantity-target="total"> 0 </p>
+          <button data-action="click->quantity#add">+</button>
+        </div>
+      </div>
       </div>
 
     <% end %>

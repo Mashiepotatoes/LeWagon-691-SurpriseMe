@@ -2,6 +2,23 @@ require 'json'
 require 'open-uri'
 require 'faker'
 
+Product.destroy_all
+Category.destroy_all
+Order.destroy_all
+Rating.destroy_all
+Occasion.destroy_all
+GiftSession.destroy_all
+Answer.destroy_all
+
+# category = Category.find(1)
+# ------ Jeremy and PE seeds ----- #
+# console.log("Seeding products!")
+# Product.create(image_url:"https://source.unsplash.com/random",category:category, name: "Xiaomi Mi Vacuum Cleaner Mini", price_cents: 6990, description: "A small-format wireless hand vacuum cleaner. It has two speeds, so you can adapt it to everything you need. Light and portable.")
+# Product.create(image_url:"https://source.unsplash.com/random",category:category, name: "Jabra Elite 3 Earbuds", price_cents: 12800, description: "Designed for secure fit and amazing durability: Ergonomic shape makes eargels exceptionally comfortable and the ideal fit for every type of ear – IP55 weather-resistant rating against dust and water. Long battery life and true wireless stability: With up to 28 hours of battery time with the pocket-friendly charging case, the Elite 3 earphones let you take calls and play music while staying connected.")
+# Product.create(image_url:"https://source.unsplash.com/random",category:category, name: "ARSSOO Cocktail Kit Bar Set. 15PC Professional Bartender Kit. 25oz Cocktail Shaker, 19oz Martini Shaker, Drink Mixer, Muddler Tool, Bar Strainer, Wine Opener, Jigger x2, Pourers and Bar Accessories", price_cents: 6999, description: "Mixology Home Mastery: Everything you need to have for making any drinks. Only the Arssoo Cocktail set comes with 2 different sized bar shakers and 4 different sized cocktail jiggers. In addition, you get Cocktail Recipe E-Book and Mixology Videos.")
+# Product.create(image_url:"https://source.unsplash.com/random",category:category, name: "STOGA 60% Gaming Keyboard, RGB Mechanical Keyboard, Small 61-Key Wired Brown Switch Mini Keyboard, White Computer Keyboard for Gaming/Office/PC/Mac", price_cents: 5699, description: "STOGA Gaming keyboard structure is small and easy to carry. The mechanical keyboard's detachable USB Type-C cable design is easy to store, freeing up your desktop working space. The wired gaming keyboard can provide a stable link, no delay, no lag. 60% Mechanical keyboard with a USB 2.0 transfer speed, click feedback and an excellent typing experience is a professional standard for typists and gamers.")
+# Product.create(image_url:"https://source.unsplash.com/random",category:category, name: "Apple AirPods Pro", price_cents: 28000, description: "Active Noise Cancellation for immersive sound. Transparency mode for hearing and connecting with the world around you. Three sizes of soft, tapered silicone tips for a customisable fit. Sweat and water resistant. Adaptive EQ automatically tunes music to the shape of your ear. Easy setup for all your Apple devices. Quick access to Siri by saying Hey Siri. The Wireless Charging Case delivers more than 24 hours of battery life.")
+# Product.create(image_url:"https://source.unsplash.com/random",category:category,name: "Dreamegg Cool Mist Humidifier - Ultrasonic Humidifiers for Bedroom, Baby & Home, Whisper Quiet Filter-Free Air Humidifier with 360° Mist Nozzle, Timer Setting, Night Light Option & Auto Shut-Off", price: 59.92, details: "OPERATES RELIABLY IN SILENCE - Noise level is ≤30dB. No buzzing, hissing, or humming. This humidifier steadily and efficiently dispenses the soothing cool mist you need. 100,000+ happy users sleep better with Dreamegg. CONTROL AT YOUR FINGERTIPS - Designed with super simple intuitive interface & buttons. 360° mist nozzle: easily direct the flow of mist away from areas that don't need moisture and toward the areas that do. Easy to set up 1h/3h/6h timer before ready for bed.")
 # Product.create(image_url:"https://source.unsplash.com/random",category:category,name: "NYX PROFESSIONAL MAKEUP Ultimate Shadow Palette, Eyeshadow Palette, Warm Neutrals", price: 28.60, details: "EYESHADOW PALETTE: This professional level makeup palette features 16 highly-pigmented shadows that glide onto lids & make eyes pop with color. Use with NYX Professional makeup eyeshadow primer for bolder, longer-lasting color. ULTIMATE EYE SHADOW: Each high quality eyeshadow palette features a highly pigmented mix of finishes from matte & satin to shimmery & metallic—perfect for your skin tone. Apply primer & build your look. BOLD & BEAUTIFUL: Eyes pop with NYX PROFESSIONAL MAKEUP eye shadow collection. Choose from eyeshadow primer, matte eyeshadow, cream eyeshadows, gel eyeshadows, liquid eyeshadows, & more with a variety of different finishes to complete your look.")
 # Product.create(image_url:"https://source.unsplash.com/random",category:category,name: "Expandable Cat Carrier Backpack for Cats, Space Capsule Bubble Pet Travel Carrier for Small Dog, Pet Hiking Traveling Backpack (Green, Expandable Backpack - Solid Hard)", price:137.19, details: "Expandable Bubble Backpack for Cat: Wider visual view from the bubble dome. Expandable back panel to give more room and play time at outdoor activity. Breathable and Ventilation: Extra 9 holes around this pet carrier and two side windows to perform great air circulation and ventilation inside. Expanded back panel to be a giant tent bed to enjoy outdoor time with nature and sunshine well without feeling stuffiness in the backpack. Order the extra floral vent cover to get ever ventilation. Eye-catching and Lightweight: Entire backpack is less than 3 lbs only, suggest for cats from 0-12lbs and small dogs from 0-10lbs to leave enough room inside to turn around. Airline Approved backpack for cats and puppy. Super wear-resistant shell perfectly against biting and scratching by pets. Portable and Shoulder-Wear: Padded shoulder straps pet carrier backpack with adjustable chest buckle for travel and hiking outdoor activity")
 # Product.create(image_url:"https://source.unsplash.com/random",category:category,name: "LONDONTOWN kur Nail Hardener and Base Coat", price: 30.00, details: "Works to penetrate and replenish deteriorated nail protein and balance natural oils in the nail to strengthen and nourish them back to health. Created with Britain's rapeseed flower oil as well as a unique blend of natural extracts and vitamins to rejuvenate and restore moisture to dry, thin and brittle nails. Sets a strong base to nails. Vegan, gluten-free and cruelty-free. 5-free formula, formaldehyde-free, toluene-free, DBP-free, formaldehyde resin-free, camphor free.")
@@ -49,17 +66,13 @@ parsed_all_beauty = JSON.parse(serialised_all_beauty)
 # serialised_video_games = File.read(file_path_vg)
 # parsed_video_games = JSON.parse(serialised_video_games)
 
-# ---- Amazon cd_vinyl seeds ---- #
+# # ---- Amazon cd_vinyl seeds ---- #
 # file_path_cdv = File.join(__dir__, "amazon_datasets/cd_vinyl.json")
 # serialised_cd_vinyl = File.read(file_path_cdv)
 # parsed_cd_vinyl = JSON.parse(serialised_cd_vinyl)
 
-# ---- Amazon pet_supplies seeds ---- #
-# file_path_ps = File.join(__dir__, "amazon_datasets/pet_supplies.json")
-# serialised_pet_supplies = File.read(file_path_ps)
 # parsed_pet_supplies = JSON.parse(serialised_pet_supplies)
-
-# ---- Amazon toys_games seeds ---- #
+# # ---- Amazon toys_games seeds ---- #
 
 # file_path_tg = File.join(__dir__, "amazon_datasets/toys_games.json")
 # serialised_toys_games = File.read(file_path_tg)
@@ -77,20 +90,21 @@ file_path_tg = File.join(__dir__, "amazon_datasets/fashion.json")
 serialised_fashion = File.read(file_path_tg)
 parsed_fashion = JSON.parse(serialised_fashion)
 
-# ---- Amazon home_kitchen seeds ---- #
+# # ---- Amazon home_kitchen seeds ---- #
 
-file_path_tg = File.join(__dir__, "amazon_datasets/home_kitchen.json")
-serialised_home_kitchen = File.read(file_path_tg)
-parsed_home_kitchen = JSON.parse(serialised_home_kitchen)
+# file_path_tg = File.join(__dir__, "amazon_datasets/home_kitchen.json")
+# serialised_home_kitchen = File.read(file_path_tg)
+# parsed_home_kitchen = JSON.parse(serialised_home_kitchen)
 
-# ---- Amazon sports_outdoors seeds ---- #
+# # ---- Amazon sports_outdoors seeds ---- #
 
-file_path_tg = File.join(__dir__, "amazon_datasets/sports_outdoors.json")
-serialised_sports_outdoors = File.read(file_path_tg)
-parsed_sports_outdoors = JSON.parse(serialised_sports_outdoors)
+# file_path_tg = File.join(__dir__, "amazon_datasets/sports_outdoors.json")
+# serialised_sports_outdoors = File.read(file_path_tg)
+# parsed_sports_outdoors = JSON.parse(serialised_sports_outdoors)
 
 # ---- seeding ---- #
-parsed_datasets = [parsed_all_beauty, parsed_video_games, parsed_pet_supplies, parsed_cd_vinyl, parsed_toys_games, parsed_fashion, parsed_home_kitchen, parsed_sports_outdoors]
+# parsed_datasets = [parsed_all_beauty, parsed_video_games, parsed_pet_supplies, parsed_cd_vinyl, parsed_toys_games, parsed_fashion, parsed_home_kitchen, parsed_sports_outdoors]
+parsed_datasets = [parsed_all_beauty, parsed_fashion]
 categories = [all_beauty, video_games, cd_vinyl, pet_essentials, toys_games, fashion, home_kitchen, sports_outdoors]
 
 puts "Creating products"
@@ -102,8 +116,9 @@ parsed_datasets.each do |dataset|
     image_url = product_raw["imageUrlHighRes"]
     brand = product_raw["brand"]
     price = product_raw["price"].to_i
+    subcategory = product_raw["subcategory"]
 
-    product_inst = Product.new(name: name, description: description, price: price, image_url: image_url, brand: brand)
+    product_inst = Product.new(name: name, description: description, price: price, image_url: image_url, brand: brand, subcategory: subcategory)
     product_inst.category = categories[categories_index]
     product_inst.save!
   end
@@ -158,7 +173,6 @@ puts "creating orders, sessions, and ratings"
     user: session.recipient,
     product: product
     )
-
 end
 
 puts "Created #{Product.count} products"
@@ -174,6 +188,7 @@ parsed_questions = JSON.parse(serialised_questions)
 parsed_questions.each do |question|
   content = question["question"]
   options = question["options"]
+  subcategory = question["subcat"]
 
-  Question.create(content: content, options: options)
+  Question.create(content: content, options: options, subcategory: subcategory)
 end

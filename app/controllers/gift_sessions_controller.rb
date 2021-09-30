@@ -14,7 +14,7 @@ class GiftSessionsController < ApplicationController
     @gift_session.user = current_user # recipient id
     @gift_session.recipient = User.find(params[:recipient_id])
     @gift_session.occasion = Occasion.find(params[:gift_session][:occasion_id])
-    @gift_session.budget = params[:gift_session][:budget]
+    @gift_session.budget = params[:gift_session][:budget] # user's slider value
     @gift_session.save
     redirect_to gift_session_path(@gift_session.id) if @gift_session.save
   end
@@ -22,7 +22,7 @@ class GiftSessionsController < ApplicationController
   private
 
   def get_recommendations(gift_session, disco_recommendations)
-    Product.curate(gift_session, disco_recommendations) # filter by price
-
+    user_preferences = Answer.where(choice: "Yes").distinct.pluck(:subcategory) # get user_prefs where answer choice is yes for those subcats
+    Product.curate(gift_session, disco_recommendations, user_preferences)
   end
 end
