@@ -68,8 +68,6 @@
   background-color: $surprise-green;
 }
 
-
-
 .btn-border-none{
   border: none;
   background-color: transparent;
@@ -88,7 +86,7 @@
   color:$surprise-pink;
 }
 
-.btn-primary {
+.btn-submit {
   background: $surprise-pink;
   color: white;
   padding: 8px 4rem;
@@ -97,9 +95,12 @@
   transition: background 0.3s ease;
   border-color: $surprise-pink;
   font-family: $body-font;
+  position: center;
+
 }
 
-.btn-primary:hover {
+.btn-submit:hover {
   background-color: #cf538f;
   border-color: #cf538f;
+  color: white;
 }
