@@ -13,23 +13,41 @@
   .product {
     background-color: rgba($surprise-font-secondary, 0.8);
     border-radius: 16px;
-    padding: 32px 24px;
+    padding: 28px 20px;
     margin-bottom: 16px;
     color: $surprise-font;
+    font-family: $body-font;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
   }
+
+  .product-details {
+    width: 62%;
+    height: 50%
+  }
+
+  .quan-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .product-removal {
+    display: flex;
+    align-items: center;
+  }
+
+  .remove-product {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    color: white;
+    background-color: $surprise-pink;
+    border: none;
+  }
 }
 
-.remove-product {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  color: white;
-  background-color: $surprise-pink;
-  border: none;
-}
 
 .totals {
   position: absolute;
