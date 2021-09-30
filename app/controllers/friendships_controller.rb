@@ -11,8 +11,8 @@ class FriendshipsController < ApplicationController
   def requests
     @requests = Friendship.where(user: current_user,status: false)
     @invitations =  Friendship.where(friend: current_user,status: false)
-    # @question = Question.first
-    # @response_sets = ResponseSet.where(user: current_user)
+    @question = Question.first
+    @response_sets = ResponseSet.where(user: current_user)
   end
 
   def show
@@ -44,6 +44,8 @@ class FriendshipsController < ApplicationController
     else
       redirect_to friendships_path
     end
+    @question = Question.first
+    @response_sets = ResponseSet.where(user: current_user)
   end
 
   def cancel

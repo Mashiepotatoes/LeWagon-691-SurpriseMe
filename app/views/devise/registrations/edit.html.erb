@@ -22,6 +22,8 @@
         <%= f.input :birthday,
                     required: true,
                     autofocus: true,
+                    start_year: Date.today.year,
+                    end_year: Date.today.year - 100,
                     input_html: { class:"input-styling"},
                     as: :date %>
          <%= f.input :address,

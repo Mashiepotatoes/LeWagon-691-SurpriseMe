@@ -1,9 +1,5 @@
 <div class="friend-page-container">
-  <div class="friend-side-panel">
-    <p class="side-panel-text"><%= link_to "All friends", friendships_path%></p>
-    <p class="side-panel-text"><%= link_to "Friend Request", friendships_requests_path%></p>
-    <p class="side-panel-text"><%= link_to "Birthday reminder", "#"%></p>
-  </div>
+  <%= render 'shared/friend-side-panel' %>
 
 
   <div class="friend-content container">
@@ -15,13 +11,13 @@
       </div>
     <% else %>
       <% @users.each do |user| %>
-        <div class="outside-card-product">
+        <div class="outside-card-product pb-2">
             <div class="card-product">
               <div class="photo-container">
                 <% if user.profile_photo.attached? %>
-                    <%= cl_image_tag user.profile_photo.key,gravity: :face, crop: :crop,height: 120, width: 100 %>
+                    <%= cl_image_tag user.profile_photo.key, class:"rounded-circle" %>
                 <% else %>
-                    <%= image_tag(asset_path("blank-profile-picture.png"),height: 120, width: 100) %>
+                    <%= image_tag(asset_path("blank-profile-picture.png"), class:"rounded-circle") %>
                     <%# <%= cl_image_tag("qef3hpwpcsezqvzin6g0.png"), height: 60, width: 60,crop: :fill, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
                 <% end %>
 
