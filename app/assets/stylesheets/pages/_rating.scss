@@ -1,0 +1,76 @@
+.page-container-rating{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  h1 {
+    font-family: $headers-font;
+    font-size: 48px;
+    vertical-align: bottom;
+    color: $surprise-font;
+    width: 100%;
+    padding-left:80px;
+  }
+
+  h2 {
+    font-family: $body-font;
+    font-size: 25px;
+    font-weight: bold;
+    color: $surprise-font;
+  }
+}
+
+.page-container-rating-inner{
+  width: 1200px;
+  height: 60vh;
+}
+
+.rating-image{
+  background-color: white;
+  width: 500px;
+  height: 100%;
+  object-fit: cover;
+  margin-right: 40px;
+  border-radius: 5px;
+}
+
+.rating-description{
+  padding: 30px;
+}
+
+.simple_form label{
+  font-family: $body-font;
+  font-size: 14px;
+  font-weight: bold;
+  color: $surprise-font;
+  float: left;
+  width: 100px;
+  text-align: leftt;
+  margin: 2px 10px;
+  padding: 20px;
+}
+
+.br-theme-css-stars .br-widget a {
+  text-decoration: none;
+  height: 18px;
+  width: 40px;
+  float: left;
+  font-size: 40px;
+  margin-right: 5px;
+}
+
+.surprise-pink-btn{
+  width:50%;
+  margin-top: 30px;
+}
+
+.simple_form{
+  text-align: center;
+}
+
+.br-widget{
+  display: flex;
+  justify-content: center;
+}

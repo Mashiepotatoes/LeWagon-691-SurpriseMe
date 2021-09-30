@@ -1,6 +1,6 @@
 <div class="container">
   <div class="container-preferences">
-    <% if @response_sets.empty? %>
+    <% if @quiz_landing %>
       <div class="card-quiz">
         <div class="card-quiz-info">
           <h2> <%= current_user.first_name.capitalize %>, help us get to know you better!</h2>
@@ -9,18 +9,21 @@
         </div>
       </div>
     <% else %>
-      <h2>Questions that you have answered</h2>
-      <% @response_sets.each do |response| %>
-        <div class="card-preferences">
-          <div class="card-preferences-info">
-            <p><strong>Q</strong>: <em><%= response.question.content %></em></p>
-            <p><strong>A</strong>: <%= response.answer.choice %></p>
+      <div class="response-set-header-container">
+        <h2>Questions that you have answered</h2>
+      </div>
+      <div class="response-set-container">
+        <% @response_sets.each do |response| %>
+          <div class="card-preferences">
+            <div class="card-preferences-info">
+              <h2><%= response.question.content %></h2>
+            </div>
+            <div class="card-preferences-edit">
+              <%= link_to "Edit response", edit_response_set_path(@response_sets), class: "btn surprise-pink-btn btn-quiz" %>
+            </div>
           </div>
-          <div class="card-preferences-edit">
-            <p><%= link_to "Edit response", edit_response_set_path(@response_sets), class: "btn btn-ghost btn-quiz mt-3" %></p>
-          </div>
-        </div>
-      <% end %>
+        <% end %>
+      </div>
     <% end %>
   </div>
 </div>

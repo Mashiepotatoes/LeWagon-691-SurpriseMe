@@ -1,7 +1,6 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: #ffffff;
-  box-shadow: 0 2px 5px rgba(198, 198, 198, 0.75);
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -12,7 +11,7 @@
   position: absolute;
   top: 12px;
   left: 20px;
-  width: 140px;
+  width: 120px;
 }
 
 // remove ul bullet //
@@ -45,6 +44,13 @@
   outline:none;
 }
 
+::placeholder {
+  font-style: italic;
+  color: $surprise-pink;
+  font-family: $body-font;
+  font-size: 14px;
+}
+
 //search icon
 .icon-pink{
   font-size: 1rem;
@@ -56,7 +62,7 @@
 
 // navbar height
 .navbar-height{
-  height: 100px;
+  height: 80px;
 }
 
 //navbar item
@@ -67,13 +73,13 @@
 }
 
 .nav-item-wrap:hover{
-  background-color: rgb(232, 231, 231);
-  border-radius: 10px;
+  background-color: rgba(252, 227, 227, 0.6);
+  border-radius: 5px;
   cursor: pointer;
 }
 
 .nav-icon{
-  font-size: 1.4rem;
+  font-size: 1rem;
   color: $surprise-pink;
 }
 
@@ -155,6 +161,9 @@
 .cust-nav-link{
   display: block;
   color: $surprise-pink;
+  font-family: $body-font;
+  font-size: 14px;
+  // font-weight: bold;
 }
 
 .cust-nav-link:hover {

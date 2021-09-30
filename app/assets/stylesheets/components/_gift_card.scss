@@ -7,6 +7,20 @@
   margin:2rem 0;
 }
 
+.gift-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 10px;
+  margin-bottom: 10px;
+
+  .rounded-circle {
+    width: 20%;
+    height: 20%;
+  }
+}
+
+
 .card-gift {
   overflow: hidden;
   height: 200px;
@@ -27,16 +41,15 @@
   object-fit: cover;
 }
 
-// .card-gift h2 {
-//   font-size: 20px;
-//   font-weight: bold;
-//   margin: 0;
-// }
-
 .card-gift-content{
   width:100%;
   display: flex;
   padding: 0 1rem;
+}
+
+.scroll {
+  overflow: auto;
+  height: 100%;
 }
 
 .card-gift-content-wide{
