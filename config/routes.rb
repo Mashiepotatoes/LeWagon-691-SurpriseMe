@@ -28,8 +28,10 @@ Rails.application.routes.draw do
     resources :gift_recommendations, only: [:index]
   end
 
-  resources :products
-
+  resources :products do
+    resources :rating, only: [:new, :create]
+  end
+  
   resources :orders, only: [:show, :create] do
     resources :payments, only: :new
   end
@@ -41,5 +43,4 @@ Rails.application.routes.draw do
   resources :response_sets, only: [:index, :edit, :update]
 
   mount StripeEvent::Engine, at: '/stripe-webhooks'
-  resources :rating, only: [:create]
 end

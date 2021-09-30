@@ -70,3 +70,4 @@ gem 'stripe_event'
 # disco gem (recommender)
 
 gem 'disco'
+gem 'noticed'
