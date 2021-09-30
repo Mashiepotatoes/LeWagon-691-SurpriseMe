@@ -8,8 +8,8 @@
         <p style="margin:auto"> You haven't add any friend yet!</p>
       </div>
     <% else %>
-      <% @friend_list.each do |friendship| %>
-        <% if (friendship.friend.birthday.yday - Date.today.yday).between?(0,7) %>
+      <% if @upcomingbirthday.count > 0 %>
+        <% @upcomingbirthday.each do |friendship| %>
           <div class="outside-card-product">
             <div class="card-product">
               <div class="photo-container">
@@ -29,6 +29,7 @@
                 </strong>
 
                 <p class="mt-2"><i class="fas fa-birthday-cake mr-3"></i><%= friendship.friend.birthday %></p>
+
               </div>
             </div>
 
@@ -42,6 +43,10 @@
             </div>
           </div>
         <% end %>
+      <% else %>
+        <div class="outside-card-product">
+          <p style="margin:auto"> There're no upcoming birthdays.</p>
+        </div>
       <% end %>
     <% end %>
   </div>
