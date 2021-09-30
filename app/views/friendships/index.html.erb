@@ -1,9 +1,21 @@
 <div class="friend-page-container">
   <div class="friend-side-panel">
-    <p class="side-panel-text"><%= link_to "All Friends", friendships_path%></p>
-    <p class="side-panel-text"><%= link_to "Friend Request", friendships_requests_path%></p>
-    <p class="side-panel-text"><%= link_to "Birthday Reminder", birthdays_path%></p>
-    <p class="side-panel-text"><%= link_to "Gifts Received", received_path %></p>
+    <%= link_to friendships_path do %>
+      <div class="side-panel-text">All Friends</div>
+    <% end %>
+
+    <%= link_to friendships_requests_path do %>
+      <div class="side-panel-text">Friend Request</div>
+    <% end %>
+
+    <%= link_to birthdays_path do %>
+      <div class="side-panel-text">Birthday Reminder</div>
+    <% end %>
+
+    <%= link_to received_path do %>
+      <div class="side-panel-text">Gifts Received</div>
+    <% end %>
+
     <%# <p class="side-panel-text"> %>
       <%# <% if @response_sets.empty? %>
         <%# <%= link_to "Preference Quiz", question_path(@question) %>
@@ -15,7 +27,7 @@
   </div>
 
   <div class="friend-content container">
-    <h2 class="page-func">My friends</h2>
+    <h2 class="page-func">My Friends</h2>
     <% if @friend_list.empty? %>
       <div class="outside-card-product">
         <p style="margin:auto"> You haven't add any friend yet!</p>
