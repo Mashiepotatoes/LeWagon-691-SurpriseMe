@@ -1,12 +1,12 @@
 
-<div class="page-container d-flex justify-content-center align-items-center">
-  <div class="page-container-inner d-block justify-content-center align-items-center">
+<div class="quiz-container d-flex justify-content-center align-items-center">
+  <div class="quiz-container-inner">
     <div><h1><%= @question.content %></h1></div>
     <div>
       <!-- form for submitting answers -->
-      <%= simple_form_for [@question, @answer] do |f| %>
-      <%= f.input :choice, as: :radio_buttons, collection: @question.options %>
-      <%= f.button :submit %>
+      <%= simple_form_for [@question, @answer], html: {class: 'quiz-form'} do |f| %>
+      <%= f.input :choice, as: :radio_buttons, label: "required", collection: @question.options %>
+      <%= f.button :submit, "Next", class: 'btn-flat' %>
       <% end %>
     </div>
   </div>
