@@ -9,25 +9,27 @@
           <%# <%= cl_image_tag("qef3hpwpcsezqvzin6g0.png"), height: 60, width: 60,crop: :fill, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
       <% end %>
 
-      <div class="card-user-info">
-        <h1><%= @friend.first_name.capitalize() %> <%= @friend.last_name.capitalize() %></h1>
-        <p id="profile-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Est pellentesque elit ullamcorper dignissim cras tincidunt lobortis. Elit sed vulputate mi sit amet mauris. Semper risus in hendrerit gravida.</p>
-      </div>
-
-      <% if @friend != current_user %>
-        <div class="card-user-add">
-          <% if @friend_list %>
-            <div class="add-friend-icon">
-              <i class="fas fa-user-friends"></i>
-              <p id="friend-added-text">Friend Added</p>
-            </div>
-          <% else %>
-            <%= link_to friendships_path(recipient_id: params[:id] ), method: :post do %>
-              <i class="fas fa-user-plus"></i>
-            <% end %>
-          <% end %>
+      <div class="d-flex justify-content-between">
+        <div class="card-user-info">
+          <h1><%= @friend.first_name.capitalize() %> <%= @friend.last_name.capitalize() %></h1>
+          <p id="profile-text"><%= @friend.description %></p>
         </div>
-      <% end %>
+
+        <% if @friend != current_user %>
+          <div class="card-user-add">
+            <% if @friend_list %>
+              <div class="add-friend-icon">
+                <i class="fas fa-user-friends"></i>
+                <p id="friend-added-text">Friend Added</p>
+              </div>
+            <% else %>
+              <%= link_to friendships_path(recipient_id: params[:id] ), method: :post do %>
+                <i class="fas fa-user-plus"></i>
+              <% end %>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
 
     </div>
 
@@ -38,7 +40,7 @@
           <div class="cards">
             <% @occasions.each do |occasion| %>
               <input type="radio" name="gift_session[occasion_id]" value="<%= occasion.id %>" id="<%= "occasion-#{occasion.id}" %>">
-              
+
               <label class="card-labe" for="<%= "occasion-#{occasion.id}" %>">
                 <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path occasion.cover_image, width: 700, height: 350, crop: :fit %>)">
                   <%= occasion.name.capitalize %>
@@ -65,4 +67,3 @@
     </div>
   </div>
 </div>
-

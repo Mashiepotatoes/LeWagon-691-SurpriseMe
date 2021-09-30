@@ -10,9 +10,9 @@
         <div class="cart-img-container">
 
           <% if gift.image_url.nil? %>
-            <% image_tag "https://source.unsplash.com/random" %>
+            <%= image_tag "https://source.unsplash.com/random" %>
           <% else %>
-            <% image_tag gift.image_url %>
+            <%= image_tag gift.image_url %>
             <% raise %>
           <% end %>
         </div>
@@ -20,8 +20,10 @@
         <div class="card-gift-content">
           <div class="card-gift-content-wide">
             <h2><%= gift.name %></h2>
-            <% desc = gift.description %>
-            <p><%= desc.gsub(/\[|\"|\]/,"") %></p>
+            <div class="scroll">
+              <% desc = gift.description %>
+              <p><%= desc.gsub(/\[|\"|\]/,"") %></p>
+            </div>
           </div>
 
           <div class="card-gift-r-quantity">

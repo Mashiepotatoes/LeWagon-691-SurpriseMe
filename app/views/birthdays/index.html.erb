@@ -15,10 +15,9 @@
               <div class="photo-container">
                 <%# if birthday is 7 days from today %>
                 <% if friendship.friend.profile_photo.attached? %>
-                        <%= cl_image_tag friendship.friend.profile_photo.key, class:"rounded-circle" %>
+                  <%= cl_image_tag friendship.friend.profile_photo.key,gravity: :face, crop: :crop, class:"rounded-circle" %>
                 <% else %>
                   <%= image_tag(asset_path("blank-profile-picture.png"), class:"rounded-circle") %>
-                  <%# <%= cl_image_tag("qef3hpwpcsezqvzin6g0.png"), height: 60, width: 60,crop: :fill, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
                 <% end %>
               </div>
               <div class="card-product-infos">
