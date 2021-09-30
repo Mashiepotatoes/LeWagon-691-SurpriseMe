@@ -1,12 +1,18 @@
 <div class="rating-container-page">
-<h1 class="chelsea-yellow">Rate a product</h1>
   <div class="container rating-container d-flex justify-content-center align-items-center">
-    <div class="rating-container-inner shadowed">
-      <%= simple_form_for @rating, url: product_rating_index_path do |f| %>
-        <h1><%= @product.name %></h1>
-        <%= f.input :rating, collection: (1..5).to_a, label: 'Rating:' %>
-        <%= f.submit class: 'btn btn-flat btn-block btn-rating' %>
-      <% end %>
+    <div class="rating-desc-container">
+      <div class="rating-product-image"><img src="<% @product.image_url %>" alt="product-image">
+        <div class="rating-product-description">
+          <h1><%= @product.name %></h1>
+          <p><%= @product.description %></p>
+        </div>    
+        <div class="rating-container">
+          <%= simple_form_for @rating, url: product_rating_index_path do |f| %>
+            <%= f.input :rating, collection: (1..5).to_a, label: 'Please rate the experience from 1 to 5' %>
+            <%= f.submit class: 'btn btn-flat btn-block btn-rating d-none' %>
+          <% end %>
+        </div>
+      </div>
     </div>
   </div>
 </div>

@@ -31,7 +31,7 @@ Rails.application.routes.draw do
   resources :products do
     resources :rating, only: [:new, :create]
   end
-  
+
   resources :orders, only: [:show, :create] do
     resources :payments, only: :new
   end
