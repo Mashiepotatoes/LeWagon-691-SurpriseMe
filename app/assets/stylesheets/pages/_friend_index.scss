@@ -20,7 +20,6 @@
   }
 }
 
-
 .side-panel-text{
   padding: 1.5rem 0;
   text-align: center;
@@ -41,7 +40,7 @@
   }
 }
 
-.side-panel-text > a{
+.side-panel-text > a, .friend-card-name > p, #birthday{
   color: $surprise-font;
 }
 
@@ -53,7 +52,6 @@
 .friend-content{
   padding: 2rem 1.1rem;
 }
-
 
 // <--------media-query ---------------> //
 

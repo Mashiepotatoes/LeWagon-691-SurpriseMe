@@ -2,12 +2,12 @@
 .friend-page-container {
   margin-top: 30px;
 
-  h2, :playing{
+  h2, #example-modal-long-title {
     color: $surprise-font;
   }
 }
 
-#reject {
+.reject {
   color: #c6c6c6;
 }
 .sent-request{

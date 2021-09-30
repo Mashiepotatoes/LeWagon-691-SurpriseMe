@@ -1,5 +1,6 @@
 .outside-card-product{
-  margin: 1rem;
+  margin: 0px 20px 50px 20px;
+  padding-top: 50px;
   overflow: hidden;
   height: 120px;
   background: white;
@@ -8,7 +9,7 @@
   justify-content: space-between;
 
   & + .outside-card-product {
-    border-top: 1px solid #AFACAC;
+    border-top: 1px solid rgba(64, 74, 79, 0.2);
   }
 }
 
