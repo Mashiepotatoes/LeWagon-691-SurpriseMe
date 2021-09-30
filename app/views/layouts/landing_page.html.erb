@@ -28,10 +28,10 @@
 
             <% if user_signed_in? %>
               <li class="nav-item nav-li my-auto ">
-                <%= link_to "My friend", friendships_path, class: "nav-link-white u-hover--sparkle-white" %>
+                <%= link_to "My Friends", friendships_path, class: "nav-link-white u-hover--sparkle-white" %>
               </li>
               <li class="nav-item nav-li my-auto ">
-                <%= link_to "Cart", cart_path(@current_cart), class: "nav-link-white u-hover--sparkle-white" %>
+                <%= link_to "My Cart", cart_path(@current_cart), class: "nav-link-white u-hover--sparkle-white" %>
               </li>
 
               <li class="nav-item dropdown ml-3">
