@@ -44,6 +44,12 @@
   background-color: $surprise-pink;
 }
 
+.surprise-green-btn{
+  color: #fff;
+  width:100%;
+  background-color: $surprise-green;
+}
+
 .surprise-pink-btn:hover{
   color:white;
   background-color: rgb(231, 44, 112);
@@ -52,4 +58,17 @@
 .btn-border-none{
   border: none;
   background-color: transparent;
+}
+
+.btn-rate{
+  background: $surprise-green;
+  width: 35%;
+  padding: 2rem 3rem;
+  text-align: center;
+  color:white;
+}
+
+.btn-rate:hover{
+  text-decoration: none;
+  color:$surprise-pink;
 }
