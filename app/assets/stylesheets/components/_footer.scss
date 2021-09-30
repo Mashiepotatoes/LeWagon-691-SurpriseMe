@@ -1,10 +1,9 @@
 footer{
   background-color: $surprise-green;
-  height: auto;
+  height: 50%;
   width: 100vw;
   color:#fff;
-  padding-top: 20px;
-  position: fixed;
+  padding-top: 10px;
 }
 
 .footer-content{
@@ -14,7 +13,7 @@ footer{
   text-align: center;
 
   img{
-    width: 120px;
+    width: 100px;
   }
 }
 
@@ -30,7 +29,7 @@ footer{
   display:flex;
   align-items: center;
   justify-content: center;
-  margin: 1rem 0 3 rem 0;
+  margin: 3px 3px;
   padding: 0;
 }
 
@@ -44,7 +43,7 @@ footer{
 }
 
 .socials a i{
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   transition: color .4s ease;
 }
 
