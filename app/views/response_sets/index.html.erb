@@ -1,16 +1,14 @@
-<% if @quiz_landing %>
 <div class="container page-container-rs-landing">
   <div class="container-preferences">
+<% if @quiz_landing %>
       <div class="card-quiz">
         <div class="card-quiz-info">
           <h2> <%= current_user.first_name.capitalize %>, help us get to know you better!</h2>
-          <p>Take our quiz to help us understand what you like. We want our recommendations to be better tailored to your personal preferences, so answer as many questions as possible!</p>
+          <p>Take our quiz to help us understand what you like. We want our recommendations to be better tailored to your personal preferences, so answer as many questions as possible! Pressing 'Next' after you answer each question will save your response. Pressing 'Exit Quiz' will exit the quiz, let you view all the question you answered and edit your responses. </p>
           <%= link_to "Begin Quiz", question_path(@question), class: "btn surprise-green-btn-small mt-4" %>
         </div>
       </div>
     <% else %>
-    <div class="container page-container-rs">
-    <div class="container-preferences">
       <div class="response-set-header-container">
         <h2>Questions that you have answered</h2>
       </div>
