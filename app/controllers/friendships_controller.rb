@@ -44,6 +44,8 @@ class FriendshipsController < ApplicationController
     else
       redirect_to friendships_path
     end
+    @question = Question.first
+    @response_sets = ResponseSet.where(user: current_user)
   end
 
   def cancel
