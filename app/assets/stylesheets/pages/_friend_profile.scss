@@ -1,3 +1,6 @@
+.page-container-friend-profile{
+  padding: 70px 0 130px 0;
+}
 // card-user
 
 .card-user {
@@ -9,10 +12,22 @@
 
 // card-user-profile //
 
-
 .card-user-add {
-  font-size: 40px;
+  font-size: 30px;
   padding: 60px 16px 0px 16px;
+}
+
+.add-friend-icon {
+  text-align: center;
+}
+
+#friend-added-text{
+  font-family: $body-font;
+  color: $surprise-pink;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 12px;
+  opacity: 0.8;
 }
 
 .fa-user-friends {
@@ -35,13 +50,14 @@
   background: white;
   display: flex;
   align-items: center;
-  padding: 30px;
+  padding: 30px 30px 30px 60px;
   font-family: $headers-font;
 }
 
 .card-user-info {
   height: auto;
   font-family: $body-font;
+  color: $surprise-font;
 }
 
 .card-user-profile-info img {
@@ -59,15 +75,15 @@
   margin: 0;
 }
 
-.card-user-profile-info p {
+#profile-text {
   padding-left: 8px;
   padding-right: 8px;
-  font-size: 15px;
+  font-size: 14px;
   line-height: 1.4;
-  opacity: .7;
   margin-bottom: 0;
   margin-top: 8px;
   height: 100%;
+  text-align: justify;
 }
 
 .card-user-profile-info .card-user-info {
@@ -87,17 +103,19 @@
 .card-user-product p {
   width: 100%;
   background-color: white;
-  text-align: center;
+  color: $surprise-font;
+  text-align: left;
   font-size: 24px;
   font-family: $headers-font;
-  margin: 0 auto;
+  margin-left: 85px;
+  margin-top: 20px;
 }
 
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
-  padding: 30px;
+  margin: 0 50px;
   background-color: white;
 }
 
@@ -121,6 +139,7 @@ input[id ^= "occasion"] {
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   filter: grayscale(1);
   font-family: $headers-font;
+  cursor: pointer;
 }
 
 .card-category:hover {
@@ -129,7 +148,7 @@ input[id ^= "occasion"] {
 
 input[id ^="occasion"]:checked + label .card-category{
   filter: grayscale(0);
-  box-shadow: 0 0 10px 4px rgba($surprise-pink, 0.4);
+  box-shadow: 0 0 15px 4px rgba($surprise-pink, 0.8);
 }
 
 // card-user-budget //
@@ -138,9 +157,13 @@ input[id ^="occasion"]:checked + label .card-category{
   justify-content: space-around;
   align-items: flex-start;
   padding: 10px 20px;
+  margin-top: 30px;
   text-align: center;
   background-color: white;
   font-family: $body-font;
+  color: $surprise-pink;
+  font-size: 14px;
+  font-weight: bold;
 }
 
 .budget-submit {
