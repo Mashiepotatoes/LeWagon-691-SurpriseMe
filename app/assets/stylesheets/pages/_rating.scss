@@ -1,0 +1,46 @@
+.page-container-rating{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-container-rating-inner{
+  width: 800px;
+  height: 60vh;
+}
+
+.rating-image{
+  background-color: white;
+  width: 250px;
+  height: 100%;
+  object-fit: cover;
+  margin-right: 40px;
+  border-radius: 5px;
+}
+
+.rating-description{
+  padding: 30px;
+}
+
+.simple_form label{
+  font-family: $body-font;
+  font-size: 14px;
+  font-weight: bold;
+  color: $surprise-font;
+  float: left;
+  width: 100px;
+  text-align: leftt;
+  margin: 2px 10px;
+  padding: 20px;
+}
+
+.br-theme-css-stars .br-widget a {
+  text-decoration: none;
+  height: 18px;
+  width: 40px;
+  float: left;
+  font-size: 40px;
+  margin-right: 5px;
+}
