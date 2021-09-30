@@ -65,6 +65,7 @@ label {
   margin-bottom: 20px;
   padding-bottom: 10px;
   border-bottom: 1px solid $color-border;
+  font-family: $body-font;
 
   .product-image {
     text-align: center;
@@ -114,6 +115,7 @@ label {
     clear: both;
     width: 100%;
     margin-bottom: 10px;
+    font-family: $headers-font;
 
     label {
       float: left;
@@ -130,7 +132,7 @@ label {
   }
 
   .totals-item-total {
-    font-family: $font-bold;
+    font-family: $headers-font;;
   }
 }
 

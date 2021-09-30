@@ -17,11 +17,9 @@
     <% @cart.line_items.each do |line_item| %>
       <div class="product">
         <div class="product-image">
-          <%# <%= image_tag line_item.product.image_url %>
         </div>
         <div class="product-details">
           <div class="product-title"><%= line_item.product.name %></div>
-
         </div>
         <div class="product-price"><%= line_item.product.price %></div>
         <div class="product-quantity">
@@ -40,9 +38,13 @@
 
 
     <div class="totals">
+      <div class="d-flex align-items-end flex-column mr-3">
+        <h3>Purchase Summary</h3>
+        <%# <p>Purchasing a gift for...</p> %>
+      </div>
       <div class="totals-item">
         <label>Subtotal</label>
-        <div class="totals-value" id="cart-subtotal"></div>
+        <div class="totals-value" id="cart-subtotal"><%= total %></div>
       </div>
       <div class="totals-item">
         <label>Tax (7%)</label>
@@ -54,11 +56,11 @@
       </div>
       <div class="totals-item totals-item-total">
         <label>Grand Total</label>
-        <div class="totals-value" id="cart-total"><%= total %></div>
+        <div class="totals-value" id="cart-total"><%= (total *1.07).to_d + 15.0 %></div>
       </div>
       <%= form_tag orders_path do %>
         <%= hidden_field_tag 'cart_id', @current_cart.id %>
-        <%= submit_tag 'Purchase', class: 'btn btn-primary float-right' %>
+        <%= submit_tag 'Purchase', class: 'btn btn-flat float-right' %>
       <% end %>
     </div>
   </div>
