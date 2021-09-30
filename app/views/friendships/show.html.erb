@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container page-container-friend-profile">
   <div class="card-user">
     <div class="card-user-profile-info">
 
@@ -11,13 +11,16 @@
 
       <div class="card-user-info">
         <h1><%= @friend.first_name.capitalize() %> <%= @friend.last_name.capitalize() %></h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Est pellentesque elit ullamcorper dignissim cras tincidunt lobortis. Elit sed vulputate mi sit amet mauris. Semper risus in hendrerit gravida.</p>
+        <p id="profile-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Est pellentesque elit ullamcorper dignissim cras tincidunt lobortis. Elit sed vulputate mi sit amet mauris. Semper risus in hendrerit gravida.</p>
       </div>
 
       <% if @friend != current_user %>
         <div class="card-user-add">
           <% if @friend_list %>
-            <i class="fas fa-user-friends"></i>
+            <div class="add-friend-icon">
+              <i class="fas fa-user-friends"></i>
+              <p id="friend-added-text">Friend Added</p>
+            </div>
           <% else %>
             <%= link_to friendships_path(recipient_id: params[:id] ), method: :post do %>
               <i class="fas fa-user-plus"></i>
@@ -35,11 +38,13 @@
           <div class="cards">
             <% @occasions.each do |occasion| %>
               <input type="radio" name="gift_session[occasion_id]" value="<%= occasion.id %>" id="<%= "occasion-#{occasion.id}" %>">
-              <label class="card-label" for="<%= "occasion-#{occasion.id}" %>">
+              
+              <label class="card-labe" for="<%= "occasion-#{occasion.id}" %>">
                 <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path occasion.cover_image, width: 700, height: 350, crop: :fit %>)">
                   <%= occasion.name.capitalize %>
                 </div>
               </label>
+
             <% end %>
           </div>
         </div>
@@ -47,7 +52,7 @@
           <div class="budget-submit">
           <div class="d-flex align-items-center mx-4">
             $10
-            <%= f.range_field :budget, min: 10, max: 500, value: 250, class:"slider", id:"price_range" %>
+            <%= f.range_field :budget, min: 10, max: 200, value: 100, class:"slider", id:"price_range" %>
             $500
           </div>
             <p>Budget: $<span id="selected_range"></span></p>
@@ -60,3 +65,4 @@
     </div>
   </div>
 </div>
+
