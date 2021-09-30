@@ -1,10 +1,14 @@
-<div class="background-wrapper min-vh-100" id="back-to-top">
-  <div class="tagline min-vh-100">
-    <h3>We help you buy gifts that people actually want</h3>
-    <a href="#learn-more" data-controller="scroll-to" >Learn More! <i class="fas fa-caret-down"></i></a>
+<div class="min-vh-100" id="back-to-top">
+  <div class="video-wrapper">
+    <%= video_tag "https://res.cloudinary.com/deqrylboj/video/upload/v1633022284/SurpriseMe-Landing-Video_sc6ttl.mp4", autoplay: :autoplay, loop: :loop, muted: :muted, class: "home_video" %>
+    <div class="video-overlay">
+      <h3>We help you buy gifts that people actually want</h3>
+      <a href="#learn-more" data-controller="scroll-to" >Learn More! <i class="fas fa-caret-down"></i></a>
+    </div>
   </div>
+ </div>
 
-  <div class="home-desc-wrapper min-vh-100">
+  <div class="background-wrapper min-vh-100">
     <div class="container" id="learn-more">
       <div class="d-flex w-100 align-item-center" id="desc">
         <div class="desc-item">
@@ -29,6 +33,5 @@
         <% end %>
     </div>
   </div>
-</div>
 
 <a id="back-to-top" href="#back-to-top" data-controller="scroll-to" ><i class="fas fa-arrow-circle-up"></i></a>
