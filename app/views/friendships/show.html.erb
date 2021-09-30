@@ -1,22 +1,33 @@
 <div class="container">
   <div class="card-user">
     <div class="card-user-profile-info">
-      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+
+      <% if @friend.profile_photo.attached? %>
+        <%= cl_image_tag @friend.profile_photo.key,gravity: :face, crop: :crop %>
+      <% else %>
+        <%= image_tag(asset_path("blank-profile-picture.png")) %>
+          <%# <%= cl_image_tag("qef3hpwpcsezqvzin6g0.png"), height: 60, width: 60,crop: :fill, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+      <% end %>
+
       <div class="card-user-info">
-        <h1><%= @friend.username.capitalize() %></h1>
+        <h1><%= @friend.first_name.capitalize() %> <%= @friend.last_name.capitalize() %></h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Est pellentesque elit ullamcorper dignissim cras tincidunt lobortis. Elit sed vulputate mi sit amet mauris. Semper risus in hendrerit gravida.</p>
       </div>
 
-      <div class="card-user-add">
-        <% if @friend_list %>
-          <i class="fas fa-user-friends"></i>
-        <% else %>
-          <%= link_to friendships_path(recipient_id: params[:id] ), method: :post do %>
-            <i class="fas fa-user-plus"></i>
+      <% if @friend != current_user %>
+        <div class="card-user-add">
+          <% if @friend_list %>
+            <i class="fas fa-user-friends"></i>
+          <% else %>
+            <%= link_to friendships_path(recipient_id: params[:id] ), method: :post do %>
+              <i class="fas fa-user-plus"></i>
+            <% end %>
           <% end %>
-        <% end %>
-      </div>
+        </div>
+      <% end %>
+
     </div>
+
     <div class="simple_form">
       <%= simple_form_for @gift_session do |f| %>
         <div class="card-user-product">

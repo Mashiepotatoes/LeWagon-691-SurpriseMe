@@ -50,7 +50,6 @@
                     autofocus: true,
                     input_html: { autocomplete: "address",class:"input-styling" }%>
 
-
         <%= f.input :password,
                     required: true,
                     hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
@@ -59,6 +58,11 @@
         <%= f.input :password_confirmation,
                     required: true,
                     input_html: { autocomplete: "new-password",class:"input-styling" } %>
+
+        <%= f.input :description,
+                    required: true,
+                    autofocus: true,
+                    input_html: { autocomplete: "description",class:"input-styling" } %>
 
       <%= f.input :profile_photo, as: :file %>
 

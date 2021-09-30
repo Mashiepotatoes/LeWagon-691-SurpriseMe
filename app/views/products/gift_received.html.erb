@@ -2,10 +2,10 @@
 
   <h2>Gifts that I have received</h2>
 
-  <% if @received_gifts.blank? %>
+  <% if current_user.received_gifts.blank? %>
     <p>You have not received any gifts yet</p>
   <% else %>
-    <% @received_gifts.each do |gift| %>
+    <% current_user.received_gifts.each do |gift| %>
       <div class="card-gift">
         <div class="cart-img-container">
 
