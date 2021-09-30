@@ -6,25 +6,35 @@
     <p>You have not received any gifts yet</p>
   <% else %>
     <% @received_gifts.each do |gift| %>
-      <div class="card-gift ">
+      <div class="card-gift">
         <div class="cart-img-container">
-          <%= image_tag(gift.image_url) %>
+
+          <% if gift.image_url.nil? %>
+            <% image_tag "https://source.unsplash.com/random" %>
+          <% else %>
+            <% image_tag gift.image_url %>
+            <% raise %>
+          <% end %>
         </div>
+
         <div class="card-gift-content">
           <div class="card-gift-content-wide">
             <h2><%= gift.name %></h2>
-            <p><%= gift.description %><p>
+            <% desc = gift.description %>
+            <p><%= desc.gsub(/\[|\"|\]/,"") %></p>
           </div>
 
           <div class="card-gift-r-quantity">
             <p>Qty : 1</p>
           </div>
 
-        <div class="card-gift-content-rate">
-          <%= link_to 'Rate',new_product_rating_path(gift),class:"btn-rate"%>
+          <div class="card-gift-content-rate">
+            <%= link_to 'Rate',"#",class:"btn-rate"%>
+          </div>
         </div>
 
       </div>
+
     <% end %>
   <% end %>
 

@@ -7,7 +7,7 @@
     </div> %>
 
     <% @disco_recommendations.each do |recommendation| %>
-    
+
       <% if recommendation.price_cents <= @gift_session.budget * 100%>
         <div class="card-gift">
           <%# <div class="card-gift form-check"> %>
@@ -42,7 +42,7 @@
     <% end %>
 
     <div class="checkout-gift">
-      <%= link_to "View cart", cart_path(@current_cart), class: "btn surprise-green-btn" %>
+      <%= link_to "View cart", cart_path(@current_cart, gs: @gift_session), class: "btn surprise-green-btn" %>
   </div>
 </div>
 

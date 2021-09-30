@@ -16,7 +16,6 @@ class OrdersController < ApplicationController
           unit_amount: order.amount_cents,
           product_data: {
             name: "Your order ",
-            images: [@cart.products.first.image_url]
           }
         },
         quantity: 1,
@@ -30,7 +29,12 @@ class OrdersController < ApplicationController
   end
 
   def show
+      # get the session for this order
+      @gift_session = GiftSession.where(user: current_user).last
       @order = current_user.orders.find(params[:id])
+
+      @gift_session.order = @order
+      @gift_session.save
     # Find the gift session
     # @gift_session = GiftSession.find(params[:id])
     # Assign the created order to the gift session

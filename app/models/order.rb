@@ -7,5 +7,5 @@ class Order < ApplicationRecord
 
   monetize :amount_cents
   scope :is_pending, -> {where(state: 'pending')}
-#   scope :is_paid, -> {where(state: 'paid')}
+# #   scope :is_paid, -> {where(state: 'paid')}
 end
