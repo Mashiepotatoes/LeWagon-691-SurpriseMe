@@ -1,7 +1,6 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: #ffffff;
-  box-shadow: 0 2px 5px rgba(198, 198, 198, 0.75);
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -12,7 +11,7 @@
   position: absolute;
   top: 12px;
   left: 20px;
-  width: 140px;
+  width: 120px;
 }
 
 // remove ul bullet //
@@ -56,7 +55,7 @@
 
 // navbar height
 .navbar-height{
-  height: 100px;
+  height: 80px;
 }
 
 //navbar item
@@ -73,7 +72,7 @@
 }
 
 .nav-icon{
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   color: $surprise-pink;
 }
 
