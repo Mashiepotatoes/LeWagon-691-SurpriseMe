@@ -24,7 +24,7 @@
                     <%= image_tag(asset_path("blank-profile-picture.png"),height: 120, width: 100) %>
                     <%# <%= cl_image_tag("qef3hpwpcsezqvzin6g0.png"), height: 60, width: 60,crop: :fill, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
                 <% end %>
-                
+
               </div>
               <div class="card-product-infos">
                 <strong><%= link_to friendship_path(user),class:"friend-card-name" do %>
@@ -48,9 +48,11 @@
                   Accept request <i class="fas fa-user-plus"></i>
                 <% end %>
               <% else %>
-                <%= link_to friendships_path(user),method: :post do %>
-                  Add friend <i class="fas fa-user-plus"></i>
-                <% end %>
+                <div data-controller="notification">
+                  <%= link_to friendships_path(user),method: :post do %>
+                    Add friend <i class="fas fa-user-plus"></i>
+                  <% end %>
+                </div>
               <% end %>
 
             </div>
