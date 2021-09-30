@@ -1,4 +1,15 @@
 // View sent request modal
+.friend-page-container {
+  margin-top: 30px;
+
+  h2, :playing{
+    color: $surprise-font;
+  }
+}
+
+#reject {
+  color: #c6c6c6;
+}
 .sent-request{
   margin: 0.2rem 0.2rem;
   padding: 0.5rem 0.2rem;

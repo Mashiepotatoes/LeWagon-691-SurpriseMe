@@ -41,16 +41,33 @@
   background-color: $surprise-pink;
 }
 
+.surprise-pink-btn:hover{
+  color:white;
+  background-color: rgb(231, 44, 112);
+  text-transform: scale(1.05);
+}
+
+.surprise-pink-btn-small{
+  color: #fff;
+  border-radius: 5px;
+  width: 20%;
+  padding: 0.5rem 0;
+  background-color: $surprise-pink;
+}
+
+.surprise-pink-btn-small:hover{
+  color:white;
+  background-color: rgb(231, 44, 112);
+  text-transform: scale(1.05);
+}
+
 .surprise-green-btn{
   color: #fff;
   width:100%;
   background-color: $surprise-green;
 }
 
-.surprise-pink-btn:hover{
-  color:white;
-  background-color: rgb(231, 44, 112);
-}
+
 
 .btn-border-none{
   border: none;

@@ -6,8 +6,8 @@
     <div class="d-flex justify-content-between align-items-center">
       <h2 class="page-func"> Friend requests </h2>
 
-      <button type="button" class="btn-border-none" data-toggle="modal" data-target="#exampleModalCenter">
-          View sent request
+      <button type="button" class="btn  surprise-pink-btn-small" data-toggle="modal" data-target="#exampleModalCenter">
+          View sent requests
       </button>
     </div>
 
@@ -16,7 +16,7 @@
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLongTitle">Sent friend request</h5>
+            <h5 class="modal-title" id="exampleModalLongTitle">Sent friend requests</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
@@ -59,7 +59,7 @@
 
       <% if @invitations.empty? %>
         <div class="outside-card-product">
-          <p style="margin:auto"> You don't have any friend request for now !</p>
+          <p style="margin:auto" id="reject"> You do not currently have any friend requests</p>
         </div>
       <% else %>
         <% @invitations.each do |invitation| %>
