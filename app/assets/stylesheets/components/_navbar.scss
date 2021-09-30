@@ -31,12 +31,13 @@
   border-radius: 10px;
   box-shadow:inset 0 1px 3px rgba(0,0,0,0.3);
   padding: 1px 1px;
+  width: 400px;
 }
 
 // expand searchbar effect
-.nav-searchbar:hover{
-  width: 400px;
-}
+// .nav-searchbar:hover{
+//   width: 400px;
+// }
 
 .rounded-input-field{
   border: none;
