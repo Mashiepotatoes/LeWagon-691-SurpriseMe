@@ -1,9 +1,31 @@
 <div class="friend-page-container">
   <div class="friend-side-panel">
-    <p class="side-panel-text"><%= link_to "All friends", friendships_path%></p>
-    <p class="side-panel-text"><%= link_to "Friend Request", friendships_requests_path%></p>
-    <p class="side-panel-text"><%= link_to "Birthday reminder", "#"%></p>
+  <%= link_to friendships_path do %>
+    <div class="side-panel-text">All Friends</div>
+  <% end %>
+
+  <%= link_to friendships_requests_path do %>
+    <div class="side-panel-text">Friend Request</div>
+  <% end %>
+
+  <%= link_to birthdays_path do %>
+    <div class="side-panel-text">Birthday Reminder</div>
+  <% end %>
+
+  <%= link_to received_path do %>
+    <div class="side-panel-text">Gifts Received</div>
+  <% end %>
+
+  <div class="side-panel-text">
+    <% if @response_sets.empty? %>
+    <% raise %>
+      <%= link_to "Preference Quiz", question_path(@question) %>
+    <% else %>
+      <%= link_to "Preference Quiz", response_sets_path %>
+    <% end %>
   </div>
+
+</div>
 
 
   <div class="friend-content container">
@@ -19,9 +41,9 @@
             <div class="card-product">
               <div class="photo-container">
                 <% if user.profile_photo.attached? %>
-                    <%= cl_image_tag user.profile_photo.key,gravity: :face, crop: :crop,height: 120, width: 100 %>
+                    <%= cl_image_tag user.profile_photo.key, class:"rounded-circle" %>
                 <% else %>
-                    <%= image_tag(asset_path("blank-profile-picture.png"),height: 120, width: 100) %>
+                    <%= image_tag(asset_path("blank-profile-picture.png"), class:"rounded-circle") %>
                     <%# <%= cl_image_tag("qef3hpwpcsezqvzin6g0.png"), height: 60, width: 60,crop: :fill, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
                 <% end %>
 
