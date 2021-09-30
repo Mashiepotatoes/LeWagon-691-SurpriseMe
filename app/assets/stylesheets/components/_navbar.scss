@@ -44,6 +44,13 @@
   outline:none;
 }
 
+::placeholder {
+  font-style: italic;
+  color: $surprise-pink;
+  font-family: $body-font;
+  font-size: 14px;
+}
+
 //search icon
 .icon-pink{
   font-size: 1rem;
@@ -66,13 +73,13 @@
 }
 
 .nav-item-wrap:hover{
-  background-color: rgb(232, 231, 231);
-  border-radius: 10px;
+  background-color: rgba(252, 227, 227, 0.6);
+  border-radius: 5px;
   cursor: pointer;
 }
 
 .nav-icon{
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: $surprise-pink;
 }
 
@@ -154,6 +161,9 @@
 .cust-nav-link{
   display: block;
   color: $surprise-pink;
+  font-family: $body-font;
+  font-size: 14px;
+  // font-weight: bold;
 }
 
 .cust-nav-link:hover {
