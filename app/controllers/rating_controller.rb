@@ -2,6 +2,7 @@ class RatingController < ApplicationController
   def new
     @rating = Rating.new
     @product = Product.find(params[:product_id])
+
   end
 
   def create

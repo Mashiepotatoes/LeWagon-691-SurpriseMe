@@ -45,7 +45,6 @@
   width:100%;
   display: flex;
   padding: 0 1rem;
-  justify-content: space-between;
 }
 
 .scroll {
@@ -59,11 +58,11 @@
 }
 
 .card-gift-content-wide h2{
-  font-size:1.5rem;
+  font-size:1.3rem;
 }
 
 .card-gift-content-wide > p{
-  font-size: 1rem;
+  font-size: 0.8rem;
 }
 
 .cart-gift-details{
@@ -133,12 +132,14 @@
 .card-gift-content-rate{
   width: 25%;
   display:flex;
+  flex:1;
   align-items:center;
   justify-content: center;
 }
 
 .card-gift-r-quantity{
   display:flex;
+  flex:1;
   justify-content: center;
   align-items:center;
   width: 20%;

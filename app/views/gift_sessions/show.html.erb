@@ -49,7 +49,7 @@
     <% end %>
 
     <div class="checkout-gift">
-      <%= link_to "View cart", cart_path(@current_cart), class: "btn surprise-green-btn" %>
+      <%= link_to "View cart", cart_path(@current_cart, gs: @gift_session), class: "btn surprise-green-btn" %>
   </div>
 </div>
 
