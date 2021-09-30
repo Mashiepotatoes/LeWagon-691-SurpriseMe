@@ -5,8 +5,6 @@ class Product < ApplicationRecord
   has_many :carts, through: :line_items
 
   monetize :price_cents
-  # belongs_to :orders, dependent: :destroy
-  # has_many :orders, dependent: :destroy
 
   has_many :product_occasions, dependent: :destroy
   has_many :occasions, through: :product_occasions
