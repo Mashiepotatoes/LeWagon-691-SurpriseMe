@@ -3,7 +3,6 @@ footer{
   height: 50%;
   width: 100vw;
   color:#fff;
-  padding-top: 10px;
 }
 
 .footer-content{
@@ -11,6 +10,7 @@ footer{
   align-items: center;
   justify-content: center;
   text-align: center;
+  padding: 10px 0;
 
   img{
     width: 100px;
@@ -52,9 +52,9 @@ footer{
 }
 
 .footer-bottom {
-  background-color: #000;
+  background-color: $surprise-pink;
   width: 100vw;
-  padding: 5px 0 ;
+  padding: 5px 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -64,7 +64,8 @@ footer{
 
 .footer-bottom p {
   margin-bottom:0;
-  font-size: 14px;
+  font-size: 12px;
   word-spacing: 2px;
   text-transform: capitalize;
+  font-family: $body-font;
 }
