@@ -23,12 +23,14 @@
   color:white;
 
   h3 {
-    font: $headers-font;
+    margin-top: 15%;
+    padding-top: 40px;
+    font-family: $headers-font;
   }
 
   a {
-  font: $body-font;
-  color: white;
+    font-family: $body-font;
+    color: white;
   }
 }
 

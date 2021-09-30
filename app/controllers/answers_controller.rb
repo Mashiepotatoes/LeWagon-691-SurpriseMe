@@ -7,6 +7,7 @@ class AnswersController < ApplicationController
     @answer = Answer.new(answer_params)
     @answer.question_id = @question.id
     @answer.user_id = current_user.id
+    @answer.subcategory = @question.subcategory
     @answer.save
 
     @response = ResponseSet.new

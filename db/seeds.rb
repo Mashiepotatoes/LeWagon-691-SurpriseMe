@@ -7,6 +7,8 @@ Category.destroy_all
 Order.destroy_all
 Rating.destroy_all
 Occasion.destroy_all
+GiftSession.destroy_all
+Answer.destroy_all
 
 # category = Category.find(1)
 # ------ Jeremy and PE seeds ----- #
@@ -25,13 +27,7 @@ Occasion.destroy_all
 # Product.create(image_url:"https://source.unsplash.com/random",category:category,name: "LYY_Dual-purpose Folding Camping Beach Chair with Backrest for Outdoor Activities", price: 55.30, details: "The side pocket design can place mobile phones or other objects. Concave-convex pattern design can easily cope with a variety of grounds. The non-slip plastic foot cover prevents slipping. Aluminum alloy folding bracket is light, strong and not easy to deform, and high-density double-layer Oxford cloth is durable, comfortable, breathable and not stuffy. The length of the product is 82cm, the width is 44cm, and the thickness is 30cm. It is suitable for picnic, camping, fishing, traveling, outing, etc.")
 # Product.create(image_url:"https://source.unsplash.com/random",category:category,name: "Bicycle Wall Hook Stand Bike Mounted Mount Storage Hanger Adjustable activity Rack", price: 8.13, details: "Features: Bicycle Wall Mount Hanger for hanging the bike vertically to save space. Made of strong solid steel,load capacity up to 30kg. Fits on any solid wall. Four mounting points and side special design make fasten sturdy. Suitable for all type bikes like Mountain bikes,road bikes,folding bikes etc. Specification: Load Capacity: 30kg. Material: High Quality Strong Steel, High Graded Rubber. Product dimensions (L x W x H): 26 x 7.5 x 13.5cm")
 
-# Product.destroy_all
-# Category.destroy_all
-# Order.destroy_all
-# Rating.destroy_all
-# Question.destroy_all
 # console.log("Products seeded!")
-
 # console.log("Seeding categories!")
 # Category.create(name: "Electronics")
 # Category.create(name: "Beauty & Cosmetics")
@@ -46,10 +42,10 @@ Occasion.destroy_all
 # Category.create(name: "Travelling")
 # console.log("Categories seeded!")
 
-
 # ---- categories ---- #
 
 # electronics = Category.create(name: "Electronics")
+
 all_beauty = Category.create(name: "Beauty & Cosmetics")
 video_games = Category.create(name: "Video Games")
 cd_vinyl = Category.create(name: "CD & Vinyl Records")
@@ -66,25 +62,21 @@ serialised_all_beauty = File.read(file_path_beauty)
 parsed_all_beauty = JSON.parse(serialised_all_beauty)
 
 # ---- Amazon video_games seeds ---- #
-file_path_vg = File.join(__dir__, "amazon_datasets/video_games.json")
-serialised_video_games = File.read(file_path_vg)
-parsed_video_games = JSON.parse(serialised_video_games)
+# file_path_vg = File.join(__dir__, "amazon_datasets/video_games.json")
+# serialised_video_games = File.read(file_path_vg)
+# parsed_video_games = JSON.parse(serialised_video_games)
 
-# ---- Amazon cd_vinyl seeds ---- #
-file_path_cdv = File.join(__dir__, "amazon_datasets/cd_vinyl.json")
-serialised_cd_vinyl = File.read(file_path_cdv)
-parsed_cd_vinyl = JSON.parse(serialised_cd_vinyl)
+# # ---- Amazon cd_vinyl seeds ---- #
+# file_path_cdv = File.join(__dir__, "amazon_datasets/cd_vinyl.json")
+# serialised_cd_vinyl = File.read(file_path_cdv)
+# parsed_cd_vinyl = JSON.parse(serialised_cd_vinyl)
 
-# ---- Amazon pet_supplies seeds ---- #
-file_path_ps = File.join(__dir__, "amazon_datasets/pet_supplies.json")
-serialised_pet_supplies = File.read(file_path_ps)
-parsed_pet_supplies = JSON.parse(serialised_pet_supplies)
+# parsed_pet_supplies = JSON.parse(serialised_pet_supplies)
+# # ---- Amazon toys_games seeds ---- #
 
-# ---- Amazon toys_games seeds ---- #
-
-file_path_tg = File.join(__dir__, "amazon_datasets/toys_games.json")
-serialised_toys_games = File.read(file_path_tg)
-parsed_toys_games = JSON.parse(serialised_toys_games)
+# file_path_tg = File.join(__dir__, "amazon_datasets/toys_games.json")
+# serialised_toys_games = File.read(file_path_tg)
+# parsed_toys_games = JSON.parse(serialised_toys_games)
 
 # ---- Amazon electronics seeds ---- #
 
@@ -98,20 +90,21 @@ file_path_tg = File.join(__dir__, "amazon_datasets/fashion.json")
 serialised_fashion = File.read(file_path_tg)
 parsed_fashion = JSON.parse(serialised_fashion)
 
-# ---- Amazon home_kitchen seeds ---- #
+# # ---- Amazon home_kitchen seeds ---- #
 
-file_path_tg = File.join(__dir__, "amazon_datasets/home_kitchen.json")
-serialised_home_kitchen = File.read(file_path_tg)
-parsed_home_kitchen = JSON.parse(serialised_home_kitchen)
+# file_path_tg = File.join(__dir__, "amazon_datasets/home_kitchen.json")
+# serialised_home_kitchen = File.read(file_path_tg)
+# parsed_home_kitchen = JSON.parse(serialised_home_kitchen)
 
-# ---- Amazon sports_outdoors seeds ---- #
+# # ---- Amazon sports_outdoors seeds ---- #
 
-file_path_tg = File.join(__dir__, "amazon_datasets/sports_outdoors.json")
-serialised_sports_outdoors = File.read(file_path_tg)
-parsed_sports_outdoors = JSON.parse(serialised_sports_outdoors)
+# file_path_tg = File.join(__dir__, "amazon_datasets/sports_outdoors.json")
+# serialised_sports_outdoors = File.read(file_path_tg)
+# parsed_sports_outdoors = JSON.parse(serialised_sports_outdoors)
 
 # ---- seeding ---- #
-parsed_datasets = [parsed_all_beauty, parsed_video_games, parsed_pet_supplies, parsed_cd_vinyl, parsed_toys_games, parsed_fashion, parsed_home_kitchen, parsed_sports_outdoors]
+# parsed_datasets = [parsed_all_beauty, parsed_video_games, parsed_pet_supplies, parsed_cd_vinyl, parsed_toys_games, parsed_fashion, parsed_home_kitchen, parsed_sports_outdoors]
+parsed_datasets = [parsed_all_beauty, parsed_fashion]
 categories = [all_beauty, video_games, cd_vinyl, pet_essentials, toys_games, fashion, home_kitchen, sports_outdoors]
 
 puts "Creating products"
@@ -123,8 +116,9 @@ parsed_datasets.each do |dataset|
     image_url = product_raw["imageUrlHighRes"]
     brand = product_raw["brand"]
     price = product_raw["price"].to_i
+    subcategory = product_raw["subcategory"]
 
-    product_inst = Product.new(name: name, description: description, price: price, image_url: image_url, brand: brand)
+    product_inst = Product.new(name: name, description: description, price: price, image_url: image_url, brand: brand, subcategory: subcategory)
     product_inst.category = categories[categories_index]
     product_inst.save!
   end
@@ -179,7 +173,6 @@ puts "creating orders, sessions, and ratings"
     user: session.recipient,
     product: product
     )
-
 end
 
 puts "Created #{Product.count} products"
@@ -195,6 +188,7 @@ parsed_questions = JSON.parse(serialised_questions)
 parsed_questions.each do |question|
   content = question["question"]
   options = question["options"]
+  subcategory = question["subcat"]
 
-  Question.create(content: content, options: options)
+  Question.create(content: content, options: options, subcategory: subcategory)
 end
