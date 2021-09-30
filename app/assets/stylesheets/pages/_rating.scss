@@ -7,14 +7,16 @@
 
   h1 {
     font-family: $headers-font;
-    font-size: 40px;
+    font-size: 48px;
     vertical-align: bottom;
     color: $surprise-font;
+    width: 100%;
+    padding-left:80px;
   }
 
   h2 {
     font-family: $body-font;
-    font-size: 20px;
+    font-size: 25px;
     font-weight: bold;
     color: $surprise-font;
   }
@@ -66,4 +68,9 @@
 
 .simple_form{
   text-align: center;
+}
+
+.br-widget{
+  display: flex;
+  justify-content: center;
 }
