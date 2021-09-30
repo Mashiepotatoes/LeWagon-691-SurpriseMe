@@ -20,7 +20,7 @@
       </div>
     <% else %>
       <% @friend_list.each do |friendship| %>
-        <% if friendship.friend.birthday.days_ago(-7) %>
+        <% if (friendship.friend.birthday.yday - Date.today.yday).between?(0,7) %>
           <div class="outside-card-product">
             <div class="card-product">
               <div class="photo-container">
