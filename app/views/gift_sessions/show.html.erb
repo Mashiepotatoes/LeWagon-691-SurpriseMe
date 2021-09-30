@@ -11,7 +11,15 @@
       <div class="card-gift">
         <%# <div class="card-gift form-check"> %>
           <div class="cart-img-container">
+<<<<<<< HEAD
             <%# <%= image_tag(recommendation.image_url) %> %>
+=======
+            <% if image_url.blank? %>
+              <%= image_tag(asset_path('logo.png')) %>
+            <% else %>
+              <%= image_tag(recommendation.image_url) %>
+            <% end %>
+>>>>>>> 5d784251160a1d2851b96ab0dae346c9e6ab760a
           </div>
 
           <div class="card-gift-content">
