@@ -4,26 +4,27 @@
 }
 
 .friend-side-panel{
-  background-color: #fff;
+  background-color: #FCE3E3;
   height: 100vh;
   margin: 1.5rem 1.5rem;
   box-shadow: 0 5px 5px rgba(198, 198, 198, 0.75);
-  border-radius: 10px;
 }
 
 .side-panel-text{
   padding: 1rem 0;
   text-align: center;
   margin:0;
+  border-bottom: 1px solid $surprise-font;
+  border-bottom-width: thin ;
 }
 
 .side-panel-text:hover{
   background-color: $surprise-pink;
-  border-radius: 10px;
-}
+  border-bottom: none;
 
-.side-panel-text:hover > a {
-  color:#fff;
+  a {
+    color:#fff;
+  }
 }
 
 .side-panel-text > a{
