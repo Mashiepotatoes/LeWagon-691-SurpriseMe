@@ -107,9 +107,10 @@ label {
   }
 }
 
-
 /* Totals section */
 .totals {
+  // position: relative;
+  // overflow: hidden;
   .totals-item {
     float: right;
     clear: both;

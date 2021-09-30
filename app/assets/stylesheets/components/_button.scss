@@ -87,3 +87,19 @@
   text-decoration: none;
   color:$surprise-pink;
 }
+
+.btn-primary {
+  background: $surprise-pink;
+  color: white;
+  padding: 8px 4rem;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+  border-color: $surprise-pink;
+  font-family: $body-font;
+}
+
+.btn-primary:hover {
+  background-color: #cf538f;
+  border-color: #cf538f;
+}

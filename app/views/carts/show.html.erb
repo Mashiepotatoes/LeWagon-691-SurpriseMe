@@ -1,10 +1,10 @@
 <div class="container mt-5">
-  <h1>Shopping Cart</h1>
+  <h1>Gift Cart</h1>
 
   <div class="shopping-cart">
 
     <div class="column-labels">
-      <label class="product-image">Image</label>
+      <%# <label class="product-image">Image</label> %>
       <label class="product-details">Product</label>
       <label class="product-price">Price</label>
       <label class="product-quantity">Quantity</label>
@@ -36,7 +36,6 @@
       </div>
     <% end %>
 
-
     <div class="totals">
       <div class="d-flex align-items-end flex-column mr-3">
         <h3>Purchase Summary</h3>
@@ -60,7 +59,7 @@
       </div>
       <%= form_tag orders_path do %>
         <%= hidden_field_tag 'cart_id', @current_cart.id %>
-        <%= submit_tag 'Purchase', class: 'btn btn-flat float-right' %>
+        <%= submit_tag 'Confirm and Pay', class: 'btn btn-primary float-right' %>
       <% end %>
     </div>
   </div>
