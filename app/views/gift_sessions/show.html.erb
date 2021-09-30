@@ -1,13 +1,16 @@
 <div class="gift-container">
-  <h2>Here are some gift suggestions for </h2>
-  <%# <form class='mt-2'data-controller='check-all-checkboxes'>
-    <div class="form-check pl-0">
-      <input id="check-all" type="checkbox" data-check-all-checkboxes-target="checkbox" data-action="change->check-all-checkboxes#checkAll">
-      <label for="check-all">Select All</label>
-    </div> %>
+  <div>
+    <h2>Choosing the perfect gift for...
+      <% if @gift_session.recipient.profile_photo.attached? %>
+        <%= cl_image_tag @gift_session.recipient.profile_photo.key, class:"rounded-circle w-25 h-25" %>
+      <% else %>
+        <%= image_tag(asset_path("blank-profile-picture.png"), class:"rounded-circle w-25 h-25") %>
+      <% end %>
+    </h2>
+  </div>
 
     <% @disco_recommendations.each do |recommendation| %>
-    
+
       <% if recommendation.price_cents <= @gift_session.budget * 100%>
         <div class="card-gift">
           <%# <div class="card-gift form-check"> %>
@@ -23,7 +26,10 @@
             <div class="card-gift-content">
               <div class="card-gift-content-wide">
                   <h2><%= recommendation.name %></h2>
-                  <p><%= recommendation.description %></p>
+                  <div class="scroll">
+                    <% desc = recommendation.description %>
+                    <p><%= desc.gsub(/[(\[")|("\])]/,"") %></p>
+                  </div>
               </div>
 
               <div class="cart-gift-details">
