@@ -1,25 +1,40 @@
 .gift-cart-wrapper {
   overflow: hidden;
   position: relative;
-  display: flex;
-  align-items: center;
   min-height: 100vh;
   z-index: 10;
+
+  .container-cart{
+    position: absolute;
+    top: 50px;
+    left: 80px;
+  }
+
+  h1 {
+    margin-bottom: 20px;
+  }
 }
 
 .cart-items {
   max-width: 70%;
 
   .product {
-    background-color: rgba($surprise-font-secondary, 0.8);
-    border-radius: 16px;
+    background-color: rgba(0,0,0, 0.1);
+    border-radius: 5px;
     padding: 28px 20px;
-    margin-bottom: 16px;
+    margin-bottom: 8px;
     color: $surprise-font;
     font-family: $body-font;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    min-height: 150px;
+
+    .product-title{
+      vertical-align: middle;
+      font-family: $headers-font;
+      font-size: 20px;
+    }
   }
 
   .product-details {
@@ -29,6 +44,7 @@
 
   .quan-price {
     display: flex;
+    flex:grow;
     justify-content: space-between;
     align-items: center;
   }
@@ -62,11 +78,26 @@
   bottom: -168px;
   right: -72px;
   z-index: -1;
+
+  h3 {
+    text-align: center;
+    color: white;
+    font-size: 36px;
+  }
+
+  .totals-portion > h3 {
+    margin-bottom: 30px;
+  }
+
+  .totals-value, label {
+    font-family: $body-font;
+    font-size: 14px;
+    font-weight: bold;
+    color: $surprise-font;
+  }
 }
 
-h3 {
-  text-align: center;
-}
+  
 
 .product .product-price:before, .product .product-line-price:before, .totals-value:before {
   content: '$';
@@ -77,8 +108,14 @@ h3 {
   flex-wrap: wrap;
   align-items: flex-start;
   justify-content: center;
+  width: 100%;
 
   label {
     flex: 0 0 50%;
   }
+}
+
+.fa-times-circle {
+  text-decoration: none;
+  color: $surprise-pink;
 }

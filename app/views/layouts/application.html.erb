@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
+
     <title>SurpriseMe! - Santa's not the only one with secrets</title>
+    <%= favicon_link_tag %>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -33,7 +35,7 @@
   <body>
     <%= render 'shared/navbar' %>
     <%= render 'layouts/messages' %>
-    
+
     <%= yield %>
   </body>
 

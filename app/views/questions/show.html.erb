@@ -1,13 +1,18 @@
-
 <div class="quiz-container d-flex justify-content-center align-items-center">
+  <div class="quiz-header">
+    <h2>Preferences Quiz</h2>
+  </div>
   <div class="quiz-container-inner">
     <div><h1><%= @question.content %></h1></div>
     <div>
       <!-- form for submitting answers -->
       <%= simple_form_for [@question, @answer], html: {class: 'quiz-form'} do |f| %>
-      <%= f.input :choice, as: :radio_buttons, label: "required", collection: @question.options %>
+      <%= f.input :choice, as: :radio_buttons, label: nil, collection: @question.options %>
       <%= f.button :submit, "Next", class: 'btn-flat' %>
       <% end %>
     </div>
   </div>
+</div>
+<div id="quiz-exit" class="surprise-orange-ghost-btn">
+  <%= link_to "Exit Quiz", response_sets_path %>
 </div>

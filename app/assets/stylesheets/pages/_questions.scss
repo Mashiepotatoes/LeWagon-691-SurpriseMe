@@ -1,25 +1,30 @@
 .quiz-container{
-  margin: 0 auto;
+  position: relative;
   height: 100vh;
   width: 100vw;
 }
 
 .quiz-container-inner{
-  width: 1000px;
+  width: 700px;
   height: auto;
   padding: 40px;
   border-radius: 10px;
   background-color: $surprise-pink-secondary;
-  box-shadow: 0 5px 5px rgba(198, 198, 198, 0.75);
+}
+
+.quiz-header {
+  position: absolute;
+    top: 200px;
+    left: 80px;
 }
 
 .quiz-form {
-  background-color: $surprise-pink-secondary;
-  border-radius: 5%;
+  border-radius: 5px;
 }
 
 .simple_form.quiz-form {
   text-align: left;
+  background-color: transparent;
 }
 
 .simple_form.quiz-form label {
@@ -30,4 +35,10 @@
 
 .simple_form input.is-valid ~ .form-check-label {
   color: black;
+}
+
+#quiz-exit{
+  position:absolute;
+    bottom: 100px;
+    right: 290px;
 }

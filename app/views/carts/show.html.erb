@@ -1,5 +1,5 @@
 <div class="gift-cart-wrapper">
-  <div class="container">
+  <div class="container container-cart">
     <h1>Gift Cart</h1>
 
     <%# <div class="column-labels">
@@ -21,14 +21,15 @@
 
           <div class="quan-price">
             <div class="product-quantity">
-              QTY: <%= line_item.quantity %>
+              qty: <%= line_item.quantity %>
             </div>
             <% total += line_item.product.price * line_item.quantity %>
             <div class="product-line-price"><%= line_item.product.price * line_item.quantity %></div>
           </div>
 
           <div class="product-removal">
-            <%= button_to "x",line_items_path(id: line_item),method: :delete , class: "remove-product text-center"%>
+            <%# <%= button_to "x",line_items_path(id: line_item),method: :delete , class: "remove-product text-center"%>
+            <%= link_to "", line_items_path(id: line_item), method: :delete, class: "fas fa-times-circle" %>
           </div>
         </div>
       </div>

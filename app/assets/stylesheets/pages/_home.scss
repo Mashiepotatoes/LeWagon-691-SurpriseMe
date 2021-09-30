@@ -1,19 +1,50 @@
 .background-wrapper {
   background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("https://res.cloudinary.com/dncp2x5qh/image/upload/v1632643774/pexels-tima-miroshnichenko-6463605_ctlci8.jpg");
   background-size: 100%;
-  background-position: center top;
-  background-repeat: no-repeat;
-  background-position: fixed;
-}
-
-.home-desc-wrapper {
-  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("https://res.cloudinary.com/dncp2x5qh/image/upload/v1632643791/pexels-cottonbro-3972177_olkptt.jpg");
-  background-size: 100%;
+  width: 100vw;
+  height: 100vh;
   background-position: center top;
   background-repeat: no-repeat;
   background-attachment: fixed;
   display: flex;
   align-items: center;
+}
+
+.video-wrapper{
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  z-index: 0;
+
+  .home_video{
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .video-overlay{
+    position:absolute;
+      top: 350px;
+      left: 500px;
+    z-index: 1;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color:white;
+
+    h3 {
+      margin-top: 15%;
+      padding-top: 40px;
+      font-family: $headers-font;
+    }
+
+    a {
+      font-family: $body-font;
+      color: white;
+    }
+  }
 }
 
 .tagline {
@@ -83,4 +114,8 @@ a#back-to-top {
 .fa-arrow-circle-up {
   font-size: 40px;
   color: white;
+}
+
+#learn-more{
+  margin-top: 150px;
 }
