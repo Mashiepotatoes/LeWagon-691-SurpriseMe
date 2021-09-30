@@ -4,14 +4,14 @@
       <%= image_tag("logo.png", class: "rating-image") %>
     </div>
     <div class="rating-description">
-      <div>
+      <div class="rating-description-inner">
         <h2><%= @product.name %></h2>
-        <p><%= @product.description[0] %></p>
+        <p><%= @product.description.first %></p>
       </div>
       <div class="rating-container">
         <%= simple_form_for @rating, url: product_rating_index_path, html: { class: "rating_form" } do |f| %>
-          <%= f.input :rating, collection: (1..5).to_a, label: 'Rating:' %>
-          <%= f.submit class: 'btn btn-flat btn-block btn-rating d-none' %>
+          <%= f.input :rating, collection: (1..5).to_a, label: false %>
+          <%= f.submit class: 'btn btn-flat btn-block btn-rating surprise-pink-btn' %>
         <% end %>
       </div>
     </div>
