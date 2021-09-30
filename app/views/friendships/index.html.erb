@@ -1,8 +1,8 @@
 <div class="friend-page-container">
   <div class="friend-side-panel">
-    <p class="side-panel-text"><%= link_to "All friends", friendships_path%></p>
+    <p class="side-panel-text"><%= link_to "All Friends", friendships_path%></p>
     <p class="side-panel-text"><%= link_to "Friend Request", friendships_requests_path%></p>
-    <p class="side-panel-text"><%= link_to "Birthday reminder", birthdays_path%></p>
+    <p class="side-panel-text"><%= link_to "Birthday Reminder", birthdays_path%></p>
     <p class="side-panel-text">
       <% if @response_sets.empty? %>
         <%= link_to "Preference Quiz", question_path(@question) %>
