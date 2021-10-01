@@ -7,30 +7,31 @@
   </div>
 
   <div class="sign-up-form">
-    <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { class: 'user-signup'}) do |f| %>
       <%= f.error_notification %>
 
-      <div class="form-inputs">
+      <div class="form-inputs signup">
 
-        <%= f.input :username,
-                    required: true,
-                    input_html: { autocomplete: "username",class:"input-styling" }%>
-
-        <div class="d-flex ">
-          <div class="flex-fill mr-2">
+        <div class="d-flex">
+          <div class="flex-fill mr-2 signupname">
             <%= f.input :first_name,
                         required: true,
                         autofocus: true,
                         input_html: { autocomplete: "first name",class:"input-styling" }%>
           </div>
 
-          <div class="flex-fill ml-2">
+          <div class="flex-fill ml-2 signupname">
             <%= f.input :last_name,
                         required: true,
                         autofocus: true,
                         input_html: { autocomplete: "last name",class:"input-styling" }%>
           </div>
         </div>
+
+        <%= f.input :username,
+                    required: true,
+                    input_html: { autocomplete: "username",class:"input-styling" }%>
+
 
         <%= f.input :email,
                     required: true,

@@ -1,0 +1,28 @@
+.simple_form.user-signup:first-child label {
+  float: none;
+  padding: 20px;
+  font-family: $body-font;
+  flex: 0 0 20%;
+  text-align: left;
+}
+
+.simple_form.user-signup label {
+  float: none;
+  padding: 20px;
+  font-family: $body-font;
+  flex: 0 0 20%;
+  text-align: left;
+}
+
+
+.signup > .form-group {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.signupname > .form-group {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
