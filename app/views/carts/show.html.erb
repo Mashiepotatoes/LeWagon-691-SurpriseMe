@@ -12,27 +12,31 @@
 
     <% total = 0 %>
 
-    <% @cart.line_items.each do |line_item| %>
-      <div class="cart-items">
-        <div class="product">
-          <div class="product-details">
-            <div class="product-title"><%= line_item.product.name %></div>
-          </div>
-
-          <div class="quan-price">
-            <div class="product-quantity">
-              qty: <%= line_item.quantity %>
+    <% if @cart.line_items.empty? %>
+      <p>You have not selected any gifts</p>
+    <% else %>
+      <% @cart.line_items.each do |line_item| %>
+        <div class="cart-items">
+          <div class="product">
+            <div class="product-details">
+              <div class="product-title"><%= line_item.product.name %></div>
             </div>
-            <% total += line_item.product.price * line_item.quantity %>
-            <div class="product-line-price"><%= line_item.product.price * line_item.quantity %></div>
-          </div>
 
-          <div class="product-removal">
-            <%# <%= button_to "x",line_items_path(id: line_item),method: :delete , class: "remove-product text-center"%>
-            <%= link_to "", line_items_path(id: line_item), method: :delete, class: "fas fa-times-circle" %>
+            <div class="quan-price">
+              <div class="product-quantity">
+                qty: <%= line_item.quantity %>
+              </div>
+              <% total += line_item.product.price * line_item.quantity %>
+              <div class="product-line-price"><%= line_item.product.price * line_item.quantity %></div>
+            </div>
+
+            <div class="product-removal">
+              <%# <%= button_to "x",line_items_path(id: line_item),method: :delete , class: "remove-product text-center"%>
+              <%= link_to "", line_items_path(id: line_item), method: :delete, class: "fas fa-times-circle" %>
+            </div>
           </div>
         </div>
-      </div>
+      <% end %>
     <% end %>
   </div>
 
