@@ -41,6 +41,9 @@ Rails.application.routes.draw do
 
   resources :questions, only: [:show] do
     resources :answers, only: [:create, :edit, :update]
+    collection do
+      get :landing
+    end
   end
 
   resources :response_sets, only: [:index, :edit, :update]

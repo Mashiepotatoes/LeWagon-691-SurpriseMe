@@ -1,30 +1,20 @@
 <div class="container page-container-rs-landing">
   <div class="container-preferences">
-<% if @quiz_landing %>
-      <div class="card-quiz">
-        <div class="card-quiz-info">
-          <h2> <%= current_user.first_name.capitalize %>, help us get to know you better!</h2>
-          <p>Take our quiz to help us understand what you like. We want our recommendations to be better tailored to your personal preferences, so answer as many questions as possible! Pressing 'Next' after you answer each question will save your response. Pressing 'Exit Quiz' will exit the quiz, let you view all the question you answered and edit your responses. </p>
-          <%= link_to "Begin Quiz", question_path(@question), class: "btn surprise-green-btn-small mt-4" %>
-        </div>
-      </div>
-    <% else %>
-      <div class="response-set-header-container">
-        <h2>Questions that you have answered</h2>
-      </div>
-      <div class="response-set-container">
-        <% @response_sets.each do |response| %>
-          <div class="card-preferences">
-            <div class="card-preferences-info">
-              <h2><%= response.question.content %></h2>
-            </div>
-            <div class="card-preferences-edit">
-              <h2><%= response.answer.choice %></h2>
-              <%= link_to "Edit response", edit_response_set_path(@response_sets), class: "btn surprise-pink-btn-small btn-edit-response" %>
-            </div>
+    <div class="response-set-header-container">
+      <h2>Questions that you have answered</h2>
+    </div>
+    <div class="response-set-container">
+      <% @response_sets.each do |response| %>
+        <div class="card-preferences">
+          <div class="card-preferences-info">
+            <h2><%= response.question.content %></h2>
           </div>
-        <% end %>
-      </div>
-    <% end %>
+          <div class="card-preferences-edit">
+            <h2><%= response.answer.choice %></h2>
+            <%= link_to "Edit response", edit_response_set_path(@response_sets), class: "btn surprise-pink-btn-small" %>
+          </div>
+        </div>
+      <% end %>
+    </div>
   </div>
 </div>
