@@ -6,6 +6,9 @@ Rails.application.routes.draw do
   end
 
   get '/users/gift_received', to: 'products#gift_received', as: :received
+  get '/users/gift_received/rating/', to: 'rating#new', as: :rating
+  post '/users/gift_received/rating/', to: 'rating#create'
+
   root to: 'pages#home'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
@@ -29,7 +32,6 @@ Rails.application.routes.draw do
   end
 
   resources :products do
-    resources :rating, only: [:new, :create]
   end
 
   resources :orders, only: [:show, :create] do

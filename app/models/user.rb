@@ -40,8 +40,10 @@ class User < ApplicationRecord
     end
 
     @gift_sessions.each do |session|
-      products = session.order.cart.products
-      products.each { |product| @users_gifts << product }
+      if session.order != nil
+        products = session.order.cart.products
+        products.each { |product| @users_gifts << product }
+      end
     end
 
     @users_gifts

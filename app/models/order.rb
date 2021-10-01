@@ -1,6 +1,6 @@
 class Order < ApplicationRecord
   has_many :gift_sessions, dependent: :destroy
-  belongs_to :cart
+  belongs_to :cart, optional: true
   belongs_to :user
   # has_many :gift_sessions, optional: true
   has_one :rating

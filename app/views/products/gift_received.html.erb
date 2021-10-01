@@ -13,7 +13,6 @@
             <%= image_tag "https://source.unsplash.com/random" %>
           <% else %>
             <%= image_tag gift.image_url %>
-            <% raise %>
           <% end %>
         </div>
 
@@ -31,7 +30,7 @@
           </div>
 
           <div class="card-gift-content-rate">
-            <%= link_to 'Rate',"#",class:"btn-rate"%>
+            <%= link_to 'Rate',rating_path(product_id: gift),class:"btn-rate"%>
           </div>
         </div>
 
