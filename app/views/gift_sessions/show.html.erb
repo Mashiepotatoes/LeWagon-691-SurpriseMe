@@ -16,10 +16,13 @@
         <div class="card-gift">
           <%# <div class="card-gift form-check"> %>
             <div class="cart-img-container">
-              <% if recommendation.image_url.nil? %>
-                <%= image_tag 'https://source.unsplash.com/random' %>
+
+              <% img_url = recommendation.image_url.gsub(/[(\[")|("\])]/,"") %>
+
+              <% if img_url.length > 0 %>
+                <%= image_tag(img_url) %>
               <% else %>
-                <%= image_tag(recommendation.image_url) %>
+                <%= image_tag 'https://source.unsplash.com/random' %>
               <% end %>
 
             </div>
@@ -28,8 +31,8 @@
               <div class="card-gift-content-wide">
                   <h2><%= recommendation.name %></h2>
                   <div class="scroll">
-                    <% desc = recommendation.description %>
-                    <p><%= desc.gsub(/[(\[")|("\])]/,"") %></p>
+                    <% desc = (recommendation.description.nil? || recommendation.description.empty?) ? "No description available" : recommendation.description.gsub(/[(\[")|("\])]/,"") %>
+                    <p><%= desc %></p>
                   </div>
               </div>
 
