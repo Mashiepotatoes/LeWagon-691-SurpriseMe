@@ -15,19 +15,27 @@
   width: 100vw;
   height: 100vh;
   position: relative;
-  z-index: 0;
+  z-index: 1;
+  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3));
 
   .home_video{
     object-fit: cover;
     width: 100vw;
     height: 100vh;
+    z-index: 0;
   }
 
   .video-overlay{
-    position:absolute;
-      top: 350px;
-      left: 500px;
-    z-index: 1;
+    width: 600px;
+    height: 100px;
+    padding: 0 10px;
+    background-color: rgba(0,0,0,0.1);
+    border-radius: 5px;
+    position: absolute;
+      top: 70%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    z-index: 2;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -36,15 +44,17 @@
     color:white;
 
     h3 {
-      margin-top: 15%;
-      padding-top: 40px;
       font-family: $headers-font;
+      text-align: center;
+      vertical-align: middle;
+      font-size: 24px;
+      margin-bottom: 0;
     }
+  }
 
-    a {
-      font-family: $body-font;
-      color: white;
-    }
+  .video-overlay:hover{
+    background-color: rgba(255,255,255,0.8);
+    color: $surprise-font;
   }
 }
 
@@ -69,7 +79,7 @@
 
 
 #desc {
-  width: 300px;
+  width: 100%;
   font-size: 15px;
   color: white;
 }
