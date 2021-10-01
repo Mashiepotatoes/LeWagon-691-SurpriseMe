@@ -39,14 +39,23 @@
 
   .product-details {
     width: 62%;
-    height: 50%
+    height: 50%;
+
+    .product-title {
+      text-align: center;
+      margin-top: 34px;
+    }
   }
 
   .quan-price {
     display: flex;
-    flex:grow;
+    flex: grow;
     justify-content: space-between;
     align-items: center;
+  }
+
+  .product-quantity {
+    margin: 10px;
   }
 
   .product-removal {
@@ -87,6 +96,7 @@
 
   .totals-portion > h3 {
     margin-bottom: 30px;
+    color: $surprise-font;
   }
 
   .totals-value, label {
@@ -120,6 +130,12 @@
   color: $surprise-pink;
 }
 
-.cart-checkout-wrapper {
-  
+// <--- purchased page --->
+
+.thank-you {
+  margin: 10px 48px;
+
+  .name {
+    color: $surprise-pink;
+  }
 }

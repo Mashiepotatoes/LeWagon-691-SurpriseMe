@@ -21,7 +21,7 @@
 
 // <--- send gift at user profile --->
 .btn-flat {
-  color: white;
+  color: $surprise-font;
   padding: 8px 4rem;
   margin-bottom: 20px;
   border-radius: 5px;
@@ -31,7 +31,7 @@
 
 .btn-flat:hover {
   background: $surprise-green-secondary;
-  color: white;
+  color: $surprise-font;
 }
 
 .surprise-pink-btn{
