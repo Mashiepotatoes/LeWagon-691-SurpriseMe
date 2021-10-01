@@ -36,7 +36,8 @@ class OrdersController < ApplicationController
       @order = current_user.orders.find(params[:id])
       @gift_session.order = @order
       @gift_session.save
-      
+
+      flash[:notice] = "Email has been sent to your friend"
     # Find the gift session
     # @gift_session = GiftSession.find(params[:id])
     # Assign the created order to the gift session

@@ -97,7 +97,7 @@
   }
 }
 
-  
+
 
 .product .product-price:before, .product .product-line-price:before, .totals-value:before {
   content: '$';
@@ -118,4 +118,8 @@
 .fa-times-circle {
   text-decoration: none;
   color: $surprise-pink;
+}
+
+.cart-checkout-wrapper {
+  
 }
