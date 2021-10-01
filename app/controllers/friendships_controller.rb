@@ -55,12 +55,14 @@ class FriendshipsController < ApplicationController
   end
 
   def destroy
-
     @friendship = Friendship.find(params[:id]) #user: current_user
     @another_friendship = Friendship.find_by user: @friendship.friend,friend:current_user
     @another_friendship.destroy
     @friendship.destroy
     redirect_to friendships_path
+  end
 
+  def sent
+    redirect_to friendships_path, notice: "Email has been sent to your friend"
   end
 end
