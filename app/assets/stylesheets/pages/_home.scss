@@ -8,6 +8,7 @@
   background-attachment: fixed;
   display: flex;
   align-items: center;
+  position: relative;
 }
 
 .video-wrapper{
@@ -107,7 +108,7 @@
 }
 
 a#back-to-top {
-  position: fixed;
+  position: absolute;
   bottom: 20px;
   right: 20px;
 }

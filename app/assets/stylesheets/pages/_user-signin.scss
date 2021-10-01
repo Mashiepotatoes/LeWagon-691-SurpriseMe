@@ -1,0 +1,15 @@
+.signin > .form-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.simple_form.user-signin label {
+  float: none;
+  padding: 0;
+  font-family: $body-font;
+}
+
+.form-container.signinpage {
+  height: 100vh;
+}
