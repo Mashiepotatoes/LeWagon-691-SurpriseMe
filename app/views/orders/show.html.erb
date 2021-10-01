@@ -1,7 +1,7 @@
 <!-- To be updated when cart completed -->
 <div class="cart-checkout-wrapper min-vh-100">
 
-  <div class="container">
+  <div class="container mt-5">
     <div class="row py-4">
       <div class="col">
         <h2>Here is your order details:</h2>
@@ -17,8 +17,8 @@
   </div>
 
   <div class="thank-you">
-    <h1>Thank you for choosing a give for <%= @gift_session.recipient.username %>!</h1>
-    <h2>And we're sure <%= @gift_session.recipient.username %> will love the gift!</h2>
+    <h2>Thank you for choosing a give for <span class="reci-username"><%= @gift_session.recipient.first_name %></span>!</h2>
+    <h3>And we're sure <span class="reci-username"><%= @gift_session.recipient.first_name %></span> will love the gift!</h3>
   </div>
 
 </div>
