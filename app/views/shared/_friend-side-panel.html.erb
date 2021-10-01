@@ -1,22 +1,22 @@
 <div class="friend-side-panel">
   <%= link_to friendships_path do %>
-    <div class="side-panel-text">My Friends</div>
+    <div class="side-panel-text <%= "active" if current_page?(friendships_path) %>">My Friends</div>
   <% end %>
 
   <%= link_to friendships_requests_path do %>
-    <div class="side-panel-text">Friend Requests</div>
+    <div class="side-panel-text <%= "active" if current_page?(friendships_requests_path) %>">Friend Requests</div>
   <% end %>
 
   <%= link_to birthdays_path do %>
-    <div class="side-panel-text">Upcoming Birthdays</div>
+    <div class="side-panel-text <%= "active" if current_page?(birthdays_path) %>">Upcoming Birthdays</div>
   <% end %>
 
   <%= link_to received_path do %>
-    <div class="side-panel-text">Gifts Received</div>
+    <div class="side-panel-text <%= "active" if current_page?(received_path) %>">Gifts Received</div>
   <% end %>
 
   <%= link_to friendships_sent_path do  %>
-    <div class="side-panel-text">Sent Gifts</div>
+    <div class="side-panel-text <%= "active" if current_page?(friendships_sent_path) %>">Sent Gifts</div>
   <% end %>
 
   <% if @response_sets.empty? %>

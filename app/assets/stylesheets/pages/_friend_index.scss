@@ -29,7 +29,8 @@
   font-size: 20px;
 }
 
-.side-panel-text:hover{
+.side-panel-text:hover,
+.side-panel-text.active{
   background-color: $surprise-pink;
   border-bottom: none;
   margin: 0;
