@@ -10,11 +10,16 @@
   height: 100%;
 }
 
+.card-user-name {
+  display: flex;
+  align-items: flex-start;
+}
+
 // card-user-profile //
 
 .card-user-add {
-  font-size: 30px;
-  padding: 60px 16px 0px 16px;
+  font-size: 20px;
+  margin-left: 15px;
 }
 
 .add-friend-icon {
@@ -81,7 +86,6 @@
   padding-right: 8px;
   font-size: 14px;
   line-height: 1.4;
-  margin-bottom: 0;
   margin-top: 8px;
   height: 100%;
   text-align: justify;

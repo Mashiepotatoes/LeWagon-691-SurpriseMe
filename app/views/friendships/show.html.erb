@@ -11,24 +11,26 @@
 
       <div class="d-flex justify-content-between">
         <div class="card-user-info">
-          <h1><%= @friend.first_name.capitalize() %> <%= @friend.last_name.capitalize() %></h1>
+          <div class="card-user-name">
+            <h1><%= @friend.first_name.capitalize() %> <%= @friend.last_name.capitalize() %></h1>
+            <% if @friend != current_user %>
+              <div class="card-user-add">
+                <% if @friend_list.empty? %>
+                  <%=link_to friendships_path(@friend), method: :post do %>
+                    <i class="fas fa-user-plus"></i>
+                  <% end %>
+                <% else %>
+                  <div class="add-friend-icon">
+                    <i class="fas fa-user-friends"></i>
+                    <%# <p id="friend-added-text">Friend Added</p> %>
+                  </div>
+                <% end %>
+              </div>
+            <% end %>
+          </div>
           <p id="profile-text"><%= @friend.description %></p>
         </div>
 
-        <% if @friend != current_user %>
-          <div class="card-user-add">
-            <% if @friend_list %>
-              <div class="add-friend-icon">
-                <i class="fas fa-user-friends"></i>
-                <p id="friend-added-text">Friend Added</p>
-              </div>
-            <% else %>
-              <%= link_to friendships_path(recipient_id: params[:id] ), method: :post do %>
-                <i class="fas fa-user-plus"></i>
-              <% end %>
-            <% end %>
-          </div>
-        <% end %>
       </div>
 
     </div>
