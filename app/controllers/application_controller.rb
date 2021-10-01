@@ -6,6 +6,10 @@ class ApplicationController < ActionController::Base
 
   before_action :current_cart
 
+  def default_url_options
+    { host: ENV["DOMAIN"] || "localhost:3000" }
+  end
+  
   protected
 
   def configure_permitted_parameters
@@ -13,6 +17,8 @@ class ApplicationController < ActionController::Base
 
     devise_parameter_sanitizer.permit(:account_update) { |u| u.permit(:username, :first_name, :last_name, :email, :password, :current_password, :birthday, :address, :profile_photo, :description ) }
   end
+
+
 
   private
 
