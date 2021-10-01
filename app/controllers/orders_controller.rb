@@ -3,7 +3,7 @@ class OrdersController < ApplicationController
     @cart = Cart.find(params[:cart_id])
     @total = 0
     @cart.line_items.each do |item|
-      @total += ((item.product.price * item.quantity).to_d * 1.07).to_d
+      @total += ((item.product.price * item.quantity).to_d * 1.07).to_d if item.status == true
     end
 
     @grand_total = @total + 15.0
@@ -34,9 +34,10 @@ class OrdersController < ApplicationController
       # get the session for this order
       @gift_session = GiftSession.where(user: current_user).last
       @order = current_user.orders.find(params[:id])
-
       @gift_session.order = @order
       @gift_session.save
+      # raise
+
     # Find the gift session
     # @gift_session = GiftSession.find(params[:id])
     # Assign the created order to the gift session

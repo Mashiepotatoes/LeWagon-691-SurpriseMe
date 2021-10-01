@@ -67,9 +67,9 @@
             <div class="card-product">
               <div class="photo-container">
                 <% if invitation.user.profile_photo.attached? %>
-                  <%= cl_image_tag invitation.user.profile_photo.key,gravity: :face, crop: :crop,height: 120, width: 100 %>
+                  <%= cl_image_tag invitation.user.profile_photo.key,gravity: :face, crop: :crop,class:"rounded-circle" %>
                 <% else %>
-                  <%= image_tag(asset_path("blank-profile-picture.png"),height: 120, width: 100) %>
+                  <%= image_tag(asset_path("blank-profile-picture.png"),class:"rounded-circle") %>
                   <%# <%= cl_image_tag("qef3hpwpcsezqvzin6g0.png"), height: 60, width: 60,crop: :fill, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
                 <% end %>
               </div>

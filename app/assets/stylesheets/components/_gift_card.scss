@@ -8,15 +8,17 @@
 }
 
 .gift-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  // display: flex;
+  // align-items: center;
+  // justify-content: space-evenly;
   padding: 10px;
   margin-bottom: 10px;
 
   .rounded-circle {
     width: 20%;
-    height: 20%;
+    // height: 20%;
   }
 }
 
