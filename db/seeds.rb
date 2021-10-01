@@ -113,7 +113,7 @@ parsed_datasets.each do |dataset|
   dataset.each do |product_raw|
     name = product_raw["title"]
     description = product_raw["description"]
-    image_url = product_raw["imageUrlHighRes"]
+    image_url = product_raw["imageURLHighRes"]
     brand = product_raw["brand"]
     price = product_raw["price"].to_i
     subcategory = product_raw["subcategory"]
@@ -126,20 +126,22 @@ parsed_datasets.each do |dataset|
 end
 
 # ---- Create occasion cover image ---- #
+puts "Creating Occasion cover images"
 general = Occasion.create(name: "General", cover_image: "General")
 birthday = Occasion.create(name: "Birthday", cover_image: "Birthday")
 christmas = Occasion.create(name: "Christmas", cover_image: "Christmas")
 anniversary = Occasion.create(name: "Anniversary", cover_image: "Anniversary")
 housewarming = Occasion.create(name: "Housewarming", cover_image: "Housewarming")
+puts "Cover images created"
 
 # ---- Linking Products to Occasions ---- #
-
+puts "Linking products to occasions"
 Product.all.each do |product|
   (1..5).to_a.sample.times do
     product.occasions << Occasion.all.sample
   end
 end
-
+puts "Linking done"
 # ---- Create Users ---- #
 
 puts "creating users"
