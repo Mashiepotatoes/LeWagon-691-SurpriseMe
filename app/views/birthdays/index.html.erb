@@ -8,26 +8,26 @@
         <p style="margin:auto"> You haven't added a friend yet!</p>
       </div>
     <% else %>
-      <% if @upcomingbirthday.count > 0 %>
-        <% @upcomingbirthday.each do |friendship| %>
+      <% if @sortedbirthday.count > 0 %>
+        <% @sortedbirthday.each do |friend| %>
           <div class="outside-card-product">
             <div class="card-product">
               <div class="photo-container">
                 <%# if birthday is 7 days from today %>
-                <% if friendship.friend.profile_photo.attached? %>
-                  <%= cl_image_tag friendship.friend.profile_photo.key,gravity: :face, crop: :crop, class:"rounded-circle" %>
+                <% if friend.profile_photo.attached? %>
+                  <%= cl_image_tag friend.profile_photo.key,gravity: :face, crop: :crop, class:"rounded-circle" %>
                 <% else %>
                   <%= image_tag(asset_path("blank-profile-picture.png"), class:"rounded-circle") %>
                 <% end %>
               </div>
-              <div class="card-product-infos">
+              <div class="card-product-infos birthday">
 
-                <strong><%= link_to friendship_path(friendship.friend),class:"friend-card-name" do %>
-                    <p><%= friendship.friend.first_name %> <%= friendship.friend.last_name %></p>
+                <strong><%= link_to friendship_path(friend),class:"friend-card-name" do %>
+                    <p><%= friend.first_name.capitalize %> <%= friend.last_name.capitalize %>'s birthday is <%= pluralize( (friend.birthday.yday - Date.today.yday), 'day') %> away!</p>
                     <% end %>
                 </strong>
 
-                <p class="mt-2"><i class="fas fa-birthday-cake mr-3"></i><%= friendship.friend.birthday %></p>
+                <%# <p class="mt-2"><i class="fas fa-birthday-cake mr-3"></i><%= friend.birthday %>
 
               </div>
             </div>
@@ -35,7 +35,7 @@
             <div class="friend-card-btns">
               <%# <--- Send gift ---> %>
               <div class="card-product-actions">
-                <%= link_to  friendship_path(friendship.friend) do %>
+                <%= link_to  friendship_path(friend) do %>
                   Send a gift <i class="fas fa-gift"></i>
                 <% end %>
               </div>

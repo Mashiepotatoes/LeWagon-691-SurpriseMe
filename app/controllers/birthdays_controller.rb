@@ -6,8 +6,11 @@ class BirthdaysController < ApplicationController
     @upcomingbirthday = []
     @friend_list.each do |friendship|
       if (friendship.friend.birthday.yday - Date.today.yday).between?(0,7)
-        @upcomingbirthday << friendship
+        @upcomingbirthday << friendship.friend
       end
+    end
+    @sortedbirthday = @upcomingbirthday.sort_by do |friend|
+      friend.birthday.yday
     end
   end
 end
