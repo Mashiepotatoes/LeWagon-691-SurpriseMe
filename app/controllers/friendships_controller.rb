@@ -1,9 +1,8 @@
 class FriendshipsController < ApplicationController
-
   before_action :authenticate_user!
 
   def index
-    @friend_list = Friendship.where(user: current_user,status: true) # current_user friend list
+    @friend_list = Friendship.where(user: current_user, status: true) # current_user friend list
     @question = Question.first
     @response_sets = ResponseSet.where(user: current_user)
   end
