@@ -7,8 +7,8 @@ class UserMailer < ApplicationMailer
   #
   def sent_gift
     @user = params[:user]
-    @gift_session = GiftSession.where(user: @user).last
-    @recipient = @gift_session.recipient
+    @gift_session = params[:gift_session]
+    @recipient = params[:recipient]
     mail(to: @recipient.email, subject: 'SurpriseMe!')
   end
 end

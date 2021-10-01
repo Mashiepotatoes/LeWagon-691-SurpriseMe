@@ -55,13 +55,23 @@ class FriendshipsController < ApplicationController
 
   def destroy
     @friendship = Friendship.find(params[:id]) #user: current_user
-    @another_friendship = Friendship.find_by user: @friendship.friend,friend:current_user
+    @another_friendship = Friendship.find_by user: @friendship.friend, friend: current_user
     @another_friendship.destroy
     @friendship.destroy
     redirect_to friendships_path
   end
 
   def sent
-    redirect_to friendships_path, notice: "Email has been sent to your friend"
+    @user = params[:user]
+
+    @gift_session = GiftSession.where(user: @user).last
+    if @gift_session == nil
+      redirect_to friendships_path, notice: "Choose a friend first!"
+    else
+      @recipient = @gift_session.recipient
+      mail = UserMailer.with(user: @user, gift_session: @gift_session, recipient: @recipient).send_sent_gift_email
+      mail.deliver_now
+      redirect_to friendships_path, notice: "Email has been sent to your friend"
+    end
   end
 end

@@ -26,6 +26,8 @@ class User < ApplicationRecord
   has_many :ratings
   has_recommended :products
 
+  after_create :send_sent_gift_email
+
   def pending_orders
     self.orders.is_pending
   end
@@ -49,4 +51,9 @@ class User < ApplicationRecord
     @users_gifts
   end
 
+  private
+
+  def send_sent_gift_email
+    UserMailer.with(user: self).sent_gift.deliver_now
+  end
 end
