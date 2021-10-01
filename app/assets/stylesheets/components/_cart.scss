@@ -39,14 +39,23 @@
 
   .product-details {
     width: 62%;
-    height: 50%
+    height: 50%;
+
+    .product-title {
+      text-align: center;
+      margin-top: 34px;
+    }
   }
 
   .quan-price {
     display: flex;
-    flex:grow;
+    flex: grow;
     justify-content: space-between;
     align-items: center;
+  }
+
+  .product-quantity {
+    margin: 10px;
   }
 
   .product-removal {
@@ -87,6 +96,7 @@
 
   .totals-portion > h3 {
     margin-bottom: 30px;
+    color: $surprise-font;
   }
 
   .totals-value, label {
@@ -97,7 +107,7 @@
   }
 }
 
-  
+
 
 .product .product-price:before, .product .product-line-price:before, .totals-value:before {
   content: '$';
@@ -118,4 +128,14 @@
 .fa-times-circle {
   text-decoration: none;
   color: $surprise-pink;
+}
+
+// <--- purchased page --->
+
+.thank-you {
+  margin: 10px 80px;
+
+  .reci-username {
+    color: $surprise-pink;
+  }
 }
