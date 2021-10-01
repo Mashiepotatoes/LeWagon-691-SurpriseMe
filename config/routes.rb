@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   post "/friendships/accept", to: 'friendships#accept'
   get "/friendships/requests", to: 'friendships#requests'
   get "/friendships/search", to: 'friendships#search'
+  get "/friendships/sent", to: 'friendships#sent'
   delete "/friendships/cancel/:id", to: 'friendships#cancel',as: :request_cancel
 
   post '/line_items' ,to: "line_items#create"

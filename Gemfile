@@ -71,3 +71,4 @@ gem 'stripe_event'
 
 gem 'disco'
 gem 'noticed'
+gem 'letter_opener', group: :development

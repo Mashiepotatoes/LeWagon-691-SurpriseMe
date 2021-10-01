@@ -1,9 +1,8 @@
 class FriendshipsController < ApplicationController
-
   before_action :authenticate_user!
 
   def index
-    @friend_list = Friendship.where(user: current_user,status: true) # current_user friend list
+    @friend_list = Friendship.where(user: current_user, status: true) # current_user friend list
     @question = Question.first
     @response_sets = ResponseSet.where(user: current_user)
   end
@@ -55,12 +54,24 @@ class FriendshipsController < ApplicationController
   end
 
   def destroy
-
     @friendship = Friendship.find(params[:id]) #user: current_user
-    @another_friendship = Friendship.find_by user: @friendship.friend,friend:current_user
+    @another_friendship = Friendship.find_by user: @friendship.friend, friend: current_user
     @another_friendship.destroy
     @friendship.destroy
     redirect_to friendships_path
+  end
 
+  def sent
+    @user = params[:user]
+
+    @gift_session = GiftSession.where(user: @user).last
+    if @gift_session == nil
+      redirect_to friendships_path, notice: "Choose a friend first!"
+    else
+      @recipient = @gift_session.recipient
+      mail = UserMailer.with(user: @user, gift_session: @gift_session, recipient: @recipient).send_sent_gift_email
+      mail.deliver_now
+      redirect_to friendships_path, notice: "Email has been sent to your friend"
+    end
   end
 end
