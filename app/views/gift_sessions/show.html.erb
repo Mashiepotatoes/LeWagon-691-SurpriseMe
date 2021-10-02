@@ -10,8 +10,7 @@
     </div>
   </div>
 
-    <% @disco_recommendations.each do |recommendation| %>
-
+    <% @disco_recommendations_curated.each do |recommendation| %>
       <% if recommendation.price_cents <= @gift_session.budget * 100%>
         <div class="card-gift">
           <%# <div class="card-gift form-check"> %>

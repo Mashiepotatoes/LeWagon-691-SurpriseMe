@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get '/users/gift_received/rating/', to: 'rating#new', as: :rating
   post '/users/gift_received/rating/', to: 'rating#create'
 
+
   root to: 'pages#home'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 

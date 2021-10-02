@@ -11,8 +11,9 @@
         <p><%= @product.description.first %></p>
       </div>
       <div class="rating-container">
-        <%= simple_form_for @rating, url: users_gift_received_rating_path, html: { class: "rating_form" } do |f| %>
+        <%= simple_form_for @rating, url: rating_path, html: { class: "rating_form" } do |f| %>
           <%= f.input :rating, collection: (1..5).to_a, label: false %>
+          <%= f.input :product, as: :hidden, input_html: {value: @product.id} %>
           <%= f.submit class: 'btn surprise-pink-btn' %>
         <% end %>
       </div>

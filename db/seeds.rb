@@ -116,7 +116,7 @@ parsed_datasets.each do |dataset|
     image_url = product_raw["imageURLHighRes"]
     brand = product_raw["brand"]
     price = product_raw["price"].to_i
-    subcategory = product_raw["subcategory"]
+    subcategory = product_raw["sub_category"]
 
     product_inst = Product.new(name: name, description: description, price: price, image_url: image_url, brand: brand, subcategory: subcategory)
     product_inst.category = categories[categories_index]
@@ -145,7 +145,7 @@ puts "Linking done"
 # ---- Create Users ---- #
 
 puts "creating users"
-10.times do |i|
+200.times do |i|
   User.create(
     address: Faker::Address.full_address,
     birthday: Faker::Date.birthday(min_age: 18, max_age: 65),
@@ -160,14 +160,20 @@ puts "created #{User.count} users"
 
 # ---- Create Orders, Sessions, and Ratings ---- #
 puts "creating orders, sessions, and ratings"
-10.times do |i|
+500.times do |i|
   # cart = Cart.create
   product = Product.all.sample
-  # order = Order.create(product: product, user: User.all.sample, cart: cart)
+  recipient = User.all.sample
+  # order = Order.create(
+  #   product: product, 
+  #   user: User.all.sample, 
+  #   cart_id: (1..10).to_a.sample,
+  #  )
   session = GiftSession.create(
     user: User.all.sample,
-    recipient: User.all.sample,
-    budget: (10..100).to_a.sample
+    recipient: recipient,
+    budget: (10..100).to_a.sample,
+    occasion_id: (1..5).to_a.sample
     )
   rating = Rating.create!(
     rating: (1..5).to_a.sample,
