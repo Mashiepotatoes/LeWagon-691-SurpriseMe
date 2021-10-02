@@ -158,7 +158,7 @@ puts "Linking done"
 # ---- Create Users ---- #
 
 puts "creating users"
-200.times do |i|
+10.times do |i|
   User.create(
     address: Faker::Address.full_address,
     birthday: Faker::Date.birthday(min_age: 18, max_age: 65),
@@ -173,7 +173,7 @@ puts "created #{User.count} users"
 
 # ---- Create Orders, Sessions, and Ratings ---- #
 puts "creating orders, sessions, and ratings"
-500.times do |i|
+1000.times do |i|
   # cart = Cart.create
   product = Product.all.sample
   recipient = User.all.sample
