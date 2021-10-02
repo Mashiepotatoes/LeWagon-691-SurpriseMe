@@ -1,40 +1,5 @@
-[{"occasion": ["Christmas", "Birthday"], "category": ["Fashion"], "sub_category":
-      "Costumes",
-    "description": [
-      "6\" long, stretched waist measures 11 1/2\" across. Fits up to 7 years."
-    ],
-    "title": "Purple Sequin Tiny Dancer Tutu Ballet Dance Fairy Princess Costume Accessory",
-    "brand": "Big Dreams",
-    "price": 15,
-    "imageURLHighRes":[]
-  },
-  {"occasion": ["Christmas", "General"],
-    "category": ["Fashion"], "sub_category":
-      "Bags",
-    "description": [
-      "The Hottest Bag in Town! Brand: Anello Condition: 100% brand new Size: Large Simplistic Japanese design to add spark to your style! Main compartment with a large capacity can fit numerous items! - a front zip pocket - 2 interior open pockets - bottle pocket on both sides - a zipper at the back - Made of lightweight, durable and waterproof fabric! - Roomy main compartment and multiple pockets for functionally - Comes with adjustable double shoulder straps and double top handles - Simple and stylish design that goes well with most outfits. Specifications: Size: approx. H 40 x W 26 x D 20cm Shoulder straps length: approx. 38-80cm (adjustable) Weight: approx. 650g Material: 600DOxford"
-    ],
-    "title": "Japan Anello Backpack Unisex LARGE LIGHT GRAY BLACK Rucksack Waterproof Canvas Bag",
-    "brand": "Anello",
-    "price": 40,
-    "imageURLHighRes": [
-      "https://images-na.ssl-images-amazon.com/images/I/51RJoBQ2ANL.jpg"
-    ]
-  },
-  {"occasion": ["Christmas", "General"],
-    "category": ["Fashion"], "sub_category":
-      "Bags",
-    "description": [
-      "The Hottest Bag in Town! Brand: Anello Condition: 100% brand new Size: LARGE SIZE Material: PU Leather Simplistic Japanese design to add spark to your style! Main compartment with a large capacity can fit numerous items! Comes with a front zip pocket, 2 interior open pockets, 2 side bottle pockets and a zipper at the back! Made of stylish, elegant and durable PU leather fabric! - Roomy main compartment and multiple pockets for functionally - Comes with adjustable double shoulder straps and double top handles - Simple and stylish design that goes well with most outfits - Made of stylish, elegant and durable and PU leather fabric. Specifications: Size: approx. H 39 x W 26 x D 16cm Shoulder straps length: up to 84cm (adjustable) Weight: approx. 800g Material: PU Leather"
-    ],
-    "title": "Japan Anello Backpack Unisex PINK BEIGE LARGE PU LEATHER Rucksack School Bag Campus",
-    "brand": "Anello",
-    "price": 80,
-    "imageURLHighRes": [
-      "https://images-na.ssl-images-amazon.com/images/I/518UiiWp-vL.jpg"
-    ]
-  },
-  {"occasion": ["Christmas", "General"],
+[
+  {"occasion": ["Birthday", "General"],
     "category": ["Fashion"], "sub_category":
       "Bags",
     "description": [
@@ -47,20 +12,7 @@
       "https://images-na.ssl-images-amazon.com/images/I/514s3E59F1L.jpg"
     ]
   },
-  {"occasion": ["General"],
-    "category": ["Fashion"], "sub_category":
-      "Hats",
-    "description": [
-      "Brand New.  Hat Centre Length: adult about 8cm (3.14 \")  Adult section Cap around: 55-60cm (21.65 \"-23.62\") adjustable hat around"
-    ],
-    "title": "bettyhome Unisex Adult Winter Spring Thicken Cotton Hat Baseball Cap",
-    "brand": "bettyhome",
-    "price": 19,
-    "imageURLHighRes": [
-      "https://images-na.ssl-images-amazon.com/images/I/51ALk5zBu2L.jpg"
-    ]
-  },
-  {"occasion": ["General"],
+  {"occasion": ["General","Birthday"],
     "category": ["Fashion"], "sub_category":
       "Female Clothes",
     "description": [
@@ -68,38 +20,49 @@
     ],
     "title": "bettyhome Womens Lace Short Sleeves Top Printing Butterfly Beach Cover-up Shirt",
     "brand": "bettyhome",
-    "price": 24,
+    "price": 36,
     "imageURLHighRes": [
       "https://images-na.ssl-images-amazon.com/images/I/51HNh00jdGL.jpg"
     ]
   },
-  {"occasion": ["General"],
+  {"occasion": ["General","Birthday","Christmas"],
+    "category": ["Fashion"], "sub_category":
+      "Female Clothes",
+    "title": "Plants Print Button Up Dress",
+    "description": ["Button Up Dress"],
+    "brand": "Shein",
+    "price": 48,
+    "imageURLHighRes": [
+      "https://img.ltwebstatic.com/images3_pi/2021/08/21/1629540004ed80949a2901303537a6c0b530ba314e.webp"
+    ]
+  },
+  {"occasion": ["General","Birthday"],
     "category": ["Fashion"], "sub_category":
       "Female Shoes",
     "title": "bettyhome Women Sexy Club Party Super High Heels 4.33 inch Comfortable Thongs Casual Wedges Sandals Beach Flip Flops Slippers",
     "description": ["Super High Heels 4.33 inch"],
     "brand": "bettyhome",
-    "price": 32,
+    "price": 48,
     "imageURLHighRes": [
       "https://images-na.ssl-images-amazon.com/images/I/51tzpun%2BBDL.jpg"
     ]
   },
-  {"occasion": ["General"],
+  {"occasion": ["General","Birthday"],
     "category": ["Fashion"], "sub_category":
       "Bags"
     ,
     "description": [
-      "The Hottest Bag in Town! Brand: Anello Condition: 100% brand new Size: MINI / SMALL SIZE Material: PU Leather Simplistic Japanese design to add spark to your style! Main compartment with a large capacity can fit numerous items! Comes with a front zip pocket, 2 interior open pockets, side bottle pockets and a zipper at the back! Made of stylish, elegant and durable PU leather fabric! - Roomy main compartment and multiple pockets for functionally - Comes with adjustable double shoulder straps and double top handles - Simple and stylish design that goes well with most outfits - Made of stylish, elegant and durable and PU leather fabric Specifications: Size: approx. H 32 x W 23 x D 14cm Shoulder straps: adjustable Weight: approx. 600g Material: PU Leather"
+      "Faux Pearl Hair Pin"
     ],
-    "title": "Japan Anello Backpack Unisex NAVY MINI SMALL PU LEATHER Rucksack School Bag Campus",
-    "brand": "Anello",
+    "title": "Faux Pearl Hair Pin",
+    "brand": "Shein",
     "price": 55,
     "imageURLHighRes": [
-      "https://images-na.ssl-images-amazon.com/images/I/51NA97pnTNL.jpg"
+      "https://img.ltwebstatic.com/images3_pi/2021/08/30/1630300707b848df51fa3d5212dfaeee627f3b3f9b.webp"
     ]
   },
   {"occasion": ["General"],
-    "category": ["Fashion"], "sub_category":
+    "category": ["Fashion","Birthday"], "sub_category":
       "Bags"
     ,
     "description": [
@@ -112,162 +75,19 @@
       "https://images-na.ssl-images-amazon.com/images/I/512lZ8qMVVL.jpg"
     ]
   },
-  {"occasion": ["General", "Christmas"],
+  {"occasion": ["General", "Christmas","Birthday"],
     "category": ["Fashion"], "sub_category":
-      "Accessories",
-    "title": "Twilight Saga: New Moon Alice Chocker Necklace Wearable Prop Replica",
-    "description": ["Twilight Saga"],
-    "brand": "neca",
-    "price": 18,
-    "imageURLHighRes": [
-      "https://images-na.ssl-images-amazon.com/images/I/41cQk6Z-bZL.jpg"
-    ]
-  },
-  {"occasion": ["General"],
-    "category": ["Fashion"], "sub_category":
-      "Accessories",
+      "Bags",
     "description": [
-      "Viva Espaol pin, 1 x 1 inch."
+      "Minimalist Quilted Drawstring Detail Bucket Bag"
     ],
-    "title": "Viva Espaol Pins Set of 10",
-    "brand": "Teacher's Discovery",
-    "price": 16,
-    "imageURLHighRes": [
-      "https://images-na.ssl-images-amazon.com/images/I/51XUFkm8Z9L.jpg"
-    ]
-  },
-  {"occasion": ["General", "Birthday"],
-    "category": ["Fashion"], "sub_category":
-      "Miscellania Fashion",
-    "description": [
-      "Philippians 4:13 engraved on duotone Italian leather in a contemporary color and font combination. It is designed to be used with Regular Size and Personal Size Bibles. 17 x 25 cm / Phillipians 4:13 embossed on Italian Duo-tone materials, contemporary color style and trendy typesetting. It can fit all Regular and Personal sizes Bibles."
-    ],
-    "title": "Todo lo puedo / I Can Do Everything Bible Cover: Verde/Cafe (Spanish Edition)",
+    "title": "Minimalist Quilted Drawstring Detail Bucket Bag",
     "brand": "",
-    "price": 13,
-    "imageURLHighRes":[]
+    "price": 32,
+    "imageURLHighRes":["https://img.ltwebstatic.com/images3_pi/2021/08/30/1630303690756f836c98c0f17433ff71a56349e057.webp"]
   },
-  {"occasion": ["General", "Christmas", "Birthday"],
-    "category": ["Fashion"], "sub_category":
-      "Accessories",
-    "description": [
-      "Beth Martin is a popular jewelry design instructor, continually inspiring students to go beyond their comfort level and incorporate beach glass into areas they never considered. Eva Sherman opened Grand River Beads and Gift Gallery in 2005. Her jewelry designs have been published in several different magazines and she has traveled and taught extensively. Both live in Rocky River, OH."
-    ],
-    "title": "Organic Wire and Metal Jewelry: Stunning Pieces Made with Sea Glass, Stones, and Crystals",
-    "brand": "",
-    "price": 18,
-    "imageURLHighRes":[]
-  },
-  {"occasion": ["General"],
-    "category": ["Fashion"], "sub_category":
-      "Miscellania Fashion",
-    "description": [
-      "Due cento Luoghi provides pilgrims and tourists invaluable information about the best sites, most delicious wines, most delectable restaurants and even the top locations to watch the sunset in Rome."
-    ],
-    "title": "Rome Due Centi Luoghi Pocket Guide to 220 Can't Miss Sites",
-    "brand": "Melissa Annen",
-    "price": 15,
-    "imageURLHighRes":[]
-  },
-  {"occasion": ["General"],
-    "category": ["Fashion"], "sub_category":
-      "Miscellania Fashion",
-    "title": "One White Lie (The Barrington Billionaire's Series) (Volume 1)",
-    "description": [],
-    "brand": "",
-    "price": 8,
-    "imageURLHighRes":[]
-  },
-  {"occasion": ["General", "Birthday", "Christmas", "Anniversary"],
-    "category": ["Fashion"], "sub_category":
-      "Miscellania Fashion",
-    "description": [
-      "Enjoy a taste from ages past with a our \"Oriental Carpet Product line! For centuries Oriental Carpets have been an expression of beauty and creativity. Oriental Carpets are made in virtually every Asian country from Turkey in the we to China in the east, with designs and motifs dating back to the 12th century. A carpet's name is almost always derived from the village or region in which it is woven. Each Oriental Carpet mousepad is NOT and image transfer or imprint but an authentic woven carpet adhered to USA made open cell foam rubber, the highest quality mousepad rubber in the world! For millennia, in countries spanning the globe, Oriental Carpets have maintained a quiet yet ever constant presence. Whether as art, a trade item, furnishing or investment, the Oriental Carpet crosses historical, ethnic and cultural lines in both Eastern and Western societies. The mere mention of Oriental Carpets can evoke the sounds and scents of ancient villages, bazaars, wooden looms, tea parlors and smoke-filled hookah dens. Not just scenes from films or a bygone past, but at this very moment such scenes are being lived out in many parts of the Eastern world. It is easy to envision Oriental Carpets accenting a beautifully furnished paneled library or a luxurious Victorian home. Upon hearing the name, most carpet lovers can see in their minds eye the unique diamond-like shapes on rich indigo backgrounds and recognize a Bokhara (Uzbekistan). Many can correctly identify a lovely Tree of Life design and know it is a Tabriz (Persia)."
-    ],
-    "title": "Oriental Carpet Woven Coin Change Purse- Kerman Collection",
-    "brand": "Eunoia Collections",
-    "price": 25,
-    "imageURLHighRes": [
-      "https://images-na.ssl-images-amazon.com/images/I/51KTzLHECDL.jpg"
-    ]
-  },
-  {"occasion": ["General", "Birthday", "Christmas", "Anniversary"],
-    "category": ["Fashion"], "sub_category":
-      "Baby Clothes",
-    "description": [
-      "Beautifully rendered, heartbreakingly adorable, and wonderfully wacky knitted caps for newborns and toddlers Thirty-eight million Americans knit, and that number grows every day. The baby hat is the perfect project for knitters of any level, with enchanting patterns that are easy enough for rank beginners but also interesting enough for the most accomplished needle wielders, in yarns that range from silk and linen to cashmere and mohair."],
-    "title": "Itty-Bitty Hats cute and cuddly caps to knit for babies and toddlers",
-    "brand": "Visit Amazon's Susan B. Anderson Page",
-    "price": 19,
-    "imageURLHighRes": []
-  },
-  {"occasion": ["General"],
-    "category": ["Fashion"], "sub_category":
-      "Costumes",
-    "title": "'Scary Skeleton' Glow-in-the-Dark Footed Bodysuit Coverall, Girls",
-    "description": ["Glow-in-the-Dark Footed Bodysuit"],
-    "brand": "Happy Halloween",
-    "price": 30,
-    "imageURLHighRes":[]
-  },
-  {"occasion": ["General"],
-    "category": ["Fashion"], "sub_category":
-      "Baby Clothes",
-    "description": [
-      "Hut! Hut! Hut! Dress your little one in the cutest football shirt for tailgates!"
-    ],
-    "title": "Bambino Balls Short Sleeve Football Outfit Brown and White (3T T-Shirt)",
-    "brand": "Bambino Balls",
-    "price": 22,
-    "imageURLHighRes":[]
-  },
-  {"occasion": ["General"],
-    "category": ["Fashion"], "sub_category":
-      "Baby Clothes",
-    "description": [
-      "Bambino Balls is the perfect gift for sports fans who are expecting or who already have small children. It's a great way to dress up your kids in your favorite sports theme and share your love of the games."
-    ],
-    "title": "Bambino Balls Short Sleeve Baseball Outfit",
-    "brand": "Bambino Balls",
-    "price": 22,
-    "imageURLHighRes":[]
-  },
-  {"occasion": ["General"],
-    "category": ["Fashion"], "sub_category":
-      "Baby Clothes",
-    "description": [
-      "Bambino Balls is the perfect gift for sports fans who are expecting or who already have small children. It's a great way to dress up your kids in your favorite sports theme and share your love of the games."
-    ],
-    "title": "Bambino Balls Short Sleeve Football Outfit. Small. Brown and White.",
-    "brand": "Bambino Balls",
-    "price": 19,
-    "imageURLHighRes": [
-      "https://images-na.ssl-images-amazon.com/images/I/31ua8kP7GVL.jpg"
-    ]
-  },
-  {"occasion": ["General", "Housewarming"],
-    "category": ["Fashion"], "sub_category":
-      "Miscellania Fashion",
-    "description": [
-      "A must for those interested in Essential Oils. A great introduction to those new to using essential oils and a handy 'must' reminder and quick reference for those already familiar with them.\n\nThis is a handy 5\" x 6 3/4\" manual and is really two books in one. The \"Essential Oils History & Overview\" is all about the history of oils, the science behind them, some of their marvelous properties, safety, and storage information. Flip over the book and viola The \"Essential Oils Reference Guide\" details common wellness uses, health concerns, and how leading authorities have suggested using essential oils in those cases. It also describes techniques for applying oils and gives a two page summary on each of 25 commonly used oils and 10 blends. Finally, there is a chart that summarizes much of this information that is called the QuickQuick Guide.\n\nBecause of the simple but thorough format and style of this book it will be of great value to essential oil product consultants for companies like Young Living, doTerra and others to introduce new users to essential oils and how they may be of benefit."
-    ],
-    "title": "Essential Oils Overview and Reference Guide",
-    "brand": "R.L. James",
-    "price": 80,
-    "imageURLHighRes":[]
-  },
-  {"occasion": ["General"],
-    "category": ["Fashion"], "sub_category":
-      "Miscellania Fashion",
-    "description": [
-      "These convenient, self-adhesive name tags are ideal for labeling, reminders, calendar and homework notes, and more! Each pack features 40 name tags, measuring 3\" x 2.5\". Available in a variety of prints, name tags are fun addition to any classroom!"
-    ],
-    "title": "Carson Dellosa Kids Name Tags (150003)",
-    "brand": "Carson-Dellosa",
-    "price": 4,
-    "imageURLHighRes":[]
-  },
-  {"occasion": ["General"],
+
+  {"occasion": ["General","Housewarming"],
     "category": ["Fashion"], "sub_category":
       "Baby Clothes",
     "description": [
@@ -280,32 +100,6 @@
       "https://images-na.ssl-images-amazon.com/images/I/31VzkSA2mYL.jpg"
     ]
   },
-  {"occasion": ["General"],
-    "category": ["Fashion"], "sub_category":
-      "Baby Clothes",
-    "description": [
-      "Sputtens are adorable character kids mittens designed much like a sock puppet in order to provide superior protection from the elements and maximum fun for toddlers and young children. The tube sock like design is perfect for covering small hands all the way up to the elbow so they cannot be pulled off, fall off, or fill with snow. The cute gloves are cuddly and colorful, which makes them fun to wear. Kids can't wait to put them on! The puppet design adds so much creative snow play! They are saving winter fun!! SMALL: For Infants and toddlers. (measure 7 in. from fingertips to elbow) MEDIUM:For active toddlers. (measure 10 in. from fingertips to elbow) LARGE:For young kids. (measure 13 in. from fingertips to elbow)"
-    ],
-    "title": "Stay On Sputtens Sock Puppet Mittens, Water Resistant Fleece, Ruby & Lioness - Kids Mittens - MEDIUM (For active toddlers. measure 10 in. from fingertips to elbow)",
-    "brand": "The Sock Puppet Mitten Company - Sputtens",
-    "price": 25,
-    "imageURLHighRes": [
-      "https://images-na.ssl-images-amazon.com/images/I/51NatLSGgFL.jpg"
-    ]
-  },
-  {"occasion": ["General", "Birthday", "Anniversary"],
-    "category": ["Fashion"], "sub_category":
-      "Male Clothes",
-    "description": [
-      "Hi buyer, pls pay attention, pls read our size details clearly before making the buying decision. Thanks. Super quality, much more comfortable.Package:Other accessories not include Material:Cotton blendSize details: US Small=China Medium:Length:25.59\"(65cm),Bust:37.80\"(96cm),Shoulder:16.93\"(43cm),Sleeve Length:8.27\"(21cm); US Medium=China Large:Length:26.38\"(67cm),Bust:39.37\"(100cm),Shoulder:17.32\"(44cm),Sleeve Length:8.66\"(22cm); US Large=China X-Large:Length:27.17\"(69cm),Bust:40.94\"(104cm),Shoulder:17.72\"(45cm),Sleeve Length:9.06\"(23cm); US X-Large=China 2X-Large:Length:27.95\"(71cm),Bust:42.52\"(108cm),Shoulder:18.11\"(46cm),Sleeve Length:9.45\"(24cm); US 2X-Large=China 3X-Large:Length:28.74\"(73cm),Bust:44.09\"(112cm),Shoulder:18.50\"(47cm),Sleeve Length:9.84\"(25cm);"
-    ],
-    "title": "YUNY Men's Easy Care Floral Business Comfort Soft Shirt Blouse Tops",
-    "brand": "YUNY",
-    "price": 30,
-    "imageURLHighRes": [
-      "https://images-na.ssl-images-amazon.com/images/I/31DodyO5mHL.jpg"
-    ]
-  },
   {"occasion": ["General", "Birthday"],
     "category": ["Fashion"], "sub_category":
       "Female Clothes",
@@ -314,35 +108,9 @@
     ],
     "title": "FLCH+YIGE Womens Summer Spaghetti Strap Loose Beach Flowy Long Dress with Pockets",
     "brand": "FLCH+YIGE",
-    "price": 5,
+    "price": 43,
     "imageURLHighRes": [
       "https://images-na.ssl-images-amazon.com/images/I/51gPcllAvhL.jpg"
-    ]
-  },
-  {"occasion": ["General"],
-    "category": ["Fashion"], "sub_category":
-      "Miscellania Fashion",
-    "description": [
-      "Each page is complete with a global range of select holidays and information about an unusual species of bee with illustrations that highlight its unique qualities."
-    ],
-    "title": "2017 Danmala Calendar",
-    "brand": "Danmala by Kathy Klein",
-    "price": 55,
-    "imageURLHighRes": [
-      "https://images-na.ssl-images-amazon.com/images/I/51W-sGjlQmL.jpg"
-    ]
-  },
-  {"occasion": ["General", "Anniversary"],
-    "category": ["Fashion"], "sub_category":
-      "Accessories",
-    "description": [
-      "Kabbalah Bracelet - 2014 Collection Thick New Design String. Vs Evil Eye and for Good Luck."
-    ],
-    "title": "Gold Flat Hamsa Hand Kabbalah Special Thick Red Thread String Bracelet Evil Eye Beads - 2014 Collecion",
-    "brand": "Accessory",
-    "price": 70,
-    "imageURLHighRes": [
-      "https://images-na.ssl-images-amazon.com/images/I/414mZiFAJZL.jpg"
     ]
   },
   {"occasion": ["General", "Birthday", "Anniversary"],
@@ -355,60 +123,24 @@
     "brand": "Accessory",
     "price": 39,
     "imageURLHighRes": [
-      "https://images-na.ssl-images-amazon.com/images/I/318HJ2KtQzL.jpg"
+      "https://www.crudo-leather.com/site/assets/files/3673211/190903_ricordi_leather_wrap_bracelet_2000x2000_2-2-2.jpg"
     ]
   },
-  {"occasion": ["General"],
-    "category": ["Fashion"], "sub_category":
-      "Accessories",
-    "title": "Face Ski Mask 3 Hole (More Colors)- Black",
-    "description":[],
-    "brand": "TopHeadwear",
-    "price": "32",
-    "imageURLHighRes": [
-      "https://images-na.ssl-images-amazon.com/images/I/41rlJ%2BWzFlL.jpg"
-    ]
-  },
-  {"occasion": ["General"],
+  {"occasion": ["General","Birthday"],
     "category": ["Fashion"], "sub_category":
       "Female Shoes",
     "description": [
-      "Ladies Straw Slipper Womens Summer Beach Flat Bow Footwear Sandals - Decorated with Hand Made Flower Beads - Size : See Title."
+      "Ladies High Heels "
     ],
-    "title": "Ladies Straw Slipper Womens Summer Beach Flat Bow Footwear Sandals - with Hand Made Flower Beads - Size EUR 40 / US 8.5",
+    "title": " Emblem High heels",
     "brand": "Accessory",
-    "price": 26,
+    "price": 45,
     "imageURLHighRes": [
-      "https://images-na.ssl-images-amazon.com/images/I/51bHMyS9E8L.jpg"
+      "https://thesmartlocal.com/wp-content/uploads/2020/06/emblem-sandya-red-stilettos.jpg"
     ]
   },
-  {"occasion": ["General"],
-    "category": ["Fashion"], "sub_category":
-      "Male Clothes",
-    "description": [
-      "Slip into the tight leather jeans by Bockle.The new, modern skinny cut is hip high, particularly among young men.The Bockle 1991 tube falls out really tight and you can order a size ...The soft, non-slip leather adjusts to ideal.The new Bockle look, with silver buttons on the back pockets. #FETT-AN#Specification:#FETT-AUS#- Type: leatherpants- Kind: leather- Color: White- Closure: zip- Waist height: low- Knee Seam: No- Lining: Yes"
-    ],
-    "title": "Bockle 1991 Tube White Men Leather Pants Trouser Tight Leather Jeans",
-    "brand": "Bockle",
-    "price": 169,
-    "imageURLHighRes": [
-      "https://images-na.ssl-images-amazon.com/images/I/41HKKtOvo0L.jpg"
-    ]
-  },
-  {"occasion": ["General"],
-    "category": ["Fashion"], "sub_category":
-      "Male Clothes",
-    "description": [
-      "A new lace-up leather pants by Bockle, made for the man with claim and expression joy. The lacing is continuous, even at the waist and can be nicely taut and pulled tightly. To open the leather pants with zipper, press stud and hook."
-    ],
-    "title": "Bockle 1991 lace-up Leather Pants Leatherjeans Men Pants Leather Jeans New",
-    "brand": "Bockle",
-    "price": 100,
-    "imageURLHighRes": [
-      "https://images-na.ssl-images-amazon.com/images/I/41QC8sQZ75L.jpg"
-    ]
-  },
-  {"occasion": ["General"],
+
+  {"occasion": ["General","Birthday"],
     "category": ["Fashion"], "sub_category":
       "Male Clothes",
     "description": [
@@ -419,55 +151,6 @@
     "price": 149,
     "imageURLHighRes": [
       "https://images-na.ssl-images-amazon.com/images/I/41%2B1Q7je0oL.jpg"
-    ]
-  },
-  {"occasion": ["General"],
-    "category": ["Fashion"], "sub_category":
-      "Male Clothes",
-    "description": [
-      "The new leather pants by Bockle is a mix of jacket and sweatpants.Experience the new leather feel and enjoy the very good leather.With the original Bockle buttons equipped.Sexy Look for cool guys!"
-    ],
-    "title": "Bockle B-Joggers Tight Leather Sweatpants Button Closure Men",
-    "brand": "Bockle",
-    "price": 199,
-    "imageURLHighRes": [
-      "https://images-na.ssl-images-amazon.com/images/I/41BD0ZWylkL.jpg"
-    ]
-  },
-  {"occasion": ["General"],
-    "category": ["Fashion"], "sub_category":
-      "Male Clothes",
-    "description": [
-      "The new Bockle Boyfriend.Butter Soft lamb leather, crisp cut."
-    ],
-    "title": "Bockle Boyfriend Men Leather Pants Trouser Tube Jeans",
-    "brand": "Bockle",
-    "price": 199,
-    "imageURLHighRes": [
-      "https://images-na.ssl-images-amazon.com/images/I/51wI1z7yHXL.jpg"
-    ]
-  },
-  {"occasion": ["General"],
-    "category": ["Fashion"], "sub_category":
-      "Male Clothes",
-    "title": "Bockle Joggers Running Leather Pants Trousers Lambskin Soft Men",
-    "brand": "Bockle",
-    "price": 110,
-    "imageURLHighRes": [
-      "https://images-na.ssl-images-amazon.com/images/I/416COawtcyL.jpg"
-    ]
-  },
-  {"occasion": ["General"],
-    "category": ["Fashion"], "sub_category":
-      "Male Clothes",
-    "description": [
-      "The new Bockle Vest from smooth cowhide.Equipped with two outside pockets and one inside pocket andwith lining."
-    ],
-    "title": "Bockle Smooth Black Leather Vest for Man",
-    "brand": "Bockle",
-    "price": 89,
-    "imageURLHighRes": [
-      "https://images-na.ssl-images-amazon.com/images/I/41opyrBCysL.jpg"
     ]
   },
   {"occasion": ["General", "Anniversary"],
@@ -481,7 +164,7 @@
       "https://images-na.ssl-images-amazon.com/images/I/41AMG9rX3nL.jpg"
     ]
   },
-  {"occasion": ["General", "Anniversary", "Christmas", "Birthday"],
+  {"occasion": ["General", "Anniversary", "Christmas"],
     "category": ["Fashion"], "sub_category":
       "Accessories",
     "description": [
@@ -492,30 +175,6 @@
     "price": 47,
     "imageURLHighRes": []
   },
-  {"occasion": ["General", "Anniversary", "Birthday", "Christmas"],
-    "category": ["Fashion"], "sub_category":
-      "Accessories",
-    "description": [
-      "Electro-luminescent backlight, automatic with afterglow Light powered - no batteries to change - when fully charged has a 5 month power reserve. Low-temperature resistant (-10C/14F) Digital compass: Measures and displays direction as one of 16 points with a range of 0 to 359 in 1 units and has an abnormal magnetic field detect function and also bidirectional calibration and northerly calibration function Altimeter Measuring range: -700 to 10,000 m (-2,300 to 32,800 ft) in 20 ft units (5m). Takes auto memory measurments storing up to 40 sets of data, each including altitude, month, date, time. Reference altitude setting and altitude alarm. 1-second stopwatch, coordinated with altimeter, measures elapsed time, split time, 1st-2nd place times Barometer Display range: 260 to 1,100 hPa/mb (7.65 to 32.45 inHg) in 1hPa/mb or .05 inHg units) and atmospheric pressure tendency graph. (Ability to select between hPa and inHg units) Thermometer with a display range of:-10 to 60C (14 to 140F) in 0.1C (0.2F) units (Fahrenheit or Celsius is user-selectable);Duplex LCD Daily alarm Hourly time signal Battery power indicator & Power save function (automatically disables LCD when the watch is left in the dark for 30 minutes);Auto-calendar (to year 2039, no auto day of week setting) 12/24-hour format & Regular timekeeping: Hour, minutes, seconds, pm, year, month, date, day ;Titanium bracelet Accuracy 15 seconds per month ;Size of case: .57.0 x 52.0 x 14.8 mm Weight: 77 g"
-    ],
-    "title": "Casio Solar Powered Titanium Triple Sensor Pro Trek PRG60T-7AV",
-    "brand": "Casio",
-    "price": 50,
-    "imageURLHighRes":[]
-  },
-  {"occasion": ["General"],
-    "category": ["Fashion"], "sub_category":
-      "Female Clothes",
-    "description": [
-      "Veneziana Sexy Strip 20 Open Crotch Pantyhose (20 Den) OPEN CROTCH: Thigh-high lace top garter belt panty hose sheers are perfect for stylish women GARTERBELT: The sheer tights legs are attached to a soft semi opaque belt with a floral net trim. QUALITY: Durable, resistant and comfortable nylon. 20 den matt imitation semi-opaque stocking SIMPLE CLASSIC STYLE: plain open-crotch tights - Work, Office, Casual, Evening, Party, Glamour. COLOURS: Beautiful crotch less thigh high strip panty - available in Black, Beige, Bianco (White). Small Medium Large S M L 87% Polyamide, 12% Elastane Care Instructions: - Washing: In order to increase the longevity of this product, please take care to wash by hand and drip dry only, the material is highly unsuitable for tumble dry. - We also recommend the use of hosiery gloves to prevent unwanted snagging."
-    ],
-    "title": "Sexystrip",
-    "brand": "Veneziana",
-    "price": 15,
-    "imageURLHighRes": [
-      "https://images-na.ssl-images-amazon.com/images/I/41%2BVhT2w7NL.jpg"
-    ]
-  },
   {"occasion": ["General"],
     "category": ["Fashion"], "sub_category":
       "Female Clothes",
@@ -525,41 +184,7 @@
     "price": 50,
     "imageURLHighRes": ["https://images-na.ssl-images-amazon.com/images/I/51v%2BzSZZn4L.jpg"]
   },
-  {"occasion": ["General"],
-    "category": ["Fashion"], "sub_category":
-      "Female Clothes",
-    "description": [
-      "Top Length (Neck to Bottom Hem) Small - 29 inches, Medium - 30 inches, Large - 31 inches, X-Large - 32 inches   Who says nursing tops cant be stylish? The sofsy Tie Front Nursing & Maternity Top is a chic, refreshing twist on frumpy motherhood gear. This sassy pullover features a tie-front top that gives you easy access to LARGE DUAL NURSING OPENINGS beneath. No more fumbling with your shirt when babys hungrynow breastfeeding on the go is quick & simple!  Unlike nursing tops that are cheap & flimsy, ours is a durable garment made with a premium 95% Rayon 5% Elastane fabric blend. Youll feel the quality the moment you take it out of the package! It HOLDS UP TO WASH AFTER WASH without losing its shape or vibrant color. With its comfortable elasticized waist that shrinks and expands to fit your shape, our top can be WORN DURING PREGNANCY AND AFTER your little ones arrival. Some maternity tops cover you in the frontbut not in the back. Ours is EXTRA LONG to provide reassuring coverage for your large baby bump AND your bottom. So you feel cute and confidentnot self conscious!  Tie our versatile top at the front, side, back in a knot or bow to create a VARIETY OF FASHIONABLE LOOKS that are perfect for work, lunches with friends, or trips to the park. During breastfeeding, you can even tie the ties at the very ends to make a cozy cocoon for your little one while ensuring privacy.  Delight your favorite new mom or mom-to-be with the sofsy Tie Front Nursing & Maternity Top. Both practical & trendy, it makes a GREAT BABY SHOWER or WELCOME HOME GIFT! Click ADD TO CART TO BUY NOW!"
-    ],
-    "title": "sofsy Soft-Touch Rayon Blend Tie Front Nursing Top Maternity Fashion Top",
-    "price": 35,
-    "imageURLHighRes": [
-      "https://images-na.ssl-images-amazon.com/images/I/51HJbA8UG2L.jpg"
-    ]
-  },
-  {"occasion": ["General"],
-    "category": ["Fashion"], "sub_category":
-      "Female Clothes",
-    "description": [
-      "Hold Ups Thigh High Stockings (20 Den) These beautiful and comfortable Sheer Transparent Thigh High Stockings are the perfect style for fashionable women who are looking for the ideal addition to their outfit. Whether it is for work, a party, a glamorous day out, or even a Wedding, the elegant design and fine quality material make these hold ups perfect for helping you look and feel amazing all day long. The wide lace elastic tops are made with double silicone bands for extra sturdy hold up strength, and are approximately 9cm un-stretched. With such a simple, yet classic and versatile style, these over the knee thigh high hold-ups stockings can be worn all day everyday, wherever you are, whatever the occasion. Main Features: - Style: Plain Classic Thigh-High Stockings - Floral Lace Tops: Approximately 9cm deep un-stretched with Double Silicone bands. - Natural and Versatile Colors Available: Black, Brown (Tan) or Natural (Nude) - Thickness: Sheer Transparent - 20 Den (Semi Matt) - Sizes Available: Extra Small - Small (1 - 2), or Medium - Large (3 - 4) - Suitable for all Occasions: Work, Office, Casual, Leisure, Evening, Party, Glamour, Wedding - Suitable for Warmer Seasons: Spring, Summer - Soft, stretchy and comfortable - High Quality: Durable and resistant material - Material: 88% Polyamide, 12% Elastane"
-    ],
-    "title": "Veneziana Ar Beautiful",
-    "brand": "Veneziana",
-    "price": 20,
-    "imageURLHighRes": [
-      "https://i.cdn.nrholding.net/54367546/550/550"
-    ]
-  },
-  {"occasion": ["General"],
-    "category": ["Fashion"], "sub_category":
-      "Female Clothes",
-    "description":[],
-    "title": "Fiona",
-    "brand": "Veneziana",
-    "price": 40,
-    "imageURLHighRes": []
-  },
-  {"occasion": ["General", "Christmas"],
+  {"occasion": ["General", "Christmas","Birthday"],
     "category": ["Fashion"], "sub_category":
       "Accessories",
     "description": [
@@ -607,20 +232,6 @@
     "price": 16,
     "imageURLHighRes": [
       "https://images-na.ssl-images-amazon.com/images/I/51wPG6JhNeL.jpg"
-    ]
-  },
-  {"occasion": ["General"],
-    "category": ["Fasion"], "sub_category":
-      "Female Shoes",
-    "description": [],
-    "title": "Hello Kitty LALA Lovely Kids Girls Summer Slippers Shoes Beach Pool Black US size 3",
-    "brand": "Hello Kitty",
-    "price": "69",
-    "imageURLHighRes": [
-      "https://images-na.ssl-images-amazon.com/images/I/41Vf3mKKZBL.jpg",
-      "https://images-na.ssl-images-amazon.com/images/I/31pDNSufkjL.jpg",
-      "https://images-na.ssl-images-amazon.com/images/I/41hbUxgBk9L.jpg",
-      "https://images-na.ssl-images-amazon.com/images/I/51XXiau9lZL.jpg"
     ]
   }
 ]

@@ -19,7 +19,7 @@ class RatingController < ApplicationController
     @product.save!
 
     if @rating.save! && @product.save!
-      redirect_to received_path
+      redirect_to friendships_path
     else
       flash[:alert] = "Something went wrong."
       render :new
