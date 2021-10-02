@@ -1,6 +1,7 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: #ffffff;
+
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -175,7 +176,7 @@
 .navbar-landing {
   position: fixed;
   width: 100%;
-  z-index: 1;
+  z-index: 4;
 }
 
 .background{
@@ -185,9 +186,9 @@
 
 .navbar-landing .navbar-brand img {
   position: absolute;
-  top: 17px;
-  left: 20px;
-  width: 160px;
+  top:20px;
+  left: 5px;
+  width: 250px;
 }
 
 .nav-link-white{
