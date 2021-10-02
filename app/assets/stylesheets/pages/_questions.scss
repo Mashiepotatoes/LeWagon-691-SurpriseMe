@@ -1,5 +1,6 @@
 .quiz-container{
   position: relative;
+  flex-wrap: wrap;
   height: 100vh;
   width: 100vw;
 }
@@ -7,15 +8,19 @@
 .quiz-container-inner{
   width: 700px;
   height: auto;
+  margin: 0 auto;
   padding: 40px;
   border-radius: 10px;
   background-color: $surprise-pink-secondary;
+  position: relative;
 }
 
-.quiz-header {
-  position: absolute;
-    top: 200px;
-    left: 80px;
+.quiz-wrapper{
+  width: 800px;
+}
+
+h2 {
+  flex:0 0 100%
 }
 
 .quiz-form {
@@ -37,8 +42,21 @@
   color: black;
 }
 
+// option 1
+// #quiz-exit{
+//   position:absolute;
+//   bottom: 0;
+//   right: 0;
+//   transform: translate(50%, 50%);
+//   background-color: $surprise-pink;
+
+//   a {
+//     color:#fff;
+//   }
+// }
+
+// option 2
 #quiz-exit{
-  position:absolute;
-    bottom: 100px;
-    right: 290px;
+  margin-top: 24px;
+  margin-left: auto;
 }
