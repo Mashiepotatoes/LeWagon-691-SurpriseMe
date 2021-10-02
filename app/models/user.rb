@@ -31,9 +31,7 @@ class User < ApplicationRecord
   end
 
   def received_gifts
-
     @users_gifts = []
-
     @gift_sessions = GiftSession.where(recipient: self)
     @gift_sessions._select! do |session|
       session.order.state == "paid"
@@ -47,5 +45,18 @@ class User < ApplicationRecord
     end
 
     @users_gifts
+  end
+
+  def has_questions?
+    @response_sets = ResponseSet.where(user: self)
+    @question = Question.first
+    @all_questions = Question.all
+    @response_sets.nil? || (@response_sets.count != @all_questions.count) ? @quiz_landing = true : @quiz_landing = false
+  end
+
+  private
+
+  def send_sent_gift_email
+    UserMailer.with(user: self).sent_gift.deliver_now
   end
 end

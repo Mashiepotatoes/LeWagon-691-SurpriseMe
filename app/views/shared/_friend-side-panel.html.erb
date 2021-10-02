@@ -19,9 +19,9 @@
     <div class="side-panel-text <%= "active" if current_page?(friendships_sent_path) %>">Sent Gifts</div>
   <% end %>
 
-  <% if @response_sets.empty? %>
-    <%= link_to question_path(@question) do %>
-      <div class="side-panel-text">Preference Quiz</div>
+  <% if current_user.has_questions? %>
+    <%= link_to landing_questions_path do %>
+      <div class="side-panel-text">Preferences Quiz</div>
     <% end %>
   <% else %>
     <%= link_to response_sets_path do %>
