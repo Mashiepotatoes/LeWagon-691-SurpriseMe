@@ -15,9 +15,9 @@
     <div class="side-panel-text <%= "active" if current_page?(received_path) %>">Gifts Received</div>
   <% end %>
 
-  <%= link_to friendships_sent_path do  %>
-    <div class="side-panel-text <%= "active" if current_page?(friendships_sent_path) %>">Sent Gifts</div>
-  <% end %>
+  <%# <%= link_to friendships_sent_path do  %>
+    <%# <div class="side-panel-text <%= "active" if current_page?(friendships_sent_path) ">Sent Gifts</div> %>
+  <%# <% end %>
 
   <% if current_user.has_questions? %>
     <%= link_to landing_questions_path do %>
