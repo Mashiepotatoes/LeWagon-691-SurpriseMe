@@ -1,0 +1,172 @@
+[
+  {"occasion": ["General","Birthday","Christmas"],
+    "category": ["Fashion"], "sub_category":
+      "Female Clothes",
+    "title": "Plants Print Button Up Dress",
+    "description": ["Button Up Dress"],
+    "brand": "Shein",
+    "price": 48,
+    "imageURLHighRes": [
+      "https://img.ltwebstatic.com/images3_pi/2021/08/21/1629540004ed80949a2901303537a6c0b530ba314e.webp"
+    ]
+  },
+  {"occasion": ["General","Birthday"],
+    "category": ["Fashion"], "sub_category":
+      "Female Shoes",
+    "title": "bettyhome Women Sexy Club Party Super High Heels 4.33 inch Comfortable Thongs Casual Wedges Sandals Beach Flip Flops Slippers",
+    "description": ["Super High Heels 4.33 inch"],
+    "brand": "bettyhome",
+    "price": 45,
+    "imageURLHighRes": [
+      "https://images-na.ssl-images-amazon.com/images/I/51tzpun%2BBDL.jpg"
+    ]
+  },
+  {"occasion": ["General","Birthday"],
+    "category": ["Fashion"], "sub_category":
+      "Accessories"
+    ,
+    "description": [
+      "Faux Pearl Hair Pin"
+    ],
+    "title": "Faux Pearl Hair Pin",
+    "brand": "Shein",
+    "price": 55,
+    "imageURLHighRes": [
+      "https://img.ltwebstatic.com/images3_pi/2021/08/30/1630300707b848df51fa3d5212dfaeee627f3b3f9b.webp"
+    ]
+  },
+  {"occasion": ["General"],
+    "category": ["Fashion","Birthday"], "sub_category":
+      "Bags"
+    ,
+    "description": [
+      "2 Way Shoulder Handle Polyester Canvas Boston Bag Large ! Brand: Anello ( Original ) Condition: 100% brand new Size: LARGE SIZE Material: Polyester Canvas Simplistic Japanese design to add spark to your style! Main compartment with a large capacity can fit numerous items! Comes with a front zip pocket, 2 interior open pockets. - Roomy main compartment and multiple pockets for functionally - Comes with adjustable shoulder straps and double top handles - Simple and stylish design that goes well with most outfits - Made of stylish, elegant and durable fabric. Specifications: Size: approx. H 29 x W 33 x D 14cm Shoulder straps length: up to 128cm (adjustable) Weight: approx. 400g Material: Polyester Canvas"
+    ],
+    "title": "Japan Anello LARGE CAMO 2 Way Unisex Shoulder Bag Poly Canvas Waterproof Campus",
+    "brand": "Anello",
+    "price": 65,
+    "imageURLHighRes": [
+      "https://images-na.ssl-images-amazon.com/images/I/512lZ8qMVVL.jpg"
+    ]
+  },
+  {"occasion": ["General", "Christmas","Birthday"],
+    "category": ["Fashion"], "sub_category":
+      "Bags",
+    "description": [
+      "Minimalist Quilted Drawstring Detail Bucket Bag"
+    ],
+    "title": "Minimalist Quilted Drawstring Detail Bucket Bag",
+    "brand": "",
+    "price": 32,
+    "imageURLHighRes":["https://img.ltwebstatic.com/images3_pi/2021/08/30/1630303690756f836c98c0f17433ff71a56349e057.webp"]
+  },
+
+  {"occasion": ["General","Housewarming"],
+    "category": ["Fashion"], "sub_category":
+      "Baby Clothes",
+    "description": [
+      "Sputtens are adorable character kids mittens designed much like a sock puppet in order to provide superior protection from the elements and maximum fun for toddlers and young children. The tube sock like design is perfect for covering small hands all the way up to the elbow so they cannot be pulled off, fall off, or fill with snow. The cute gloves are cuddly and colorful, which makes them fun to wear. Kids can't wait to put them on! The puppet design adds so much creative snow play! They are saving winter fun!! SMALL: For Infants and toddlers. (measure 7 in. from fingertips to elbow) MEDIUM:For active toddlers. (measure 10 in. from fingertips to elbow) LARGE:For young kids. (measure 13 in. from fingertips to elbow)"
+    ],
+    "title": "Stay On Sputtens Sock Puppet Mittens, Water Resistant Fleece, Pink, Penny & Bella - SMALL (For Infants and toddlers)",
+    "brand": "The Sock Puppet Mitten Company - Sputtens",
+    "price": 25,
+    "imageURLHighRes": [
+      "https://images-na.ssl-images-amazon.com/images/I/31VzkSA2mYL.jpg"
+    ]
+  },
+  {"occasion": ["General", "Birthday", "Anniversary"],
+    "category": ["Fashion"], "sub_category":
+      "Accessories",
+    "description": [
+      "Kabbalah Bracelet - 2014 Collection Thick New Design String. Vs Evil Eye and for Good Luck."
+    ],
+    "title": "Silver Magen David Kabbalah Special Thick Black Thread String Bracelet Evil Eye - 2014 Collecion",
+    "brand": "Accessory",
+    "price": 39,
+    "imageURLHighRes": [
+      "https://www.crudo-leather.com/site/assets/files/3673211/190903_ricordi_leather_wrap_bracelet_2000x2000_2-2-2.jpg"
+    ]
+  },
+  {"occasion": ["General","Birthday"],
+    "category": ["Fashion"], "sub_category":
+      "Female Shoes",
+    "description": [
+      "Ladies High Heels "
+    ],
+    "title": " Emblem High heels",
+    "brand": "Accessory",
+    "price": 45,
+    "imageURLHighRes": [
+      "https://thesmartlocal.com/wp-content/uploads/2020/06/emblem-sandya-red-stilettos.jpg"
+    ]
+  },
+
+  {"occasion": ["General","Birthday","Anniversary"],
+    "category": ["Fashion"], "sub_category":
+      "Accessories",
+    "description": [
+      "Winter scarf"
+    ],
+    "title": "Plaid Print Scarf",
+    "brand": "Bockle",
+    "price": 32,
+    "imageURLHighRes": [
+      "https://img.ltwebstatic.com/images3_pi/2021/09/06/16308991029a94e7097ded8dfa6959d6376c1c8003.webp"
+    ]
+  },
+  {"occasion": ["General", "Anniversary","Birthday"],
+    "category": ["Fashion"], "sub_category":
+      "Accessories",
+    "description":["Nickel-free. Safe for Sensitive Skin.Shipping emissions are carbon neutralized"],
+    "title": "ROSE GOLD VERMEIL LOCK NECKLACE",
+    "brand": "Joyfulshine",
+    "price": 67,
+    "imageURLHighRes": [
+      "https://cdn.shopify.com/s/files/1/0174/4760/products/RoseGold-Lock-Necklace_1800x1800.jpg?v=1611289945"
+    ]
+  },
+  {"occasion": ["General", "Christmas","Anniversary","Birthday"],
+    "category": ["Fashion"], "sub_category":
+      "Accessories",
+    "description": [
+      "Size: Approx 4.80cm\nWatch Case Material: Alloy\nWatch Dial Color: Black\nChain Material: Alloy\nChain Color: Metallic Black\nDaily Water Resistant (not for swimming or showering): Yes\n (2.54cm=1.00inch)"
+    ],
+    "title": "Rose Gold Faith in Natural",
+    "brand": "new brand",
+    "price": 47,
+    "imageURLHighRes": ["https://cdn.shopify.com/s/files/1/0437/4092/2010/products/RoseGoldFaithinNatural_900x.jpg?v=1601537882"]
+  },
+  {"occasion": ["General","Anniversary"],
+    "category": ["Fashion"], "sub_category":
+      "Female Clothes",
+    "description":["Leather Cap"],
+    "title": "Solid PU Leather Baker Boy Cap",
+    "brand": "Veneziana",
+    "price": 50,
+    "imageURLHighRes": ["https://img.ltwebstatic.com/images3_pi/2021/09/14/1631607991adaaf33bdd0648529c98697868fa80de.webp"]
+  },
+  {"occasion": ["General", "Christmas","Birthday"],
+    "category": ["Fashion"], "sub_category":
+      "Accessories",
+    "description": [
+      "Snug ribbed knit. Size One Size. Fabric 100% Soft Touch Acrylic Weight: 130g."
+    ],
+    "title": "Beechfield Ladies/Womens Metro Knitted Winter Scarf",
+    "brand": "Beechfield",
+    "price": 30,
+    "imageURLHighRes": [
+      "https://images-na.ssl-images-amazon.com/images/I/516QE-qf8BL.jpg"
+    ]
+  },
+  {"occasion": ["General","Housewarming","Birthday"],
+    "category": ["Fashion"], "sub_category":
+      "Female Clothes",
+    "description": ["Circles are a symbol of infinity, with no beginning or end. The smooth, stone-studded circle of our signature pendant necklace creates an elegant statement of forever that pays tribute to our jewellery-making heritage."],
+    "title": "Pandora Logo Pavé Circle Collier Necklace",
+    "brand": "Pandora",
+    "price": 67,
+    "imageURLHighRes": [
+      "https://sg.pandora.net/dw/image/v2/AAWM_PRD/on/demandware.static/-/Sites-pandora-master-catalog/default/dwde030e9e/images/productimages/main/397436CZ_RGB.JPG?sw=1000&sh=1000&sm=fit&sfrm=png&bgcolor=F5F5F5"
+    ]
+  }
+]

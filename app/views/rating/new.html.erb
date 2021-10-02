@@ -8,7 +8,7 @@
     <div class="rating-description">
       <div class="rating-description-inner">
         <h2><%= @product.name %></h2>
-        <p><%= @product.description.first %></p>
+        <%# <p><%= @product.description </p>%>
       </div>
       <div class="rating-container">
         <%= simple_form_for @rating, url: rating_path, html: { class: "rating_form" } do |f| %>
