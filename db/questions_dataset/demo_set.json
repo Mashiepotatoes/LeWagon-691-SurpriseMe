@@ -1,0 +1,8 @@
+[
+  {"question": "I take pride in my appearance", "options": ["Yes", "No"], "subcat"},
+  {"question": "I care for my skin", "options": ["Yes", "No"], "subcat": "Body Lotion"},
+  {"question": "I want to smell nice around people", "options": ["Yes", "No"], "subcat": "Scents"},
+  {"question": "Bags are useful to have when I go out", "options": ["Yes", "No"], "subcat": "Bags"},
+  {"question": "Wearing female clothes makes me feel happy", "options": ["Yes", "No"], "subcat": "Female Clothes"},
+  {"question": "I want people to notice how I pair my accessories with my clothes", "options": ["Yes", "No"], "subcat": "Accessories"}
+]

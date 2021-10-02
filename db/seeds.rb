@@ -182,7 +182,7 @@ puts "finished creating #{GiftSession.count} gift sessions"
 puts "finished creating #{Rating.count} ratings"
 
 # ---- Create Questions ---- #
-file_path_questions = File.join(__dir__, "questions_dataset/questions.json")
+file_path_questions = File.join(__dir__, "questions_dataset/demo_set.json")
 serialised_questions = File.read(file_path_questions)
 parsed_questions = JSON.parse(serialised_questions)
 
