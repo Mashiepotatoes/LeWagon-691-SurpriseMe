@@ -57,9 +57,9 @@ sports_outdoors = Category.create(name: "Outdoor Activities")
 # home_lifestyle = Category.create(name: "Home & Lifestyle")
 
 # ---- Amazon all_beauty Seeds ---- #
-file_path_beauty = File.join(__dir__, "amazon_datasets/all_beauty.json")
-serialised_all_beauty = File.read(file_path_beauty)
-parsed_all_beauty = JSON.parse(serialised_all_beauty)
+# file_path_beauty = File.join(__dir__, "amazon_datasets/all_beauty.json")
+# serialised_all_beauty = File.read(file_path_beauty)
+# parsed_all_beauty = JSON.parse(serialised_all_beauty)
 
 # ---- Amazon video_games seeds ---- #
 # file_path_vg = File.join(__dir__, "amazon_datasets/video_games.json")
@@ -86,9 +86,9 @@ parsed_all_beauty = JSON.parse(serialised_all_beauty)
 
 # ---- Amazon fashion seeds ---- #
 
-file_path_tg = File.join(__dir__, "amazon_datasets/fashion.json")
-serialised_fashion = File.read(file_path_tg)
-parsed_fashion = JSON.parse(serialised_fashion)
+# file_path_tg = File.join(__dir__, "amazon_datasets/fashion.json")
+# serialised_fashion = File.read(file_path_tg)
+# parsed_fashion = JSON.parse(serialised_fashion)
 
 # # ---- Amazon home_kitchen seeds ---- #
 
@@ -104,8 +104,21 @@ parsed_fashion = JSON.parse(serialised_fashion)
 
 # ---- seeding ---- #
 # parsed_datasets = [parsed_all_beauty, parsed_video_games, parsed_pet_supplies, parsed_cd_vinyl, parsed_toys_games, parsed_fashion, parsed_home_kitchen, parsed_sports_outdoors]
-parsed_datasets = [parsed_all_beauty, parsed_fashion]
-categories = [all_beauty, video_games, cd_vinyl, pet_essentials, toys_games, fashion, home_kitchen, sports_outdoors]
+# parsed_datasets = [parsed_all_beauty, parsed_fashion]
+# categories = [all_beauty, video_games, cd_vinyl, pet_essentials, toys_games, fashion, home_kitchen, sports_outdoors]
+
+# ---- Demo set ---- #
+
+file_path_tg = File.join(__dir__, "amazon_datasets/demo_set_beauty.json")
+serialised_demo_set_beauty = File.read(file_path_tg)
+parsed_demo_set_beauty = JSON.parse(serialised_demo_set_beauty)
+
+file_path_tg = File.join(__dir__, "amazon_datasets/demo_set_fashion.json")
+serialised_demo_set_fashion = File.read(file_path_tg)
+parsed_demo_set_fashion = JSON.parse(serialised_demo_set_fashion)
+
+parsed_datasets = [parsed_demo_set_beauty, parsed_demo_set_fashion]
+categories = [all_beauty, fashion]
 
 puts "Creating products"
 categories_index = 0
