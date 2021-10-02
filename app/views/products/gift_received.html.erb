@@ -9,10 +9,12 @@
       <div class="card-gift">
         <div class="cart-img-container">
 
-          <% if gift.image_url.nil? %>
+        <% img_url = gift.image_url.gsub(/[(\[")|("\])]/,"") %>
+          
+          <% if img_url.nil? %>
             <%= image_tag "https://source.unsplash.com/random" %>
           <% else %>
-            <%= image_tag gift.image_url %>
+            <%= image_tag img_url %>
           <% end %>
         </div>
 
