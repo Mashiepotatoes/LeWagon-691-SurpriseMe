@@ -1,5 +1,5 @@
 [
-  {"question": "I take pride in my appearance", "options": ["Yes", "No"], "subcat"},
+  {"question": "I take pride in my appearance", "options": ["Yes", "No"], "subcat": "Facial"},
   {"question": "I care for my skin", "options": ["Yes", "No"], "subcat": "Body Lotion"},
   {"question": "I want to smell nice around people", "options": ["Yes", "No"], "subcat": "Scents"},
   {"question": "Bags are useful to have when I go out", "options": ["Yes", "No"], "subcat": "Bags"},
