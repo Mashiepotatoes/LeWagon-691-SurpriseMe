@@ -18,7 +18,7 @@ class Product < ApplicationRecord
   }
 
   scope :by_category, ->(user_preferences) {
-    where({subcategory: user_preferences})
+    where({ subcategory: user_preferences })
   }
 
   def self.curate(gift_session, disco_recommendations, user_preferences)
@@ -30,7 +30,7 @@ class Product < ApplicationRecord
       if (user_preferences.nil?) || (user_preferences.count <= 2)
         Product.all.sample(5)
       else
-        if not get disco recommendation
+       # if not get disco recommendation
         disco_recommendations.for_occasion(gift_session.occasion_id).by_category(user_preferences).less_than(gift_session.budget)
       end
     end
